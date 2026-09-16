@@ -88,14 +88,14 @@ Für die vier Wellen bis zur ersten tragfähigen Fassung:
 | | |
 |---|---|
 | Eigenleistung | Die Arbeit am Real Life Stack, die ohnehin läuft. Timos Zeit. Die Recherche von 280 Stiftungen, die steht. |
-| Gesucht | Zehn Gründungspartner mit 5.000 bis 50.000 EUR ([../06-ansprache.md](../06-ansprache.md)) |
+| Gesucht | Zehn Gründungspartner mit 5.000 bis 50.000 EUR ([../07-ansprache.md](../07-ansprache.md)) |
 | Wofür | Entwicklung der Wellen 1 bis 4, Redaktion der Einträge, anwaltliche Prüfung, Betrieb |
 
 Die genauen Zahlen setzen wir ein, sobald die ersten Gespräche gelaufen sind. Eine Zahl, die wir uns ausdenken, wäre keine Zahl.
 
 ### 9. WANN?
 
-Start: September 2026. Die vier Wellen laufen so schnell, wie der Real Life Stack sie trägt; der Fahrplan in [../07-pilot.md](../07-pilot.md) ist ein Vorschlag, kein Versprechen. Wir fangen mit Welle 1 an, sobald die anwaltliche Prüfung steht.
+Start: September 2026. Die vier Wellen laufen so schnell, wie der Real Life Stack sie trägt; der Fahrplan in [../08-pilot.md](../08-pilot.md) ist ein Vorschlag, kein Versprechen. Wir fangen mit Welle 1 an, sobald die anwaltliche Prüfung steht.
 
 ---
 

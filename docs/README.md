@@ -27,13 +27,14 @@ Die Dokumente bauen in dieser Reihenfolge aufeinander auf.
 | [03-datenmodell.md](03-datenmodell.md) | Normativer Entwurf | Felder für Stiftung und Projekt, Abbildung auf den Stack |
 | [04-recht.md](04-recht.md) | Arbeitsstand | Was wir aufnehmen dürfen, Herkunftsblock, Profil-Übernahme |
 | [05-matching.md](05-matching.md) | Normativer Entwurf | Vorschläge mit Begründung, Förderkriterien, Antragswege |
+| [06-foerderhilfe.md](06-foerderhilfe.md) | Normativer Entwurf | Menschen, die beim Antrag helfen, der Förderstammtisch, die Hilfe-Tags |
 
 ## Arbeit am Netzwerk
 
 | Dokument | Zweck |
 |---|---|
-| [06-ansprache.md](06-ansprache.md) | Drei Türen, Partnerprogramm, 30-Minuten-Termin, erste Mail |
-| [07-pilot.md](07-pilot.md) | Der Pilot, vier Wellen, offene Punkte für den Stack |
+| [07-ansprache.md](07-ansprache.md) | Drei Türen, Partnerprogramm, 30-Minuten-Termin, erste Mail |
+| [08-pilot.md](08-pilot.md) | Der Pilot, vier Wellen, offene Punkte für den Stack |
 
 ## Fragebögen
 

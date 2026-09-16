@@ -41,6 +41,16 @@ Der Türöffner und der legitime Anlass für den Erstkontakt.
 
 Kostet die Stiftung nichts. Sie bekommt einen geprüften Eintrag und kann ihn übernehmen.
 
+### Der Nutzen, den man leicht übersieht
+
+Neben dem Matching gibt es ein zweites Angebot, das eine Geschäftsstelle sofort versteht:
+
+> Wir heben die Qualität dessen, was bei Ihnen ankommt.
+
+Über die Förderhilfe treffen Projekte auf Menschen, die schon Anträge geschrieben haben, und auf den Förderstammtisch. Jeder unpassende Antrag weniger ist eine halbe Stunde und ein Absagebrief weniger ([06-foerderhilfe.md](06-foerderhilfe.md)).
+
+Eine Stiftung kann selbst daran teilnehmen: zwanzig Minuten am Stammtisch, in denen sie erklärt, was sie wirklich lesen will. Das kostet wenig und spart viel.
+
 ### Tür 2: Wir möchten Ihre Sicht verstehen
 
 Der wichtigere Schritt. Sieben Fragen:
@@ -145,5 +155,5 @@ Aus der Förder-Landschaft (der Förder-Landschaft) ergeben sich drei Wellen:
 ## Verwandt
 
 - [00-ueberblick.md](00-ueberblick.md) das Modell hinter dem Pitch
-- [07-pilot.md](07-pilot.md) was der Pilot beweisen soll
+- [08-pilot.md](08-pilot.md) was der Pilot beweisen soll
 - [fragen/stiftungsgespraech.md](fragen/stiftungsgespraech.md) die sieben Fragen im Detail

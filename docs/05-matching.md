@@ -76,6 +76,12 @@ Zwei Arten zu geben, beide sichtbar, beide mit Quelle. Die Stiftung wirkt dauerh
 
 Damit wird aus einer Fördermitteldatenbank ein Ort, an dem Kapital, Menschen, Organisationen und reale Vorhaben zusammenfinden. Kein kommerzieller Marktplatz, sondern eine Verbindungsschicht.
 
+## Die dritte Richtung: Menschen, die helfen
+
+Dasselbe Matching verbindet nicht nur Projekt und Stiftung. Es verbindet auch ein Projekt mit Menschen, die beim Antrag helfen können: Können im Profil, Bedarf im Projekt, Tags wie `#antragshilfe` oder `#finanzierungsplan`.
+
+Die Regeln bleiben dieselben: Vorschlag statt Empfehlung, Begründung Zeile für Zeile, kein Ranking von Menschen. Wie das im Einzelnen aussieht, steht in [06-foerderhilfe.md](06-foerderhilfe.md).
+
 ## Auf der Karte
 
 | Merkmal | Zeigt |

@@ -53,6 +53,15 @@ Die Liste „möglicherweise passende Förderer“ mit Zeile für Zeile nachvoll
 
 **Was gebraucht wird:** ein Modul oder eine Linse im Stack, die zwei Item-Typen gegeneinander rechnet.
 
+### Welle 2b: Förderhilfe (parallel zu Welle 2)
+
+Läuft ohne neue Technik, mit den Tags aus [06-foerderhilfe.md](06-foerderhilfe.md).
+
+- Fünf Menschen tragen ihr Können ein: `#antragshilfe`, `#finanzierungsplan`, `#projektskizze`
+- Drei Pilotprojekte tragen denselben Bedarf
+- Ein Förderstammtisch in Nordhessen, mit jemandem aus einer Stiftung der ersten Welle
+- Ein Antrag, der dadurch besser wird. Das ist der Beweis fürs nächste Gespräch
+
 ### Welle 3: Menschen und Beiträge (Dezember)
 
 Der Teil, der trustdonation von einem Verzeichnis unterscheidet.
@@ -84,7 +93,7 @@ Aus [03-datenmodell.md](03-datenmodell.md), gesammelt für das nächste Gespräc
 
 ## Was sofort geht, ohne Code
 
-- Die 10 Stiftungen der ersten Welle ansprechen ([06-ansprache.md](06-ansprache.md))
+- Die 10 Stiftungen der ersten Welle ansprechen ([07-ansprache.md](07-ansprache.md))
 - Die sieben Fragen stellen und die Antworten sammeln
 - Einen Förderfall von Hand durchspielen und dokumentieren
 - Entwürfe der Einträge als PDF oder Link zeigen und übernehmen lassen
@@ -99,6 +108,6 @@ Diese Arbeit erzeugt genau das Material, mit dem Welle 1 und 2 richtig gebaut we
 
 ## Verwandt
 
-- [01-rollen.md](01-rollen.md), [03-datenmodell.md](03-datenmodell.md), [06-ansprache.md](06-ansprache.md)
+- [01-rollen.md](01-rollen.md), [03-datenmodell.md](03-datenmodell.md), [07-ansprache.md](07-ansprache.md)
 - Datenbasis: 280 recherchierte Stiftungen im Workspace
 - [fragen/beispiel-projekt.md](fragen/beispiel-projekt.md) trustdonation durch den eigenen Bogen

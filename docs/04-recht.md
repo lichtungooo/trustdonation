@@ -54,7 +54,7 @@ Eine namentliche Ansprache steht nur dort, wo die Stiftung sie selbst öffentlic
 
 Eine öffentlich angegebene Adresse auf der Karte zu zeigen, ist etwas anderes, als sie für eine Kampagne zu nutzen. Für elektronische Werbung gilt § 7 UWG, der Mails ohne vorherige Einwilligung streng behandelt.
 
-Für die Ansprache heißt das: persönlicher Erstkontakt mit konkretem Anlass, keine Massenaussendung. Siehe [06-ansprache.md](06-ansprache.md).
+Für die Ansprache heißt das: persönlicher Erstkontakt mit konkretem Anlass, keine Massenaussendung. Siehe [07-ansprache.md](07-ansprache.md).
 
 ## Der Herkunftsblock
 

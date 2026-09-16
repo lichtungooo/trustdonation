@@ -24,6 +24,18 @@ Stufe 2 des Vertrauens. Zeit, Arbeit, Wissen, Material, Organisation oder Geld, 
 
 → [02-vertrauen.md → §Stufe 2](02-vertrauen.md)
 
+## Förderhilfe
+
+Menschen mit Erfahrung helfen Projekten beim Antrag. Läuft über dasselbe *Matching*, mit eigenen Tags (`#antragshilfe`, `#finanzierungsplan`, …). Hilfe ist ein *Beitrag*, keine Ware; wir schreiben keine Anträge und beraten nicht rechtlich.
+
+→ [06-foerderhilfe.md](06-foerderhilfe.md)
+
+## Förderstammtisch
+
+Wiederkehrender Termin an einem Ort, an dem Antragserfahrung weitergegeben wird. Erscheint auf Karte und im Kalender. Erzeugt reale Begegnungen und damit *Verbindungen*.
+
+→ [06-foerderhilfe.md → §Der Förderstammtisch](06-foerderhilfe.md)
+
 ## Förderkriterium
 
 Eines von elf Feldern, in denen gefördert wird. Projekte und Stiftungen ordnen sich darin ein; aus der Überlappung entsteht das *Matching*. Früher „Förder-Rubrik“.
@@ -106,7 +118,7 @@ Protokoll für dezentrale Identität und Vertrauensbeziehungen: `did:key`, JWS-S
 
 Eine von vier Ausbaustufen: Sichtbarkeit, Matching mit Begründung, Menschen und Beiträge, der Kreis schließt sich.
 
-→ [07-pilot.md → §Vier Wellen](07-pilot.md)
+→ [08-pilot.md → §Vier Wellen](08-pilot.md)
 
 ## Zustifter
 

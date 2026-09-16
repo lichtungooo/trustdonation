@@ -13,12 +13,13 @@ The core idea: money is not the entry point, it is the result of a relationship.
 - [03 Datenmodell](https://github.com/lichtungooo/trustdonation/blob/main/docs/03-datenmodell.md): Fields for foundation and project, mapping onto Real Life Stack items, relations and spaces.
 - [04 Recht](https://github.com/lichtungooo/trustdonation/blob/main/docs/04-recht.md): Legal guardrails for collecting public facts, the provenance block, GDPR on contact data, profile claiming.
 - [05 Matching](https://github.com/lichtungooo/trustdonation/blob/main/docs/05-matching.md): Suggestions with a reason per line, eleven funding criteria, eight application paths. No ratings.
+- [06 Förderhilfe](https://github.com/lichtungooo/trustdonation/blob/main/docs/06-foerderhilfe.md): People who help with funding applications, the recurring local meetup, and the help tags. Same matching, third direction.
 - [Glossar](https://github.com/lichtungooo/trustdonation/blob/main/docs/glossar.md): Shared vocabulary.
 
 ## Working with foundations
 
-- [06 Ansprache](https://github.com/lichtungooo/trustdonation/blob/main/docs/06-ansprache.md): Three doors, founding partner programme, 30-minute meeting, first email.
-- [07 Pilot](https://github.com/lichtungooo/trustdonation/blob/main/docs/07-pilot.md): Pilot size, four waves, open decisions for the stack.
+- [07 Ansprache](https://github.com/lichtungooo/trustdonation/blob/main/docs/07-ansprache.md): Three doors, founding partner programme, 30-minute meeting, first email.
+- [08 Pilot](https://github.com/lichtungooo/trustdonation/blob/main/docs/08-pilot.md): Pilot size, four waves, open decisions for the stack.
 
 ## Question sheets
 

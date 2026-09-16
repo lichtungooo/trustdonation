@@ -2,7 +2,7 @@
 
 *Der Bogen [stiftung.md](stiftung.md), ausgefüllt. So sieht ein recherchierter Eintrag aus, bevor die Stiftung ihn übernimmt.*
 
-> **Die Stiftung hier ist erfunden.** „Bürgerstiftung Musterstadt“ gibt es nicht. Das ist Absicht: Ein Eintrag über eine echte Stiftung geht erst online, nachdem wir ihn ihr gezeigt haben ([../06-ansprache.md](../06-ansprache.md), Tür 1). Ein Beispiel in einem öffentlichen Repo ist online.
+> **Die Stiftung hier ist erfunden.** „Bürgerstiftung Musterstadt“ gibt es nicht. Das ist Absicht: Ein Eintrag über eine echte Stiftung geht erst online, nachdem wir ihn ihr gezeigt haben ([../07-ansprache.md](../07-ansprache.md), Tür 1). Ein Beispiel in einem öffentlichen Repo ist online.
 
 ---
 

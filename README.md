@@ -123,7 +123,7 @@ Server: `/home/timo/apps/wir-ooo/`, Traefik mit Let's Encrypt davor.
 
 Das Konzept in [docs/](docs/) ist der gemeinsame Stand. Wer etwas ändern will, öffnet ein Issue oder einen Pull Request. Bei Konflikt zwischen Konzept und Umsetzung gewinnt das Konzept.
 
-Die Arbeit läuft in vier Wellen ([docs/07-pilot.md](docs/07-pilot.md)):
+Die Arbeit läuft in vier Wellen ([docs/08-pilot.md](docs/08-pilot.md)):
 
 1. **Sichtbarkeit** Stiftungen und Projekte auf der Karte, mit Quelle und Prüfdatum
 2. **Matching mit Begründung** jede Zeile zeigt, warum sie dort steht

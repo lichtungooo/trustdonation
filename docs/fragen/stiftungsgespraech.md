@@ -105,5 +105,5 @@ Nächster Schritt                                  bis wann
 
 ## Verwandt
 
-- [../06-ansprache.md](../06-ansprache.md) Ablauf des Termins, Partnerprogramm, erste Mail
+- [../07-ansprache.md](../07-ansprache.md) Ablauf des Termins, Partnerprogramm, erste Mail
 - [stiftung.md](stiftung.md) die Fragen zum Eintrag selbst

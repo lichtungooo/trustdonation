@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>trustdonation — Projekte finden Stiftungen. Stiftungen finden Wirkung.</title>
-<meta name="description" content="Stiftungen, Stifter, Zustifter, Projekte und Menschen auf einer Karte. Jedes Projekt zeigt, was es braucht. Jede Stiftung findet, was zu ihrem Zweck passt. Jede Gabe wird sichtbar.">
+<title>trustdonation — Der Kreislauf</title>
+<meta name="description" content="So fließt es: Projekte zeigen sich, Stiftungen fördern, Wirkung wird sichtbar, Zustifter stiften zu, Stifter öffnen Räume, Menschen tragen mit.">
 <link rel="icon" href="/branding/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/site.css">
 <script>
@@ -13,17 +13,26 @@
     if (w === "dark" || w === "light") document.documentElement.dataset.theme = w
   } catch (e) {}
 </script>
-<meta property="og:type" content="website">
-<meta property="og:locale" content="de_DE">
-<meta property="og:url" content="https://wir.ooo">
-<meta property="og:site_name" content="trustdonation">
-<meta property="og:title" content="trustdonation — Projekte finden Stiftungen. Stiftungen finden Wirkung.">
-<meta property="og:description" content="Stiftungen, Stifter, Zustifter, Projekte und Menschen auf einer Karte. Jede Gabe wird sichtbar.">
-<meta property="og:image" content="https://wir.ooo/og.png">
-<meta name="twitter:card" content="summary_large_image">
+<style>
+  .big-diagram { max-width: 880px; }
+  .flowsteps { display: grid; gap: 16px; margin-top: 56px; }
+  @media (min-width: 720px) { .flowsteps { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1040px) { .flowsteps { grid-template-columns: repeat(3, 1fr); } }
+  .fs { border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius); padding: 24px; display: flex; gap: 16px; align-items: flex-start; }
+  .fs .n { flex: none; width: 36px; height: 36px; border-radius: 50%; background: var(--gold); color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 15px; }
+  .fs.gruen .n { background: var(--gruen); }
+  .fs h3 { font-size: 19px; font-weight: 700; letter-spacing: -0.02em; }
+  .fs p { margin: 6px 0 0; font-size: 15px; line-height: 1.55; color: var(--body); }
+  .mitte { margin-top: 56px; border: 1px solid var(--line); border-radius: 18px; background: var(--accent-soft); padding: 40px; display: grid; gap: 24px; align-items: center; }
+  @media (min-width: 800px) { .mitte { grid-template-columns: auto 1fr; gap: 40px; } }
+  .mitte .glyph { width: 96px; height: 96px; border-radius: 50%; background: var(--surface); border: 3px solid var(--gold); display: grid; place-items: center; color: var(--ink); }
+  .mitte .glyph svg { width: 40px; height: 40px; }
+  .mitte h3 { font-size: 26px; font-weight: 800; letter-spacing: -0.03em; }
+  .mitte p { margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; color: var(--body); }
+</style>
 </head>
 
-<body data-seite="">
+<body data-seite="kreislauf">
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
@@ -64,22 +73,22 @@
       <div class="has-menu" data-open="false">
         <button type="button" aria-expanded="false" aria-haspopup="true"><span data-t="nav.fuerwen">Für wen</span> <svg class="caret"><use href="#i-caret"></use></svg></button>
         <div class="menu wide">
-          <a href="#anstifter"><span class="ic"><svg><use href="#i-geben"></use></svg></span><div><b data-t="nav.anstifter">Anstifter</b><span data-t="nav.anstifter.s">Starte ein Projekt, bring deine Begabung ein, arbeite in einer Stiftung mit.</span></div></a>
-          <a href="#zustifter"><span class="ic"><svg><use href="#i-menschen"></use></svg></span><div><b data-t="nav.zustifter">Zustifter</b><span data-t="nav.zustifter.s">Gib in eine Stiftung oder direkt an ein Projekt.</span></div></a>
-          <a href="#stiftungen"><span class="ic"><svg><use href="#i-stiftung"></use></svg></span><div><b data-t="nav.stiftungen">Stiftungen</b><span data-t="nav.stiftungen.s">Finde Projekte in deinem Feld und bekomm deinen eigenen Raum.</span></div></a>
-          <a href="#projekte"><span class="ic"><svg><use href="#i-projekt"></use></svg></span><div><b data-t="nav.projekte">Projekte</b><span data-t="nav.projekte.s">Trag dein Projekt ein und sieh, welche Stiftungen zu dir passen.</span></div></a>
+          <a href="/#anstifter"><span class="ic"><svg><use href="#i-geben"></use></svg></span><div><b data-t="nav.anstifter">Anstifter</b><span data-t="nav.anstifter.s">Starte ein Projekt, bring deine Begabung ein, arbeite in einer Stiftung mit.</span></div></a>
+          <a href="/#zustifter"><span class="ic"><svg><use href="#i-menschen"></use></svg></span><div><b data-t="nav.zustifter">Zustifter</b><span data-t="nav.zustifter.s">Gib in eine Stiftung oder direkt an ein Projekt.</span></div></a>
+          <a href="/#stiftungen"><span class="ic"><svg><use href="#i-stiftung"></use></svg></span><div><b data-t="nav.stiftungen">Stiftungen</b><span data-t="nav.stiftungen.s">Finde Projekte in deinem Feld und bekomm deinen eigenen Raum.</span></div></a>
+          <a href="/#projekte"><span class="ic"><svg><use href="#i-projekt"></use></svg></span><div><b data-t="nav.projekte">Projekte</b><span data-t="nav.projekte.s">Trag dein Projekt ein und sieh, welche Stiftungen zu dir passen.</span></div></a>
         </div>
       </div>
-      <a href="/kreislauf/" data-t="nav.kreislauf">Kreislauf</a>
+      <a href="/kreislauf/" aria-current="page" data-t="nav.kreislauf">Kreislauf</a>
       <div class="has-menu" data-open="false">
         <button type="button" aria-expanded="false" aria-haspopup="true"><span data-t="nav.ressourcen">Ressourcen</span> <svg class="caret"><use href="#i-caret"></use></svg></button>
         <div class="menu wide">
           <div>
             <div class="group" data-t="nav.raum">Der Raum</div>
             <a href="/app/network/map"><span class="ic"><svg><use href="#i-karte"></use></svg></span><div><b data-t="nav.karte">Karte</b><span data-t="nav.karte.s">Alle Stiftungen und Projekte auf einer Karte, direkt in der App.</span></div></a>
-            <a href="#rubriken"><span class="ic"><svg><use href="#i-rubrik"></use></svg></span><div><b data-t="nav.rubriken">Förderkriterien</b><span data-t="nav.rubriken.s">Die elf Felder, nach denen Stiftungen fördern.</span></div></a>
-            <a href="#antragswege"><span class="ic"><svg><use href="#i-weg"></use></svg></span><div><b data-t="nav.antragswege">Antragswege</b><span data-t="nav.antragswege.s">Offen, Wettbewerb, Anfrage, Partnerschaft, Boden.</span></div></a>
-            <a href="#matching"><span class="ic"><svg><use href="#i-match"></use></svg></span><div><b data-t="nav.matching">Wie alles zusammenfindet</b><span data-t="nav.matching.s">Projekte, Stiftungen und Menschen finden über Themen, Region und Weg zueinander.</span></div></a>
+            <a href="/#rubriken"><span class="ic"><svg><use href="#i-rubrik"></use></svg></span><div><b data-t="nav.rubriken">Förderkriterien</b><span data-t="nav.rubriken.s">Die elf Felder, nach denen Stiftungen fördern.</span></div></a>
+            <a href="/#antragswege"><span class="ic"><svg><use href="#i-weg"></use></svg></span><div><b data-t="nav.antragswege">Antragswege</b><span data-t="nav.antragswege.s">Offen, Wettbewerb, Anfrage, Partnerschaft, Boden.</span></div></a>
+            <a href="/#matching"><span class="ic"><svg><use href="#i-match"></use></svg></span><div><b data-t="nav.matching">Wie alles zusammenfindet</b><span data-t="nav.matching.s">Projekte, Stiftungen und Menschen finden über Themen, Region und Weg zueinander.</span></div></a>
           </div>
           <div>
             <div class="group" data-t="nav.offen">Offen</div>
@@ -90,7 +99,7 @@
           </div>
         </div>
       </div>
-      <a href="#mitmachen" data-t="nav.mitmachen">Mitmachen</a>
+      <a href="/#mitmachen" data-t="nav.mitmachen">Mitmachen</a>
     </nav>
     <div class="nav-right">
       <button class="schema" type="button" onclick="schemaUmschalten()" data-t-aria="aria.schema" aria-label="Hell oder dunkel">
@@ -130,16 +139,16 @@
   </div>
   <div class="mobile" id="mobile">
     <div class="group" data-t="nav.fuerwen">Für wen</div>
-    <a href="#anstifter" onclick="menueSchliessen()"><span class="ic"><svg><use href="#i-geben"></use></svg></span><span data-t="nav.anstifter">Anstifter</span></a>
-    <a href="#zustifter" onclick="menueSchliessen()"><span class="ic"><svg><use href="#i-menschen"></use></svg></span><span data-t="nav.zustifter">Zustifter</span></a>
-    <a href="#stiftungen" onclick="menueSchliessen()"><span class="ic"><svg><use href="#i-stiftung"></use></svg></span><span data-t="nav.stiftungen">Stiftungen</span></a>
-    <a href="#projekte" onclick="menueSchliessen()"><span class="ic"><svg><use href="#i-projekt"></use></svg></span><span data-t="nav.projekte">Projekte</span></a>
+    <a href="/#anstifter"><span class="ic"><svg><use href="#i-geben"></use></svg></span><span data-t="nav.anstifter">Anstifter</span></a>
+    <a href="/#zustifter"><span class="ic"><svg><use href="#i-menschen"></use></svg></span><span data-t="nav.zustifter">Zustifter</span></a>
+    <a href="/#stiftungen"><span class="ic"><svg><use href="#i-stiftung"></use></svg></span><span data-t="nav.stiftungen">Stiftungen</span></a>
+    <a href="/#projekte"><span class="ic"><svg><use href="#i-projekt"></use></svg></span><span data-t="nav.projekte">Projekte</span></a>
     <div class="group" data-t="nav.mehr">Mehr</div>
     <a href="/kreislauf/"><span class="ic"><svg><use href="#i-kreis"></use></svg></span><span data-t="nav.kreislauf">Kreislauf</span></a>
     <a href="/app/network/map"><span class="ic"><svg><use href="#i-karte"></use></svg></span><span data-t="nav.karte">Karte</span></a>
-    <a href="#rubriken" onclick="menueSchliessen()"><span class="ic"><svg><use href="#i-rubrik"></use></svg></span><span data-t="nav.rubriken">Förderkriterien</span></a>
-    <a href="#antragswege" onclick="menueSchliessen()"><span class="ic"><svg><use href="#i-weg"></use></svg></span><span data-t="nav.antragswege">Antragswege</span></a>
-    <a href="#mitmachen" onclick="menueSchliessen()"><span class="ic"><svg><use href="#i-hand"></use></svg></span><span data-t="nav.mitmachen">Mitmachen</span></a>
+    <a href="/#rubriken"><span class="ic"><svg><use href="#i-rubrik"></use></svg></span><span data-t="nav.rubriken">Förderkriterien</span></a>
+    <a href="/#antragswege"><span class="ic"><svg><use href="#i-weg"></use></svg></span><span data-t="nav.antragswege">Antragswege</span></a>
+    <a href="/#mitmachen"><span class="ic"><svg><use href="#i-hand"></use></svg></span><span data-t="nav.mitmachen">Mitmachen</span></a>
     <div class="group" data-t="nav.sprache">Sprache</div>
     <div class="langs">
       <button type="button" role="menuitemradio" aria-checked="true" data-lang="de">Deutsch</button>
@@ -162,123 +171,15 @@
   </div>
 </div>
 
-<header class="wrap hero" id="top">
-  <div class="eyebrow"><span class="dot"></span><span data-t="hero.eyebrow">280 Stiftungen, vier Rollen, eine Karte</span></div>
-  <h1 data-t="hero.h1">Dein Projekt findet die Stiftungen, die passen.</h1>
-  <p class="lede" data-t="hero.lede">trustdonation ist eine Karte. Projekte tragen drei bis sechs Themen ein und sehen sofort, welche Stiftungen dazu passen. Stiftungen sehen, wer in ihrem Feld schon arbeitet. Und wer gibt, sieht später, was daraus geworden ist.</p>
-  <div class="hero-cta">
-    <a class="pill lg" href="/app/" data-t="cta.app">App öffnen →</a>
-    <a class="link-arrow" href="/kreislauf/" data-t="hero.link">So läuft es</a>
-  </div>
-  <p class="hero-note" data-t="hero.note">Ein Projekt des Real Life Network e.V. Deine Identität liegt auf deinem Gerät, nicht bei uns.</p>
-
-  <div class="frame">
-    <div class="frame-bar"><i></i><i></i><i></i><span class="url">wir.ooo/app · Karte</span><a href="/app/network/map" data-t="frame.open">Karte in der App öffnen →</a></div>
-    <a class="frame-map" href="/app/network/map" aria-label="Karte in der App öffnen">
-      <svg viewBox="0 0 1040 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <defs>
-          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0v40" fill="none" stroke="currentColor" stroke-opacity=".08"/></pattern>
-        </defs>
-        <rect width="1040" height="560" fill="url(#grid)"/>
-        <g class="land">
-          <path d="M-20 420c90-70 150-40 240-90s80-140 200-150 170 60 290 30 190-60 350-20V580H-20z"/>
-          <path d="M120 40c80 30 160 10 240 60s60 120 160 130 160-70 260-30 120 90 280 70V-20H120z" opacity=".6"/>
-        </g>
-        <g class="way" fill="none" stroke-linecap="round">
-          <path d="M40 300c120-30 200 40 320 10s200-90 320-60 220 80 340 40"/>
-          <path d="M520 20c-30 120 40 200 10 320s-90 200-60 220" opacity=".7"/>
-          <path d="M120 120c150 40 260 200 400 220s260-40 420-20" opacity=".5"/>
-        </g>
-        <g class="pins">
-          <g class="s" transform="translate(300 250)"><path d="M0 0c-20-26-30-40-30-58a30 30 0 0 1 60 0c0 18-10 32-30 58z"/><circle cy="-58" r="11"/></g>
-          <g class="p" transform="translate(410 330)"><path d="M0 0c-20-26-30-40-30-58a30 30 0 0 1 60 0c0 18-10 32-30 58z"/><circle cy="-58" r="11"/></g>
-          <g class="s" transform="translate(560 190)"><path d="M0 0c-20-26-30-40-30-58a30 30 0 0 1 60 0c0 18-10 32-30 58z"/><circle cy="-58" r="11"/></g>
-          <g class="p" transform="translate(650 300)"><path d="M0 0c-20-26-30-40-30-58a30 30 0 0 1 60 0c0 18-10 32-30 58z"/><circle cy="-58" r="11"/></g>
-          <g class="s" transform="translate(780 240)"><path d="M0 0c-20-26-30-40-30-58a30 30 0 0 1 60 0c0 18-10 32-30 58z"/><circle cy="-58" r="11"/></g>
-          <g class="p" transform="translate(200 380)"><path d="M0 0c-20-26-30-40-30-58a30 30 0 0 1 60 0c0 18-10 32-30 58z"/><circle cy="-58" r="11"/></g>
-          <g class="s" transform="translate(870 400)"><path d="M0 0c-20-26-30-40-30-58a30 30 0 0 1 60 0c0 18-10 32-30 58z"/><circle cy="-58" r="11"/></g>
-          <g class="p" transform="translate(500 450)"><path d="M0 0c-20-26-30-40-30-58a30 30 0 0 1 60 0c0 18-10 32-30 58z"/><circle cy="-58" r="11"/></g>
-        </g>
-      </svg>
-      <div class="frame-legend"><span><i class="s"></i><span data-t="frame.stiftungen">Stiftungen</span></span><span><i class="p"></i><span data-t="frame.projekte">Projekte</span></span></div>
-      <span class="frame-cta pill lg" data-t="frame.open">Karte in der App öffnen →</span>
-    </a>
-  </div>
+<header class="wrap hero slim" id="top">
+  <div class="eyebrow"><span class="dot"></span><span data-t="kp.kicker">Der Kreislauf</span></div>
+  <h1 data-t="kp.h1">So läuft es.</h1>
+  <p class="lede" data-t="kp.lede">Vier Rollen, sechs Wege, das Vertrauen in der Mitte. Kein Antrag, der in einer Schublade landet. Jede Gabe bleibt sichtbar und löst die nächste aus.</p>
 </header>
 
-<p class="wrap proof" data-t="proof"><strong>280 deutsche Stiftungen</strong> haben wir durchgesehen und nach elf Förderkriterien sortiert.</p>
-
-<section class="or1" id="rollen">
+<section style="padding-top: 24px">
   <div class="wrap">
-    <div class="head">
-      <div class="kicker" data-t="r.kicker">Für wen</div>
-      <h2 data-t="r.h2">Vier Rollen, vier Einstiege.</h2>
-      <p class="section-lede" data-t="r.lede">Anstifter fangen an, Zustifter geben dazu, Stiftungen fördern, Projekte arbeiten draußen. Jede Rolle kann in jede geben, und alles läuft über dieselbe Karte.</p>
-    </div>
-    <div class="rollen-grid">
-    <article class="rolle orange" id="anstifter">
-      <div class="verb"><i></i><span data-t="ra.verb">Anstiften</span></div>
-      <h3 data-t="ra.h3">Anstifter: du fängst an.</h3>
-      <p data-t="ra.p">Du startest ein Projekt, bringst deine Begabung ein oder arbeitest in einer Stiftung mit. Zeit, Wissen, Werkzeug, ein Raum: alles zählt. Anstifter sind Menschen, keine Institutionen, und von ihnen kommt der erste Anstoß.</p>
-      <a class="link-arrow" href="/app/" data-t="ra.link">Anstiften →</a>
-      <div class="visual">
-        <div class="row"><div class="avatar">W</div><div class="txt"><b data-t="ra.a">Werkstatt am Bahnhof</b><span data-t="ra.as">Drei Menschen, ein Raum, ein Anfang</span></div><span class="tag" data-t="ra.at">gegründet</span></div>
-        <div class="row"><div class="avatar">J</div><div class="txt"><b data-t="ra.b">Jonas bringt sein Schweißgerät</b><span data-t="ra.bs">Werkstatt am Bahnhof</span></div><span class="tag grey" data-t="ra.bt">Begabung</span></div>
-        <div class="row"><div class="avatar">L</div><div class="txt"><b data-t="ra.c">Lena im Stiftungsrat</b><span data-t="ra.cs">Bürgerstiftung Kassel, seit zwei Jahren</span></div><span class="tag" data-t="ra.ct">Nachwuchs</span></div>
-        <div class="stack-note" data-t="ra.note">Wer sich trifft, bestätigt sich gegenseitig. Die Bestätigung steht danach im Profil.</div>
-      </div>
-    </article>
-    <article class="rolle orange" id="zustifter">
-      <div class="verb"><i></i><span data-t="rz.verb">Zustiften</span></div>
-      <h3 data-t="rz.h3">Zustifter: du gibst dazu.</h3>
-      <p data-t="rz.p">Du gibst Geld in eine bestehende Stiftung oder direkt an ein Projekt. Beide Wege stehen offen. Was du gibst, bleibt sichtbar: wohin es ging und was daraus wurde. Vertrauen entsteht aus dem, was man nachsehen kann.</p>
-      <a class="link-arrow" href="/app/" data-t="rz.link">Zustiften →</a>
-      <div class="visual">
-        <div class="row"><div class="avatar">Z</div><div class="txt"><b data-t="rz.a">Zustiftung</b><span data-t="rz.as">Stiftung Bildung · Förderfonds Handwerk</span></div><span class="tag" data-t="rz.at">5.000 EUR</span></div>
-        <div class="row"><div class="avatar">D</div><div class="txt"><b data-t="rz.b">Direkte Förderung</b><span data-t="rz.bs">Musterschule Gudensberg · Außengelände</span></div><span class="tag grey" data-t="rz.bt">sichtbar</span></div>
-        <div class="row"><div class="avatar">A</div><div class="txt"><b data-t="rz.c">Anna gibt jeden Monat</b><span data-t="rz.cs">Werkstatt am Bahnhof, 50 EUR</span></div><span class="tag" data-t="rz.ct">regelmäßig</span></div>
-        <div class="stack-note" data-t="rz.note">Jede Gabe wird von beiden Seiten bestätigt und steht dann auf der Karte.</div>
-      </div>
-    </article>
-    <article class="rolle gruen" id="stiftungen">
-      <div class="verb"><i></i><span data-t="rs.verb">Finden</span></div>
-      <h3 data-t="rs.h3">Stiftungen: finde Projekte, die zu deinem Zweck passen.</h3>
-      <p data-t="rs.p">Trag deinen Förderzweck als Tags ein, dazu Region und Antragsweg. Die Karte zeigt dir, wer in deinem Feld schon arbeitet. Du bekommst einen eigenen Raum mit Karte, Community und Quests, also kleinen Aufgaben zum Mitmachen.</p>
-      <a class="link-arrow" href="/app/" data-t="rs.link">Stiftung eintragen →</a>
-      <div class="visual">
-        <div class="row"><div class="avatar">B</div><div class="txt"><b data-t="rs.a">Bürgerstiftung Kassel</b><span data-t="rs.as">offen · bis 5.000 EUR · Online-Formular</span></div><span class="tag" data-t="rs.at">offen</span></div>
-        <div class="row"><div class="avatar">S</div><div class="txt"><b data-t="rs.b">Software AG-Stiftung, Darmstadt</b><span data-t="rs.bs">zweistufig · 20.000 bis 500.000 EUR</span></div><span class="tag" data-t="rs.bt">zweistufig</span></div>
-        <div class="row"><div class="avatar">E</div><div class="txt"><b data-t="rs.c">Edith Maryon Stiftung, Basel</b><span data-t="rs.cs">kauft Boden, verpachtet dauerhaft</span></div><span class="tag" data-t="rs.ct">Boden</span></div>
-        <div class="stack-note" data-t="rs.note">Jeder Eintrag zeigt Quelle und Prüfdatum. Stiftungen pflegen ihr Profil selbst.</div>
-      </div>
-    </article>
-    <article class="rolle gruen" id="projekte">
-      <div class="verb"><i></i><span data-t="rp.verb">Zeigen</span></div>
-      <h3 data-t="rp.h3">Projekte: zeig, woran du arbeitest.</h3>
-      <p data-t="rp.p">Setz einen Pin auf die Karte, wähl drei bis sechs Themen und deine Region. Daraus entsteht deine Liste: die Stiftungen, die zu dir passen, sortiert nach Übereinstimmung und Nähe. Kein Antragspoker, ein Profil.</p>
-      <a class="link-arrow" href="/app/" data-t="rp.link">Projekt anlegen →</a>
-      <div class="visual">
-        <div class="row"><div class="avatar">W</div><div class="txt"><b data-t="rp.a">Werkstatt am Bahnhof</b><span data-t="rp.as">#handwerk #jugend #hessen</span></div><span class="tag" data-t="rp.at">4 passen</span></div>
-        <div class="row"><div class="avatar">M</div><div class="txt"><b data-t="rp.b">Musterschule Gudensberg</b><span data-t="rp.bs">#bildung #potenzialentfaltung #reformpaedagogik</span></div><span class="tag" data-t="rp.bt">9 passen</span></div>
-        <div class="row"><div class="avatar">V</div><div class="txt"><b data-t="rp.c">Vollmondfeuer Lohre</b><span data-t="rp.cs">#gemeinwesen #frieden #innere-arbeit</span></div><span class="tag" data-t="rp.ct">3 passen</span></div>
-        <div class="stack-note" data-t="rp.note">Sortiert nach gemeinsamen Themen, Region und Größenordnung. Jede Zeile zeigt, warum.</div>
-      </div>
-    </article>
-    </div>
-  </div>
-</section>
-
-<section id="kreislauf">
-  <div class="wrap flow">
-    <div>
-      <div class="head left">
-        <div class="kicker" data-t="k.kicker">Der Kreislauf</div>
-        <h2 data-t="k.h2">Ein Kreislauf, kein Antrag.</h2>
-        <p class="section-lede" data-t="k.lede">In der Mitte steht das Vertrauen: das Real Life Trust Protokoll, darum Profile, Karte und Stack. Außen die vier Rollen. Anstifter fangen an, Zustifter geben, Stiftungen fördern, Projekte arbeiten draußen. Was daraus wird, sehen alle, und die nächste Gabe folgt.</p>
-      </div>
-      <a class="link-arrow" href="/kreislauf/" data-t="k.link">So läuft es im Ganzen →</a>
-    </div>
-    <svg class="diagram" viewBox="0 0 800 800" role="img" aria-label="Das Geflecht: vier Rollen um das Vertrauen">
+    <svg class="diagram big-diagram" viewBox="0 0 800 800" role="img" aria-label="Das Geflecht: vier Rollen um das Vertrauen">
       <defs>
         <marker id="pf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head" d="M0 0 L10 5 L0 10z"></path></marker>
         <marker id="pg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head gruen" d="M0 0 L10 5 L0 10z"></path></marker>
@@ -307,93 +208,36 @@
       <text class="label gruen" x="400" y="726" data-t="d.l5">fördern</text>
       <text class="label gruen" x="400" y="84" data-t="d.l6">Wirkung kehrt zurück</text>
     </svg>
-  </div>
-</section>
 
-<div class="band">
-  <div class="wrap band-grid">
-    <div>
-      <div class="big" data-t="band.big">Ein Topf,<br><em>viele Räume.</em></div>
-      <p data-t="band.p">Jede Stiftung bekommt ihren eigenen Raum: Karte, Community, Quests. Alle zahlen in einen gemeinsamen Topf, der Betrieb, Entwicklung und Verein finanziert. So wächst deine Community, und das Ganze trägt sich selbst.</p>
+    <div class="flowsteps">
+      <div class="fs"><span class="n">1</span><div><h3 data-t="kp.s1.h">Anstifter fangen an</h3><p data-t="kp.s1.p">Anstifter sind Menschen. Sie starten Projekte, bringen ihre Begabung ein und arbeiten in Stiftungen mit. Von ihnen kommt der erste Anstoß.</p></div></div>
+      <div class="fs"><span class="n">2</span><div><h3 data-t="kp.s2.h">Zustifter geben dazu</h3><p data-t="kp.s2.p">Wer Wirkung sieht, gibt dazu: in eine Stiftung oder direkt an ein Projekt. Beide Wege stehen offen, beide bleiben sichtbar.</p></div></div>
+      <div class="fs gruen"><span class="n">3</span><div><h3 data-t="kp.s3.h">Stiftungen fördern</h3><p data-t="kp.s3.p">Die Stiftung findet über die Tags, was zu ihrem Zweck passt, und fördert. Dafür bekommt sie einen eigenen Raum: Karte, Community, Quests.</p></div></div>
+      <div class="fs"><span class="n">4</span><div><h3 data-t="kp.s4.h">Projekte arbeiten draußen</h3><p data-t="kp.s4.p">Projekte entstehen an einem Ort, mit Menschen, die sich in die Augen sehen. Sie nehmen Gaben aus allen drei Richtungen an.</p></div></div>
+      <div class="fs gruen"><span class="n">5</span><div><h3 data-t="kp.s5.h">Die Wirkung kommt zurück</h3><p data-t="kp.s5.p">Was aus einer Gabe wurde, bleibt auf der Karte. Anstifter, Zustifter und Stiftungen sehen es und geben weiter. So schließt sich der Kreis.</p></div></div>
     </div>
-    <div class="facts">
-      <div class="fact"><b>280</b><span data-t="fact1">Stiftungen recherchiert</span></div>
-      <div class="fact"><b>8</b><span data-t="fact2">Antragswege</span></div>
-      <div class="fact"><b>11</b><span data-t="fact3">Förderkriterien</span></div>
-    </div>
-  </div>
-</div>
 
-<section id="rubriken">
-  <div class="wrap">
-    <div class="head">
-      <div class="kicker" data-t="ru.kicker">Förderkriterien</div>
-      <h2 data-t="ru.h2">Elf Felder, in denen gefördert wird.</h2>
-      <p class="section-lede" data-t="ru.lede">Jedes Projekt und jede Stiftung ordnet sich hier ein. Wo sich die Felder überlappen, finden beide zueinander.</p>
+    <div class="head left" style="margin-top: 56px">
+      <h2 data-t="kp.mitte.h">Was in der Mitte steht</h2>
+      <p class="section-lede" data-t="kp.mitte.p">Vier Schichten tragen das Ganze: innen das Vertrauen, außen das Werkzeug. Ohne sie wäre der Kreis nur ein Bild.</p>
     </div>
-    <div class="chips">
-      <span class="chip" data-t="ru1">Soziale Innovation und Gemeinwohl</span>
-      <span class="chip" data-t="ru2">Digitale Souveränität und Open Source</span>
-      <span class="chip" data-t="ru3">Politische Bildung und Demokratie</span>
-      <span class="chip" data-t="ru4">Kultur und Kunst</span>
-      <span class="chip" data-t="ru5">Handwerk und Berufsorientierung</span>
-      <span class="chip" data-t="ru6">Kinder, Jugend und Familie</span>
-      <span class="chip" data-t="ru7">Gesundheit und Prävention</span>
-      <span class="chip" data-t="ru8">Ländliche Entwicklung und Region</span>
-      <span class="chip" data-t="ru9">Nachhaltigkeit und Kreislaufwirtschaft</span>
-      <span class="chip" data-t="ru10">Frieden und Verständigung</span>
-      <span class="chip" data-t="ru11">Bildung und freie Lernräume</span>
+    <div class="steps vier">
+      <div class="step"><span class="n">1</span><h3 data-t="kp.m1.h">Vertrauen</h3><p data-t="kp.m1.p">Das Real Life Trust Protokoll. Zwei Menschen treffen sich und bestätigen das gegenseitig. Daraus wächst das Netz. Deine Identität liegt auf deinem Gerät, nicht auf unserem Server.</p></div>
+      <div class="step"><span class="n">2</span><h3 data-t="kp.m2.h">Profile</h3><p data-t="kp.m2.p">Menschen, Projekte und Stiftungen zeigen, wer sie sind und was sie brauchen. Das Profil gehört dir und wandert mit, wenn du den Anbieter wechselst.</p></div>
+      <div class="step"><span class="n">3</span><h3 data-t="kp.m3.h">Karte</h3><p data-t="kp.m3.p">Hier treffen sich alle vier Rollen. Aus einem Eintrag wird ein Ort, den du besuchen kannst.</p></div>
+      <div class="step"><span class="n">4</span><h3 data-t="kp.m4.h">Stack</h3><p data-t="kp.m4.p">Der Real Life Stack ist der Werkzeugkasten: Karte, Kalender, Kanban, Feed. Jede Gemeinschaft stellt sich zusammen, was sie braucht. Offener Quellcode, selbst hostbar.</p></div>
+    </div>
     </div>
   </div>
 </section>
 
-<section class="or3" id="antragswege">
+<section class="closing or3" id="mitmachen">
   <div class="wrap">
-    <div class="head">
-      <div class="kicker" data-t="a.kicker">Ressourcen</div>
-      <h2 data-t="a.h2">Wie du an eine Stiftung herankommst.</h2>
-      <p class="section-lede" data-t="a.lede">Stiftungen bringen Zweck, Kapital, Netzwerk und Wissen mit. Der Weg hinein ist bei jeder anders. Acht Wege unterscheiden wir auf der Karte.</p>
-    </div>
-    <div class="cards four">
-      <div class="card tight"><span class="code">offen</span><h3 data-t="a1.h">Offen</h3><p data-t="a1.p">Offen ausgeschrieben. Jeder gemeinnützige Träger kann einen Antrag stellen. Bürgerstiftung Kassel, Stiftung Bildung.</p></div>
-      <div class="card tight"><span class="code">wettbewerb</span><h3 data-t="a2.h">Wettbewerb</h3><p data-t="a2.p">Offener Wettbewerb mit Frist. Ferry-Porsche-Challenge, Ravensburger Klasse-Wettbewerb.</p></div>
-      <div class="card tight"><span class="code">anfrage</span><h3 data-t="a3.h">Anfrage</h3><p data-t="a3.p">Erst ein Gespräch, dann ein Antrag. Sparkassenstiftungen, Landesstiftung Miteinander in Hessen.</p></div>
-      <div class="card tight"><span class="code">eingeladen</span><h3 data-t="a4.h">Eingeladen</h3><p data-t="a4.p">Nur eingeladene Projekte. Der Weg führt über Menschen, die schon drin sind.</p></div>
-      <div class="card tight"><span class="code">operativ</span><h3 data-t="a5.h">Operativ</h3><p data-t="a5.p">Die Stiftung arbeitet mit eigenen Programmen. Andocken heißt hier: mitarbeiten.</p></div>
-      <div class="card tight"><span class="code">kooperation</span><h3 data-t="a6.h">Kooperation</h3><p data-t="a6.p">Nur über gemeinsame Programme, etwa mit Ministerien oder Verbänden.</p></div>
-      <div class="card tight"><span class="code">traeger-partnerschaft</span><h3 data-t="a7.h">Träger-Partnerschaft</h3><p data-t="a7.p">Förderung über Mitgliedschaft oder Trägerschaft. Kolping, Diakonie, Paritätischer, Kammern.</p></div>
-      <div class="card tight"><span class="code">boden</span><h3 data-t="a8.h">Boden</h3><p data-t="a8.p">Kein Geld, sondern Grund und Boden: gekauft und dauerhaft verpachtet. Edith Maryon Stiftung.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="matching">
-  <div class="wrap">
-    <div class="head">
-      <div class="kicker" data-t="m.kicker">Zusammenfinden</div>
-      <h2 data-t="m.h2">So finden Projekte, Stiftungen und Menschen zueinander.</h2>
-    </div>
-    <div class="steps">
-      <div class="step"><span class="n">1</span><h3 data-t="m1.h">Tags wählen</h3><p data-t="m1.p">Ein Projekt wählt drei bis sechs Themen aus einem gemeinsamen Vokabular, dazu Region und Andock-Feld. Eine Stiftung trägt ihre Themen, Rechtsform, Region und ihren Antragsweg ein.</p></div>
-      <div class="step"><span class="n">2</span><h3 data-t="m2.h">Gemeinsames zählen</h3><p data-t="m2.p">Wir zählen die gemeinsamen Themen und prüfen Region, Größenordnung, Antragsweg und Frist. Daraus wird eine Liste, und jede Zeile zeigt, warum sie dort steht.</p></div>
-      <div class="step"><span class="n">3</span><h3 data-t="m3.h">Auf der Karte sehen</h3><p data-t="m3.p">Die Pin-Farbe zeigt den Antragsweg, die Größe das Fördervolumen. Filtern kannst du nach Förderkriterium, Region und Antragsweg. Fehlt eine Stiftung, trag sie nach.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="closing" id="mitmachen">
-  <div class="wrap">
-    <h2 data-t="cl.h2">Bring dein Projekt auf die Karte.</h2>
-    <p data-t="cl.p">Oder finde als Stiftung, was zu deinem Zweck passt. Oder gib dazu. Zwei Minuten, keine E-Mail-Anmeldung, deine Identität bleibt auf deinem Gerät.</p>
+    <h2 data-t="kp.cta.h2">Leg los.</h2>
+    <p data-t="kp.cta.p">Als Anstifter, Zustifter, Stiftung oder Projekt. Der erste Schritt ist ein Pin auf der Karte.</p>
     <div class="hero-cta">
       <a class="pill lg" href="/app/" data-t="cta.app">App öffnen →</a>
-      <a class="link-arrow" href="/app/network/map" data-t="cl.link">Karte ansehen</a>
-    </div>
-    <div>
-      <a class="android" href="https://github.com/real-life-org/real-life-stack/releases/download/app-v0.2.10/org.reallife.reallifestack_210.apk">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M4 20h16"></path></svg>
-        <span data-t="cl.android">Android-App herunterladen</span>
-      </a>
+      <a class="link-arrow" href="/" data-t="kp.cta.link">Zurück zur Übersicht</a>
     </div>
   </div>
 </section>
@@ -416,9 +260,9 @@
       <div>
         <h4 data-t="ft.erfahren">Erfahren</h4>
         <ul>
-          <li><a href="#rollen" data-t="ft.fuerwen">Für wen</a></li>
-          <li><a href="#rubriken" data-t="nav.rubriken">Förderkriterien</a></li>
-          <li><a href="#antragswege" data-t="nav.antragswege">Antragswege</a></li>
+          <li><a href="/#rollen" data-t="ft.fuerwen">Für wen</a></li>
+          <li><a href="/#rubriken" data-t="nav.rubriken">Förderkriterien</a></li>
+          <li><a href="/#antragswege" data-t="nav.antragswege">Antragswege</a></li>
         </ul>
       </div>
       <div>

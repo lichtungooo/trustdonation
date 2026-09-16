@@ -1,88 +1,80 @@
-# reallife.network — Instanz
+# trustdonation
 
-Die Instanz hinter <https://reallife.network>: Landingpage auf `/`,
-Real-Life-Stack-App auf `/app`. Es wird **nichts gebaut** — die App kommt als
-fertiges Image aus `ghcr.io/real-life-org/rls-app`, alles hier ist
-Konfiguration und Assets (siehe [Spec 11][spec] und `deploy/app/README.md` im
-Stack-Repo).
+**Infrastruktur für vertrauensbasierte Förderung.** Stiftungen, Projekte, Anstifter, Zustifter und Menschen finden auf einer Karte zueinander.
 
-[spec]: https://github.com/real-life-org/real-life-stack/blob/master/docs/spec/11-runtime-config-und-branding.md
+Getragen vom [Real Life Network e.V.](https://reallife.network) · gebaut auf dem [Real Life Stack](https://github.com/real-life-org/real-life-stack) · Vertrauensschicht ist das Real Life Trust Protokoll.
+
+| | |
+|---|---|
+| Domain | trustdonation.org *(DNS in Arbeit)* |
+| Baustelle | <https://wir.ooo> |
+| Konzept | [konzept/INDEX.md](konzept/INDEX.md) |
+
+## Der Satz
+
+> trustdonation baut eine Infrastruktur, mit der Stiftungen ihre Förderwirkung erhöhen, weil passende Projekte, Menschen, Anstifter und Zustifter leichter zusammenfinden.
+
+Keine Spendenplattform. Eine Verbindungsschicht zwischen Kapital, Menschen, Organisationen und realen Vorhaben. Geld ist nicht der Einstieg, sondern ein Ergebnis einer Beziehung.
+
+## Die vier Grundsätze
+
+1. **Geld kauft keine Vertrauensbewertung.** Partner bekommen Status und Mitsprache, keine bessere Platzierung im Matching.
+2. **Fakten statt Noten.** Kriterien, Quelle, Prüfdatum. Keine Sterne, keine Ampeln, keine Bewertung von Organisationen.
+3. **Vertrauen entsteht im Netz, nicht bei uns.** Wir stellen kein Zertifikat aus, wir machen nachvollziehbar, was passiert ist.
+4. **Die Identität bleibt beim Menschen.** Schlüssel auf dem Gerät, Profil wandert mit.
 
 ## Was hier liegt
 
 ```
-landing/      die Landingpage - freies HTML, wird auf / ausgeliefert
+landing/      die Landingpage, wird auf / ausgeliefert
+  stile/      neun Sprachstile als Wörterbuch, je eine JSON-Datei
+  logo/       Wortmarke und Signet
   fonts/      selbst gehostet, keine Anfrage an Dritte
-  fotos/      sechs Bilder; vier davon zeigt die Seite je Besuch
-branding/     theme.json (Farbtokens) und favicon.svg
+konzept/      Modell, Datenmodell, Ansprache, Pilot, Fragebögen
+branding/     theme.json (Farbtokens) und favicon.svg für die App
 docker-compose.yml
 .env.example  Vorlage; die echte .env steht auf dem Server
 ```
 
-## Betrieb
+**Kein Stack-Code.** Die App kommt als fertiges Image aus `ghcr.io/real-life-org/rls-app`. Alles hier ist Konfiguration und Inhalt (siehe [Spec 11][spec]).
 
-Verzeichnis auf dem Server: `/home/timo/apps/rls-app/`
-(Host `h2980589.stratoserver.net`, Traefik + Let's Encrypt).
+[spec]: https://github.com/real-life-org/real-life-stack/blob/master/docs/spec/11-runtime-config-und-branding.md
+
+## Drei Arten von Updates
+
+| Was | Woher | Wie |
+|-----|-------|-----|
+| **Die App** | `ghcr.io/real-life-org/rls-app` | `RLS_IMAGE_TAG` in der `.env` hochziehen, `docker compose up -d` |
+| **Die Instanz-Vorlage** | `real-life-org/reallife-network-instanz` | `git fetch upstream && git merge upstream/main` |
+| **Die Seite** | dieses Repo | `git pull` auf dem Server |
+
+Dieses Repo ist ein Fork der Instanz-Vorlage. Antons Verbesserungen an Compose, Deploy und Vorlage holen wir uns über `upstream`; unsere Landingpage bleibt dabei unsere.
+
+```bash
+git remote add upstream https://github.com/real-life-org/reallife-network-instanz.git
+git fetch upstream
+git merge upstream/main
+```
+
+## Betrieb
 
 ```bash
 docker compose up -d      # liest .env, zieht das gepinnte Image
 ```
 
-`landing/` und `branding/` sind **read-only gemountet**: eine geänderte Datei
-wirkt beim nächsten Laden der Seite, ohne Neustart. Nur Änderungen an `.env`
-brauchen ein erneutes `docker compose up -d`, weil daraus die `config.json`
-der App entsteht.
+Server: `/home/timo/apps/wir-ooo/` auf dem Strato-Host, Traefik mit Let's Encrypt davor.
 
-**Wichtig beim Ausrollen:** Dateien *im* gemounteten Verzeichnis ersetzen,
-das Verzeichnis selbst nicht löschen und neu anlegen — der laufende Container
-zeigt sonst weiter auf das alte Inode und liefert 403.
+## Mitarbeiten
 
-## Abweichungen von der Vorlage im Stack-Repo
+Das Konzept liegt in [konzept/](konzept/) und ist der gemeinsame Stand. Wer etwas ändern will, öffnet ein Issue oder einen Pull Request.
 
-* `network_mode: bridge` statt eines externen `web`-Netzes: Traefik hängt auf
-  diesem Server auf der Default-Bridge, wie alle anderen Apps dort.
-* Eine Traefik-Regel schreibt `/app` auf `/app/` um. Das ist ein Übergang,
-  bis das Image den Redirect selbst proxy-tauglich ausgibt
-  (real-life-stack#296); danach kann sie raus.
-* `watchtower.enable=false` — die Instanz pinnt ihre Version bewusst.
+Die Arbeit läuft in vier Wellen, siehe [konzept/04-pilot-und-umsetzung.md](konzept/04-pilot-und-umsetzung.md):
 
-## Bilder
+1. **Sichtbarkeit** Stiftungen und Projekte auf der Karte, mit Quelle und Prüfdatum
+2. **Matching mit Begründung** jede Zeile zeigt, warum sie dort steht
+3. **Menschen und Beiträge** reale Begegnung, Beitrag, später Gabe
+4. **Der Kreis schließt sich** Anstifter, Bedarfe, Wirkung zurück auf die Karte
 
-Sechs Bilder, vier Kacheln: drei quer, eine hoch. Ein kleines Skript in
-`landing/index.html` zieht bei jedem Besuch neu, getrennt nach Format, damit
-das Mosaik seine Form behält. Ohne JavaScript gilt die im Markup stehende
-Auswahl.
+## Lizenz
 
-Die Bilder sind auf rund das Doppelte ihrer Darstellungsgröße gerechnet und
-als WebP abgelegt. Wer ein Bild austauscht, muss `width`/`height` im Markup
-mitziehen, sonst springt die Seite beim Laden.
-
-Alle abgebildeten Menschen haben zugestimmt.
-
-## Android-App
-
-Die Einladungs-Sektion verlinkt die APK aus dem GitHub-Release des
-Stack-Repos. **Der Link ist fest verdrahtet und muss beim nächsten
-signierten Release nachgezogen werden** — ein `latest`-Link ginge ins Leere,
-weil die neuesten Releases dort OTA-Bundles ohne APK sind.
-
-Stand: `app-v0.2.3` (`org.reallife.reallifestack_203.apk`). Für `app-v0.2.4`
-und `app-v0.2.5` wurde der Signier- und Ausliefer-Schritt auf dem
-Release-Server nicht ausgeführt, deshalb hängt an ihnen keine Datei.
-Der native Teil ist damit älter als die Web-App — was ein Nutzer sieht,
-ist trotzdem aktuell, weil der F-Droid-Kanal seinen Web-Layer per OTA
-nachzieht (siehe `docs/RELEASING.md` im Stack-Repo).
-
-## Schriften
-
-`landing/fonts/` enthält Bricolage Grotesque, Hanken Grotesk und Spectral —
-alle drei unter der [SIL Open Font License 1.1][ofl], die das Mitliefern
-ausdrücklich erlaubt. Sie liegen bewusst hier statt bei Google: so lädt die
-Seite keine Ressource von Dritten, und niemand wird beim Besuch an einen
-fremden Server gemeldet.
-
-[ofl]: https://openfontlicense.org/
-
-## Bilder
-
-Alle abgebildeten Menschen haben der Veröffentlichung zugestimmt.
+Inhalte und Konzept: CC BY-SA 4.0. Der Real Life Stack steht unter seiner eigenen Lizenz.

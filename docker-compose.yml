@@ -1,16 +1,19 @@
-# Eine RLS-Instanz auf Timos NixOS-Server: Landingpage auf /, App auf /app.
+# trustdonation — Instanz auf Timos NixOS-Server.
 #
-# Abweichung von deploy/app/docker-compose.yml aus dem Stack-Repo: Dieser
-# Server haengt Traefik nicht in ein eigenes `web`-Netz, sondern laesst alle
-# Apps auf der Default-Bridge laufen (so wie wot-relay-vnext und
-# macher-network). Darum `network_mode: bridge` statt `networks: web`.
+# Zwei Domains auf demselben Container: die Zieldomain aus RLS_DOMAIN und
+# die Baustelle aus RLS_DOMAIN_ALT (Standard wir.ooo). Traefik holt fuer
+# beide ein Zertifikat, sobald ihr DNS auf diesen Server zeigt.
+# Schwester der reallife.network-Instanz in ~/apps/rls-app/.
+#
+# Alle Namen sind auf -wir gesetzt, damit die beiden Instanzen sich nicht
+# in die Quere kommen (Container-Namen, Traefik-Router).
 #
 # Start:  docker compose up -d      (Konfiguration in .env)
 
 services:
   app:
     image: ghcr.io/real-life-org/rls-app:${RLS_IMAGE_TAG:?RLS_IMAGE_TAG fehlt - welche Version soll laufen?}
-    container_name: rls-app
+    container_name: rls-app-wir
     network_mode: bridge
     restart: unless-stopped
     environment:
@@ -24,16 +27,12 @@ services:
       RLS_APP_NAME: ${RLS_APP_NAME:?RLS_APP_NAME fehlt - wie heisst diese Instanz?}
       RLS_FAVICON_URL: ${RLS_FAVICON_URL:-/branding/favicon.svg}
     volumes:
-      # Beides gehoert dem Betreiber, read-only gemountet.
       - ./landing:/srv/landing:ro
       - ./branding:/srv/branding:ro
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.rls-app.rule=Host(`${RLS_DOMAIN:?RLS_DOMAIN fehlt - unter welcher Domain laeuft die Instanz?}`)"
-      - "traefik.http.routers.rls-app.entrypoints=websecure"
-      - "traefik.http.routers.rls-app.tls.certresolver=letsencrypt"
-      # Das Image laeuft unprivilegiert und lauscht darum auf 8080, nicht 80.
-      - "traefik.http.services.rls-app.loadbalancer.server.port=8080"
-      # Instanzen pinnen ihre Version - Watchtower soll NICHT automatisch
-      # auf eine neue Minor ziehen.
+      - "traefik.http.routers.rls-app-wir.rule=Host(`${RLS_DOMAIN:?RLS_DOMAIN fehlt - unter welcher Domain laeuft die Instanz?}`) || Host(`${RLS_DOMAIN_ALT:-wir.ooo}`)"
+      - "traefik.http.routers.rls-app-wir.entrypoints=websecure"
+      - "traefik.http.routers.rls-app-wir.tls.certresolver=letsencrypt"
+      - "traefik.http.services.rls-app-wir.loadbalancer.server.port=8080"
       - "com.centurylinklabs.watchtower.enable=false"

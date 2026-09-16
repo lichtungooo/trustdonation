@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" width="100%" height="100%" style="background:#ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;">
+  <g transform="translate(10, 8)">
+    <text x="0" y="27" font-size="32" font-weight="700" letter-spacing="-0.045em" fill="#1B5E40">trustd</text>
+    <g transform="translate(84, 9.5) scale(0.117)">
+      <path d="M 68 8 A 67 67 0 0 0 68 142 L 68 99 A 24 24 0 0 1 68 51 Z" fill="#1B5E40" />
+      <path d="M 82 8 A 67 67 0 0 1 82 142 L 82 99 A 24 24 0 0 0 82 51 Z" fill="#EA580C" />
+      <circle cx="75" cy="75" r="14" fill="#EA580C" />
+    </g>
+    <text x="102" y="27" font-size="32" font-weight="700" letter-spacing="-0.045em" fill="#1B5E40">nation</text>
+  </g>
+</svg>

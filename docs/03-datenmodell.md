@@ -8,7 +8,7 @@ Die Felder für Stiftung und Projekt und ihre Abbildung auf den Real Life Stack.
 
 Die Karte trägt zwei Arten von Einträgen. Sie sehen ähnlich aus und beantworten verschiedene Fragen.
 
-**Ebene A, Förderer.** Stiftungen und Förderorganisationen.
+**Ebene A, Förderer.** Nicht nur Stiftungen. Auch Kommunen, Länder, Bund, EU, Lotterien, Kirche und Wohlfahrt, Verbände und Kammern. Das Feld `foerdererart` unterscheidet sie ([06-foerderhilfe.md → Fördertöpfe auf mehreren Ebenen](06-foerderhilfe.md)).
 
 > Was macht sie? Was fördert sie? Wo? Wer kann anfragen? Wie? Wann? Welche Summen? Zustiftung möglich? Spende möglich?
 
@@ -18,11 +18,15 @@ Die Karte trägt zwei Arten von Einträgen. Sie sehen ähnlich aus und beantwort
 
 Die letzten vier Fragen der Ebene B beantwortet nicht das Projekt, sondern die Plattform. Genau dort liegt der Nutzen.
 
-## Stiftung
+## Förderer
+
+Die Felder gelten für jede Art von Förderer. „Stiftung“ steht im Text stellvertretend, weil dort unsere Recherche liegt.
+
 
 | Feld | Typ | Bemerkung |
 |---|---|---|
 | `name` | Text | |
+| `foerdererart` | Auswahl | Stiftung, Kommune, Land, Bund, EU, Lotterie, Kirche, Wohlfahrt, Verband, Kammer, Unternehmen |
 | `sitz` | Text | Stadt, Bundesland, Land |
 | `position` | GeoJSON Point | für die Karte |
 | `zweck` | Text | eigene Zusammenfassung, kein Zitat |

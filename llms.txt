@@ -13,7 +13,7 @@ The core idea: money is not the entry point, it is the result of a relationship.
 - [03 Datenmodell](https://github.com/lichtungooo/trustdonation/blob/main/docs/03-datenmodell.md): Fields for foundation and project, mapping onto Real Life Stack items, relations and spaces.
 - [04 Recht](https://github.com/lichtungooo/trustdonation/blob/main/docs/04-recht.md): Legal guardrails for collecting public facts, the provenance block, GDPR on contact data, profile claiming.
 - [05 Matching](https://github.com/lichtungooo/trustdonation/blob/main/docs/05-matching.md): Suggestions with a reason per line, eleven funding criteria, eight application paths. No ratings.
-- [06 Förderhilfe](https://github.com/lichtungooo/trustdonation/blob/main/docs/06-foerderhilfe.md): People who help with funding applications, the recurring local meetup, and the help tags. Same matching, third direction.
+- [06 Förderhilfe](https://github.com/lichtungooo/trustdonation/blob/main/docs/06-foerderhilfe.md): The Förderhelden programme: people with experience help other projects apply for funding, at recurring local meetups and through the same matching with their own tags. Covers funders at every level, not only foundations: municipality, state, federal, EU, lotteries, church, associations.
 - [Glossar](https://github.com/lichtungooo/trustdonation/blob/main/docs/glossar.md): Shared vocabulary.
 
 ## Working with foundations

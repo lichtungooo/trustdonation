@@ -30,6 +30,18 @@ Menschen mit Erfahrung helfen Projekten beim Antrag. Läuft über dasselbe *Matc
 
 → [06-foerderhilfe.md](06-foerderhilfe.md)
 
+## Förderheld
+
+Mensch, der anderen Projekten bei der Förderung hilft: schreiben, rechnen, den richtigen Topf finden. Kein Berater, kein Dienstleister. Seine Erfahrung steht in bestätigten *Beiträgen*. Auch Menschen aus Stiftungen sind eingeladen. Arbeitstitel, Marke noch zu prüfen.
+
+→ [06-foerderhilfe.md → §Das Projekt Förderhelden](06-foerderhilfe.md)
+
+## Förderer
+
+Sammelbegriff für alle, die Mittel vergeben: Stiftungen, Kommunen, Land, Bund, EU, Lotterien, Kirche und Wohlfahrt, Verbände und Kammern. Das Feld `foerdererart` unterscheidet sie.
+
+→ [06-foerderhilfe.md → §Fördertöpfe auf mehreren Ebenen](06-foerderhilfe.md)
+
 ## Förderstammtisch
 
 Wiederkehrender Termin an einem Ort, an dem Antragserfahrung weitergegeben wird. Erscheint auf Karte und im Kalender. Erzeugt reale Begegnungen und damit *Verbindungen*.

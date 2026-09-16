@@ -51,6 +51,8 @@ Neben dem Matching gibt es ein zweites Angebot, das eine Geschäftsstelle sofort
 
 Eine Stiftung kann selbst daran teilnehmen: zwanzig Minuten am Stammtisch, in denen sie erklärt, was sie wirklich lesen will. Das kostet wenig und spart viel.
 
+Und die Einladung geht weiter: **Wer in einer Geschäftsstelle jedes Jahr zweihundert Anträge liest, ist der beste Förderheld, den ein Projekt bekommen kann.** Diese Frage gehört ans Ende des Termins.
+
 ### Tür 2: Wir möchten Ihre Sicht verstehen
 
 Der wichtigere Schritt. Sieben Fragen:

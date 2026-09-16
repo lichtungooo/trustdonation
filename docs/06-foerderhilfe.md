@@ -22,6 +22,60 @@ Die zweite Frage im Stiftungsgespräch lautet: *Welche Anträge passen häufig n
 
 Das ist ein eigenes Argument im Gespräch ([07-ansprache.md](07-ansprache.md)).
 
+## Das Projekt Förderhelden
+
+Förderhilfe braucht Menschen. Die suchen wir mit einem eigenen Aufruf, und zwar als **Projekt auf unserer eigenen Karte**. Es heißt **Förderhelden**.
+
+> **Wir suchen Förderhelden.**
+>
+> Menschen, die gut schreiben können. Menschen, die wissen, wie ein Kosten- und Finanzierungsplan aussieht. Menschen, die schon einmal einen Antrag gestellt haben und sich erinnern, woran es hing.
+>
+> Ihr helft anderen Projekten, an Förderung zu kommen: bei Stiftungen, bei der Kommune, beim Land, beim Bund, bei der EU, bei Lotterien und Verbänden. Je nachdem, wie ein Projekt aufgestellt ist, führt ein anderer Weg zum Ziel. Ihr kennt diese Wege oder findet sie schneller als die, die zum ersten Mal suchen.
+
+Ein Förderheld ist kein Berater und kein Dienstleister. Er ist jemand, der etwas weiß und es weitergibt. Was daraus wird, steht später in seinen bestätigten Beiträgen.
+
+### Auch Stiftungen schicken ihre Leute
+
+Wer in einer Geschäftsstelle sitzt und jedes Jahr zweihundert Anträge liest, ist der beste Förderheld, den ein Projekt bekommen kann. Diese Menschen wissen genau, woran es scheitert.
+
+Für die Stiftung ist das billiger als jeder Absagebrief, und es ist eine Form, sich einzubringen, die nichts kostet außer Zeit. Wir laden sie ausdrücklich ein, und zwar im selben Gespräch, in dem wir nach ihrer Sicht fragen ([07-ansprache.md](07-ansprache.md)).
+
+### Was ein Förderheld davon hat
+
+- Seine Erfahrung wird sichtbar, mit bestätigten Beiträgen statt mit einem Lebenslauf
+- Er trifft Menschen, die dasselbe können, am Förderstammtisch
+- Er sieht, was aus seiner Hilfe geworden ist, weil das Projekt auf der Karte bleibt
+- Er kommt an Projekte heran, die ihn selbst interessieren
+
+### Wie man Förderheld wird
+
+1. Profil anlegen, Können eintragen: welche Tags, welche Töpfe, welche Region
+2. Beim Förderstammtisch vorbeikommen oder sich auf eine Anfrage melden
+3. Helfen. Das Projekt bestätigt den Beitrag, fertig
+
+## Fördertöpfe auf mehreren Ebenen
+
+Stiftungen sind nur eine Quelle. Ein Projekt, das keine passende Stiftung findet, findet vielleicht einen Topf auf einer anderen Ebene. Förderhelden kennen diese Landschaft.
+
+| Ebene | Beispiele | Was typisch ist |
+|---|---|---|
+| **Kommune** | Stadt, Landkreis, Ortsbeirat | kleine Summen, kurze Wege, oft formlos |
+| **Land** | Landesprogramme, Landeszentralen, Lotteriemittel | Fristen, Formulare, Eigenmittel |
+| **Bund** | Ministerien, Bundesprogramme, Stiftungen des Bundes | lange Vorläufe, hohe Summen, viel Nachweis |
+| **EU** | Erasmus+, LEADER, ESF | Partnerschaften nötig, Vorlauf über ein Jahr |
+| **Stiftungen** | privat, kirchlich, Bürger-, Firmenstiftungen | Zweckbindung, sehr verschiedene Wege |
+| **Lotterien** | Aktion Mensch, Deutsche Fernsehlotterie, Glücksspirale | feste Antragsfenster, klare Kriterien |
+| **Kirche und Wohlfahrt** | Diakonie, Caritas, Kolping, Paritätischer | oft über Mitgliedschaft oder Trägerschaft |
+| **Verbände und Kammern** | Handwerkskammer, Sportbund, Fachverbände | Mitgliedsprojekte, Sachleistungen |
+
+Die Karte trägt darum nicht nur Stiftungen, sondern **Förderer** aller Art. Das Feld dafür steht im Datenmodell ([03-datenmodell.md](03-datenmodell.md)).
+
+Wir fangen mit Stiftungen an, weil dort unsere Recherche liegt. Die übrigen Ebenen kommen dazu, sobald Förderhelden sie mitbringen.
+
+### Zum Namen
+
+„Förderhelden“ ist ein Arbeitstitel, der gut trägt. Vor der ersten öffentlichen Nutzung prüfen wir zwei Dinge: ob eine Marke darauf liegt und ob die Domain frei ist. Solange das offen ist, benutzen wir ihn intern und in Gesprächen, nicht auf Drucksachen.
+
 ## Drei Formen
 
 ### 1. Menschen, die helfen

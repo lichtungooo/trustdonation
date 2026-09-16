@@ -27,6 +27,7 @@ Die vorhandenen Verzeichnisse lösen einen Teil davon: Sie listen Stiftungen. Wa
 | **Karte** | Stiftungen, Projekte und ihre Community an einem Ort, weltweit, mit Quelle und Prüfdatum |
 | **Matching** | Vorschläge mit Begründung Zeile für Zeile, nie als Note |
 | **Projektseite** | was ein Projekt tut, braucht und schon erreicht hat |
+| **Förderhilfe** | Menschen mit Erfahrung helfen beim Antrag, an Stammtischen und über das Matching |
 | **Vertrauensschicht** | reale Begegnung, bestätigter Beitrag, gewachsenes Vertrauen |
 
 ## Was sich dadurch ändert

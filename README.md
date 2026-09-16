@@ -30,6 +30,7 @@ Verzeichnisse lösen einen Teil davon: Sie listen Stiftungen. Was fehlt, ist die
 - **Karte** mit Stiftungen, Projekten und Community, weltweit, jeder Eintrag mit Quelle und Prüfdatum
 - **Matching** mit Begründung Zeile für Zeile, nie als Note
 - **Projektseite**, die zeigt, was ein Projekt tut, braucht und schon erreicht hat
+- **Förderhilfe**: Menschen mit Erfahrung helfen anderen Projekten beim Antrag, an Stammtischen und über dieselben Tags
 - **Vertrauensschicht** aus realer Begegnung, bestätigtem Beitrag und gewachsenem Vertrauen
 
 Geld steht nicht am Anfang. Es ist ein Ergebnis einer Beziehung.

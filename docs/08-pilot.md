@@ -53,11 +53,15 @@ Die Liste „möglicherweise passende Förderer“ mit Zeile für Zeile nachvoll
 
 **Was gebraucht wird:** ein Modul oder eine Linse im Stack, die zwei Item-Typen gegeneinander rechnet.
 
-### Welle 2b: Förderhilfe (parallel zu Welle 2)
+### Welle 2b: Förderhelden (parallel zu Welle 2)
+
+**Förderhelden ist das erste Projekt auf unserer eigenen Karte.** Es wird mit dem Projektbogen angelegt wie jedes andere, mit Bedarf, Region und Tags. Damit zeigen wir am eigenen Beispiel, wie ein Projekt entsteht.
 
 Läuft ohne neue Technik, mit den Tags aus [06-foerderhilfe.md](06-foerderhilfe.md).
 
+- Der Aufruf „Wir suchen Förderhelden“ geht raus, über die Landing und in den Stiftungsgesprächen
 - Fünf Menschen tragen ihr Können ein: `#antragshilfe`, `#finanzierungsplan`, `#projektskizze`
+- Mindestens eine Stiftung schickt jemanden aus der Geschäftsstelle
 - Drei Pilotprojekte tragen denselben Bedarf
 - Ein Förderstammtisch in Nordhessen, mit jemandem aus einer Stiftung der ersten Welle
 - Ein Antrag, der dadurch besser wird. Das ist der Beweis fürs nächste Gespräch

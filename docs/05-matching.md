@@ -48,6 +48,34 @@ Stiftung A
 
 Die umgekehrte Richtung gilt genauso: Eine Stiftung sieht passende Projekte, mit denselben Zeilen.
 
+## Die Sicht des Zustifters
+
+Das Matching läuft nicht nur zwischen Projekt und Stiftung. Ein Mensch mit Kapital sucht anders:
+
+> „Ich habe 10.000 Euro und möchte nicht einfach irgendwohin spenden. Ich will sehen, wer in meiner Gegend tatsächlich etwas mit Jugend und Handwerk zu tun hat.“
+
+Er wählt Thema, Region und die Wirkung, die er sucht. Dann sieht er beides nebeneinander:
+
+```text
+Stiftung A
+  fördert Jugendbildung
+  Region Hessen
+  Zustiftung möglich
+  Das Kapital bleibt und wirft jedes Jahr Förderung ab
+
+Projekt B
+  braucht 20.000 EUR
+  Finanzierungslücke 7.500 EUR
+  Förderer bereits gefunden: 12.500 EUR zugesagt
+  noch offen: 2.500 EUR Eigen- oder Kofinanzierung
+```
+
+Zwei Arten zu geben, beide sichtbar, beide mit Quelle. Die Stiftung wirkt dauerhaft, das Projekt sofort. Welches richtig ist, entscheidet er, nicht wir.
+
+**Die Finanzierungslücke ist dabei die wichtigste Zahl.** Sie sagt einem Zustifter genau, was sein Beitrag bewirkt: ob er ein Projekt anschiebt, es über die Schwelle bringt oder die letzte Lücke schließt.
+
+Damit wird aus einer Fördermitteldatenbank ein Ort, an dem Kapital, Menschen, Organisationen und reale Vorhaben zusammenfinden. Kein kommerzieller Marktplatz, sondern eine Verbindungsschicht.
+
 ## Auf der Karte
 
 | Merkmal | Zeigt |

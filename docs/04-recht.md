@@ -14,6 +14,19 @@ Wir dürfen Informationen über Stiftungen sammeln und nutzbar machen. Wir dürf
 
 Wenn eine Stiftung schreibt „Wir fördern Bildung, Jugend und Naturschutz“, dürfen wir diese Tatsache in unserer eigenen Struktur wiedergeben. So arbeiten bestehende Verzeichnisse auch, etwa die Stiftungssuche des Bundesverbands Deutscher Stiftungen mit Themen, Fördertätigkeit, Antragsmöglichkeit und Deutschlandkarte. Wir bauen darüber eine bessere Interaktionsschicht.
 
+## Die sichere Grundarchitektur in einer Zeile
+
+```text
+öffentliche Fakten
+  + eigene Strukturierung
+  + Quellenangabe
+  + Verlinkung zur Originalquelle
+  + Datenschutz bei Personen
+  + keine ungefragte Übernahme geschützter Inhalte
+```
+
+Wer alle sechs einhält, steht auf sicherem Boden. Wer einen davon weglässt, hat ein Problem, das später teuer wird.
+
 ## Vier Dinge, die wir sauber auseinanderhalten
 
 | | Umgang |

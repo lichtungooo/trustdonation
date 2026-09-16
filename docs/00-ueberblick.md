@@ -29,6 +29,24 @@ Die vorhandenen Verzeichnisse lösen einen Teil davon: Sie listen Stiftungen. Wa
 | **Projektseite** | was ein Projekt tut, braucht und schon erreicht hat |
 | **Vertrauensschicht** | reale Begegnung, bestätigter Beitrag, gewachsenes Vertrauen |
 
+## Was sich dadurch ändert
+
+Heute läuft Förderung so:
+
+```text
+Projekt → Förderantrag → Stiftung oder Behörde → Warten
+```
+
+Eine Linie, ein Empfänger, ein Ausgang: ja oder nein.
+
+Mit trustdonation:
+
+```text
+Projekt ↔ Förderer ↔ Community ↔ Zustifter
+```
+
+Ein Geflecht. Wer keine Förderung bekommt, hat vielleicht schon fünf Menschen gefunden, die mitbauen, und einen Zustifter, dem das Thema wichtig ist. Das Projekt lebt weiter, während der Antrag noch liegt.
+
 ## Die Kette
 
 ```text

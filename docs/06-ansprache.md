@@ -12,6 +12,25 @@ Unser Angebot ist stärker:
 
 Das ist eine andere Gesprächsebene. Nicht Bittsteller, sondern Partner an einem gemeinsamen Werkzeug.
 
+Der Satz, der alles trägt:
+
+> **Wir wollen nicht zwischen Stiftung und Projekt stehen. Wir wollen die Verbindung dazwischen besser machen.**
+
+So sieht das Modell aus, das wir anbieten:
+
+```text
+           Stiftung
+              │  veröffentlicht ihr Förderprofil
+              ▼
+        trustdonation
+              │
+         Matching mit Begründung
+        ╱     │     ╲
+  Projekte  Community  Anstifter und Zustifter
+
+  darunter: Vertrauen aus realer Begegnung
+```
+
 ## Drei Türen, gleichzeitig geöffnet
 
 ### Tür 1: Wir machen Sie kostenlos sichtbar
@@ -67,6 +86,20 @@ Was die Stiftung bekommt:
 > **Geld darf keine Vertrauensbewertung kaufen.**
 
 Dieser Satz gehört in jedes Gespräch und später in die Grundsätze der Plattform. Er ist der Grund, warum das Ergebnis überhaupt etwas wert ist, und Stiftungen verstehen das sofort.
+
+## Die Stiftung ist Teilnehmerin, nicht Kundin
+
+Das ist der Unterschied, der das Gespräch trägt. Eine Stiftung kauft bei uns keine Software. Sie tritt in ein Netz ein, in dem jeder etwas beisteuert:
+
+| Wer | Steuert bei |
+|---|---|
+| Stiftung | Kapital, Zweck, Netzwerk, Wissen |
+| Community | Beziehung, Wissen, Arbeit |
+| Anstifter | Initiative |
+| Projekt | einen konkreten Zweck an einem Ort |
+| trustdonation | die Verbindungsschicht |
+
+Das Vertrauen entsteht dann nicht durch ein Zertifikat von uns, sondern durch reale Begegnung und eine nachvollziehbare Geschichte ([02-vertrauen.md](02-vertrauen.md)).
 
 ## Der erste Termin: 30 Minuten
 

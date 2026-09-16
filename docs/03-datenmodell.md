@@ -4,6 +4,20 @@
 
 Die Felder für Stiftung und Projekt und ihre Abbildung auf den Real Life Stack. Die rechtlichen Grenzen stehen in [04-recht.md](04-recht.md).
 
+## Die zwei Ebenen der Karte
+
+Die Karte trägt zwei Arten von Einträgen. Sie sehen ähnlich aus und beantworten verschiedene Fragen.
+
+**Ebene A, Förderer.** Stiftungen und Förderorganisationen.
+
+> Was macht sie? Was fördert sie? Wo? Wer kann anfragen? Wie? Wann? Welche Summen? Zustiftung möglich? Spende möglich?
+
+**Ebene B, Projekte.** Vorhaben an einem Ort.
+
+> Wer macht es? Was soll entstehen? Wo? Was wird gebraucht? Welche Förderung passt? Welche Stiftung könnte passen? Wer kann mitmachen? Welche Sachleistungen fehlen? Welche Zustifter könnten sich dafür interessieren?
+
+Die letzten vier Fragen der Ebene B beantwortet nicht das Projekt, sondern die Plattform. Genau dort liegt der Nutzen.
+
 ## Stiftung
 
 | Feld | Typ | Bemerkung |
@@ -50,6 +64,19 @@ Dazu der Herkunftsblock aus [04-recht.md](04-recht.md).
 | `wirkung` | Liste: zwei bis drei nachprüfbare Dinge |
 | `foerderer`, `zustifter` | Relationen |
 | `fortschritt` | Einträge mit Datum |
+
+## Was im Profil jeder Rolle steht
+
+Über den Feldern liegt ein einfaches Bild: Jede Rolle hat ein Profil, und jedes Profil trägt das, was andere über sie wissen müssen.
+
+| Rolle | Im Profil |
+|---|---|
+| **Mensch** | verifizierte Identität, Fähigkeiten, Interessen, Beiträge, Projekte |
+| **Projekt** | Initiator, Beteiligte, Bedarf, Ressourcen, Fortschritt, Ergebnisse |
+| **Stiftung** | Förderprofil, Förderhistorie, Förderbedingungen, Ansprache, Projekte |
+| **Zustifter** | Interessen, gewünschte Wirkung, bevorzugte Themen und Regionen |
+
+Und zwar **nicht als zentraler Trust Score, sondern als nachvollziehbare Beziehungen und Nachweise**. Das ist der Unterschied, technisch wie im Grundsatz ([02-vertrauen.md](02-vertrauen.md)).
 
 ## Abbildung auf den Real Life Stack
 

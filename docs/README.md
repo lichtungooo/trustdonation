@@ -22,7 +22,7 @@ Die Dokumente bauen in dieser Reihenfolge aufeinander auf.
 | Dokument | Status | Zweck |
 |---|---|---|
 | [00-ueberblick.md](00-ueberblick.md) | Normativer Startpunkt | Was trustdonation ist, worauf es steht, Abgrenzung zu RLS, WoT und RLNP |
-| [01-rollen.md](01-rollen.md) | Normativer Entwurf | Die fünf Rollen, wer wem gibt, der Kreislauf |
+| [01-rollen.md](01-rollen.md) | Normativer Entwurf | Die vier Rollen, warum Menschen keine eigene ist, wer wem gibt |
 | [02-vertrauen.md](02-vertrauen.md) | Normativer Entwurf | Verbindung, Beitrag, Vertrauen und warum sie getrennt bleiben |
 | [03-datenmodell.md](03-datenmodell.md) | Normativer Entwurf | Felder für Stiftung und Projekt, Abbildung auf den Stack |
 | [04-recht.md](04-recht.md) | Arbeitsstand | Was wir aufnehmen dürfen, Herkunftsblock, Profil-Übernahme |

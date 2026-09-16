@@ -44,9 +44,9 @@ Vorschlag zwischen **einem** Projekt und **einer** Stiftung, im Moment der Abfra
 
 ## Mensch
 
-Rolle des Einstiegs. Entdeckt Projekte, lernt Menschen kennen, macht mit. Trägt Zeit, Wissen, Werkzeug und Aufmerksamkeit bei.
+**Keine Rolle, sondern die Substanz aller Rollen.** Anstifter und Zustifter sind Menschen, in Projekte und Stiftungen gehen Menschen hinein. Im Datenmodell bleibt der Mensch ein Item `person` mit Profil im *Web of Trust*; auf der Karte tritt er als *Anstifter* oder *Zustifter* auf.
 
-→ [01-rollen.md → §Die fünf Rollen](01-rollen.md)
+→ [01-rollen.md → §Menschen füllen alles](01-rollen.md)
 
 ## Profil-Übernahme
 

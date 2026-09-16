@@ -1,6 +1,6 @@
 # trustdonation
 
-> trustdonation is infrastructure for trust-based funding: an open map where foundations, projects, initiators, co-donors and people find each other. It is an instance of the Real Life Stack, not a fork; the app ships as a container image, this repository holds configuration, the landing page, the data model and the concept. Documentation is German; the data model names are English.
+> trustdonation is infrastructure for trust-based funding: an open map where foundations, projects, initiators and co-donors find each other. It is an instance of the Real Life Stack, not a fork; the app ships as a container image, this repository holds configuration, the landing page, the data model and the concept. Documentation is German; the data model names are English.
 
 The core idea: money is not the entry point, it is the result of a relationship. Between a project and a gift lie a real-world encounter, a confirmed contribution and grown trust. These three are kept strictly apart and never collapsed into a score.
 
@@ -8,7 +8,7 @@ The core idea: money is not the entry point, it is the result of a relationship.
 
 - [Concept index](https://github.com/lichtungooo/trustdonation/blob/main/docs/README.md): Entry point; the concept is the single source of truth of this repository.
 - [00 Überblick](https://github.com/lichtungooo/trustdonation/blob/main/docs/00-ueberblick.md): What trustdonation is, the layer model, and how it differs from Real Life Stack, Web of Trust and the Real Life Network Protocol.
-- [01 Rollen](https://github.com/lichtungooo/trustdonation/blob/main/docs/01-rollen.md): Five roles (person, initiator, project, foundation, co-donor), who gives to whom, the circle.
+- [01 Rollen](https://github.com/lichtungooo/trustdonation/blob/main/docs/01-rollen.md): Four roles (initiator, co-donor, foundation, project) and why people are not a fifth but the substance of all four.
 - [02 Vertrauen](https://github.com/lichtungooo/trustdonation/blob/main/docs/02-vertrauen.md): Three levels: connection (real handshake), contribution (confirmed), trust (grown, never stored as a number).
 - [03 Datenmodell](https://github.com/lichtungooo/trustdonation/blob/main/docs/03-datenmodell.md): Fields for foundation and project, mapping onto Real Life Stack items, relations and spaces.
 - [04 Recht](https://github.com/lichtungooo/trustdonation/blob/main/docs/04-recht.md): Legal guardrails for collecting public facts, the provenance block, GDPR on contact data, profile claiming.

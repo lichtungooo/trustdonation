@@ -2,19 +2,30 @@
 
 **Status:** Normativer Entwurf
 
-## Die fünf Rollen
+## Die vier Rollen
 
 | Rolle | Bringt ein | Findet |
 |---|---|---|
-| **Mensch** | Zeit, Wissen, Werkzeug, Aufmerksamkeit | Projekte zum Mitmachen, andere Menschen |
-| **Anstifter** | Initiative. Sieht ein Bedürfnis und bringt Menschen zusammen | Mitstreiter, Raum, Know-how, passende Stiftungen |
-| **Projekt** | einen konkreten Ort der Wertschöpfung | Menschen, Förderer, Sachleistungen |
-| **Stiftung** | Zweck, Kapital, Netzwerk, Wissen | Projekte im eigenen Feld, Zustifter |
+| **Anstifter** | Initiative, Zeit, Wissen, Werkzeug. Sieht ein Bedürfnis und bringt Menschen zusammen | Mitstreiter, Raum, Know-how, passende Stiftungen |
 | **Zustifter** | Kapital, ohne eigene Organisation | Stiftungen und Projekte, deren Wirkung sichtbar ist |
+| **Stiftung** | Zweck, Kapital, Netzwerk, Wissen | Projekte im eigenen Feld, Zustifter |
+| **Projekt** | einen konkreten Ort der Wertschöpfung | Menschen, Förderer, Sachleistungen |
 
-Ein Mensch kann mehrere Rollen gleichzeitig tragen. Wer heute mitmacht, ist morgen Anstifter und übermorgen Zustifter. Die Rolle beschreibt eine Haltung im Moment, keine Eigenschaft einer Person.
+## Menschen füllen alles
 
-**Offene Entscheidung:** Die Landingpage zeigt seit 16.09.2026 vier Rollen; „Menschen“ ist dort in den Anstiftern aufgegangen. Dieses Dokument führt fünf. Beides ist vertretbar: Der Mensch ist der Einstieg, der Anstifter die aktive Form. Bis zur Entscheidung gilt dieses Dokument als Modell und die Landing als Schaufenster.
+**Der Mensch ist keine fünfte Rolle.** Er ist die Substanz der vier.
+
+Ein Anstifter ist ein Mensch. Ein Zustifter ist ein Mensch. In ein Projekt gehen Menschen hinein, in eine Stiftung ebenso. Eine eigene Rolle „Mensch“ daneben würde nichts hinzufügen und die Karte doppelt zählen.
+
+Die Rolle beschreibt eine **Haltung im Moment**, keine Eigenschaft einer Person. Derselbe Mensch kann mehrere gleichzeitig tragen und im Laufe der Zeit durch alle wandern:
+
+```text
+mitmachen  →  anstiften  →  zustiften
+```
+
+Wer heute in einem Projekt mit anpackt, ruft morgen selbst eines ins Leben und gibt übermorgen dazu. Genau dieser Weg ist das Ziel, und er braucht keine eigene Rolle, sondern offene Türen zwischen den vieren.
+
+**Für das Datenmodell heißt das:** Es gibt weiterhin das Item `person` und das Profil im Web of Trust ([03-datenmodell.md](03-datenmodell.md)). Ein Mensch ist dort ein Eintrag wie zuvor. Nur auf der Karte und in der Ansprache tritt er als Anstifter oder Zustifter auf, nicht als eigene Kategorie.
 
 ## Der Anstifter
 

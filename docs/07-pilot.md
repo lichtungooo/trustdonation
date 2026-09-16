@@ -93,10 +93,9 @@ Diese Arbeit erzeugt genau das Material, mit dem Welle 1 und 2 richtig gebaut we
 
 ## Offene Entscheidungen für Timo
 
-1. **Menschen als eigene Rolle?** Die Landing zeigt seit heute vier Rollen, dieses Konzept fünf. Siehe [01-rollen.md](01-rollen.md).
-2. **Direkte Spende an Projekte:** ab wann, über welchen Zahlungsweg, und wie verhindern wir, dass Geld zum Einstieg wird statt zum Ergebnis?
-3. **Anwaltliche Prüfung** des Datenmodells vor dem Start von Welle 1.
-4. **Wer pflegt die Redaktion?** Die 80 Einträge brauchen einen Menschen, der Quellen prüft und Prüfdaten setzt.
+1. **Direkte Spende an Projekte:** ab wann, über welchen Zahlungsweg, und wie verhindern wir, dass Geld zum Einstieg wird statt zum Ergebnis?
+2. **Anwaltliche Prüfung** des Datenmodells vor dem Start von Welle 1.
+3. **Wer pflegt die Redaktion?** Die 80 Einträge brauchen einen Menschen, der Quellen prüft und Prüfdaten setzt.
 
 ## Verwandt
 

@@ -95,7 +95,7 @@ Laufend, Stichtag, Antragsfenster, mehrstufig mit Skizze und Vollantrag.
 Solange die Stiftung ihren Eintrag nicht übernommen hat: **die Funktion, nicht der Name**, und die allgemeine Adresse.
 
 *Felder:* Ansprache, öffentliche Mail, Website, Antragsportal
-*Wichtig:* Eine persönliche Mailadresse steht nur dort, wo die Stiftung sie selbst öffentlich als Ansprechpartner ausweist oder ihr Profil übernommen hat. Siehe [02-datenmodell.md](02-datenmodell.md).
+*Wichtig:* Eine persönliche Mailadresse steht nur dort, wo die Stiftung sie selbst öffentlich als Ansprechpartner ausweist oder ihr Profil übernommen hat. Siehe [../04-recht.md](../04-recht.md).
 
 ---
 
@@ -154,6 +154,6 @@ Darunter: **möglicherweise passende Projekte**, jede Zeile mit Begründung.
 
 ## Verwandt
 
-- [05-fragen-stiftungsgespraech.md](05-fragen-stiftungsgespraech.md) die sieben Fragen für das Gespräch
-- [06-w-fragen-projekt.md](06-w-fragen-projekt.md) derselbe Durchlauf für ein Projekt
-- [02-datenmodell.md](02-datenmodell.md) Felder und rechtliche Leitplanken
+- [stiftungsgespraech.md](stiftungsgespraech.md) die sieben Fragen für das Gespräch
+- [projekt.md](projekt.md) derselbe Durchlauf für ein Projekt
+- [../04-recht.md](../04-recht.md) Felder und rechtliche Leitplanken

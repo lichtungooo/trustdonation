@@ -1,80 +1,143 @@
 # trustdonation
 
-**Infrastruktur für vertrauensbasierte Förderung.** Stiftungen, Projekte, Anstifter, Zustifter und Menschen finden auf einer Karte zueinander.
+**Infrastruktur für vertrauensbasierte Förderung**
 
-Getragen vom [Real Life Network e.V.](https://reallife.network) · gebaut auf dem [Real Life Stack](https://github.com/real-life-org/real-life-stack) · Vertrauensschicht ist das Real Life Trust Protokoll.
+Stiftungen, Projekte, Anstifter, Zustifter und Menschen finden auf einer Karte zueinander. Getragen vom Real Life Network e.V., gebaut auf dem [Real Life Stack][rls], Vertrauen über das [Web of Trust][wot].
+
+> trustdonation baut eine Infrastruktur, mit der Stiftungen ihre Förderwirkung erhöhen, weil passende Projekte, Menschen, Anstifter und Zustifter leichter zusammenfinden.
 
 | | |
 |---|---|
 | Domain | trustdonation.org *(DNS in Arbeit)* |
 | Baustelle | <https://wir.ooo> |
-| Konzept | [konzept/INDEX.md](konzept/INDEX.md) |
+| Konzept | [docs/README.md](docs/README.md) |
+| Für Agenten | [AGENTS.md](AGENTS.md), [llms.txt](llms.txt) |
 
-## Der Satz
+---
 
-> trustdonation baut eine Infrastruktur, mit der Stiftungen ihre Förderwirkung erhöhen, weil passende Projekte, Menschen, Anstifter und Zustifter leichter zusammenfinden.
+## Das Problem
 
-Keine Spendenplattform. Eine Verbindungsschicht zwischen Kapital, Menschen, Organisationen und realen Vorhaben. Geld ist nicht der Einstieg, sondern ein Ergebnis einer Beziehung.
+- **Gute Projekte** finden die Förderer nicht, die zu ihnen passen.
+- **Förderer** sehen die passenden Projekte nicht, und Mittel bleiben liegen.
+- **Menschen** wissen nicht, wo sie in ihrer Nähe sinnvoll beitragen können.
+- **Zustifter** wissen nicht, wo ihr Kapital dauerhaft wirkt.
+
+Verzeichnisse lösen einen Teil davon: Sie listen Stiftungen. Was fehlt, ist die Verbindung zwischen Liste und Wirklichkeit.
+
+## Die Lösung
+
+- **Karte** mit Stiftungen, Projekten und Menschen, jeder Eintrag mit Quelle und Prüfdatum
+- **Matching** mit Begründung Zeile für Zeile, nie als Note
+- **Projektseite**, die zeigt, was ein Projekt tut, braucht und schon erreicht hat
+- **Vertrauensschicht** aus realer Begegnung, bestätigtem Beitrag und gewachsenem Vertrauen
+
+Geld steht nicht am Anfang. Es ist ein Ergebnis einer Beziehung.
+
+```text
+Vertrauen → Entdeckung → Matching → Verbindung → Finanzierung → Umsetzung → Wirkung
+```
+
+---
+
+## Architektur
+
+```text
+┌────────────────────────────────────────────────────────────┐
+│  trustdonation                                             │
+│  Landingpage · Stiftungsdaten · Matching · Ansprache       │
+├────────────────────────────────────────────────────────────┤
+│  Real Life Stack (RLS)                                     │
+│  App Shell · Karte · Gruppen · Profile · Kalender · Feed   │
+├────────────────────────────────────────────────────────────┤
+│  Web of Trust (WoT)                                        │
+│  Identität · Begegnung · Bestätigung · Sync                │
+└────────────────────────────────────────────────────────────┘
+```
+
+trustdonation ist eine **Instanz** des Real Life Stack, kein Fork. Die App kommt als fertiges Image, dieses Repo hält Konfiguration und Inhalt (siehe [Spec 11 des Stacks][spec11]).
+
+Wer die drei Namen auseinanderhalten will: [docs/00-ueberblick.md → Abgrenzung der Namen](docs/00-ueberblick.md).
+
+---
 
 ## Die vier Grundsätze
 
 1. **Geld kauft keine Vertrauensbewertung.** Partner bekommen Status und Mitsprache, keine bessere Platzierung im Matching.
 2. **Fakten statt Noten.** Kriterien, Quelle, Prüfdatum. Keine Sterne, keine Ampeln, keine Bewertung von Organisationen.
-3. **Vertrauen entsteht im Netz, nicht bei uns.** Wir stellen kein Zertifikat aus, wir machen nachvollziehbar, was passiert ist.
+3. **Vertrauen entsteht im Netz, nicht bei uns.** Wir stellen kein Zertifikat aus.
 4. **Die Identität bleibt beim Menschen.** Schlüssel auf dem Gerät, Profil wandert mit.
+
+---
 
 ## Was hier liegt
 
-```
-landing/      die Landingpage, wird auf / ausgeliefert
-  stile/      neun Sprachstile als Wörterbuch, je eine JSON-Datei
-  logo/       Wortmarke und Signet
-  fonts/      selbst gehostet, keine Anfrage an Dritte
-konzept/      Modell, Datenmodell, Ansprache, Pilot, Fragebögen
-branding/     theme.json (Farbtokens) und favicon.svg für die App
+```text
+docs/           das Konzept, normativ
+  fragen/       Fragebögen für Projekt, Stiftung, Gespräch, plus gelöste Beispiele
+  glossar.md    Begriffe
+landing/        die Landingpage, freies HTML, kein Build
+  stile/        neun Sprachstile als Wörterbuch, je eine JSON-Datei
+  logo/         Wortmarke und Signet
+  fonts/        selbst gehostet, keine Anfrage an Dritte
+branding/       theme.json (Farbtokens) und favicon.svg für die App
 docker-compose.yml
-.env.example  Vorlage; die echte .env steht auf dem Server
+.env.example    Vorlage; die echte .env steht auf dem Server
+AGENTS.md       Regeln für Agenten und Menschen
+llms.txt        maschinenlesbarer Überblick
 ```
 
-**Kein Stack-Code.** Die App kommt als fertiges Image aus `ghcr.io/real-life-org/rls-app`. Alles hier ist Konfiguration und Inhalt (siehe [Spec 11][spec]).
-
-[spec]: https://github.com/real-life-org/real-life-stack/blob/master/docs/spec/11-runtime-config-und-branding.md
+---
 
 ## Drei Arten von Updates
 
 | Was | Woher | Wie |
-|-----|-------|-----|
+|---|---|---|
 | **Die App** | `ghcr.io/real-life-org/rls-app` | `RLS_IMAGE_TAG` in der `.env` hochziehen, `docker compose up -d` |
-| **Die Instanz-Vorlage** | `real-life-org/reallife-network-instanz` | `git fetch upstream && git merge upstream/main` |
+| **Die Instanz-Vorlage** | [reallife-network-instanz][vorlage] | `git fetch upstream && git merge upstream/main` |
 | **Die Seite** | dieses Repo | `git pull` auf dem Server |
 
-Dieses Repo ist ein Fork der Instanz-Vorlage. Antons Verbesserungen an Compose, Deploy und Vorlage holen wir uns über `upstream`; unsere Landingpage bleibt dabei unsere.
+Dieses Repo ist ein Fork der Instanz-Vorlage. Verbesserungen an Compose, Deploy und Vorlage holen wir uns über `upstream`, unsere Landingpage bleibt dabei unsere.
 
 ```bash
 git remote add upstream https://github.com/real-life-org/reallife-network-instanz.git
-git fetch upstream
-git merge upstream/main
+git fetch upstream && git merge upstream/main
 ```
+
+---
 
 ## Betrieb
 
 ```bash
-docker compose up -d      # liest .env, zieht das gepinnte Image
+cp .env.example .env      # Domain, Name, Image-Tag eintragen
+docker compose up -d      # zieht das gepinnte Image
 ```
 
-Server: `/home/timo/apps/wir-ooo/` auf dem Strato-Host, Traefik mit Let's Encrypt davor.
+Die Compose-Datei trägt zwei Domains: `RLS_DOMAIN` und `RLS_DOMAIN_ALT`. So laufen Zieldomain und Baustelle auf demselben Container.
+
+Server: `/home/timo/apps/wir-ooo/`, Traefik mit Let's Encrypt davor.
+
+---
 
 ## Mitarbeiten
 
-Das Konzept liegt in [konzept/](konzept/) und ist der gemeinsame Stand. Wer etwas ändern will, öffnet ein Issue oder einen Pull Request.
+Das Konzept in [docs/](docs/) ist der gemeinsame Stand. Wer etwas ändern will, öffnet ein Issue oder einen Pull Request. Bei Konflikt zwischen Konzept und Umsetzung gewinnt das Konzept.
 
-Die Arbeit läuft in vier Wellen, siehe [konzept/04-pilot-und-umsetzung.md](konzept/04-pilot-und-umsetzung.md):
+Die Arbeit läuft in vier Wellen ([docs/07-pilot.md](docs/07-pilot.md)):
 
 1. **Sichtbarkeit** Stiftungen und Projekte auf der Karte, mit Quelle und Prüfdatum
 2. **Matching mit Begründung** jede Zeile zeigt, warum sie dort steht
 3. **Menschen und Beiträge** reale Begegnung, Beitrag, später Gabe
 4. **Der Kreis schließt sich** Anstifter, Bedarfe, Wirkung zurück auf die Karte
 
+Wer mit einer Stiftung spricht, nimmt [docs/fragen/stiftungsgespraech.md](docs/fragen/stiftungsgespraech.md) mit. Wer ein Projekt anlegt, geht [docs/fragen/projekt.md](docs/fragen/projekt.md) durch. Zwei gelöste Beispiele zeigen, wie ein fertiger Durchlauf aussieht.
+
+---
+
 ## Lizenz
 
-Inhalte und Konzept: CC BY-SA 4.0. Der Real Life Stack steht unter seiner eigenen Lizenz.
+Konzept und Inhalte: CC BY-SA 4.0. Der Real Life Stack steht unter seiner eigenen Lizenz.
+
+[rls]: https://github.com/real-life-org/real-life-stack
+[wot]: https://github.com/antontranelis/web-of-trust
+[vorlage]: https://github.com/real-life-org/reallife-network-instanz
+[spec11]: https://github.com/real-life-org/real-life-stack/blob/master/docs/spec/11-runtime-config-und-branding.md

@@ -82,7 +82,7 @@ Keine sechzig Seiten. Fünf Blöcke.
 
 ## Die erste Mail
 
-Persönlich, mit konkretem Anlass, ohne Anhang. Kein Serienbrief (siehe § 7 UWG, [02-datenmodell.md](02-datenmodell.md)).
+Persönlich, mit konkretem Anlass, ohne Anhang. Kein Serienbrief (siehe § 7 UWG, [04-recht.md](04-recht.md)).
 
 **Betreff:** Ihre Stiftung auf der offenen Förder-Karte
 
@@ -103,7 +103,7 @@ Anlage im Gespräch, nicht in der Mail: der Link auf den Entwurf des Eintrags.
 
 ## Reihenfolge der Ansprache
 
-Aus der Förder-Landschaft (`30-konzepte/foerder-landschaft/`) ergeben sich drei Wellen:
+Aus der Förder-Landschaft (der Förder-Landschaft) ergeben sich drei Wellen:
 
 1. **Nachbarschaft zuerst.** VR PartnerBank Heimatstiftungen, KSK Schwalm-Eder, Volksbank Kassel Göttingen, Bürgerstiftung Kassel. Kleine Summen, kurze Wege, echte Nähe. Sie tragen den Pilot.
 2. **Thematische Kernstiftungen.** Software AG-Stiftung, GLS Zukunftsstiftung Bildung, Stiftung Bildung. Sie verstehen den Ansatz und öffnen Türen.
@@ -111,6 +111,6 @@ Aus der Förder-Landschaft (`30-konzepte/foerder-landschaft/`) ergeben sich drei
 
 ## Verwandt
 
-- [01-modell.md](01-modell.md) das Modell hinter dem Pitch
-- [04-pilot-und-umsetzung.md](04-pilot-und-umsetzung.md) was der Pilot beweisen soll
-- `30-konzepte/foerder-landschaft/INDEX.md` wen wir ansprechen
+- [00-ueberblick.md](00-ueberblick.md) das Modell hinter dem Pitch
+- [07-pilot.md](07-pilot.md) was der Pilot beweisen soll
+- [fragen/stiftungsgespraech.md](fragen/stiftungsgespraech.md) die sieben Fragen im Detail

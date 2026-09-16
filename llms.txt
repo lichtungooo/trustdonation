@@ -1,0 +1,41 @@
+# trustdonation
+
+> trustdonation is infrastructure for trust-based funding: an open map where foundations, projects, initiators, co-donors and people find each other. It is an instance of the Real Life Stack, not a fork; the app ships as a container image, this repository holds configuration, the landing page, the data model and the concept. Documentation is German; the data model names are English.
+
+The core idea: money is not the entry point, it is the result of a relationship. Between a project and a gift lie a real-world encounter, a confirmed contribution and grown trust. These three are kept strictly apart and never collapsed into a score.
+
+## Concept (normative, German)
+
+- [Concept index](https://github.com/lichtungooo/trustdonation/blob/main/docs/README.md): Entry point; the concept is the single source of truth of this repository.
+- [00 Überblick](https://github.com/lichtungooo/trustdonation/blob/main/docs/00-ueberblick.md): What trustdonation is, the layer model, and how it differs from Real Life Stack, Web of Trust and the Real Life Network Protocol.
+- [01 Rollen](https://github.com/lichtungooo/trustdonation/blob/main/docs/01-rollen.md): Five roles (person, initiator, project, foundation, co-donor), who gives to whom, the circle.
+- [02 Vertrauen](https://github.com/lichtungooo/trustdonation/blob/main/docs/02-vertrauen.md): Three levels: connection (real handshake), contribution (confirmed), trust (grown, never stored as a number).
+- [03 Datenmodell](https://github.com/lichtungooo/trustdonation/blob/main/docs/03-datenmodell.md): Fields for foundation and project, mapping onto Real Life Stack items, relations and spaces.
+- [04 Recht](https://github.com/lichtungooo/trustdonation/blob/main/docs/04-recht.md): Legal guardrails for collecting public facts, the provenance block, GDPR on contact data, profile claiming.
+- [05 Matching](https://github.com/lichtungooo/trustdonation/blob/main/docs/05-matching.md): Suggestions with a reason per line, eleven funding criteria, eight application paths. No ratings.
+- [Glossar](https://github.com/lichtungooo/trustdonation/blob/main/docs/glossar.md): Shared vocabulary.
+
+## Working with foundations
+
+- [06 Ansprache](https://github.com/lichtungooo/trustdonation/blob/main/docs/06-ansprache.md): Three doors, founding partner programme, 30-minute meeting, first email.
+- [07 Pilot](https://github.com/lichtungooo/trustdonation/blob/main/docs/07-pilot.md): Pilot size, four waves, open decisions for the stack.
+
+## Question sheets
+
+Each question maps to exactly one field. They serve as an interview guide, as the wizard in the app, and as the field list.
+
+- [Projekt](https://github.com/lichtungooo/trustdonation/blob/main/docs/fragen/projekt.md): 14 questions in three rounds to create a project.
+- [Stiftung](https://github.com/lichtungooo/trustdonation/blob/main/docs/fragen/stiftung.md): 13 questions to create a foundation entry, by research or by claim.
+- [Stiftungsgespräch](https://github.com/lichtungooo/trustdonation/blob/main/docs/fragen/stiftungsgespraech.md): Seven questions for the first meeting, with a protocol sheet.
+- [Beispiel Projekt](https://github.com/lichtungooo/trustdonation/blob/main/docs/fragen/beispiel-projekt.md): trustdonation itself, answered through the project sheet.
+- [Beispiel Stiftung](https://github.com/lichtungooo/trustdonation/blob/main/docs/fragen/beispiel-stiftung.md): A researched foundation entry, worked through step by step.
+
+## Foundations of this instance
+
+- [Real Life Stack](https://github.com/real-life-org/real-life-stack): The modular app and UI toolkit. trustdonation composes it; the app image is `ghcr.io/real-life-org/rls-app`.
+- [Real Life Stack spec](https://github.com/real-life-org/real-life-stack/blob/master/docs/spec/README.md): The technical contract behind items, relations, spaces and connectors.
+- [Web of Trust](https://github.com/antontranelis/web-of-trust): Decentralized identity and trust relationships, `did:key`, JWS, end-to-end encrypted sync.
+
+## Contributing
+
+- [AGENTS.md](https://github.com/lichtungooo/trustdonation/blob/main/AGENTS.md): Rules for agents and humans working in this repository: sources of truth, the four principles, data rules, language, operations.

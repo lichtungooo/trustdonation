@@ -74,7 +74,7 @@ Der Teil, der trustdonation von einem Verzeichnis unterscheidet.
 
 ## Was Anton entscheiden muss
 
-Aus [02-datenmodell.md](02-datenmodell.md), gesammelt für das nächste Gespräch:
+Aus [03-datenmodell.md](03-datenmodell.md), gesammelt für das nächste Gespräch:
 
 1. **Vokabular `foundation/v1`**: eigener Typ oder `project` mit anderem Schema?
 2. **Item ↔ Space**: Wie hängt das Stiftungs-Item an ihrem Space? Steht als offene Entscheidung in Spec 04.
@@ -84,7 +84,7 @@ Aus [02-datenmodell.md](02-datenmodell.md), gesammelt für das nächste Gespräc
 
 ## Was sofort geht, ohne Code
 
-- Die 10 Stiftungen der ersten Welle ansprechen ([03-stiftungen-ansprechen.md](03-stiftungen-ansprechen.md))
+- Die 10 Stiftungen der ersten Welle ansprechen ([06-ansprache.md](06-ansprache.md))
 - Die sieben Fragen stellen und die Antworten sammeln
 - Einen Förderfall von Hand durchspielen und dokumentieren
 - Entwürfe der Einträge als PDF oder Link zeigen und übernehmen lassen
@@ -93,13 +93,13 @@ Diese Arbeit erzeugt genau das Material, mit dem Welle 1 und 2 richtig gebaut we
 
 ## Offene Entscheidungen für Timo
 
-1. **Menschen als eigene Rolle?** Die Landing zeigt seit heute vier Rollen, dieses Konzept fünf. Siehe [01-modell.md](01-modell.md).
+1. **Menschen als eigene Rolle?** Die Landing zeigt seit heute vier Rollen, dieses Konzept fünf. Siehe [01-rollen.md](01-rollen.md).
 2. **Direkte Spende an Projekte:** ab wann, über welchen Zahlungsweg, und wie verhindern wir, dass Geld zum Einstieg wird statt zum Ergebnis?
 3. **Anwaltliche Prüfung** des Datenmodells vor dem Start von Welle 1.
 4. **Wer pflegt die Redaktion?** Die 80 Einträge brauchen einen Menschen, der Quellen prüft und Prüfdaten setzt.
 
 ## Verwandt
 
-- [01-modell.md](01-modell.md), [02-datenmodell.md](02-datenmodell.md), [03-stiftungen-ansprechen.md](03-stiftungen-ansprechen.md)
-- `30-konzepte/foerder-landschaft/` die Datenbasis
-- `memory/stand_wir_ooo.md` der Stand der Live-Seite
+- [01-rollen.md](01-rollen.md), [03-datenmodell.md](03-datenmodell.md), [06-ansprache.md](06-ansprache.md)
+- Datenbasis: 280 recherchierte Stiftungen im Workspace
+- [fragen/beispiel-projekt.md](fragen/beispiel-projekt.md) trustdonation durch den eigenen Bogen

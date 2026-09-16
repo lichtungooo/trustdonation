@@ -170,6 +170,6 @@ Darunter: **möglicherweise passende Förderer**, jede Zeile mit Begründung und
 
 ## Verwandt
 
-- [02-datenmodell.md](02-datenmodell.md) die Felder im Datenmodell
-- [07-w-fragen-stiftung.md](07-w-fragen-stiftung.md) derselbe Durchlauf für eine Stiftung
-- [01-modell.md](01-modell.md) warum der Anstifter am Anfang steht
+- [../03-datenmodell.md](../03-datenmodell.md) die Felder im Datenmodell
+- [stiftung.md](stiftung.md) derselbe Durchlauf für eine Stiftung
+- [../01-rollen.md](../01-rollen.md) warum der Anstifter am Anfang steht

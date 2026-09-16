@@ -31,7 +31,12 @@ services:
       - ./branding:/srv/branding:ro
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.rls-app-wir.rule=Host(`${RLS_DOMAIN:?RLS_DOMAIN fehlt - unter welcher Domain laeuft die Instanz?}`) || Host(`${RLS_DOMAIN_ALT:-wir.ooo}`)"
+      - "traefik.http.routers.rls-app-wir.rule=Host(`${RLS_DOMAIN:?RLS_DOMAIN fehlt - unter welcher Domain laeuft die Instanz?}`) || Host(`www.${RLS_DOMAIN}`) || Host(`${RLS_DOMAIN_ALT:-wir.ooo}`)"
+      # www fuehrt auf die Adresse ohne www: eine Seite, eine Adresse.
+      - "traefik.http.middlewares.rls-wir-ohne-www.redirectregex.regex=^https://www\.(.+)"
+      - "traefik.http.middlewares.rls-wir-ohne-www.redirectregex.replacement=https://$${1}"
+      - "traefik.http.middlewares.rls-wir-ohne-www.redirectregex.permanent=true"
+      - "traefik.http.routers.rls-app-wir.middlewares=rls-wir-ohne-www"
       - "traefik.http.routers.rls-app-wir.entrypoints=websecure"
       - "traefik.http.routers.rls-app-wir.tls.certresolver=letsencrypt"
       - "traefik.http.services.rls-app-wir.loadbalancer.server.port=8080"

@@ -14,16 +14,17 @@ Keine Spendenplattform. Eine Verbindungsschicht zwischen Kapital, Menschen, Orga
 
 - **Gute Projekte** finden die Förderer nicht, die zu ihnen passen.
 - **Förderer** sehen die passenden Projekte nicht, und Mittel bleiben liegen.
-- **Menschen** wissen nicht, wo sie in ihrer Nähe sinnvoll beitragen können.
+- **Die Community** weiß nicht, wo sie in ihrer Nähe beitragen kann.
+- **Stiftungen** finden keinen Nachwuchs für ihre Gremien.
 - **Zustifter** wissen nicht, wo ihr Kapital dauerhaft wirkt.
 
-Die vorhandenen Verzeichnisse lösen einen Teil davon: Sie listen Stiftungen. Was fehlt, ist die Verbindung zwischen Liste und Wirklichkeit.
+Die vorhandenen Verzeichnisse lösen einen Teil davon: Sie listen Stiftungen. Was fehlt, ist die Verbindung zwischen Liste und Wirklichkeit. Neun Suchen laufen hier aneinander vorbei, und acht davon über Zufall. Die Aufstellung steht in [01-rollen.md → Wer sucht wen](01-rollen.md).
 
 ## Die Lösung
 
 | Baustein | Was er leistet |
 |---|---|
-| **Karte** | Stiftungen, Projekte und Menschen an einem Ort, mit Quelle und Prüfdatum |
+| **Karte** | Stiftungen, Projekte und ihre Community an einem Ort, weltweit, mit Quelle und Prüfdatum |
 | **Matching** | Vorschläge mit Begründung Zeile für Zeile, nie als Note |
 | **Projektseite** | was ein Projekt tut, braucht und schon erreicht hat |
 | **Vertrauensschicht** | reale Begegnung, bestätigter Beitrag, gewachsenes Vertrauen |
@@ -64,7 +65,7 @@ Drei Dinge werden leicht verwechselt. Diese Zuordnung folgt den Dokumenten des S
 | **Real Life Stack (RLS)** | App- und UI-Baukasten, backend-agnostisch | [real-life-stack][rls] |
 | **Web of Trust (WoT)** | Protokoll für dezentrale Identität und Vertrauensbeziehungen: `did:key`, JWS, E2EE-Sync | [web-of-trust][wot] |
 | **Real Life Network Protocol (RLNP)** | Soziale Semantik: Begegnungen, Ressourcen, Bedürfnisse, Quests, Evidence, Attestation Policies | RLNP-Konzept im Stack-Repo |
-| **trustdonation** | Ein Anwendungsfall darauf: Förderung zwischen Stiftungen, Projekten und Menschen | dieses Repo |
+| **trustdonation** | Ein Anwendungsfall darauf: Förderung zwischen Stiftungen, Projekten und ihrer Community | dieses Repo |
 
 [rls]: https://github.com/real-life-org/real-life-stack
 [wot]: https://github.com/antontranelis/web-of-trust
@@ -75,7 +76,8 @@ Die drei Vertrauensstufen in [02-vertrauen.md](02-vertrauen.md) sind unsere Sich
 
 Diese Dokumente beschreiben:
 
-- Rollen und ihren Kreislauf,
+- die vier Rollen, die Community und ihren Kreislauf,
+- wer hier wen sucht,
 - die drei Stufen des Vertrauens,
 - das Datenmodell für Stiftungen und Projekte,
 - die rechtlichen Leitplanken,

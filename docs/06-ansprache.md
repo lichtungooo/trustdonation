@@ -88,7 +88,7 @@ Persönlich, mit konkretem Anlass, ohne Anhang. Kein Serienbrief (siehe § 7 UWG
 
 > Guten Tag,
 >
-> wir bauen eine offene Karte, auf der Stiftungen, Projekte und Menschen einander finden: trustdonation.org, getragen vom Real Life Network e.V.
+> wir bauen eine offene Karte, auf der Stiftungen, Projekte und Menschen einander finden: trustdonation.org, getragen vom Kollektiv Lichtung e.V.
 >
 > Ihre Stiftung haben wir dafür aus öffentlichen Angaben erfasst: Förderzwecke, Region, Antragsweg, Fördersummen. Bevor der Eintrag online geht, möchten wir ihn Ihnen zeigen. Sie können ihn übernehmen und selbst pflegen, kostenlos.
 >
@@ -97,7 +97,7 @@ Persönlich, mit konkretem Anlass, ohne Anhang. Kein Serienbrief (siehe § 7 UWG
 > Passt ein kurzer Termin in den nächsten zwei Wochen?
 >
 > Herzliche Grüße
-> Timo Martin, Real Life Network e.V.
+> Timo Martin, Kollektiv Lichtung e.V.
 
 Anlage im Gespräch, nicht in der Mail: der Link auf den Entwurf des Eintrags.
 
@@ -107,7 +107,7 @@ Aus der Förder-Landschaft (der Förder-Landschaft) ergeben sich drei Wellen:
 
 1. **Nachbarschaft zuerst.** VR PartnerBank Heimatstiftungen, KSK Schwalm-Eder, Volksbank Kassel Göttingen, Bürgerstiftung Kassel. Kleine Summen, kurze Wege, echte Nähe. Sie tragen den Pilot.
 2. **Thematische Kernstiftungen.** Software AG-Stiftung, GLS Zukunftsstiftung Bildung, Stiftung Bildung. Sie verstehen den Ansatz und öffnen Türen.
-3. **Die Besonderen.** Edith Maryon (Boden), B. Braun (Region Melsungen), Aktion Mensch (Volumen). Erst ansprechen, wenn der Pilot etwas vorzuweisen hat.
+3. **Die Besonderen.** Edith Maryon (Boden), B. Braun (Melsungen), Aktion Mensch (Volumen). Erst ansprechen, wenn der Pilot etwas vorzuweisen hat.
 
 ## Verwandt
 

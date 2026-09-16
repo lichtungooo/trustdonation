@@ -2,7 +2,7 @@
 
 **Infrastruktur für vertrauensbasierte Förderung**
 
-Stiftungen, Projekte, Anstifter, Zustifter und Menschen finden auf einer Karte zueinander. Getragen vom Real Life Network e.V., gebaut auf dem [Real Life Stack][rls], Vertrauen über das [Web of Trust][wot].
+Stiftungen, Projekte, Anstifter, Zustifter und ihre Community finden auf einer Karte zueinander. Weltweit. Getragen vom Kollektiv Lichtung e.V., gebaut auf dem [Real Life Stack][rls], Vertrauen über das [Web of Trust][wot].
 
 > trustdonation baut eine Infrastruktur, mit der Stiftungen ihre Förderwirkung erhöhen, weil passende Projekte, Menschen, Anstifter und Zustifter leichter zusammenfinden.
 
@@ -19,14 +19,15 @@ Stiftungen, Projekte, Anstifter, Zustifter und Menschen finden auf einer Karte z
 
 - **Gute Projekte** finden die Förderer nicht, die zu ihnen passen.
 - **Förderer** sehen die passenden Projekte nicht, und Mittel bleiben liegen.
-- **Menschen** wissen nicht, wo sie in ihrer Nähe sinnvoll beitragen können.
+- **Die Community** weiß nicht, wo sie in ihrer Nähe beitragen kann.
+- **Stiftungen** finden keinen Nachwuchs für ihre Gremien.
 - **Zustifter** wissen nicht, wo ihr Kapital dauerhaft wirkt.
 
 Verzeichnisse lösen einen Teil davon: Sie listen Stiftungen. Was fehlt, ist die Verbindung zwischen Liste und Wirklichkeit.
 
 ## Die Lösung
 
-- **Karte** mit Stiftungen, Projekten und Menschen, jeder Eintrag mit Quelle und Prüfdatum
+- **Karte** mit Stiftungen, Projekten und Community, weltweit, jeder Eintrag mit Quelle und Prüfdatum
 - **Matching** mit Begründung Zeile für Zeile, nie als Note
 - **Projektseite**, die zeigt, was ein Projekt tut, braucht und schon erreicht hat
 - **Vertrauensschicht** aus realer Begegnung, bestätigtem Beitrag und gewachsenem Vertrauen

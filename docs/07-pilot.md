@@ -16,7 +16,7 @@ Vieles davon darf am Anfang von Hand laufen. Für Stiftungen ist ein funktionier
 |-------|------|
 | Stiftungen | 10 |
 | Projekte | 20 |
-| Menschen | 100 |
+| Community | 100 Menschen |
 | Anstifter | 5 |
 | Konkrete Förderfälle | 3 bis 5 |
 

@@ -43,11 +43,18 @@ Was in allen dreien dasselbe sein **kann**, liegt eine Ebene tiefer: Farbe, Schr
 
 Farben, Schriften, Abstände, Rundungen, hell und dunkel.
 
-**Steht schon.** `ds-bundle/tokens/tokens.css` führt sie als CSS-Variablen, für Landingpage und App gemeinsam. Eine Seite braucht eine Zeile:
+**Steht, mit Prüfung** (seit 17.09.2026): `baukasten/rohstoffe/farben.json` führt jede Farbe **genau einmal**, und `scripts/farben-pruefen.py` hält sie mit den beiden Orten in Einklang, an denen sie gebraucht wird.
 
-```html
-<link rel="stylesheet" href="tokens/tokens.css">
-```
+Denn sie standen vorher zweimal da, unter verschiedenen Namen:
+
+| Bedeutung | `landing/site.css` | `branding/theme.json` |
+|---|---|---|
+| Grün | `--gruen` | `primary` |
+| Linie | `--line` | `border` |
+
+Beim ersten Vergleich stimmten alle dreizehn Farben überein. **Zwei Wörter meinten allerdings Gegensätzliches:** `muted` ist auf der Seite eine Schriftfarbe (`#6B8578`), in der App eine helle Fläche (`#FFF8F1`). Bei `accent` dasselbe. Beides steht jetzt als Falle in der Quelle.
+
+`ds-bundle/tokens/tokens.css` bleibt daneben bestehen: Es ist eine **Ableitung** für den Design-Agenten, erzeugt aus denselben zwei Dateien, keine eigene Quelle.
 
 Diese Schicht ist die wichtigste, weil sie als einzige wirklich überall gilt. Solange sie stimmt, sehen drei verschiedene Welten gleich aus.
 
@@ -155,7 +162,7 @@ Wer einen Baustein sucht, sieht drei Dinge: **was er tut, wer ihn gebaut hat, wo
 
 | Schicht | Stand | Wo |
 |---|---|---|
-| Rohstoffe | **steht** | `ds-bundle/tokens/tokens.css` |
+| Rohstoffe | **steht, geprüft** | `baukasten/rohstoffe/farben.json` plus `scripts/farben-pruefen.py` |
 | Bauteile | teilweise | `ds-bundle/components/` (Band, Knöpfe, Karten) |
 | Muster | teilweise | `ds-bundle/patterns/` (Hero, Einladung) |
 | Felder | definiert | `DEFINITION.md` Teil 7, [03-datenmodell.md](03-datenmodell.md) |

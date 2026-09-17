@@ -32,7 +32,21 @@ Die App kennt zwei Wege, und das ist Absicht:
 
 Beide stehen jetzt oben auf der Landingpage. In der App steht im angemeldeten Fall nichts, im Beispielfall der Hinweis **„Beispieldaten · Mein Konto"**.
 
-**Die beiden Welten wissen nichts voneinander.** Wer sich anmeldet, sieht die 234 Stiftungen nicht: Sie liegen in den Beispieldaten, nicht in eurem Datenraum. Das ist kein Fehler, sondern die Trennung von Prüfstand und echtem Konto.
+**Die beiden Welten wissen nichts voneinander.** Wer sich anmeldet, sieht die 234 Stiftungen zunächst nicht: Sie liegen in den Beispieldaten, nicht in eurem Datenraum. Das ist kein Fehler, sondern die Trennung von Prüfstand und echtem Konto.
+
+### Die Stiftungen in euren Space holen
+
+Seit proto-12 geht es doch, und zwar in eine Richtung: Ihr könnt die 234 Stiftungen **in euren eigenen Space übernehmen**.
+
+1. Anmelden und den Space wählen, in den sie sollen
+2. An die Adresse in der Leiste `&import=stiftungen` anhängen und Eingabe drücken
+3. **Das Passwort noch einmal eingeben.** Das Neuladen sperrt die Identität, weil der Schlüssel im Arbeitsspeicher liegt und mit der Seite verschwindet.
+4. Die Rückfrage nennt den Space und die Anzahl. **Übernehmen** klicken
+5. Warten, bis **Fertig** steht. Das Fenster dabei offen lassen.
+
+Danach gehören sie dem Space: Sie laufen über das Relay, jedes Mitglied sieht sie, und wer eine ändert, ändert sie für alle. Ein zweiter Lauf verdoppelt nichts.
+
+**Vorher überlegen, in welchen Space.** 234 Einträge nimmt man nicht mit einem Klick zurück.
 
 ---
 

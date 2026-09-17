@@ -43,35 +43,31 @@ Die letzte Zeile ist die wichtigste: **Wir halten keine Nutzerdaten.** Wer sich 
 ~/apps/wir-ooo/scripts/sichern.sh
 ```
 
-Sichert die `.env` und alles, was im Instanz-Ordner nicht in Git liegt, nach `~/sicherung/` und haelt die letzten dreissig Staende. Laeuft taeglich per Cron:
+Sichert die `.env` und alles, was im Instanz-Ordner nicht in Git liegt, nach `~/sicherung/` und haelt die letzten dreissig Staende. Dazu die Liste der Images mit ihrem Datum: Ohne sie weiss beim Wiederaufbau niemand, welches Image zu welchem Commit gehoerte.
 
-```cron
-17 3 * * * /home/timo/apps/wir-ooo/scripts/sichern.sh
-```
+**Sie haengt an der Aenderung, nicht an der Uhr.** Die `.env` aendert sich genau dann, wenn ausgeliefert wird; ein taeglicher Lauf wuerde neunundzwanzig gleiche Staende erzeugen. Darum steht sie als Schritt im Ablauf `td-ausliefern` und wird zusaetzlich von Hand gefahren, wenn jemand etwas am Server aendert.
 
 Was **nicht** gesichert wird und warum:
 
 - **Images**: jederzeit aus Git neu baubar, und 350 MB Sicherung fuer einen Befehl lohnt nicht.
 - **Container-Zustand**: die App haelt nichts, was nicht aus Git oder von den Menschen kommt.
-- **Zertifikate**: werden neu ausgestellt.
-
----
+- **Zertifikate**: werden in ein bis zwei Minuten neu ausgestellt.
 
 ## Die Wacht
 
-```bash
-~/apps/wir-ooo/scripts/wacht.sh
-```
+**Von aussen**, als Arbeitsablauf in GitHub: `.github/workflows/wacht.yml`, alle fuenfzehn Minuten.
 
-Prueft alle fuenf Minuten, ob `trustdonation.org` und `/app` mit 200 antworten und ob der Container gesund ist. Meldet **nur bei einem Wechsel des Zustands**, nicht bei jedem Lauf: eine Nachricht alle fuenf Minuten wird nach einem Tag weggeblendet.
+Von aussen ist besser als vom Server: Eine Pruefung, die auf demselben Rechner laeuft, schweigt genau dann, wenn der Rechner weg ist.
 
-```cron
-*/5 * * * * /home/timo/apps/wir-ooo/scripts/wacht.sh
-```
+Sie prueft drei Dinge:
 
-Meldung per Telegram, wenn `TELEGRAM_TOKEN` und `TELEGRAM_CHAT` in der Umgebung stehen. Sonst steht alles im Log.
+1. `https://trustdonation.org/` antwortet mit 200.
+2. `https://trustdonation.org/app/` antwortet mit 200.
+3. `app/config.json` ist da und vollstaendig. Ohne sie startet die App nicht, auch wenn die Seite laedt.
 
----
+Bei einer Stoerung oeffnet der Lauf ein Issue mit dem Etikett `wacht` und haengt jeden weiteren Fund als Kommentar an. Ist wieder alles da, schreibt er die Entwarnung und schliesst es. **Eine Meldung je Stoerung**, nicht alle fuenfzehn Minuten eine.
+
+Auf dem Server liegt zusaetzlich `scripts/wacht.sh`, das dieselbe Pruefung von innen macht und dabei auch den Zustand des Containers ansieht. Es laeuft von Hand oder aus einem Ablauf heraus; **fuer einen Zeitplan fehlt auf diesem Server der Dienst** (kein `cron`, und `systemd --user` ohne Linger stoppt beim Abmelden). Das ist kein Mangel, solange die Wacht von aussen laeuft.
 
 ## Zurueckdrehen
 

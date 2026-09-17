@@ -14,6 +14,11 @@
       "name": "trustdonation-tools",
       "source": "./plugins/trustdonation-tools",
       "description": "Definieren, Nähte setzen, Antons Stand verfolgen, zu ihm beitragen, Module und Komponenten bauen, ausliefern"
+    },
+    {
+      "name": "sprach-tools",
+      "source": "./plugins/sprach-tools",
+      "description": "Sprach-Stimmen und Schreibregeln: klartext, klare-sprache, gendern, konzept-schreiben, neun Sprachstile"
     }
   ]
 }

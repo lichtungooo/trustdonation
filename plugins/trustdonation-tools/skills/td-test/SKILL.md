@@ -1,6 +1,6 @@
 ---
 name: td-test
-description: "Was in trustdonation getestet wird und was nicht. Die Regel: jede Liste und jede Regel aus der Definition bekommt einen Test. Vitest-Befehle, Testarten, die drei Tore, und was ein Test nicht leisten soll."
+description: "Was in trustdonation getestet wird und was nicht. Die Regel: jede Liste und jede Regel aus der Definition bekommt einen Test. Vitest, die sechs Tore in pruefen.py, Zugang mit axe-core, und was ein Test nicht leisten soll."
 ---
 
 # Testen
@@ -48,15 +48,29 @@ cd packages/toolkit && npx vitest                                 # mitlaufend
 
 Die Tests laufen mit **Vitest**. Sie liegen je Paket in `tests/`.
 
-## Die drei Tore
+## Die Tore
 
-Vor jeder Auslieferung, in dieser Reihenfolge. **Kein Tor wird uebersprungen.**
+Ein Befehl faehrt sie alle:
 
-| Tor | Befehl | Was es sagt |
+```bash
+python td-tools/pruefen.py            # alles
+python td-tools/pruefen.py --schnell  # ohne Bau und Tests, Sekunden
+```
+
+| Tor | Was es sagt | haelt auf? |
 |---|---|---|
-| **1 Typen** | `pnpm build` | die Formen stimmen |
-| **2 Regeln** | `pnpm -r test` | die Listen stimmen |
-| **3 Augenschein** | `pnpm dev:reference`, Port 5173 | es tut, was es soll |
+| **Typen** | `pnpm build` laeuft durch | ja |
+| **Regeln** | alle Tests gruen | ja |
+| **Naehte** | keine unbenannte Stelle in Antons Code | ja |
+| **Grenze** | keine Protokoll-Aufrufe in unseren Paketen | ja |
+| **Budget** | die Groesse bleibt im Rahmen | nein, warnt |
+| **Gedaechtnis** | der Stand ist gepflegt | ja |
+
+Rot haelt die Auslieferung auf, gelb warnt. Ein Werkzeug, das immer rot leuchtet, wird nach zwei Tagen ignoriert.
+
+**Der Schnelllauf verdeckt Fehler.** Zwei eigene Fehler im Werkzeug fielen erst im vollen Lauf auf: `pnpm` liess sich auf Windows ohne `shutil.which` nicht starten, und die Pfaderkennung im Naht-Bericht verlangte einen Punkt im Dateinamen, weshalb `deploy/app/Dockerfile` als unbenannt galt. **Vor dem Ausliefern immer voll fahren.**
+
+Dazu der Augenschein: `pnpm dev:reference` auf **Port 5173**, niemals ausweichen.
 
 Ein gruener Build ohne gruene Tests sagt nichts ueber die Regeln, die wir geaendert haben.
 
@@ -97,9 +111,33 @@ cd packages/data-interface && npx vitest run tests/schema-validation.test.ts
 
 AJV prueft jedes Beispiel unter `docs/spec/schemas/vocab/*/examples/valid/` gegen sein Schema. **Ein neues Vokabular bekommt mindestens ein gueltiges Beispiel**, sonst prueft die CI nichts.
 
+## Zugang pruefen
+
+Ob die App fuer alle bedienbar ist, misst ein eigenes Werkzeug:
+
+```bash
+pnpm --filter reference exec vite preview --port 4173 &
+python td-tools/zugang.py                              # gegen die Vorschau
+python td-tools/zugang.py https://trustdonation.org/app/
+```
+
+Es laesst **axe-core** ueber die laufende App laufen. axe findet nicht alles, was ein Mensch findet, aber es findet zuverlaessig, was Maschinen finden koennen: fehlende Beschriftungen, zu schwache Kontraste, Bilder ohne Text, eine kaputte Ueberschriften-Ordnung. Rueckgabe 1, wenn ein schwerer Fund dabei ist.
+
+**Der erste Lauf am 17.09.2026 fand drei Verstoesse, zwei davon schwer:**
+
+| Fund | Was er bedeutet |
+|---|---|
+| `button-name` | Der Hell-Dunkel-Umschalter hatte keinen Namen. Eine Vorlesehilfe las nur "Schaltflaeche". |
+| `meta-viewport` | `user-scalable=no` schaltete das Zoomen ab. Das trifft jeden, der vergroessern muss, um zu lesen. |
+| `page-has-heading-one` | Keine Ueberschrift erster Ordnung. Wer springt, fand keinen Anfang. |
+
+Alle drei behoben. **Beim Beheben ist ein vierter aufgetaucht**, und das ist die Lehre: Die neue Ueberschrift kam zuerst in einen eigenen `header` und war damit ein zweiter gleichnamiger Bereich. axe meldete `landmark-unique` sofort. Sie gehoert **in** die vorhandene Leiste.
+
+**Live pruefen lohnt getrennt:** Dort ist ein anderer Space aktiv, und Funde haengen an der Space-Farbe. Der aktive Reiter auf hellem Orange faellt lokal nicht auf.
+
 ## Die Grenze zum Protokoll pruefen
 
-Ein Test, der noch fehlt und gebaut werden soll:
+Das Tor `Grenze` in `pruefen.py` misst es bei jedem Lauf. Von Hand:
 
 ```bash
 grep -rn "did:key\|Y\.Doc\|applyUpdate\|@web_of_trust" packages/td-* apps/trustdonation 2>/dev/null
@@ -113,10 +151,10 @@ Muss leer bleiben. Wir sprechen nie direkt mit dem Web of Trust, immer ueber `Da
 2. Hat jede Regel aus der Definition einen Test?
 3. Prueft der Test die **ganze** Liste, nicht einen Eintrag?
 4. Sagt der Testname die Regel?
-5. Laufen alle drei Tore?
+5. Laufen alle sechs Tore? (`python td-tools/pruefen.py`, voll, nicht `--schnell`)
 
 ## Verwandt
 
-- `docs/ARCHITEKTUR.md` Teil 7 (die sieben Qualitaetstore)
+- `docs/ARCHITEKTUR.md` Teil 7 (die Qualitaetstore)
 - `docs/NAEHTE.md` Abschnitt D
 - Skills `td-definieren`, `td-ausliefern`, `td-update`

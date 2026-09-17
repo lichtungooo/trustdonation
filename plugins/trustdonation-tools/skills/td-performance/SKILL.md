@@ -9,46 +9,48 @@ description: "Performance in trustdonation: messen statt raten. Bundle-Budget mi
 
 ## Die Zahlen von heute
 
-Gemessen am 17.09.2026, `pnpm build`, Ordner `apps/reference/dist`:
+Gemessen am 17.09.2026. **Die Startlast ist die Zahl, die zaehlt**: was ein Browser beim ersten Aufruf tatsaechlich holt. Die Groesse der Dateien im `dist`-Ordner sagt wenig, denn ueber die Leitung geht rund ein Drittel davon, und ein Stueck, das nur beim Oeffnen der Karte geladen wird, kostet niemanden, der nie auf die Karte geht.
 
-| Datei | Groesse | Was |
-|---|---:|---|
-| `index-*.js` (gross) | **1758 KB** | die App |
-| `maplibre-gl-*.js` | **1029 KB** | die Kartenbibliothek |
-| `index-*.js` | 613 KB | Teilstueck |
-| `index-*.js` | 237 KB | Teilstueck |
-| **gesamt `dist/`** | **5.0 MB** | mit Schriften und Bildern |
+| | Wert | Budget |
+|---|---:|---:|
+| **Startlast, lokal** | **864 KB** | 1200 KB |
+| **Startlast, live** | **1015 KB** | 1200 KB |
+| groesstes Stueck im `dist` | 1766 KB | 2000 KB |
+| `dist` gesamt | 4,9 MB | |
 
-Vite meldet beim Bau selbst, dass drei Stuecke ueber der Warnschwelle liegen.
+**Woher der Sprung kam:** Der erste Lauf mass 1596 KB, und das groesste Einzelstueck war kein Code, sondern ein Bild. `timo.png` wog 733 KB bei 707 Pixeln Breite und wurde als 40-Pixel-Avatar gezeigt. Jetzt liegt es als 128er WebP mit 3 KB in den Musterdaten.
 
-## Das Budget
-
-| Was | Grenze | heute |
-|---|---:|---|
-| groesstes JavaScript-Stueck | 800 KB | **1758 KB** |
-| Karte, nachgeladen statt im Start | ja | nein |
-| `dist/` gesamt | 4 MB | 5.0 MB |
-| Erstes sichtbares Bild, schnelle Leitung | 2 s | ungemessen |
-| Erstes sichtbares Bild, langsame Leitung | 5 s | ungemessen |
-
-**Ein Budget ist erst ein Budget, wenn es gemessen wird.** Die beiden letzten Zeilen sind heute Absicht, keine Zahl.
+**Die Lehre daraus:** Vor jeder Optimierung messen, was wirklich geladen wird. Ich haette einen Tag am JavaScript gefeilt und das Bild nie gesehen.
 
 ## Messen
+
+**Zuerst im Browser, dann im Ordner.**
 
 ```bash
 cd /d/Workspace/20-repos/rls-uebersicht
 pnpm build
-ls -la apps/reference/dist/assets/*.js | awk '{printf "%8.0f KB  %s\n", $5/1024, $9}' | sort -rn | head
-du -sh apps/reference/dist
+pnpm --filter reference exec vite preview --port 4173 &
+python td-tools/startlast.py                          # gegen die Vorschau
+python td-tools/startlast.py https://trustdonation.org/app/
 ```
 
-Was in einem Stueck steckt, zeigt die Karte des Bauwerks:
+Das Werkzeug startet Chrome ohne Fenster, laedt die Seite und zaehlt jede Antwort. Es sagt, wieviel nach Art zusammenkommt, welche Dateien die groessten sind, und ob die Kartenbibliothek im Startpfad liegt.
+
+**Es loescht sein Browserprofil vor jedem Lauf.** Ohne das misst der zweite Lauf, was der erste gespeichert hat: Der local-Connector legt seinen Stand in der IndexedDB ab, und das verkleinerte Bild taucht nie auf. Dieser Fehler hat eine Messung verfaelscht, bevor er aufgefallen ist.
+
+Der grobe Blick ohne Browser:
+
+```bash
+python td-tools/pruefen.py          # Tor "Budget"
+du -sh apps/reference/dist
+ls -laS apps/reference/dist/assets/*.js | head
+```
+
+Was in einem Stueck steckt:
 
 ```bash
 npx vite-bundle-visualizer --config apps/reference/vite.config.ts
 ```
-
-Im Browser: die Registerkarte **Netzwerk** mit Drosselung auf langsame Leitung, und **Leistung** fuer die Aufzeichnung.
 
 ## Die teuren Stellen
 

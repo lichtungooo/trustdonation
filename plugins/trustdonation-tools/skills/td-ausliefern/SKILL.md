@@ -12,15 +12,35 @@ Vom Arbeitsstand zur laufenden App auf `trustdonation.org/app`.
 **Bauordner:** `~/build/td-app` · **Instanz:** `~/apps/wir-ooo` · **Container:** `rls-app-wir`
 **Instanz-Repo:** `lichtungooo/trustdonation`, lokal `20-repos/trustdonation`
 
-## 1. Drei Tore, lokal
+## 1. Alle Tore, lokal
 
 ```bash
 cd /d/Workspace/20-repos/rls-uebersicht
-pnpm -r test          # alle acht Pakete gruen
-pnpm build            # zehn Aufgaben erfolgreich
+python td-tools/pruefen.py
 ```
 
-Das dritte Tor ist der Augenschein: `pnpm dev:reference` auf **Port 5173**, niemals ausweichen. IndexedDB haengt am Origin.
+Sechs Tore in einem Befehl: Typen, Regeln, Naehte, Grenze, Budget, Gedaechtnis. **Voll fahren, nicht `--schnell`**: Der Schnelllauf ueberspringt Bau und Tests und hat schon zwei Fehler verdeckt.
+
+Dazu der Augenschein: `pnpm dev:reference` auf **Port 5173**, niemals ausweichen. IndexedDB haengt am Origin.
+
+Wer an der Oberflaeche gearbeitet hat, prueft zusaetzlich:
+
+```bash
+pnpm --filter reference exec vite preview --port 4173 &
+python td-tools/zugang.py        # axe-core, null Funde erwartet
+python td-tools/startlast.py     # Startlast, Budget 1200 KB
+```
+
+## 1a. Ein neues Paket? Dann den Dockerfile ergaenzen
+
+Der Bau kopiert **jede `package.json` einzeln**, damit die Abhaengigkeits-Schicht im Cache bleibt:
+
+```dockerfile
+COPY packages/td-core/package.json packages/td-core/
+COPY packages/td-ui/package.json packages/td-ui/
+```
+
+Fehlt ein Paket dort, installiert pnpm es nicht, und der Server-Bau bricht ab, sobald es etwas importiert. **Lokal faellt das nie auf**, weil dort alles installiert ist. Das hat einen Durchgang gekostet.
 
 ## 2. Musterdaten geaendert?
 
@@ -47,6 +67,14 @@ Die `tsbuildinfo` gehoert nicht in den Commit:
 ```bash
 git checkout -- apps/landing/tsconfig.tsbuildinfo
 ```
+
+## 3a. Vorher sichern
+
+```bash
+ssh timo@h2980589.stratoserver.net "cd ~/apps/wir-ooo && sh scripts/sichern.sh"
+```
+
+Die `.env` ist die einzige Datei, die nur auf dem Server existiert, und sie aendert sich genau jetzt. Der Rest liegt in Git.
 
 ## 4. Server: holen und bauen
 
@@ -109,7 +137,9 @@ Umlaute im Bundle sind oft escaped. Nach **Ids** suchen, nicht nach Namen mit Um
 
 ## 7. Nachtragen
 
-`memory/stand_trustdonation.md`: Image-Tag, Commit, was unterwegs schiefging. Bei einer neuen Falle zusaetzlich `40-forge/Real-Life-Forge/ERFAHRUNGEN.md`.
+1. **`docs/AUSLIEFERUNGEN.md`**: neue Zeile oben mit Stand, Commit, Datum und dem, was ein Mensch merkt. Beim Zurueckdrehen zaehlt genau das.
+2. **`memory/stand_trustdonation.md`**: Image-Tag, Commit, was unterwegs schiefging.
+3. Bei einer neuen Falle zusaetzlich `40-forge/Real-Life-Forge/ERFAHRUNGEN.md`.
 
 ## Landing statt App
 

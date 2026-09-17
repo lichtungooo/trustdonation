@@ -8,33 +8,134 @@
       "name": "Einen Stiftungseintrag anlegen",
       "zweck": "13 W-Fragen, Recherche und Uebernahme. Jede Frage gehoert zu genau einem Feld.",
       "datei": "docs/fragen/stiftung.md",
-      "schichten": ["felder", "arten"],
-      "herkunft": { "name": "Timo", "did": null },
-      "belege": ["docs/fragen/beispiel-stiftung.md: einmal geloest"]
+      "schichten": [
+        "felder",
+        "arten"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/fragen/beispiel-stiftung.md: einmal geloest"
+      ]
     },
     {
       "id": "fragebogen-projekt",
       "name": "Ein Projekt anlegen",
       "zweck": "14 W-Fragen in drei Runden.",
       "datei": "docs/fragen/projekt.md",
-      "schichten": ["felder", "arten"],
-      "herkunft": { "name": "Timo", "did": null },
-      "belege": ["docs/fragen/beispiel-projekt.md: trustdonation selbst geloest"]
+      "schichten": [
+        "felder",
+        "arten"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/fragen/beispiel-projekt.md: trustdonation selbst geloest"
+      ]
     },
     {
       "id": "fragebogen-stiftungsgespraech",
       "name": "Der erste Termin mit einer Stiftung",
       "zweck": "Sieben Fragen und ein Protokollbogen. Fuer den Tisch, nicht fuer die App.",
       "datei": "docs/fragen/stiftungsgespraech.md",
-      "schichten": ["sprache"],
-      "herkunft": { "name": "Timo", "did": null },
+      "schichten": [
+        "sprache"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": []
+    },
+    {
+      "id": "space-stiftung",
+      "name": "Space fuer eine Stiftung",
+      "zweck": "Ein fertig eingerichteter Space: vier Module, die Art `stiftung`, die Farbe ihrer Art.",
+      "datei": "baukasten/vorlagen/spaces/stiftung.json",
+      "schichten": [
+        "arten",
+        "module",
+        "felder"
+      ],
+      "vorbild": "Loewenherz Stiftung, aus Timos echten Daten",
+      "herkunft": {
+        "name": "Timo und Eli",
+        "did": null
+      },
+      "belege": [
+        "Space Loewenherz Stiftung"
+      ]
+    },
+    {
+      "id": "space-projekt",
+      "name": "Space fuer ein Projekt",
+      "zweck": "Dasselbe fuer ein Vorhaben, das Foerderung sucht. Kann zugleich ein eigenes Netzwerk sein.",
+      "datei": "baukasten/vorlagen/spaces/projekt.json",
+      "schichten": [
+        "arten",
+        "module",
+        "felder"
+      ],
+      "vorbild": "Marker & Maps und Lichtung",
+      "herkunft": {
+        "name": "Timo und Eli",
+        "did": null
+      },
+      "belege": [
+        "Space Marker & Maps",
+        "Space Lichtung"
+      ]
+    },
+    {
+      "id": "space-netzwerk",
+      "name": "Space fuer ein Netzwerk",
+      "zweck": "Der Schalter `isNetwork` macht alles auf: Arten-Editor, Landingpage-Bereich, erster Platz im Umschalter.",
+      "datei": "baukasten/vorlagen/spaces/netzwerk.json",
+      "schichten": [
+        "arten",
+        "module"
+      ],
+      "vorbild": "trustdonation selbst",
+      "herkunft": {
+        "name": "Timo und Eli",
+        "did": null
+      },
+      "belege": [
+        "Space trustdonation",
+        "Space Real Life"
+      ]
+    },
+    {
+      "id": "landingpage-stiftung",
+      "name": "Landingpage einer Stiftung",
+      "zweck": "Eine fertige Seite. Alles darauf kommt aus den Feldern; wer eine eigene braucht, tauscht die Werte, nicht den Aufbau.",
+      "datei": "baukasten/vorlagen/landingpage-stiftung.html",
+      "schichten": [
+        "rohstoffe",
+        "bauteile",
+        "muster",
+        "felder"
+      ],
+      "absicht": "Ein Projekt sucht zuerst eine Antwort: Passe ich ueberhaupt? Darum stehen die fuenf Zahlen vor jedem Text.",
+      "herkunft": {
+        "name": "Timo und Eli",
+        "did": null
+      },
       "belege": []
     }
   ],
   "$fehlt": [
-    { "id": "landingpage-stiftung", "warum": "Eine fertige Seite fuer eine Stiftung, aus Mustern zusammengesetzt. Das ist es, was eine Stiftung am Ende will." },
-    { "id": "space-stiftung", "warum": "Ein Space mit den richtigen Modulen, Arten und Feldern, fertig eingerichtet." },
-    { "id": "space-projekt", "warum": "Dasselbe fuer ein Projekt." },
-    { "id": "space-netzwerk", "warum": "Dasselbe fuer ein Netzwerk, mit Arten-Editor und Landingpage-Bereich." }
+    {
+      "id": "landingpage-projekt",
+      "warum": "Ein Projekt braucht dieselbe Seite mit anderen Zahlen: Beduerfnis, Bedarf, Luecke, Wirkung."
+    },
+    {
+      "id": "space-verein",
+      "warum": "Die meisten Projekte haengen an einem Verein. Er traegt eigene Angaben."
+    }
   ]
 }

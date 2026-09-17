@@ -1,0 +1,26 @@
+{
+  "$beschreibung": "Ein fertiger Space fuer ein Projekt. Siebte Schicht des Baukastens.",
+  "$vorbild": "Marker & Maps und Lichtung, aus Timos echten Daten (17.09.2026)",
+  "$so_wird_daraus_ein_space": "Die Felder unter `data` gehen in `Group.data`. `<platzhalter>` ersetzen, den Rest lassen.",
+  "name": "<Name des Projekts>",
+  "data": {
+    "scope": "group",
+    "access": "open",
+    "roles": ["admin", "member"],
+    "modules": ["feed", "kanban", "calendar", "map"],
+    "network": "30455be1-a5f9-465d-8d19-a72dd8da2d83",
+    "kind": "projekt",
+    "primaryColor": "<Farbe des Projekts, sonst weglassen>",
+    "image": "<Bild als data-URI, sonst weglassen>"
+  },
+  "$erklaerung": {
+    "kind": "`projekt` muss in den `spaceKinds` des Netzwerks stehen.",
+    "zwei_rollen_moeglich": "Ein Projekt kann zugleich ein eigenes Netzwerk sein: Marker & Maps und Lichtung sind Projekte in trustdonation UND fuehren eigene Arten. Dann kommen `isNetwork: true`, `spaceKinds` und `domain` dazu. Siehe netzwerk.json.",
+    "module": "Dieselben vier wie bei der Stiftung. Ein Projekt arbeitet mehr im Kanban, eine Stiftung mehr im Kalender."
+  },
+  "$danach": [
+    "Die vierzehn Fragen aus docs/fragen/projekt.md in drei Runden durchgehen.",
+    "Die Felder aus baukasten/felder/felder.json (arten: projekt) fuellen.",
+    "`beduerfnis` zuerst: Was fehlt hier ohne dieses Projekt. Der Satz traegt den Rest."
+  ]
+}

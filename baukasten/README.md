@@ -18,10 +18,10 @@ Die Festlegung steht in [docs/12-baukasten.md](../docs/12-baukasten.md). **Kein 
 | **4. Felder** | 43 | 0 | `felder/felder.json` |
 | **5. Arten** | 5 | 3 | `arten/arten.json` |
 | **6. Module** | 8 | 0 | `module/module.json` |
-| **7. Vorlagen** | 3 | 4 | `vorlagen/vorlagen.json` |
+| **7. Vorlagen** | 7 | 2 | `vorlagen/vorlagen.json` |
 | **8. Sprache: Regeln** | 4 + 11 Werkzeuge | 3 | `sprache/sprache.json` |
 | **8. Sprache: Texte** | 5 | 0 | `sprache/texte/` |
-| **zusammen** | **95** | **16** | |
+| **zusammen** | **99** | **14** | |
 
 Jeder Eintrag folgt [EINTRAG.md](EINTRAG.md): id, name, zweck, herkunft, belege, abstand.
 
@@ -97,6 +97,28 @@ python scripts/rohstoffe-bauen.py
 
 ---
 
+## Schicht 7: Die Vorlagen
+
+Ein fertiger Auftritt, statt Knöpfe auszusuchen. Vier stehen:
+
+| Vorlage | Was sie mitbringt |
+|---|---|
+| [Space Stiftung](vorlagen/spaces/stiftung.json) | vier Module, Art `stiftung`, Farbe der Art. Nach dem Vorbild Löwenherz |
+| [Space Projekt](vorlagen/spaces/projekt.json) | dasselbe für ein Vorhaben. Kann zugleich ein eigenes Netzwerk sein |
+| [Space Netzwerk](vorlagen/spaces/netzwerk.json) | `isNetwork` macht alles auf: Arten-Editor, Landingpage-Bereich, erster Platz im Umschalter |
+| [Landingpage einer Stiftung](vorlagen/landingpage-stiftung.html) | eine fertige Seite, alles daraus aus den Feldern |
+
+**Die drei Space-Vorlagen folgen der echten Struktur**, nicht einer erdachten: Sie sind aus deinen eigenen Spaces abgelesen. Jede erklärt in `$erklaerung`, warum ein Feld dasteht, und was passiert, wenn es fehlt.
+
+Zwei Beispiele daraus:
+
+- *Eine Stiftung ist Mitglied eines Netzwerks, kein eigenes.* Wer `isNetwork` setzt, bekommt den Arten-Editor und den Landingpage-Bereich, und beides braucht sie nicht.
+- *Eine Art ohne `labelPlural` gilt als unvollständig und wird nicht gespeichert.* Das ist `zeileVollstaendig` in td-core.
+
+**Die Landingpage stellt fünf Zahlen vor jeden Text.** Ein Projekt sucht zuerst eine Antwort: Passe ich überhaupt? Fördersumme, Reichweite, Antragsweg, Fristen, Eigenmittel. Erst danach kommen Sätze.
+
+---
+
 ## Schicht 8: Die Texte
 
 `sprache/texte/` führt die Bausteine, die eine Stiftung am Tisch braucht:
@@ -117,9 +139,9 @@ python scripts/rohstoffe-bauen.py
 
 Die zwanzig Lücken stehen in den Dateien. Nach Nutzen geordnet:
 
-1. **Die vier Vorlagen** (Landingpage einer Stiftung, Space „Stiftung", „Projekt", „Netzwerk"). Das ist es, was eine Stiftung am Ende wirklich will.
-4. **Die drei fehlenden Arten** (Verein, Unternehmen, Mensch).
-5. **Die vier Muster** (Profilkopf, Projektvorstellung, Kontaktblock, Förderaufruf).
+1. **Die vier Muster** (Profilkopf, Projektvorstellung, Kontaktblock, Förderaufruf). Sie sitzen zwischen dem, was steht: Bauteile gibt es, Vorlagen auch, aber nichts dazwischen.
+2. **Die drei fehlenden Arten** (Verein, Unternehmen, Mensch).
+3. **Die Landingpage eines Projekts**, mit den anderen Zahlen: Bedürfnis, Bedarf, Lücke, Wirkung.
 
 ## Zwei Entscheidungen, die anstehen
 

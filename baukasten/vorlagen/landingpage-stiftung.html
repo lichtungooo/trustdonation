@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="de">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Umweltstiftung Michael Otto — Vorlage</title>
+<link rel="stylesheet" href="../rohstoffe/tokens.css">
+<style>
+  /* Die Landingpage einer Stiftung. Siebte Schicht des Baukastens.
+     Alles, was hier steht, kommt aus den Feldern in felder/felder.json.
+     Wer eine eigene Seite braucht, tauscht die Werte, nicht den Aufbau. */
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--weiss); color:var(--gruen);
+         font:400 17px/1.65 var(--schrift-hanken); -webkit-font-smoothing:antialiased; }
+  .mitte { max-width:var(--seitenbreite); margin:0 auto; padding:0 24px; }
+  a { color:var(--rotbraun); }
+
+  /* Kopf: Signet, Name, ein Satz. Mehr nicht. Wer hier drei Absaetze
+     unterbringt, verliert den Besucher vor der ersten Zahl. */
+  header { padding:72px 0 56px; background:var(--papier); border-bottom:1px solid var(--linie); }
+  .signet { width:76px; height:76px; border-radius:18px; background:var(--stiftungsfarbe);
+            color:var(--weiss); display:inline-flex; align-items:center; justify-content:center;
+            font-size:28px; font-weight:700; margin-bottom:22px; }
+  h1 { font-size:clamp(30px,5vw,44px); font-weight:800; letter-spacing:-.025em; margin:0 0 12px; }
+  .einsatz { font-size:20px; color:var(--fliesstext); max-width:32em; margin:0; }
+
+  /* Die Zahlen, die eine Stiftung ausmacht. Sie stehen oben, weil ein
+     Projekt sie zuerst sucht: Passe ich ueberhaupt? */
+  .zahlen { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+            gap:1px; background:var(--linie); border:1px solid var(--linie);
+            border-radius:var(--rundung); overflow:hidden; margin:44px 0; }
+  .zahl { background:var(--weiss); padding:20px 22px; }
+  .zahl dt { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.13em;
+             color:var(--gedaempft); margin:0 0 6px; }
+  .zahl dd { margin:0; font-size:19px; font-weight:600; text-wrap:balance; }
+
+  section { padding:40px 0; border-top:1px solid var(--linie); }
+  section:first-of-type { border-top:0; }
+  h2 { font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.13em;
+       color:var(--gedaempft); margin:0 0 16px; }
+  .fliess { max-width:34em; color:var(--fliesstext); }
+
+  .etiketten { display:flex; flex-wrap:wrap; gap:9px; }
+  .etikett { border:1px solid var(--linie); background:var(--papier); border-radius:999px;
+             padding:6px 14px; font-size:14px; font-weight:600; }
+
+  .schritte { list-style:none; counter-reset:s; padding:0; margin:0; max-width:34em; }
+  .schritte li { counter-increment:s; position:relative; padding:0 0 18px 42px; }
+  .schritte li::before { content:counter(s); position:absolute; left:0; top:1px;
+                          width:26px; height:26px; border-radius:50%;
+                          background:var(--stiftungsfarbe); color:var(--weiss);
+                          font-size:13px; font-weight:700;
+                          display:flex; align-items:center; justify-content:center; }
+
+  /* Die Einladung. Eine Handlung, nicht zwei: Zwei gleichwertige Knoepfe
+     halbieren beide (siehe muster/muster.json, Muster "einladung"). */
+  .einladung { background:var(--papier); border-top:1px solid var(--linie);
+               padding:56px 0; text-align:center; }
+  .einladung h2 { color:var(--gedaempft); }
+  .einladung p { font-size:22px; font-weight:600; max-width:22em; margin:0 auto 26px; }
+  .knopf { display:inline-block; background:var(--stiftungsfarbe); color:var(--weiss);
+           border-radius:999px; padding:15px 34px; font-size:17px; font-weight:600;
+           text-decoration:none; }
+
+  footer { padding:28px 0 56px; font-size:13.5px; color:var(--gedaempft); }
+  footer a { color:var(--gedaempft); }
+
+  /* Die Hausfarbe der Stiftung. Ohne eigene die Farbe ihrer Art. */
+  :root { --stiftungsfarbe:#194294; }
+</style>
+
+<header>
+  <div class="mitte">
+    <div class="signet">UO</div>
+    <h1>Umweltstiftung Michael Otto</h1>
+    <p class="einsatz">Wir fördern Vorhaben, die Gewässer schützen und Menschen dafür gewinnen.</p>
+  </div>
+</header>
+
+<div class="mitte">
+
+  <dl class="zahlen">
+    <div class="zahl"><dt>Fördersumme</dt><dd>5.000 bis 50.000&nbsp;€</dd></div>
+    <div class="zahl"><dt>Reichweite</dt><dd>bundesweit</dd></div>
+    <div class="zahl"><dt>Antragsweg</dt><dd>offen</dd></div>
+    <div class="zahl"><dt>Fristen</dt><dd>laufend</dd></div>
+    <div class="zahl"><dt>Eigenmittel</dt><dd>teilweise</dd></div>
+  </dl>
+
+  <section>
+    <h2>Woran Sie erkennen, dass Sie zu uns passen</h2>
+    <p class="fliess">Ihr Vorhaben verbessert den Zustand eines Gewässers, und es bindet Menschen ein, die dort leben. Wir fördern lieber ein Projekt, das hundert Nachbarn bewegt, als eines, das eine Messstation aufstellt.</p>
+  </section>
+
+  <section>
+    <h2>Was wir fördern</h2>
+    <div class="etiketten">
+      <span class="etikett">Gewässerschutz</span>
+      <span class="etikett">Umweltbildung</span>
+      <span class="etikett">Renaturierung</span>
+      <span class="etikett">Bürgerwissenschaft</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Der Weg zum Antrag</h2>
+    <ol class="schritte">
+      <li>Eine Skizze auf zwei Seiten, formlos per Mail.</li>
+      <li>Wir melden uns innerhalb von vier Wochen.</li>
+      <li>Passt es, laden wir zum vollen Antrag ein.</li>
+      <li>Der Vorstand entscheidet im März und im Oktober.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Was wir bisher gefördert haben</h2>
+    <div class="etiketten">
+      <span class="etikett">Elbe-Auen</span>
+      <span class="etikett">Schulteiche</span>
+      <span class="etikett">Bachpatenschaften</span>
+    </div>
+    <p class="fliess" style="margin-top:14px;font-size:15px">Themen, keine Projektbeschreibungen: Wer Anträge kopiert, bekommt Kopien zurück.</p>
+  </section>
+
+</div>
+
+<div class="einladung">
+  <div class="mitte">
+    <h2>Sie haben ein Vorhaben</h2>
+    <p>Schicken Sie uns zwei Seiten. Mehr brauchen wir für den ersten Blick nicht.</p>
+    <a class="knopf" href="mailto:foerderung@beispiel.de">Skizze einreichen</a>
+  </div>
+</div>
+
+<footer>
+  <div class="mitte">
+    Eintrag gepflegt von der Stiftung selbst ·
+    <a href="https://trustdonation.org">auf trustdonation.org ansehen</a> ·
+    <a href="#">Impressum</a>
+  </div>
+</footer>

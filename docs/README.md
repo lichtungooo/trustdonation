@@ -36,6 +36,14 @@ Die Dokumente bauen in dieser Reihenfolge aufeinander auf.
 | [07-ansprache.md](07-ansprache.md) | Drei Türen, Partnerprogramm, 30-Minuten-Termin, erste Mail |
 | [08-pilot.md](08-pilot.md) | Der Pilot, vier Wellen, offene Punkte für den Stack |
 
+## Betrieb und Zusammenarbeit
+
+| Dokument | Zweck |
+|---|---|
+| [09-betrieb.md](09-betrieb.md) | Server, Container, Domains, Sicherung, was im Notfall hilft |
+| [10-zusammen-testen.md](10-zusammen-testen.md) | Anmelden, verifizieren, gemeinsam arbeiten. Der Ablauf für ein Treffen |
+| [11-zusammen-arbeiten.md](11-zusammen-arbeiten.md) | Zu dritt bauen: wer welches Stück nimmt, wo der Stand steht, wo Entscheidungen fallen |
+
 ## Fragebögen
 
 Jede Frage gehört zu genau einem Feld aus [03-datenmodell.md](03-datenmodell.md). Die Bögen dienen dreifach: als Leitfaden am Tisch, als Durchlauf in der App, als Feldliste.

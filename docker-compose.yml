@@ -28,6 +28,9 @@ services:
       # --- Identitaet ---
       RLS_APP_NAME: ${RLS_APP_NAME:?RLS_APP_NAME fehlt - wie heisst diese Instanz?}
       RLS_FAVICON_URL: ${RLS_FAVICON_URL:-/branding/favicon.svg}
+      # Das Start-Netzwerk der Instanz (Spec 11, Zuhause-Space): der Space,
+      # auf dem die App ohne URL und ohne Merker landet.
+      RLS_HOME_SPACE_ID: ${RLS_HOME_SPACE_ID:-}
     volumes:
       - ./landing:/srv/landing:ro
       - ./branding:/srv/branding:ro

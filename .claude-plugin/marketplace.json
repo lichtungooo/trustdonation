@@ -1,0 +1,19 @@
+{
+  "name": "trustdonation",
+  "owner": {
+    "name": "Kollektiv Lichtung e.V.",
+    "email": "info@trustdonation.org"
+  },
+  "metadata": {
+    "description": "Claude Code Skills für das Projekt trustdonation",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "trustdonation-tools",
+      "source": "./plugins/trustdonation-tools",
+      "description": "Definieren, Nähte setzen, Antons Stand verfolgen, zu ihm beitragen, Module und Komponenten bauen, ausliefern"
+    }
+  ]
+}

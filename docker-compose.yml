@@ -12,7 +12,9 @@
 
 services:
   app:
-    image: ghcr.io/real-life-org/rls-app:${RLS_IMAGE_TAG:?RLS_IMAGE_TAG fehlt - welche Version soll laufen?}
+    # Voreingestellt Antons veroeffentlichtes Image. Der trustdonation-Prototyp
+    # setzt RLS_IMAGE auf ein selbst gebautes Image und friert dort ein.
+    image: ${RLS_IMAGE:-ghcr.io/real-life-org/rls-app}:${RLS_IMAGE_TAG:?RLS_IMAGE_TAG fehlt - welche Version soll laufen?}
     container_name: rls-app-wir
     network_mode: bridge
     restart: unless-stopped

@@ -1,0 +1,95 @@
+/* Die Rohstoffe von trustdonation, als CSS-Variablen.
+ *
+ * ERZEUGT aus baukasten/rohstoffe/*.json durch scripts/rohstoffe-bauen.py.
+ * Wer hier etwas ändert, verliert es beim nächsten Lauf. Die Quelle ist
+ * farben.json.
+ *
+ * Jede Farbe steht zweimal: unter ihrem Namen im Baukasten und unter
+ * jedem Namen, den sie auf der Seite trägt. So lassen sich Bauteile
+ * schreiben, die beides verstehen.
+ */
+:root {
+  /* Die Hauptfarbe. Schrift, Knoepfe, Logo. */
+  --gruen: #1B5E40;
+  --ink: var(--gruen);
+  --pill: var(--gruen);
+  --band-text: var(--gruen);
+  --logo-ink: var(--gruen);
+
+  /* Flaeche und Schrift auf Gruen. */
+  --weiss: #FFFFFF;
+  --bg: var(--weiss);
+  --surface: var(--weiss);
+  --on-pill: var(--weiss);
+  --band-surface: var(--weiss);
+
+  /* Der Akzent. Hinweise, Fokus, Warnung. */
+  --gold: #EA580C;
+  --band-accent: var(--gold);
+
+  /* Die weiche Flaeche hinter Abschnitten. */
+  --papier: #FFF8F1;
+  --bg-soft: var(--papier);
+  --or1: var(--papier);
+
+  /* Raender, Trenner, Eingabefelder. */
+  --linie: #EFE0D2;
+  --line: var(--linie);
+
+  /* Laufender Text, ruhiger als die Hauptfarbe. */
+  --fliesstext: #3C5F4E;
+  --body: var(--fliesstext);
+  --band-body: var(--fliesstext);
+
+  /* Nebensaechliches: Bildunterschriften, Hinweise. */
+  --gedaempft: #6B8578;
+  --muted: var(--gedaempft);
+
+  /* Das Leiseste, was noch lesbar ist. */
+  --blass: #9AB0A5;
+  --faint: var(--blass);
+
+  /* Der dunkle Akzent fuer Links und Hervorhebungen im Text. */
+  --rotbraun: #B5390A;
+  --accent: var(--rotbraun);
+
+  /* Die hellste Stufe der Orangeleiter. */
+  --sanft-1: #FFEEDF;
+  --accent-soft: var(--sanft-1);
+  --or2: var(--sanft-1);
+
+  /* Die zweite Stufe der Orangeleiter. */
+  --sanft-2: #FFE4CC;
+  --or3: var(--sanft-2);
+
+  /* Die dritte Stufe der Orangeleiter. */
+  --sanft-3: #FFD9B8;
+  --or4: var(--sanft-3);
+
+  /* Trenner im dunklen Band. */
+  --band-linie: #F3D9C0;
+  --band-line: var(--band-linie);
+
+  /* Maße */
+  /* Die groesste Breite des Inhalts. Darueber bleibt Rand. */
+  --seitenbreite: 1160px;
+  --page: var(--seitenbreite);
+  /* Die Standard-Rundung fuer Karten und Flaechen. */
+  --rundung: 14px;
+  --radius: var(--rundung);
+  /* Der einzige Schatten. Zwei Lagen, beide im Gruen der Marke statt in Schwarz. */
+  --schatten: 0 1px 2px rgba(27,94,64,.06), 0 12px 40px rgba(27,94,64,.12);
+  --shadow: var(--schatten);
+
+  /* Schriften */
+  /* Die eine Schrift der Seite. Ueberschriften und Fliesstext. */
+  --schrift-hanken: "Hanken Grotesk", system-ui, sans-serif;
+  /* Code und Kennungen. Kommt vom Geraet, kostet nichts. */
+  --schrift-system-monospace: ui-monospace, Consolas, monospace;
+}
+
+/* Achtung, zwei Namen meinen in der App etwas anderes:
+ *   muted: hier #6B8578, in der App #FFF8F1
+ *   accent: hier #B5390A, in der App #FFE4CC
+ * Siehe baukasten/rohstoffe/farben.json, Abschnitt $fallen.
+ */

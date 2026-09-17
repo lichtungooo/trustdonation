@@ -9,10 +9,18 @@
       "zweck": "Ein Abschnitt, der sich vom Rest abhebt. Traegt in jedem Schema dunkle Farben, auch im hellen.",
       "welt": "seite",
       "datei": "ds-bundle/components/band.html",
-      "rohstoffe": ["band-linie"],
-      "herkunft": { "name": "Sebastian", "did": null },
-      "belege": ["trustdonation.org"],
-      "abstand": null
+      "rohstoffe": [
+        "band-linie"
+      ],
+      "herkunft": {
+        "name": "Sebastian",
+        "did": null
+      },
+      "belege": [
+        "reallife.network"
+      ],
+      "abstand": null,
+      "hinweis": "Gebaut mit den Tokens von reallife.network (--forest, --cream, --terracotta), nicht mit unseren. Beim Herholen umstellen."
     },
     {
       "id": "knoepfe",
@@ -20,10 +28,20 @@
       "zweck": "Aktionen und Etiketten. Pillen mit 999px Rundung.",
       "welt": "seite",
       "datei": "ds-bundle/components/buttons.html",
-      "rohstoffe": ["gruen", "weiss", "gold"],
-      "herkunft": { "name": "Sebastian", "did": null },
-      "belege": ["trustdonation.org"],
-      "abstand": null
+      "rohstoffe": [
+        "gruen",
+        "weiss",
+        "gold"
+      ],
+      "herkunft": {
+        "name": "Sebastian",
+        "did": null
+      },
+      "belege": [
+        "reallife.network"
+      ],
+      "abstand": null,
+      "hinweis": "Gebaut mit den Tokens von reallife.network (--forest, --cream, --terracotta), nicht mit unseren. Beim Herholen umstellen."
     },
     {
       "id": "karten",
@@ -31,17 +49,117 @@
       "zweck": "Die Flaechen, auf denen Inhalt steht. Drei Dichten fuer drei Zwecke.",
       "welt": "seite",
       "datei": "ds-bundle/components/cards.html",
-      "rohstoffe": ["weiss", "linie", "rundung", "schatten"],
-      "herkunft": { "name": "Sebastian", "did": null },
-      "belege": ["trustdonation.org"],
+      "rohstoffe": [
+        "weiss",
+        "linie",
+        "rundung",
+        "schatten"
+      ],
+      "herkunft": {
+        "name": "Sebastian",
+        "did": null
+      },
+      "belege": [
+        "reallife.network"
+      ],
+      "abstand": null,
+      "hinweis": "Gebaut mit den Tokens von reallife.network (--forest, --cream, --terracotta), nicht mit unseren. Beim Herholen umstellen."
+    },
+    {
+      "id": "feld",
+      "name": "Eingabefeld",
+      "zweck": "Der Ort, an dem sich entscheidet, ob jemand dranbleibt. Vier Formen plus der Fall, dass etwas fehlt.",
+      "welt": "beide",
+      "datei": "baukasten/bauteile/stuecke/feld.html",
+      "rohstoffe": [
+        "weiss",
+        "linie",
+        "gold",
+        "rotbraun",
+        "gedaempft"
+      ],
+      "regel": "Die Beschriftung steht ueber dem Feld, nicht darin: Ein Platzhalter verschwindet beim Tippen. Der Fehler sagt, was dadurch nicht geht, statt 'Pflichtfeld'.",
+      "herkunft": {
+        "name": "Timo und Eli",
+        "did": null
+      },
+      "belege": [],
+      "abstand": null
+    },
+    {
+      "id": "avatar",
+      "name": "Avatar",
+      "zweck": "Menschen und Einrichtungen bekommen ein Gesicht. Wo keins da ist, stehen Anfangsbuchstaben.",
+      "welt": "beide",
+      "datei": "baukasten/bauteile/stuecke/avatar.html",
+      "rohstoffe": [
+        "gruen",
+        "weiss",
+        "gold",
+        "papier"
+      ],
+      "regel": "Rund fuer Menschen, gerundet fuer Einrichtungen. Ein Punkt statt eines Hakens: Ein Haken sieht aus wie eine Note, und wir vergeben keine.",
+      "herkunft": {
+        "name": "Timo und Eli",
+        "did": null
+      },
+      "belege": [],
+      "abstand": null
+    },
+    {
+      "id": "kartennadel",
+      "name": "Kartennadel",
+      "zweck": "234 Stiftungen stehen auf der Karte. Die Nadel entscheidet, ob jemand findet, was er sucht.",
+      "welt": "app",
+      "datei": "baukasten/bauteile/stuecke/kartennadel.html",
+      "rohstoffe": [
+        "weiss",
+        "linie",
+        "rundung"
+      ],
+      "regel": "Ein Tropfen, kein Kreis: Ein Kreis sitzt auf seinem Mittelpunkt, ein Tropfen zeigt auf seine Spitze. Die Farbe kommt von der Art, nicht vom Thema.",
+      "herkunft": {
+        "name": "Timo und Eli",
+        "did": null
+      },
+      "belege": [
+        "trustdonation.org/app: 234 Stiftungen tragen data.color"
+      ],
+      "abstand": null
+    },
+    {
+      "id": "vertrauens-anzeiger",
+      "name": "Vertrauens-Anzeiger",
+      "zweck": "Der Kern des Web of Trust, sichtbar gemacht. Er nennt Menschen, keine Punkte.",
+      "welt": "app",
+      "datei": "baukasten/bauteile/stuecke/vertrauens-anzeiger.html",
+      "rohstoffe": [
+        "gruen",
+        "weiss",
+        "linie",
+        "gedaempft",
+        "rotbraun"
+      ],
+      "regel": "Niemals eine Zahl, die man erhoehen kann. Sobald Vertrauen eine Zahl ist, arbeiten Menschen an der Zahl statt an der Beziehung, und wer zahlt, kauft sich hoch (Grundsatz 1).",
+      "herkunft": {
+        "name": "Timo und Eli",
+        "did": null
+      },
+      "belege": [],
       "abstand": null
     }
   ],
   "$fehlt": [
-    { "id": "feld", "name": "Eingabefeld", "warum": "Jede Stiftung fuellt Felder aus. Es gibt kein gemeinsames Aussehen dafuer." },
-    { "id": "avatar", "name": "Avatar", "warum": "Menschen und Einrichtungen brauchen ein Bild. Die App hat eines, die Seite nicht." },
-    { "id": "kartennadel", "name": "Kartennadel", "warum": "Die 234 Stiftungen stehen auf der Karte. Ihre Nadel ist heute Antons, nicht unsere." },
-    { "id": "vertrauens-anzeiger", "name": "Vertrauens-Anzeiger", "warum": "Der Kern des Web of Trust hat keine eigene Darstellung." }
+    {
+      "id": "tabelle",
+      "name": "Tabelle",
+      "warum": "234 Stiftungen als Liste zu lesen ist heute muehsam. Antons Liste kennt unsere Felder nicht."
+    },
+    {
+      "id": "etikett",
+      "name": "Etikett",
+      "warum": "Foerderbereiche, Reichweite und Zielgruppen sind Tags. Sie haben kein gemeinsames Aussehen."
+    }
   ],
-  "$hinweis": "Die drei vorhandenen liegen in ds-bundle, das fuer reallife.network erzeugt wurde. Sie gehoeren hierher geholt, sobald jemand sie anfasst."
+  "$hinweis": "Die drei ersten liegen in ds-bundle und gehoeren zu reallife.network. Die vier neuen stehen in bauteile/stuecke/ und benutzen baukasten/rohstoffe/tokens.css, das aus unserer Quelle erzeugt wird."
 }

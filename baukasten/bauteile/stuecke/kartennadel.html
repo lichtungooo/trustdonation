@@ -1,0 +1,75 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Kartennadel — trustdonation</title>
+<link rel="stylesheet" href="../../rohstoffe/tokens.css">
+<style>
+  body { margin:0; padding:40px; background:var(--papier); color:var(--gruen);
+         font:400 16px/1.6 var(--schrift-hanken); }
+  h1 { font-size:28px; font-weight:800; letter-spacing:-.02em; margin:0 0 8px; }
+  .vorspann { max-width:44em; color:var(--fliesstext); margin:0 0 32px; }
+  h2 { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.14em;
+       color:var(--gedaempft); margin:32px 0 14px; }
+  .notiz { font-size:13px; color:var(--gedaempft); margin-top:10px; max-width:44em; }
+  .karte { background:#E8EDE9; border:1px solid var(--linie); border-radius:var(--rundung);
+           padding:34px; display:flex; flex-wrap:wrap; gap:34px; align-items:flex-end; }
+
+  /* Die Nadel. Ein Tropfen, kein Kreis: Ein Kreis sitzt auf seinem
+     Mittelpunkt, ein Tropfen zeigt auf seine Spitze. Bei 234 Punkten auf
+     engem Raum entscheidet das darueber, ob jemand den richtigen trifft. */
+  .nadel { position:relative; width:26px; height:34px; flex:none; cursor:pointer; }
+  .nadel svg { display:block; width:100%; height:100%;
+               filter:drop-shadow(0 2px 3px rgba(27,94,64,.35)); }
+  .nadel:hover svg { transform:translateY(-2px); }
+  .nadel svg { transition:transform .12s; }
+
+  /* Ein Buendel. Die Zahl steht mittig, der Ring zeigt, wie viele: Je mehr,
+     desto dicker. Eine Zahl allein laesst sich schlecht vergleichen. */
+  .buendel { display:inline-flex; align-items:center; justify-content:center;
+             width:40px; height:40px; border-radius:50%;
+             background:var(--stiftung); color:var(--weiss);
+             font-size:14px; font-weight:700; flex:none;
+             box-shadow:0 0 0 5px rgba(25,66,148,.25); cursor:pointer; }
+  .buendel[data-viele] { width:50px; height:50px; font-size:16px;
+                         box-shadow:0 0 0 8px rgba(25,66,148,.22); }
+
+  :root { --stiftung:#194294; }
+  .legende { display:flex; flex-wrap:wrap; gap:16px; margin-top:16px; font-size:13.5px; }
+  .legende span { display:inline-flex; align-items:center; gap:7px; }
+  .legende i { width:11px; height:11px; border-radius:50%; display:inline-block; }
+</style>
+
+<h1>Kartennadel</h1>
+<p class="vorspann">234 Stiftungen stehen auf der Karte. Ihre Nadel entscheidet, ob jemand findet, was er sucht.</p>
+
+<h2>Einzeln und gebündelt</h2>
+<div class="karte">
+  <span class="nadel" title="Umweltstiftung Michael Otto">
+    <svg viewBox="0 0 26 34"><path d="M13 0C5.8 0 0 5.8 0 13c0 9.8 13 21 13 21s13-11.2 13-21C26 5.8 20.2 0 13 0z" fill="#194294"/><circle cx="13" cy="13" r="4.6" fill="#fff"/></svg>
+  </span>
+  <span class="nadel" title="Löwenherz Stiftung">
+    <svg viewBox="0 0 26 34"><path d="M13 0C5.8 0 0 5.8 0 13c0 9.8 13 21 13 21s13-11.2 13-21C26 5.8 20.2 0 13 0z" fill="#990000"/><circle cx="13" cy="13" r="4.6" fill="#fff"/></svg>
+  </span>
+  <span class="nadel" title="Ein Projekt">
+    <svg viewBox="0 0 26 34"><path d="M13 0C5.8 0 0 5.8 0 13c0 9.8 13 21 13 21s13-11.2 13-21C26 5.8 20.2 0 13 0z" fill="#1B5E40"/><circle cx="13" cy="13" r="4.6" fill="#fff"/></svg>
+  </span>
+  <span class="buendel" title="13 Stiftungen in Köln">13</span>
+  <span class="buendel" data-viele title="28 Stiftungen in Berlin">28</span>
+</div>
+<div class="legende">
+  <span><i style="background:#194294"></i>Stiftung</span>
+  <span><i style="background:#1B5E40"></i>Projekt</span>
+  <span><i style="background:#990000"></i>eigene Farbe der Einrichtung</span>
+</div>
+
+<h2>Was daran wichtig ist</h2>
+<p class="notiz">
+  <strong>Ein Tropfen, kein Kreis.</strong> Ein Kreis sitzt auf seinem Mittelpunkt, ein Tropfen zeigt auf seine Spitze. Bei 234 Punkten auf engem Raum entscheidet das darüber, ob jemand den richtigen trifft.<br><br>
+  <strong>Die Farbe kommt von der Art, nicht vom Thema.</strong> Antons <code>getItemColor</code> nimmt sonst die Farbe des ersten Tags, und dann hat jede Stiftung eine andere Farbe. Eine Stiftung soll aussehen wie eine Stiftung. Wer eine eigene Farbe gesetzt hat, behält sie.<br><br>
+  <strong>Das Bündel trägt einen Ring, der mit der Anzahl wächst.</strong> Eine Zahl allein lässt sich schlecht vergleichen; zwei Ringe nebeneinander sofort.<br><br>
+  <strong>Ein weißer Punkt in der Mitte.</strong> Ohne ihn verschwindet die Nadel auf dunklem Kartengrund.
+</p>
+
+<h2>Woher die Farbe kommt</h2>
+<p class="notiz">
+  Jede Stiftung trägt <code>data.color</code> mit der Farbe ihrer Art (<code>#194294</code>). Das steht in <code>baukasten/arten/arten.json</code> und wird beim Anlegen gesetzt, nicht beim Zeichnen: So sieht auch Antons Karte sie richtig, ohne dass wir seinen Code anfassen.
+</p>

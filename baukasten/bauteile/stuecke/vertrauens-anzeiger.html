@@ -1,0 +1,86 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Vertrauens-Anzeiger — trustdonation</title>
+<link rel="stylesheet" href="../../rohstoffe/tokens.css">
+<style>
+  body { margin:0; padding:40px; background:var(--papier); color:var(--gruen);
+         font:400 16px/1.6 var(--schrift-hanken); }
+  h1 { font-size:28px; font-weight:800; letter-spacing:-.02em; margin:0 0 8px; }
+  .vorspann { max-width:44em; color:var(--fliesstext); margin:0 0 32px; }
+  h2 { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.14em;
+       color:var(--gedaempft); margin:32px 0 14px; }
+  .notiz { font-size:13px; color:var(--gedaempft); margin-top:10px; max-width:44em; }
+  .reihe { display:flex; flex-wrap:wrap; gap:14px; align-items:center; }
+  .falsch { border-left:3px solid var(--rotbraun); padding-left:14px; margin-top:24px; }
+
+  /* Der Anzeiger. Er nennt Menschen, keine Punkte: "Drei Menschen, die du
+     kennst" ist eine Tatsache. "Vertrauen: 87%" ist eine Note, und wir
+     vergeben keine (Grundsatz 1 und 2). */
+  .vertrauen { display:inline-flex; align-items:center; gap:9px;
+               border:1px solid var(--linie); background:var(--weiss);
+               border-radius:999px; padding:6px 14px 6px 8px;
+               font-size:13.5px; font-weight:600; }
+  .gesichter { display:inline-flex; }
+  .gesichter span { width:22px; height:22px; border-radius:50%;
+                    background:var(--gruen); color:var(--weiss);
+                    font-size:9.5px; font-weight:700;
+                    display:inline-flex; align-items:center; justify-content:center;
+                    border:2px solid var(--weiss); margin-right:-8px; }
+  .gesichter span:last-child { margin-right:0; }
+  .vertrauen[data-keins] { color:var(--gedaempft); font-weight:500; }
+  .vertrauen[data-keins] .punkt { width:9px; height:9px; border-radius:50%;
+                                   background:var(--linie); margin-left:4px; }
+
+  /* Ein Beleg. Was jemand bestaetigt hat, mit Datum. */
+  .beleg { display:flex; gap:10px; align-items:flex-start; padding:11px 0;
+           border-top:1px solid var(--linie); font-size:14px; max-width:40em; }
+  .beleg .wer { font-weight:600; }
+  .beleg .wann { color:var(--gedaempft); font-size:12.5px; }
+</style>
+
+<h1>Vertrauens-Anzeiger</h1>
+<p class="vorspann">Der Kern des Web of Trust, sichtbar gemacht. Er nennt Menschen, keine Punkte.</p>
+
+<h2>Drei Zustände</h2>
+<div class="reihe">
+  <span class="vertrauen">
+    <span class="gesichter"><span>TM</span><span>EM</span><span>JR</span></span>
+    3 Menschen, die du kennst, bürgen
+  </span>
+  <span class="vertrauen">
+    <span class="gesichter"><span>AT</span></span>
+    Anton bürgt
+  </span>
+  <span class="vertrauen" data-keins>
+    Niemand aus deinem Netz <span class="punkt"></span>
+  </span>
+</div>
+<p class="notiz">Der dritte Zustand ist <strong>keine Warnung</strong>. Er sagt, was er sagt: Aus deinem Netz kennt diese Einrichtung noch niemand. Das ist bei jeder neuen Verbindung so.</p>
+
+<h2>Die Belege dahinter</h2>
+<div style="max-width:40em">
+  <div class="beleg">
+    <span class="gesichter"><span>TM</span></span>
+    <span><span class="wer">Timo Martin</span> hat die Stiftung persönlich getroffen.<br>
+    <span class="wann">12. September 2026, in Kassel</span></span>
+  </div>
+  <div class="beleg">
+    <span class="gesichter"><span>EM</span></span>
+    <span><span class="wer">Emil</span> hat dort mitgearbeitet.<br>
+    <span class="wann">März bis Juli 2026</span></span>
+  </div>
+</div>
+<p class="notiz">Ein Klick auf den Anzeiger öffnet diese Liste. <strong>Wer bürgt, sagt wofür.</strong></p>
+
+<h2>Was daran wichtig ist</h2>
+<p class="notiz">
+  <strong>Menschen statt Punkte.</strong> „Drei Menschen, die du kennst" ist eine Tatsache. „Vertrauen: 87 Prozent" ist eine Note, und wir vergeben keine.<br><br>
+  <strong>Kein Balken, kein Stern, keine Farbe von Rot nach Grün.</strong> Alles drei macht aus Vertrauen eine Skala, auf der man aufsteigen kann. Genau das soll es nicht sein.<br><br>
+  <strong>Die Gesichter sind dieselben wie überall.</strong> Wer bürgt, ist jemand, den man anklicken kann.
+</p>
+
+<div class="falsch">
+  <p class="notiz" style="margin-top:0">
+    <strong>Was es niemals wird:</strong> eine Zahl, die man erhöhen kann. Sobald Vertrauen eine Zahl ist, arbeiten Menschen an der Zahl statt an der Beziehung, und wer zahlt, kauft sich hoch. Das ist der erste Grundsatz: <strong>Geld kauft keine Vertrauensbewertung.</strong>
+  </p>
+</div>

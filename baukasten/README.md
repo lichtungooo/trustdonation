@@ -13,7 +13,7 @@ Die Festlegung steht in [docs/12-baukasten.md](../docs/12-baukasten.md). **Kein 
 | **1. Rohstoffe: Farben** | 13 | 0 | `rohstoffe/farben.json` |
 | **1. Rohstoffe: Schriften** | 2 | 0 | `rohstoffe/schriften.json` |
 | **1. Rohstoffe: Maße** | 3 | 0 | `rohstoffe/masse.json` |
-| **2. Bauteile** | 3 | 4 | `bauteile/bauteile.json` |
+| **2. Bauteile** | 7 | 2 | `bauteile/bauteile.json` |
 | **3. Muster** | 2 | 4 | `muster/muster.json` |
 | **4. Felder** | 43 | 0 | `felder/felder.json` |
 | **5. Arten** | 5 | 3 | `arten/arten.json` |
@@ -21,7 +21,7 @@ Die Festlegung steht in [docs/12-baukasten.md](../docs/12-baukasten.md). **Kein 
 | **7. Vorlagen** | 3 | 4 | `vorlagen/vorlagen.json` |
 | **8. Sprache: Regeln** | 4 + 11 Werkzeuge | 3 | `sprache/sprache.json` |
 | **8. Sprache: Texte** | 5 | 0 | `sprache/texte/` |
-| **zusammen** | **91** | **18** | |
+| **zusammen** | **95** | **16** | |
 
 Jeder Eintrag folgt [EINTRAG.md](EINTRAG.md): id, name, zweck, herkunft, belege, abstand.
 
@@ -76,6 +76,27 @@ Stand 17.09.2026: **13 Farben, an allen drei Orten gleich.**
 
 ---
 
+## Schicht 2: Die Bauteile
+
+`bauteile/stuecke/` führt die vier, die trustdonation wirklich braucht. Jedes ist eine Seite, die man im Browser öffnet:
+
+| Bauteil | Die Regel darin |
+|---|---|
+| [Eingabefeld](bauteile/stuecke/feld.html) | Die Beschriftung steht über dem Feld, nicht darin. Der Fehler sagt, was dadurch nicht geht, statt „Pflichtfeld" |
+| [Avatar](bauteile/stuecke/avatar.html) | Rund für Menschen, gerundet für Einrichtungen. Ein Punkt statt eines Hakens |
+| [Kartennadel](bauteile/stuecke/kartennadel.html) | Ein Tropfen, kein Kreis. Die Farbe kommt von der Art, nicht vom Thema |
+| [Vertrauens-Anzeiger](bauteile/stuecke/vertrauens-anzeiger.html) | Menschen statt Punkte. **Niemals eine Zahl, die man erhöhen kann** |
+
+Sie benutzen `rohstoffe/tokens.css`, das aus der Quelle erzeugt wird:
+
+```bash
+python scripts/rohstoffe-bauen.py
+```
+
+**Nicht zu verwechseln mit `ds-bundle/`.** Das ist die Gestaltung von reallife.network, ein anderes Projekt mit anderen Farben (`--forest`, `--cream`, `--terracotta`). Die drei Bauteile, die dort liegen, belegen jenes Projekt, nicht unseres.
+
+---
+
 ## Schicht 8: Die Texte
 
 `sprache/texte/` führt die Bausteine, die eine Stiftung am Tisch braucht:
@@ -96,8 +117,7 @@ Stand 17.09.2026: **13 Farben, an allen drei Orten gleich.**
 
 Die zwanzig Lücken stehen in den Dateien. Nach Nutzen geordnet:
 
-1. **Die vier fehlenden Bauteile** (Eingabefeld, Avatar, Kartennadel, Vertrauens-Anzeiger). Ohne sie hat jede Fläche ihr eigenes Aussehen.
-2. **Die vier Vorlagen** (Landingpage einer Stiftung, Space „Stiftung", „Projekt", „Netzwerk"). Das ist es, was eine Stiftung am Ende wirklich will.
+1. **Die vier Vorlagen** (Landingpage einer Stiftung, Space „Stiftung", „Projekt", „Netzwerk"). Das ist es, was eine Stiftung am Ende wirklich will.
 4. **Die drei fehlenden Arten** (Verein, Unternehmen, Mensch).
 5. **Die vier Muster** (Profilkopf, Projektvorstellung, Kontaktblock, Förderaufruf).
 

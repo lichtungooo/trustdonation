@@ -1,0 +1,78 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Eingabefeld — trustdonation</title>
+<link rel="stylesheet" href="../../rohstoffe/tokens.css">
+<style>
+  body { margin:0; padding:40px; background:var(--papier); color:var(--gruen);
+         font:400 16px/1.6 var(--schrift-hanken); }
+  h1 { font-size:28px; font-weight:800; letter-spacing:-.02em; margin:0 0 8px; }
+  .vorspann { max-width:44em; color:var(--fliesstext); margin:0 0 32px; }
+  h2 { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.14em;
+       color:var(--gedaempft); margin:32px 0 14px; }
+  .notiz { font-size:13px; color:var(--gedaempft); margin-top:10px; max-width:44em; }
+  .reihe { display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start; }
+
+  /* Das Feld selbst. Ein Rahmen, eine Beschriftung darueber, ein Hinweis
+     darunter. Die Beschriftung steht nicht im Feld: Wer tippt, sieht sonst
+     nicht mehr, wonach gefragt war. */
+  .feld { display:flex; flex-direction:column; gap:6px; min-width:260px; }
+  .feld > label { font-size:13.5px; font-weight:600; }
+  .feld > label .pflicht { color:var(--rotbraun); margin-left:3px; }
+  .feld input, .feld textarea, .feld select {
+    font:inherit; color:inherit; background:var(--weiss);
+    border:1.5px solid var(--linie); border-radius:8px; padding:11px 13px;
+    outline:none; transition:border-color .15s, box-shadow .15s;
+  }
+  .feld input:focus, .feld textarea:focus, .feld select:focus {
+    border-color:var(--gold); box-shadow:0 0 0 3px rgba(234,88,12,.15);
+  }
+  .feld .hinweis { font-size:12.5px; color:var(--gedaempft); }
+  .feld[data-fehler] input { border-color:var(--rotbraun); }
+  .feld[data-fehler] .hinweis { color:var(--rotbraun); }
+  .feld textarea { min-height:96px; resize:vertical; }
+</style>
+
+<h1>Eingabefeld</h1>
+<p class="vorspann">Jede Stiftung füllt Felder aus. Sie sind der Ort, an dem sich entscheidet, ob jemand dranbleibt.</p>
+
+<h2>Die vier Formen</h2>
+<div class="reihe">
+  <div class="feld">
+    <label for="a">Name der Stiftung <span class="pflicht" title="Pflichtfeld">*</span></label>
+    <input id="a" value="Umweltstiftung Michael Otto">
+  </div>
+  <div class="feld">
+    <label for="b">Fördersumme von</label>
+    <input id="b" inputmode="numeric" placeholder="1.000 €">
+    <span class="hinweis">Leer lassen, wenn es keine Untergrenze gibt.</span>
+  </div>
+  <div class="feld">
+    <label for="c">Antragsweg</label>
+    <select id="c">
+      <option>offen</option><option>Wettbewerb</option><option>Anfrage</option>
+      <option>eingeladen</option><option>operativ</option>
+    </select>
+  </div>
+</div>
+
+<h2>Langer Text</h2>
+<div class="feld" style="max-width:44em">
+  <label for="d">Woran erkennt ein Projekt, dass es zu Ihnen passt?</label>
+  <textarea id="d" placeholder="In Ihren Worten, nicht in unseren."></textarea>
+  <span class="hinweis">Dieser Satz steht später auf Ihrem Eintrag.</span>
+</div>
+
+<h2>Wenn etwas fehlt</h2>
+<div class="feld" data-fehler style="max-width:26em">
+  <label for="e">Sitz <span class="pflicht">*</span></label>
+  <input id="e" value="">
+  <span class="hinweis">Ohne den Sitz erscheint die Stiftung nicht auf der Karte.</span>
+</div>
+<p class="notiz">Der Fehler sagt, <strong>was dadurch nicht geht</strong>, statt „Pflichtfeld". Wer weiß, was er verliert, füllt es aus.</p>
+
+<h2>Was daran wichtig ist</h2>
+<p class="notiz">
+  <strong>Die Beschriftung steht über dem Feld, nicht darin.</strong> Ein Platzhalter verschwindet beim Tippen, und dann weiß niemand mehr, wonach gefragt war.<br><br>
+  <strong>Der Hinweis steht darunter, nicht daneben.</strong> Auf einem Telefon ist daneben kein Platz.<br><br>
+  <strong>Der Fokus trägt Gold, nicht Grün.</strong> Grün ist die Schriftfarbe; ein grüner Rahmen um ein grünes Feld sieht aus wie nichts.
+</p>

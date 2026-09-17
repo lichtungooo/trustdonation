@@ -1,0 +1,70 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Avatar — trustdonation</title>
+<link rel="stylesheet" href="../../rohstoffe/tokens.css">
+<style>
+  body { margin:0; padding:40px; background:var(--papier); color:var(--gruen);
+         font:400 16px/1.6 var(--schrift-hanken); }
+  h1 { font-size:28px; font-weight:800; letter-spacing:-.02em; margin:0 0 8px; }
+  .vorspann { max-width:44em; color:var(--fliesstext); margin:0 0 32px; }
+  h2 { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.14em;
+       color:var(--gedaempft); margin:32px 0 14px; }
+  .notiz { font-size:13px; color:var(--gedaempft); margin-top:10px; max-width:44em; }
+  .reihe { display:flex; flex-wrap:wrap; gap:18px; align-items:center; }
+
+  /* Der Avatar. Rund fuer Menschen, gerundet fuer Einrichtungen: Das ist
+     kein Zierrat, sondern die einzige Stelle, an der man auf einen Blick
+     sieht, ob man mit einem Menschen oder einem Haus spricht. */
+  .avatar { display:inline-flex; align-items:center; justify-content:center;
+            width:44px; height:44px; border-radius:50%; overflow:hidden;
+            background:var(--gruen); color:var(--weiss);
+            font-size:16px; font-weight:700; letter-spacing:.02em;
+            flex:none; user-select:none; }
+  .avatar img { width:100%; height:100%; object-fit:cover; }
+  .avatar[data-art="einrichtung"] { border-radius:12px; }
+  .avatar[data-gross] { width:72px; height:72px; font-size:26px; }
+  .avatar[data-gross][data-art="einrichtung"] { border-radius:18px; }
+  .avatar[data-klein] { width:28px; height:28px; font-size:11px; }
+  .avatar[data-klein][data-art="einrichtung"] { border-radius:8px; }
+
+  /* Bestaetigt: ein kleiner Punkt, kein Haken. Ein Haken sieht aus wie eine
+     Note, und wir vergeben keine. Der Punkt sagt: hier steht jemand dahinter. */
+  .traeger { position:relative; display:inline-flex; }
+  .traeger .punkt { position:absolute; right:-1px; bottom:-1px;
+                    width:13px; height:13px; border-radius:50%;
+                    background:var(--gold); border:2.5px solid var(--papier); }
+</style>
+
+<h1>Avatar</h1>
+<p class="vorspann">Menschen und Einrichtungen bekommen ein Gesicht. Wo keins da ist, stehen Anfangsbuchstaben.</p>
+
+<h2>Mensch und Einrichtung</h2>
+<div class="reihe">
+  <span class="avatar" title="Timo Martin">TM</span>
+  <span class="avatar" data-art="einrichtung" title="Umweltstiftung Michael Otto">UO</span>
+  <span class="avatar" data-gross title="Timo Martin">TM</span>
+  <span class="avatar" data-gross data-art="einrichtung" title="Löwenherz Stiftung">LS</span>
+  <span class="avatar" data-klein title="Emil">E</span>
+  <span class="avatar" data-klein data-art="einrichtung" title="Lichtung">L</span>
+</div>
+<p class="notiz"><strong>Rund für Menschen, gerundet für Einrichtungen.</strong> Das ist die einzige Stelle, an der man auf einen Blick sieht, ob man mit einem Menschen oder einem Haus spricht.</p>
+
+<h2>Mit Bild</h2>
+<div class="reihe">
+  <span class="avatar"><img src="../../../landing/logo/trustdonation-signet.svg" alt=""></span>
+  <span class="avatar" data-art="einrichtung" data-gross><img src="../../../landing/logo/trustdonation-signet.svg" alt=""></span>
+</div>
+
+<h2>Bestätigt</h2>
+<div class="reihe">
+  <span class="traeger"><span class="avatar">TM</span><span class="punkt" title="im Web of Trust bestätigt"></span></span>
+  <span class="traeger"><span class="avatar" data-gross>EM</span><span class="punkt"></span></span>
+</div>
+<p class="notiz"><strong>Ein Punkt, kein Haken.</strong> Ein Haken sieht aus wie eine Note, und wir vergeben keine. Der Punkt sagt nur: Hier hat jemand für diese Person gebürgt.</p>
+
+<h2>Was daran wichtig ist</h2>
+<p class="notiz">
+  <strong>Anfangsbuchstaben statt eines Platzhalterbildes.</strong> Ein graues Personensymbol sagt „hier fehlt etwas". Zwei Buchstaben sagen, wer gemeint ist.<br><br>
+  <strong>Grün als Grund, nicht bunt nach Name.</strong> Zufällige Farben je Mensch sehen lebendig aus und zerstören jede ruhige Liste.<br><br>
+  <strong>Drei Größen reichen:</strong> klein in Zeilen, normal in Karten, groß im Profilkopf.
+</p>

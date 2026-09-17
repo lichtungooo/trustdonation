@@ -44,7 +44,8 @@ SCHICHTEN = [
     ("5 Arten", "arten/arten.json", "arten"),
     ("6 Module", "module/module.json", "module"),
     ("7 Vorlagen", "vorlagen/vorlagen.json", "vorlagen"),
-    ("8 Sprache", "sprache/sprache.json", "regeln"),
+    ("8 Sprache: Regeln", "sprache/sprache.json", "regeln"),
+    ("8 Sprache: Texte", "sprache/sprache.json", "texte"),
 ]
 
 # Rohstoffe und Felder tragen keine Herkunft: Eine Farbe gehört niemandem.
@@ -69,6 +70,7 @@ def main():
     funde = []
     ohne_zweck = []
     zahlen = []
+    gezaehlt = set()
     alle_ids = {}
 
     for titel, pfad, schluessel in SCHICHTEN:
@@ -79,7 +81,10 @@ def main():
             continue
 
         eintraege = daten.get(schluessel, [])
-        fehlt = daten.get("$fehlt", [])
+        # Zwei Listen koennen aus derselben Datei kommen (Sprache: Regeln und
+        # Texte). Ihre Luecken stehen dort einmal und werden einmal gezaehlt.
+        fehlt = daten.get("$fehlt", []) if pfad not in gezaehlt else []
+        gezaehlt.add(pfad)
         zahlen.append((titel, len(eintraege), len(fehlt)))
 
         for e in eintraege:

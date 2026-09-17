@@ -19,8 +19,9 @@ Die Festlegung steht in [docs/12-baukasten.md](../docs/12-baukasten.md). **Kein 
 | **5. Arten** | 5 | 3 | `arten/arten.json` |
 | **6. Module** | 8 | 0 | `module/module.json` |
 | **7. Vorlagen** | 3 | 4 | `vorlagen/vorlagen.json` |
-| **8. Sprache** | 4 + 11 Werkzeuge | 5 | `sprache/sprache.json` |
-| **zusammen** | **86** | **20** | |
+| **8. Sprache: Regeln** | 4 + 11 Werkzeuge | 3 | `sprache/sprache.json` |
+| **8. Sprache: Texte** | 5 | 0 | `sprache/texte/` |
+| **zusammen** | **91** | **18** | |
 
 Jeder Eintrag folgt [EINTRAG.md](EINTRAG.md): id, name, zweck, herkunft, belege, abstand.
 
@@ -75,13 +76,28 @@ Stand 17.09.2026: **13 Farben, an allen drei Orten gleich.**
 
 ---
 
+## Schicht 8: Die Texte
+
+`sprache/texte/` führt die Bausteine, die eine Stiftung am Tisch braucht:
+
+| Baustein | Wann | Der Kern |
+|---|---|---|
+| [Erstansprache](../docs/07-ansprache.md) | vor dem ersten Kontakt | steht im Zusammenhang der drei Türen und bleibt dort |
+| [Nachfassen](sprache/texte/nachfassen.md) | nach zwei bis drei Wochen | ein Ausweg, der leicht fällt. Und kein drittes Mal |
+| [Einladung](sprache/texte/einladung.md) | jemand soll mitarbeiten | die Verifizierung wird erklärt, nicht vorausgesetzt |
+| [Absage](sprache/texte/absage.md) | eine Förderung wird abgelehnt | der Grund zeigt auf ein Kriterium, nicht auf Qualität |
+| [Dankeschön](sprache/texte/dankeschoen.md) | nach einer Zusage | der Dank in einem Satz, danach was folgt |
+
+**Jeder Text sagt auch, was wegbleibt.** Das ist der nützlichere Teil: „Leider müssen wir Ihnen mitteilen" sagt nichts, und „wir sind überwältigt" macht die nächste Bitte schwerer.
+
+---
+
 ## Was als Nächstes dran ist
 
 Die zwanzig Lücken stehen in den Dateien. Nach Nutzen geordnet:
 
-1. **Die fünf Textbausteine** (Erstansprache, Einladung, Absage, Nachfassen, Dankeschön). Sie kosten am wenigsten und sparen am meisten: Die meisten scheitern nicht an der Technik, sondern an der Frage, was sie schreiben sollen.
-2. **Die vier fehlenden Bauteile** (Eingabefeld, Avatar, Kartennadel, Vertrauens-Anzeiger). Ohne sie hat jede Fläche ihr eigenes Aussehen.
-3. **Die vier Vorlagen** (Landingpage einer Stiftung, Space „Stiftung", „Projekt", „Netzwerk"). Das ist es, was eine Stiftung am Ende wirklich will.
+1. **Die vier fehlenden Bauteile** (Eingabefeld, Avatar, Kartennadel, Vertrauens-Anzeiger). Ohne sie hat jede Fläche ihr eigenes Aussehen.
+2. **Die vier Vorlagen** (Landingpage einer Stiftung, Space „Stiftung", „Projekt", „Netzwerk"). Das ist es, was eine Stiftung am Ende wirklich will.
 4. **Die drei fehlenden Arten** (Verein, Unternehmen, Mensch).
 5. **Die vier Muster** (Profilkopf, Projektvorstellung, Kontaktblock, Förderaufruf).
 

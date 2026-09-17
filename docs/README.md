@@ -43,6 +43,7 @@ Die Dokumente bauen in dieser Reihenfolge aufeinander auf.
 | [09-betrieb.md](09-betrieb.md) | Server, Container, Domains, Sicherung, was im Notfall hilft |
 | [10-zusammen-testen.md](10-zusammen-testen.md) | Anmelden, verifizieren, gemeinsam arbeiten. Der Ablauf für ein Treffen |
 | [11-zusammen-arbeiten.md](11-zusammen-arbeiten.md) | Zu dritt bauen: wer welches Stück nimmt, wo der Stand steht, wo Entscheidungen fallen |
+| [12-baukasten.md](12-baukasten.md) | Woraus wir bauen: acht Schichten von Rohstoffen bis Sprache, für Landingpage, App und Web of Trust |
 
 ## Fragebögen
 

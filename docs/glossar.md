@@ -18,6 +18,14 @@ Wie ein Projekt an eine Stiftung herankommt. Acht Werte: offen, Wettbewerb, Anfr
 
 → [05-matching.md → §Die acht Antragswege](05-matching.md)
 
+## Baukasten
+
+Der Ort, aus dem gebaut wird: Rohstoffe (Farben, Schriften, Abstände), Bauteile, Muster, Felder, Arten, Module, Vorlagen und Sprache. Was einmal entsteht, steht der Landingpage, der App und dem Web of Trust zur Verfügung.
+
+**Kein Marktplatz.** Ein Baustein ist Werkzeug, ein Angebot ist ein Anliegen.
+
+→ [12-baukasten.md](12-baukasten.md)
+
 ## Beitrag
 
 Stufe 2 des Vertrauens. Zeit, Arbeit, Wissen, Material, Organisation oder Geld, tatsächlich geleistet und von Beteiligten bestätigt. Setzt eine *Verbindung* voraus.
@@ -60,6 +68,12 @@ Sechs Felder an jedem recherchierten Datensatz: Quelle, Original-Link, erfasst a
 
 → [04-recht.md → §Der Herkunftsblock](04-recht.md)
 
+## Marktplatz
+
+Wo Menschen einander zeigen, was sie brauchen und was sie geben können. Angebot und Bedarf.
+
+Der Name ist dafür reserviert und **nicht** für die Sammlung der Bausteine. Die heißt [Baukasten](#baukasten).
+
 ## Matching
 
 Vorschlag zwischen **einem** Projekt und **einer** Stiftung, im Moment der Abfrage berechnet und Zeile für Zeile begründet. Nie eine Note, nie an einer Organisation gespeichert.
@@ -92,7 +106,9 @@ Soziale Semantik: Begegnungen, Ressourcen, Bedürfnisse, Veranstaltungen, Quests
 
 ## Real Life Stack (RLS)
 
-Backend-agnostischer App- und UI-Baukasten. trustdonation ist eine Instanz davon, kein Fork. Die App kommt als fertiges Image.
+Backend-agnostischer Unterbau für Anwendungen und Oberflächen. trustdonation ist eine Instanz davon, kein Fork. Die App kommt als fertiges Image.
+
+Nicht zu verwechseln mit dem **Baukasten** (siehe dort): Der Stack ist das Fundament, der Baukasten die Sammlung, aus der wir darauf bauen.
 
 → [00-ueberblick.md → §Wo trustdonation steht](00-ueberblick.md), [real-life-stack](https://github.com/real-life-org/real-life-stack)
 

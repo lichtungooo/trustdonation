@@ -64,6 +64,7 @@ python td-tools/pruefen.py --schnell  # ohne Bau und Tests, Sekunden
 | **Naehte** | keine unbenannte Stelle in Antons Code | ja |
 | **Grenze** | keine Protokoll-Aufrufe in unseren Paketen | ja |
 | **Budget** | die Groesse bleibt im Rahmen | nein, warnt |
+| **Durchgang** | die zwoelf Erwartungen aus dem Testplan | ja |
 | **Gedaechtnis** | der Stand ist gepflegt | ja |
 
 Rot haelt die Auslieferung auf, gelb warnt. Ein Werkzeug, das immer rot leuchtet, wird nach zwei Tagen ignoriert.
@@ -110,6 +111,27 @@ cd packages/data-interface && npx vitest run tests/schema-validation.test.ts
 ```
 
 AJV prueft jedes Beispiel unter `docs/spec/schemas/vocab/*/examples/valid/` gegen sein Schema. **Ein neues Vokabular bekommt mindestens ein gueltiges Beispiel**, sonst prueft die CI nichts.
+
+## Der Durchgang als Test
+
+Die pruefbaren Zeilen aus `docs/TESTPLAN.md` laufen als Playwright-Test:
+
+```bash
+cd apps/reference
+npx playwright test --config playwright.trustdonation.config.ts
+npx playwright test --config playwright.trustdonation.config.ts --headed   # zum Zusehen
+```
+
+Zwoelf Erwartungen in achtzehn Sekunden: Ankommen ohne Anmeldung, Ueberschrift, Zoomen, die fuenf Spaces im Umschalter, Netzwerke oben, eigene Bilder, Gliederung nach Arten, ein Space der Netzwerk und Projekt zugleich ist in beiden Abschnitten, die sechs Dialog-Bereiche, Landingpage nur fuer Netzwerke, die Modul-Reiter, die Karte.
+
+**Eigene leichte Konfiguration**, nicht Antons: seine startet Relay, Profilverzeichnis und Vault fuer die Web-of-Trust-Tests. Unser Durchgang laeuft gegen die Musterdaten im Browser und braucht nichts davon. Sie liegt in `apps/reference/`, weil pnpm Abhaengigkeiten strikt ablegt und `@playwright/test` zu dieser App gehoert.
+
+**Zwei Fallen beim Schreiben solcher Tests:**
+
+1. **Die Arten-Abschnitte erscheinen erst, wenn ein Netzwerk aktiv ist.** Die Uebersicht kennt keine Arten. Ein Test, der sie sofort erwartet, meldet zwei Fehler, die keine sind.
+2. **Das letzte Zahnrad im Menue zu nehmen ist bequem und falsch.** Es gehoert dem letzten Space. Der Test muss die Zeile ueber den Namen suchen **und den Dialogtitel mitpruefen**, sonst prueft er womoeglich den falschen Space und meldet trotzdem gruen.
+
+Vorher selbst gebaut mit Chrome und CDP, dann verworfen: Playwright liegt im Repo, kann klicken und warten, und ist in jeder Hinsicht besser. Die CDP-Werkzeuge bleiben fuer das, was sie gut koennen (Startlast, Zugang).
 
 ## Zugang pruefen
 

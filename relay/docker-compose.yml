@@ -1,0 +1,57 @@
+# Das Relay von trustdonation.
+#
+# **Was ein Relay ist:** eine Poststelle. Es nimmt verschlüsselte Umschläge
+# an und stellt sie zu. Lesen kann es sie nicht, und speichern muss es sie
+# nur, solange jemand offline ist. Antons eigener Kommentar im Quelltext:
+# "The relay is blind — it never inspects the payload."
+#
+# **Warum es dieses hier gibt.** Auf diesem Server laufen bereits zwei:
+# relay.web-of-trust.de und relay-staging.web-of-trust.de. Beide holen sich
+# automatisch das neueste Image, weil Watchtower sie beobachtet. Im Alltag
+# ist das bequem. Vor einem Termin ist es ein Risiko: Ein Stand, der abends
+# erscheint, läuft am nächsten Morgen ohne Zutun.
+#
+# Dieses Relay ist darum anders gebaut:
+#
+#   1. **Kein Watchtower.** Es bleibt auf dem Stand, den jemand gewählt hat.
+#   2. **Das Image hängt an seinem Digest**, nicht an "latest": derselbe
+#      Stand, der am 17.09.2026 nachweislich trug.
+#   3. **Eigenes Volume.** Seine Warteschlange gehört ihm allein.
+#   4. **Eigene Datei.** Die Compose der App bricht ab, sobald eine Variable
+#      fehlt. Eine Rückfallebene darf nicht mit dem fallen, wovor sie schützt.
+#
+# **Umschalten**, falls das andere Relay klemmt: in ~/apps/wir-ooo/.env
+#
+#     RLS_RELAY_URL=wss://relay.trustdonation.org
+#
+# dann `docker compose up -d`. Jeder lädt die Seite neu und ist auf dem
+# neuen Weg. Die Daten liegen ohnehin in den Browsern der Menschen, es
+# wechselt nur der Bote.
+#
+# **Start:** in diesem Ordner `docker compose up -d`
+name: td-relay
+
+services:
+  td-relay:
+    image: ghcr.io/real-life-org/web-of-trust/relay@sha256:9548bad1a3abf7a14f8e46387d704edc6b522d00037c6e7d71dd496b796811a4
+    container_name: td-relay
+    network_mode: bridge
+    restart: unless-stopped
+    volumes:
+      - td-relay-data:/data
+    environment:
+      - PORT=8787
+      - DB_PATH=/data/relay-queue.db
+      # RELAY_DEBUG_STATS bleibt ungesetzt. Es öffnet im Dashboard Felder
+      # über Geräte und Spaces, die niemanden etwas angehen.
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.td-relay.rule=Host(`relay.trustdonation.org`)"
+      - "traefik.http.routers.td-relay.entrypoints=websecure"
+      - "traefik.http.routers.td-relay.tls.certresolver=letsencrypt"
+      - "traefik.http.services.td-relay.loadbalancer.server.port=8787"
+      # Watchtower bleibt außen vor: siehe Kopf dieser Datei.
+      - "com.centurylinklabs.watchtower.enable=false"
+
+volumes:
+  td-relay-data:

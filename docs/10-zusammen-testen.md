@@ -46,7 +46,40 @@ Seit proto-12 geht es doch, und zwar in eine Richtung: Ihr könnt die 234 Stiftu
 
 Danach gehören sie dem Space: Sie laufen über das Relay, jedes Mitglied sieht sie, und wer eine ändert, ändert sie für alle. Ein zweiter Lauf verdoppelt nichts.
 
-**Vorher überlegen, in welchen Space.** 234 Einträge nimmt man nicht mit einem Klick zurück.
+**Die Reihenfolge entscheidet.** Wer die Stiftungen in seinen persönlichen Space holt, arbeitet allein damit. Sollen alle daran mitarbeiten, gilt:
+
+1. Erst die Gruppe anlegen
+2. Dann alle verifizieren und einladen
+3. **Dann** in dieser Gruppe importieren
+
+234 Einträge nimmt man nicht mit einem Klick zurück, und in den falschen Space geschrieben bleiben sie dort.
+
+---
+
+## Wenn das Relay klemmt
+
+Das Relay ist die Poststelle: Es nimmt verschlüsselte Umschläge an und stellt sie zu. Lesen kann es sie nicht.
+
+**Es gibt jetzt zwei**, und das Umschalten dauert eine Minute:
+
+| Adresse | Was es ist |
+|---|---|
+| `wss://relay.web-of-trust.de` | Antons Relay, das alle nutzen. Läuft auf demselben Server. Aktualisiert sich selbst. |
+| `wss://relay.trustdonation.org` | Unseres. Fester Stand, aktualisiert sich nicht von selbst. Für den Fall, dass am Termin etwas klemmt. |
+
+Umschalten auf dem Server:
+
+```bash
+cd ~/apps/wir-ooo
+sed -i 's|^RLS_RELAY_URL=.*|RLS_RELAY_URL=wss://relay.trustdonation.org|' .env
+docker compose up -d
+```
+
+Danach lädt jeder die Seite neu. **Eure Daten bleiben**, sie liegen in euren Browsern. Es wechselt nur der Bote.
+
+**Woran ihr erkennt, dass es klemmt:** kein grüner Punkt oben rechts, obwohl das Netz steht. Oder Änderungen kommen beim anderen nicht an.
+
+Solange ihr an verschiedenen Relays hängt, seht ihr euch **nicht**. Also entweder alle am einen oder alle am anderen.
 
 ---
 

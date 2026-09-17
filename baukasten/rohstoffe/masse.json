@@ -1,0 +1,48 @@
+{
+  "$beschreibung": "Breiten, Rundungen und Schatten von trustdonation. Erste Schicht des Baukastens (docs/12-baukasten.md).",
+  "$quellen": {
+    "seite": "landing/site.css"
+  },
+  "$stand": "2026-09-17",
+  "masse": [
+    {
+      "id": "seitenbreite",
+      "wert": "1160px",
+      "seite": ["page"],
+      "zweck": "Die groesste Breite des Inhalts. Darueber bleibt Rand."
+    },
+    {
+      "id": "rundung",
+      "wert": "14px",
+      "seite": ["radius"],
+      "zweck": "Die Standard-Rundung fuer Karten und Flaechen."
+    },
+    {
+      "id": "schatten",
+      "wert": "0 1px 2px rgba(27,94,64,.06), 0 12px 40px rgba(27,94,64,.12)",
+      "seite": ["shadow"],
+      "zweck": "Der einzige Schatten. Zwei Lagen, beide im Gruen der Marke statt in Schwarz."
+    }
+  ],
+  "$rundungen_im_gebrauch": {
+    "999px": { "anzahl": 8, "wofuer": "Pillen: Etiketten, Reiter, Knoepfe" },
+    "50%": { "anzahl": 8, "wofuer": "Kreise: Avatare, Punkte" },
+    "var(--radius)": { "anzahl": 3, "wofuer": "Karten, ueber die Variable" },
+    "18px": { "anzahl": 2, "wofuer": "grosse Flaechen" },
+    "12px": { "anzahl": 2, "wofuer": "mittlere Flaechen" },
+    "10px": { "anzahl": 3, "wofuer": "kleine Flaechen" },
+    "8px": { "anzahl": 2, "wofuer": "kleine Flaechen" },
+    "9px": { "anzahl": 1, "wofuer": "ein Einzelfall" }
+  },
+  "$befund": "Acht verschiedene Rundungen, davon fuenf als feste Zahl im Stil statt als Variable. 8, 9, 10, 12, 14 und 18 Pixel liegen so nah beieinander, dass niemand sie unterscheidet, und jede muss einzeln nachgezogen werden. Ein Vorschlag: drei Stufen (klein 8px, normal 14px, gross 18px) plus die Pille (999px) und den Kreis (50%), alle als Variable.",
+  "$abstaende_im_gebrauch": {
+    "8px": { "anzahl": 14, "wofuer": "der haeufigste Abstand" },
+    "12px": { "anzahl": 4 },
+    "14px": { "anzahl": 3 },
+    "40px": { "anzahl": 3, "wofuer": "zwischen Abschnitten" },
+    "96px": { "anzahl": 3, "wofuer": "Luft um grosse Baender" },
+    "6px": { "anzahl": 4 },
+    "10px": { "anzahl": 3 }
+  },
+  "$entscheidung_offen": "Die Abstaende stehen als feste Zahlen im Stil. Eine Leiter (4, 8, 12, 16, 24, 40, 96) als Variablen wuerde sie vereinheitlichen. Das ist Arbeit an der Seite, kein reines Aufraeumen: erst mit Sebastian besprechen."
+}

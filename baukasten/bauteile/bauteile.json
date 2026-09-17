@@ -1,0 +1,47 @@
+{
+  "$beschreibung": "Zweite Schicht des Baukastens: die einzelnen Stuecke. Jeder Eintrag folgt baukasten/EINTRAG.md.",
+  "$stand": "2026-09-17",
+  "$regel": "Ein Bauteil hat je Welt eine Auspraegung und EIN Aussehen. Wer den Knopf der Landingpage aendert, aendert die Rohstoffe, nicht den Knopf der App.",
+  "bauteile": [
+    {
+      "id": "band",
+      "name": "Dunkles Band",
+      "zweck": "Ein Abschnitt, der sich vom Rest abhebt. Traegt in jedem Schema dunkle Farben, auch im hellen.",
+      "welt": "seite",
+      "datei": "ds-bundle/components/band.html",
+      "rohstoffe": ["band-linie"],
+      "herkunft": { "name": "Sebastian", "did": null },
+      "belege": ["trustdonation.org"],
+      "abstand": null
+    },
+    {
+      "id": "knoepfe",
+      "name": "Knoepfe und Auszeichnungen",
+      "zweck": "Aktionen und Etiketten. Pillen mit 999px Rundung.",
+      "welt": "seite",
+      "datei": "ds-bundle/components/buttons.html",
+      "rohstoffe": ["gruen", "weiss", "gold"],
+      "herkunft": { "name": "Sebastian", "did": null },
+      "belege": ["trustdonation.org"],
+      "abstand": null
+    },
+    {
+      "id": "karten",
+      "name": "Karten, Zeilen, Kacheln",
+      "zweck": "Die Flaechen, auf denen Inhalt steht. Drei Dichten fuer drei Zwecke.",
+      "welt": "seite",
+      "datei": "ds-bundle/components/cards.html",
+      "rohstoffe": ["weiss", "linie", "rundung", "schatten"],
+      "herkunft": { "name": "Sebastian", "did": null },
+      "belege": ["trustdonation.org"],
+      "abstand": null
+    }
+  ],
+  "$fehlt": [
+    { "id": "feld", "name": "Eingabefeld", "warum": "Jede Stiftung fuellt Felder aus. Es gibt kein gemeinsames Aussehen dafuer." },
+    { "id": "avatar", "name": "Avatar", "warum": "Menschen und Einrichtungen brauchen ein Bild. Die App hat eines, die Seite nicht." },
+    { "id": "kartennadel", "name": "Kartennadel", "warum": "Die 234 Stiftungen stehen auf der Karte. Ihre Nadel ist heute Antons, nicht unsere." },
+    { "id": "vertrauens-anzeiger", "name": "Vertrauens-Anzeiger", "warum": "Der Kern des Web of Trust hat keine eigene Darstellung." }
+  ],
+  "$hinweis": "Die drei vorhandenen liegen in ds-bundle, das fuer reallife.network erzeugt wurde. Sie gehoeren hierher geholt, sobald jemand sie anfasst."
+}

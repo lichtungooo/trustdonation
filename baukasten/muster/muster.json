@@ -1,0 +1,37 @@
+{
+  "$beschreibung": "Dritte Schicht: zusammengesetzte Bauteile mit einer Absicht. Jeder Eintrag folgt baukasten/EINTRAG.md.",
+  "$stand": "2026-09-17",
+  "$regel": "Ein Muster traegt eine Absicht. Sie steht in `absicht`, und sie entscheidet, ob eine Aenderung erlaubt ist.",
+  "muster": [
+    {
+      "id": "hero",
+      "name": "Hero",
+      "zweck": "Der erste Blick auf eine Seite.",
+      "absicht": "In drei Sekunden sagen, worum es geht. Wer hier mehr unterbringt, verliert den Besucher.",
+      "welt": "seite",
+      "datei": "ds-bundle/patterns/hero.html",
+      "bauteile": ["knoepfe"],
+      "herkunft": { "name": "Sebastian", "did": null },
+      "belege": ["trustdonation.org"],
+      "abstand": null
+    },
+    {
+      "id": "einladung",
+      "name": "Einladung",
+      "zweck": "Der Abschnitt, der zum Mitmachen ruft.",
+      "absicht": "Eine Handlung anbieten, nicht zwei. Zwei gleichwertige Knoepfe halbieren beide.",
+      "welt": "seite",
+      "datei": "ds-bundle/patterns/invitation.html",
+      "bauteile": ["knoepfe", "band"],
+      "herkunft": { "name": "Sebastian", "did": null },
+      "belege": ["trustdonation.org"],
+      "abstand": null
+    }
+  ],
+  "$fehlt": [
+    { "id": "profilkopf", "name": "Profilkopf", "warum": "Jede Stiftung und jedes Projekt braucht einen Kopf: Bild, Name, Ort, was sie tut." },
+    { "id": "projektvorstellung", "name": "Projektvorstellung", "warum": "Der Kern des Pitches an eine Stiftung. Heute schreibt jeder ihn neu." },
+    { "id": "kontaktblock", "name": "Kontaktblock", "warum": "Wie erreicht man jemanden, ohne die Mailadresse an Sammler zu verlieren." },
+    { "id": "foerderaufruf", "name": "Foerderaufruf", "warum": "Was ein Projekt braucht, in einer Form, die eine Stiftung lesen kann." }
+  ]
+}

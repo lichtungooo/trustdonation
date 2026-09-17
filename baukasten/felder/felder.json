@@ -1,0 +1,682 @@
+{
+  "$beschreibung": "Vierte Schicht des Baukastens: die Felder, die ein Mensch ausfuellt. Jeder Eintrag folgt baukasten/EINTRAG.md.",
+  "$quelle": "docs/03-datenmodell.md",
+  "$stand": "2026-09-17",
+  "$regel": "Ein Feld steht genau einmal hier, auch wenn mehrere Arten es tragen. Wer `position` zweimal fuehrt, hat zwei Wahrheiten ueber Orte.",
+  "$formen": [
+    "text",
+    "longtext",
+    "number",
+    "money",
+    "range",
+    "date",
+    "daterange",
+    "bool",
+    "url",
+    "email",
+    "tags",
+    "list",
+    "position",
+    "ref",
+    "select"
+  ],
+  "$hinweis_manifest": "Im Stack tragen Felder eine Id der Form `<vokabular>#<feld>`, zum Beispiel `foundation/v1#foerderrahmen` (DEFINITION Teil 7). Diese Datei nennt die kurzen Namen aus dem Konzept; die Zuordnung entsteht beim Bau.",
+  "gemeinsam": [
+    "eigenmittel",
+    "name",
+    "position",
+    "zielgruppen"
+  ],
+  "felder": [
+    {
+      "id": "ansprache",
+      "form": "text",
+      "zweck": "Funktion statt Name, solange kein Profil übernommen ist",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "anstifter",
+      "form": "ref",
+      "zweck": "Wer es angestossen hat, als Relation auf einen Menschen.",
+      "arten": [
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "antragsportal",
+      "form": "url",
+      "zweck": "Wo ein Antrag eingereicht wird, falls es ein eigenes Portal gibt.",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "antragstellung",
+      "form": "select",
+      "zweck": "ja, nein, offen",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "antragsweg",
+      "form": "select",
+      "zweck": "offen, Wettbewerb, Anfrage, eingeladen, operativ, Kooperation, Träger-Partnerschaft, Boden",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "art",
+      "form": "select",
+      "zweck": "fördernd, operativ, beides",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "bedarfGesamt",
+      "form": "number",
+      "zweck": "Die Summe aller Bedarfe in Euro.",
+      "arten": [
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "bedarfe",
+      "form": "list",
+      "zweck": "Was gebraucht wird, je Eintrag mit Art: Haende, Wissen, Sachen, Raum.",
+      "arten": [
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "beduerfnis",
+      "form": "longtext",
+      "zweck": "Was hier fehlt, wenn es dieses Projekt nicht gibt.",
+      "arten": [
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "bisherGefoerdert",
+      "form": "tags",
+      "zweck": "Themen, keine kopierten Projektbeschreibungen",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "eigenmittel",
+      "form": "text",
+      "zweck": "ja, nein, teilweise",
+      "arten": [
+        "foerderer",
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "foerderbereiche",
+      "form": "tags",
+      "zweck": "aus dem gemeinsamen Vokabular",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "foerderer",
+      "form": "ref",
+      "zweck": "Wer schon foerdert, als Relation.",
+      "arten": [
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "foerdererart",
+      "form": "select",
+      "zweck": "Stiftung, Kommune, Land, Bund, EU, Lotterie, Kirche, Wohlfahrt, Verband, Kammer, Unternehmen",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "fortschritt",
+      "form": "text",
+      "zweck": "Einträge mit Datum",
+      "arten": [
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "fristen",
+      "form": "text",
+      "zweck": "laufend, Stichtag, Fenster",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "gruppe",
+      "form": "ref",
+      "zweck": "Die Menschen dahinter, als Relation.",
+      "arten": [
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "hinweis",
+      "form": "text",
+      "zweck": "„Woran erkennt ein Projekt, dass es zu uns passt“, in ihren Worten",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "kurz",
+      "form": "text",
+      "zweck": "Ein Satz, der das Vorhaben fasst. Fuer Karten und Listen.",
+      "arten": [
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "luecke",
+      "form": "number",
+      "zweck": "Was zwischen Bedarf und Eigenmitteln offen bleibt. Die Zahl, um die es geht.",
+      "arten": [
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "mail",
+      "form": "email",
+      "zweck": "allgemeine Adresse",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "name",
+      "form": "text",
+      "zweck": "Wie die Einrichtung oder das Vorhaben heisst.",
+      "arten": [
+        "foerderer",
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "position",
+      "form": "position",
+      "zweck": "für die Karte",
+      "arten": [
+        "foerderer",
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "region",
+      "form": "position",
+      "zweck": "Wo es wirkt, als Tags. Neben der Position auf der Karte.",
+      "arten": [
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "reichweite",
+      "form": "tags",
+      "zweck": "lokal, regional, national, international",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "schritte",
+      "form": "list",
+      "zweck": "Wie es vorangeht, in Etappen.",
+      "arten": [
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "sitz",
+      "form": "text",
+      "zweck": "Stadt, Bundesland, Land",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "spende",
+      "form": "bool",
+      "zweck": "Ob Spenden angenommen werden.",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "summeBis",
+      "form": "number",
+      "zweck": "Die groesste Foerderung, die vergeben wird.",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "summeVon",
+      "form": "number",
+      "zweck": "Die kleinste Foerderung, die vergeben wird.",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "termine",
+      "form": "text",
+      "zweck": "Zeitraum, Daten",
+      "arten": [
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "themen",
+      "form": "text",
+      "zweck": "Tags, drei bis sechs",
+      "arten": [
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "treuhand",
+      "form": "bool",
+      "zweck": "Ob treuhaenderische Stiftungen moeglich sind.",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "unterlagen",
+      "form": "list",
+      "zweck": "Was einem Antrag beiliegen muss.",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "volumenJahr",
+      "form": "number",
+      "zweck": "wenn öffentlich bekannt",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "vorhandenes",
+      "form": "list",
+      "zweck": "Was schon da ist: Zusagen, Genehmigungen, Material, Raeume.",
+      "arten": [
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "website",
+      "form": "url",
+      "zweck": "Die eigene Adresse im Netz.",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "wirkung",
+      "form": "list",
+      "zweck": "Zwei bis drei nachpruefbare Dinge, die sich aendern.",
+      "arten": [
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "zeitraum",
+      "form": "text",
+      "zweck": "Zeitraum, Daten",
+      "arten": [
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "zielgruppen",
+      "form": "tags",
+      "zweck": "Fuer wen es da ist.",
+      "arten": [
+        "foerderer",
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "zustifter",
+      "form": "ref",
+      "zweck": "Wer zugestiftet hat, als Relation.",
+      "arten": [
+        "projekt"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "zustiftung",
+      "form": "bool",
+      "zweck": "Ob Zustiftungen angenommen werden.",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    },
+    {
+      "id": "zweck",
+      "form": "text",
+      "zweck": "eigene Zusammenfassung, kein Zitat",
+      "arten": [
+        "foerderer"
+      ],
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "docs/03-datenmodell.md"
+      ]
+    }
+  ],
+  "$hinweis_zwecke": "Das Datenmodell nennt viele Felder nur mit ihrer Form. Die Zwecke hier beschreiben, was das Feld offensichtlich ist, in der Sprache des Konzepts. Wo der Name allein nicht reicht, bleibt der Zweck leer und die Pruefung meldet es."
+}

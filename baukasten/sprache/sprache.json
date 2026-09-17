@@ -1,0 +1,64 @@
+{
+  "$beschreibung": "Achte Schicht: die Worte. Jeder Eintrag folgt baukasten/EINTRAG.md.",
+  "$stand": "2026-09-17",
+  "$warum": "Die Schicht, die andere uebersehen. Die meisten scheitern nicht an der Technik, sondern an der Frage, was sie schreiben sollen. Ein Baukasten, der die Worte mitliefert, spart einer Stiftung mehr Zeit als jeder Knopf.",
+  "regeln": [
+    {
+      "id": "klare-sprache",
+      "name": "Klare Sprache",
+      "zweck": "Der Standard fuer Konzepte, Dokumente, Mails und Pitches. Klar wie Schiller, positiv wie Goethe.",
+      "datei": "plugins/sprach-tools/skills/klare-sprache",
+      "herkunft": { "name": "Timo und Eli", "did": null },
+      "belege": ["trustdonation.org", "alle docs/"]
+    },
+    {
+      "id": "konzept-schreiben",
+      "name": "Konzept schreiben",
+      "zweck": "Wie ein Konzept aufgebaut wird, bevor es Code wird.",
+      "datei": "plugins/sprach-tools/skills/konzept-schreiben",
+      "herkunft": { "name": "Timo und Eli", "did": null },
+      "belege": ["docs/00-ueberblick.md bis docs/12-baukasten.md"]
+    },
+    {
+      "id": "gendern",
+      "name": "Gendern",
+      "zweck": "Wie wir ueber Menschen schreiben.",
+      "datei": "plugins/sprach-tools/skills/gendern",
+      "herkunft": { "name": "Timo und Eli", "did": null },
+      "belege": []
+    },
+    {
+      "id": "sprach-stile",
+      "name": "Sprach-Stile",
+      "zweck": "Neun Stimmen fuer neun Lagen: macher, kraftvoll, herzens, kindgerecht, marktschreier, groessenwahn, tiefstapelei, schamanisch, soziologen-sprech.",
+      "datei": "plugins/sprach-tools/skills/sprach-stile",
+      "herkunft": { "name": "Timo und Eli", "did": null },
+      "belege": []
+    }
+  ],
+  "werkzeuge": [
+    { "id": "td-stand", "zweck": "Am Anfang jeder Runde: was lesen, was am Ende schreiben." },
+    { "id": "td-anton", "zweck": "Wo steht Anton, was hat er veroeffentlicht, was heisst das fuer uns." },
+    { "id": "td-definieren", "zweck": "Bevor eine Sache Code wird. Raster, Antons sechs Muster." },
+    { "id": "td-naht", "zweck": "Bevor Code von Anton geaendert wird. Haken pruefen, Eingriff klein ziehen." },
+    { "id": "td-modul", "zweck": "Ein Space-Modul bauen, ueber das Register statt in seinen Code." },
+    { "id": "td-komponente", "zweck": "Eine Komponente bauen, nachdem gesucht wurde, ob es sie gibt." },
+    { "id": "td-test", "zweck": "Was getestet wird: jede Liste, jede Regel aus der Definition." },
+    { "id": "td-performance", "zweck": "Messen statt raten, mit den echten Zahlen." },
+    { "id": "td-update", "zweck": "Antons Stand einspielen, neun Schritte mit drei Toren." },
+    { "id": "td-beitragen", "zweck": "Etwas von uns zu Anton zurueckbringen, Anwendungsfall zuerst." },
+    { "id": "td-ausliefern", "zweck": "Prototyp bauen und auf trustdonation.org bringen." }
+  ],
+  "$fehlt": [
+    { "id": "erstansprache", "warum": "Die erste Mail an eine Stiftung. Heute schreibt jeder sie neu, und die meisten schreiben sie zu lang." },
+    { "id": "einladung", "warum": "Jemanden in einen Space holen, so dass klar ist, worum es geht." },
+    { "id": "absage", "warum": "Eine Foerderung abzulehnen, ohne die Beziehung zu beenden." },
+    { "id": "nachfassen", "warum": "Nach drei Wochen ohne Antwort, ohne zu draengen." },
+    { "id": "dankeschoen", "warum": "Nach einer Zusage. Der Moment, in dem die Beziehung anfaengt." }
+  ],
+  "$installieren": [
+    "/plugin marketplace add lichtungooo/trustdonation",
+    "/plugin install trustdonation-tools",
+    "/plugin install sprach-tools"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "$beschreibung": "Siebte Schicht: ganze Auftritte, aus den Schichten darunter zusammengesetzt. Jeder Eintrag folgt baukasten/EINTRAG.md.",
+  "$stand": "2026-09-17",
+  "$warum": "Eine Vorlage spart einer Stiftung am meisten. Sie will keine Knoepfe aussuchen, sie will einen Auftritt haben.",
+  "vorlagen": [
+    {
+      "id": "fragebogen-stiftung",
+      "name": "Einen Stiftungseintrag anlegen",
+      "zweck": "13 W-Fragen, Recherche und Uebernahme. Jede Frage gehoert zu genau einem Feld.",
+      "datei": "docs/fragen/stiftung.md",
+      "schichten": ["felder", "arten"],
+      "herkunft": { "name": "Timo", "did": null },
+      "belege": ["docs/fragen/beispiel-stiftung.md: einmal geloest"]
+    },
+    {
+      "id": "fragebogen-projekt",
+      "name": "Ein Projekt anlegen",
+      "zweck": "14 W-Fragen in drei Runden.",
+      "datei": "docs/fragen/projekt.md",
+      "schichten": ["felder", "arten"],
+      "herkunft": { "name": "Timo", "did": null },
+      "belege": ["docs/fragen/beispiel-projekt.md: trustdonation selbst geloest"]
+    },
+    {
+      "id": "fragebogen-stiftungsgespraech",
+      "name": "Der erste Termin mit einer Stiftung",
+      "zweck": "Sieben Fragen und ein Protokollbogen. Fuer den Tisch, nicht fuer die App.",
+      "datei": "docs/fragen/stiftungsgespraech.md",
+      "schichten": ["sprache"],
+      "herkunft": { "name": "Timo", "did": null },
+      "belege": []
+    }
+  ],
+  "$fehlt": [
+    { "id": "landingpage-stiftung", "warum": "Eine fertige Seite fuer eine Stiftung, aus Mustern zusammengesetzt. Das ist es, was eine Stiftung am Ende will." },
+    { "id": "space-stiftung", "warum": "Ein Space mit den richtigen Modulen, Arten und Feldern, fertig eingerichtet." },
+    { "id": "space-projekt", "warum": "Dasselbe fuer ein Projekt." },
+    { "id": "space-netzwerk", "warum": "Dasselbe fuer ein Netzwerk, mit Arten-Editor und Landingpage-Bereich." }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "$beschreibung": "Die Schriften von trustdonation. Erste Schicht des Baukastens (docs/12-baukasten.md).",
+  "$quellen": {
+    "seite": "landing/site.css",
+    "dateien": "landing/fonts/"
+  },
+  "$stand": "2026-09-17",
+  "schriften": [
+    {
+      "id": "hanken",
+      "familie": "Hanken Grotesk",
+      "datei": "landing/fonts/hanken.woff2",
+      "groesse_kb": 33,
+      "schnitte": "100 bis 900, eine veraenderliche Datei",
+      "zweck": "Die eine Schrift der Seite. Ueberschriften und Fliesstext.",
+      "laedt": "@font-face in landing/site.css, font-display: swap",
+      "belege": ["trustdonation.org"]
+    },
+    {
+      "id": "system-monospace",
+      "familie": "ui-monospace, Consolas, monospace",
+      "datei": null,
+      "groesse_kb": 0,
+      "zweck": "Code und Kennungen. Kommt vom Geraet, kostet nichts.",
+      "laedt": "nichts, es ist die Schrift des Systems",
+      "belege": ["trustdonation.org"]
+    }
+  ],
+  "$ungenutzt": [
+    {
+      "datei": "landing/fonts/bricolage.woff2",
+      "groesse_kb": 40,
+      "befund": "Wird ausgeliefert und nirgends geladen. Das ds-bundle beschreibt sie als Schrift von reallife.network; die trustdonation-Seite benutzt sie nicht."
+    },
+    {
+      "datei": "landing/fonts/spectral-italic.woff2",
+      "groesse_kb": 14,
+      "befund": "Dasselbe. Zusammen 54 KB, die jeder Besucher herunterlaedt, ohne sie zu sehen."
+    }
+  ],
+  "$entscheidung_offen": "Entweder die beiden Schriften einsetzen (Bricolage fuer Ueberschriften, Spectral kursiv fuer Zitate, so wie das ds-bundle es beschreibt) oder die Dateien entfernen. Beides ist besser als der heutige Zustand."
+}

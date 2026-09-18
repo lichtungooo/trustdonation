@@ -818,11 +818,15 @@ function stilSetzen(id) {
     if (e.key === "Escape") {
       var activeEl = document.activeElement
       var activeMenu = activeEl ? activeEl.closest(".has-menu") : null
+      var imBurger = activeEl ? activeEl.closest(".mobile") : null
       alleZu(null)
       menueSchliessen()
       if (activeMenu) {
         var btn = activeMenu.querySelector("button")
         if (btn) btn.focus()
+      } else if (imBurger) {
+        var burgerBtn = document.querySelector(".burger")
+        if (burgerBtn) burgerBtn.focus()
       }
     }
   })

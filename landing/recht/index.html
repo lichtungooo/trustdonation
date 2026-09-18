@@ -25,6 +25,9 @@
   .recht dd { margin: .15rem 0 0; }
   .luecke { background: #fff4e5; border-left: 3px solid #EA580C; padding: .6rem .9rem; margin: .5rem 0 1rem; border-radius: .25rem; }
   :root[data-theme="dark"] .luecke { background: #3a2a15; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .luecke { background: #3a2a15; }
+  }
   .zurueck { display: inline-block; margin-bottom: 2rem; }
 </style>
 </head>
@@ -144,6 +147,5 @@
 
 </main>
 
-<script src="/site.js"></script>
 </body>
 </html>

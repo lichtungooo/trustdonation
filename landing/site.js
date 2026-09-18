@@ -717,7 +717,14 @@ function auswahlZeigen() {
   var opts = document.querySelectorAll("[data-lang]")
   for (var o = 0; o < opts.length; o++) opts[o].setAttribute("aria-checked", opts[o].dataset.lang === aktiveSprache ? "true" : "false")
   var st = document.querySelectorAll("[data-stil]")
-  for (var s = 0; s < st.length; s++) st[s].setAttribute("aria-checked", st[s].dataset.stil === aktiverStil ? "true" : "false")
+  for (var s = 0; s < st.length; s++) {
+    st[s].setAttribute("aria-checked", st[s].dataset.stil === aktiverStil ? "true" : "false")
+    if (aktiveSprache !== "de") {
+      st[s].setAttribute("disabled", "true")
+    } else {
+      st[s].removeAttribute("disabled")
+    }
+  }
   document.documentElement.dataset.stile = aktiveSprache === "de" ? "an" : "aus"
 }
 

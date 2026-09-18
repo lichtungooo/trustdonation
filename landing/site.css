@@ -132,7 +132,7 @@ a { color: inherit; }
 .stile-spalte { border-left: 1px solid var(--line); padding-left: 8px; }
 .stile-hinweis { display: none; margin: 4px 12px 8px; font-size: 13px; line-height: 1.4; color: var(--muted); }
 :root[data-stile="aus"] .stile-hinweis { display: block; }
-:root[data-stile="aus"] .stile-spalte button.opt { opacity: .45; }
+:root[data-stile="aus"] .stile-spalte button.opt { opacity: .65; }
 :root[data-stile="aus"] .stile-spalte button.opt[aria-checked="true"] .check { visibility: hidden; }
 :root[data-stile="aus"] .stile-spalte button.opt[aria-checked="true"] b { color: var(--ink); }
 .mobile .stile { display: flex; flex-wrap: wrap; gap: 8px; padding: 6px 24px 0; }

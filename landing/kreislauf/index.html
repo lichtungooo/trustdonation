@@ -13,6 +13,14 @@
     if (w === "dark" || w === "light") document.documentElement.dataset.theme = w
   } catch (e) {}
 </script>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://trustdonation.org/kreislauf/">
+<meta property="og:site_name" content="trustdonation">
+<meta property="og:title" content="trustdonation — So läuft es">
+<meta property="og:description" content="Anstifter starten, Zustifter geben, Stiftungen fördern, Projekte arbeiten draußen. Und alle sehen, was daraus wurde.">
+<meta property="og:image" content="https://trustdonation.org/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <style>
   .big-diagram { max-width: 880px; }
   .flowsteps { display: grid; gap: 16px; margin-top: 56px; }
@@ -69,10 +77,10 @@
 <div class="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="/" aria-label="trustdonation">trustd<svg class="signet" aria-hidden="true"><use href="#signet"></use></svg>nation</a>
-    <nav class="nav-links" aria-label="Hauptnavigation">
+    <nav class="nav-links" aria-label="Hauptnavigation" data-t-aria="aria.navigation">
       <div class="has-menu" data-open="false">
-        <button type="button" aria-expanded="false" aria-haspopup="true"><span data-t="nav.fuerwen">Für wen</span> <svg class="caret"><use href="#i-caret"></use></svg></button>
-        <div class="menu wide">
+        <button type="button" aria-expanded="false" aria-controls="menu-fuerwen"><span data-t="nav.fuerwen">Für wen</span> <svg class="caret"><use href="#i-caret"></use></svg></button>
+        <div class="menu wide" id="menu-fuerwen">
           <a href="/#anstifter"><span class="ic"><svg><use href="#i-geben"></use></svg></span><div><b data-t="nav.anstifter">Anstifter</b><span data-t="nav.anstifter.s">Starte ein Projekt, bring deine Begabung ein, arbeite in einer Stiftung mit.</span></div></a>
           <a href="/#zustifter"><span class="ic"><svg><use href="#i-menschen"></use></svg></span><div><b data-t="nav.zustifter">Zustifter</b><span data-t="nav.zustifter.s">Gib in eine Stiftung oder direkt an ein Projekt.</span></div></a>
           <a href="/#stiftungen"><span class="ic"><svg><use href="#i-stiftung"></use></svg></span><div><b data-t="nav.stiftungen">Stiftungen</b><span data-t="nav.stiftungen.s">Finde Projekte in deinem Feld und bekomm deinen eigenen Raum.</span></div></a>
@@ -81,8 +89,8 @@
       </div>
       <a href="/kreislauf/" aria-current="page" data-t="nav.kreislauf">Kreislauf</a>
       <div class="has-menu" data-open="false">
-        <button type="button" aria-expanded="false" aria-haspopup="true"><span data-t="nav.ressourcen">Ressourcen</span> <svg class="caret"><use href="#i-caret"></use></svg></button>
-        <div class="menu wide">
+        <button type="button" aria-expanded="false" aria-controls="menu-ressourcen"><span data-t="nav.ressourcen">Ressourcen</span> <svg class="caret"><use href="#i-caret"></use></svg></button>
+        <div class="menu wide" id="menu-ressourcen">
           <div>
             <div class="group" data-t="nav.raum">Der Raum</div>
             <a href="/app/network/map"><span class="ic"><svg><use href="#i-karte"></use></svg></span><div><b data-t="nav.karte">Karte</b><span data-t="nav.karte.s">Alle Stiftungen und Projekte auf einer Karte, direkt in der App.</span></div></a>
@@ -107,26 +115,26 @@
         <svg class="zu-hell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
       </button>
       <div class="has-menu lang" data-open="false">
-        <button type="button" aria-expanded="false" aria-haspopup="true" data-t-aria="nav.sprache" aria-label="Sprache"><svg class="globe"><use href="#i-globe"></use></svg> <span id="lang-label">DE</span> <svg class="caret"><use href="#i-caret"></use></svg></button>
-        <div class="menu wide stilmenu" role="menu">
-          <div>
-            <div class="group" data-t="nav.sprache">Sprache</div>
-            <button class="opt" type="button" role="menuitemradio" aria-checked="true" data-lang="de"><span class="ic code">DE</span><div><b>Deutsch</b></div><svg class="check"><use href="#i-check"></use></svg></button>
-            <button class="opt" type="button" role="menuitemradio" aria-checked="false" data-lang="en"><span class="ic code">EN</span><div><b>English</b></div><svg class="check"><use href="#i-check"></use></svg></button>
-            <button class="opt" type="button" role="menuitemradio" aria-checked="false" data-lang="es"><span class="ic code">ES</span><div><b>Español</b></div><svg class="check"><use href="#i-check"></use></svg></button>
+        <button type="button" aria-expanded="false" aria-controls="menu-sprache" data-t-aria="nav.sprache" aria-label="Sprache"><svg class="globe"><use href="#i-globe"></use></svg> <span id="lang-label">DE</span> <svg class="caret"><use href="#i-caret"></use></svg></button>
+        <div class="menu wide stilmenu" id="menu-sprache">
+          <div role="radiogroup" aria-labelledby="lang-title">
+            <div id="lang-title" class="group" data-t="nav.sprache">Sprache</div>
+            <button class="opt" type="button" role="radio" aria-checked="true" data-lang="de"><span class="ic code">DE</span><div><b>Deutsch</b></div><svg class="check"><use href="#i-check"></use></svg></button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-lang="en"><span class="ic code">EN</span><div><b>English</b></div><svg class="check"><use href="#i-check"></use></svg></button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-lang="es"><span class="ic code">ES</span><div><b>Español</b></div><svg class="check"><use href="#i-check"></use></svg></button>
           </div>
-          <div class="stile-spalte">
-            <div class="group" data-t="nav.stil">Sprachstil</div>
+          <div class="stile-spalte" role="radiogroup" aria-labelledby="style-title">
+            <div id="style-title" class="group" data-t="nav.stil">Sprachstil</div>
             <p class="stile-hinweis" data-t="nav.stil.hinweis">Sprachstile gibt es bisher auf Deutsch.</p>
-            <button class="opt" type="button" role="menuitemradio" aria-checked="true" data-stil="klar"><span class="ic"><svg><use href="#i-st-klar"></use></svg></span><div><b>Klartext</b><span>Modern, professionell, zugänglich. Die Grundfassung.</span></div><svg class="check"><use href="#i-check"></use></svg></button>
-            <button class="opt" type="button" role="menuitemradio" aria-checked="false" data-stil="kindgerecht"><span class="ic"><svg><use href="#i-st-kind"></use></svg></span><div><b>Kindgerecht</b><span>Warm, staunend, einfach. Sendung mit der Maus.</span></div><svg class="check"><use href="#i-check"></use></svg></button>
-            <button class="opt" type="button" role="menuitemradio" aria-checked="false" data-stil="tiefstapelei"><span class="ic"><svg><use href="#i-st-tief"></use></svg></span><div><b>Tiefstapelei</b><span>Zweifelnd, kleinlaut, liebenswert.</span></div><svg class="check"><use href="#i-check"></use></svg></button>
-            <button class="opt" type="button" role="menuitemradio" aria-checked="false" data-stil="herzens-sprache"><span class="ic"><svg><use href="#i-st-herz"></use></svg></span><div><b>Herzens-Sprache</b><span>Weich, atmend, einladend. Rumi, Rilke.</span></div><svg class="check"><use href="#i-check"></use></svg></button>
-            <button class="opt" type="button" role="menuitemradio" aria-checked="false" data-stil="schamanisch"><span class="ic"><svg><use href="#i-st-feuer"></use></svg></span><div><b>Schamanisch</b><span>Zeremoniell, zyklisch, am Feuer gesprochen.</span></div><svg class="check"><use href="#i-check"></use></svg></button>
-            <button class="opt" type="button" role="menuitemradio" aria-checked="false" data-stil="soziologen-sprech"><span class="ic"><svg><use href="#i-st-buch"></use></svg></span><div><b>Soziologen-Sprech</b><span>Theoriegesättigt, hypotaktisch. Habermas, Luhmann.</span></div><svg class="check"><use href="#i-check"></use></svg></button>
-            <button class="opt" type="button" role="menuitemradio" aria-checked="false" data-stil="groessenwahn"><span class="ic"><svg><use href="#i-st-rakete"></use></svg></span><div><b>Größenwahn</b><span>Welterobernd, pathetisch. Musk, Napoleon.</span></div><svg class="check"><use href="#i-check"></use></svg></button>
-            <button class="opt" type="button" role="menuitemradio" aria-checked="false" data-stil="kraftvolle-sprache"><span class="ic"><svg><use href="#i-st-feder"></use></svg></span><div><b>Kraftvolle Sprache</b><span>Klar, pathosfähig, tragend. Schiller, Goethe.</span></div><svg class="check"><use href="#i-check"></use></svg></button>
-            <button class="opt" type="button" role="menuitemradio" aria-checked="false" data-stil="marktschreier"><span class="ic"><svg><use href="#i-st-mega"></use></svg></span><div><b>Marktschreier</b><span>Laut, theatralisch, herzlich. Fischmarkt.</span></div><svg class="check"><use href="#i-check"></use></svg></button>
+            <button class="opt" type="button" role="radio" aria-checked="true" data-stil="klar"><span class="ic"><svg><use href="#i-st-klar"></use></svg></span><div><b>Klartext</b><span>Modern, professionell, zugänglich. Die Grundfassung.</span></div><svg class="check"><use href="#i-check"></use></svg></button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-stil="kindgerecht"><span class="ic"><svg><use href="#i-st-kind"></use></svg></span><div><b>Kindgerecht</b><span>Warm, staunend, einfach. Sendung mit der Maus.</span></div><svg class="check"><use href="#i-check"></use></svg></button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-stil="tiefstapelei"><span class="ic"><svg><use href="#i-st-tief"></use></svg></span><div><b>Tiefstapelei</b><span>Zweifelnd, kleinlaut, liebenswert.</span></div><svg class="check"><use href="#i-check"></use></svg></button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-stil="herzens-sprache"><span class="ic"><svg><use href="#i-st-herz"></use></svg></span><div><b>Herzens-Sprache</b><span>Weich, atmend, einladend. Rumi, Rilke.</span></div><svg class="check"><use href="#i-check"></use></svg></button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-stil="schamanisch"><span class="ic"><svg><use href="#i-st-feuer"></use></svg></span><div><b>Schamanisch</b><span>Zeremoniell, zyklisch, am Feuer gesprochen.</span></div><svg class="check"><use href="#i-check"></use></svg></button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-stil="soziologen-sprech"><span class="ic"><svg><use href="#i-st-buch"></use></svg></span><div><b>Soziologen-Sprech</b><span>Theoriegesättigt, hypotaktisch. Habermas, Luhmann.</span></div><svg class="check"><use href="#i-check"></use></svg></button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-stil="groessenwahn"><span class="ic"><svg><use href="#i-st-rakete"></use></svg></span><div><b>Größenwahn</b><span>Welterobernd, pathetisch. Musk, Napoleon.</span></div><svg class="check"><use href="#i-check"></use></svg></button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-stil="kraftvolle-sprache"><span class="ic"><svg><use href="#i-st-feder"></use></svg></span><div><b>Kraftvolle Sprache</b><span>Klar, pathosfähig, tragend. Schiller, Goethe.</span></div><svg class="check"><use href="#i-check"></use></svg></button>
+            <button class="opt" type="button" role="radio" aria-checked="false" data-stil="marktschreier"><span class="ic"><svg><use href="#i-st-mega"></use></svg></span><div><b>Marktschreier</b><span>Laut, theatralisch, herzlich. Fischmarkt.</span></div><svg class="check"><use href="#i-check"></use></svg></button>
           </div>
         </div>
       </div>
@@ -179,7 +187,7 @@
 
 <section style="padding-top: 24px">
   <div class="wrap">
-    <svg class="diagram big-diagram" viewBox="0 0 800 800" role="img" aria-label="Das Geflecht: vier Rollen um das Vertrauen">
+    <svg class="diagram big-diagram" viewBox="0 0 800 800" role="img" aria-label="Das Geflecht: vier Rollen um das Vertrauen" data-t-aria="aria.diagramm">
       <defs>
         <marker id="pf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head" d="M0 0 L10 5 L0 10z"></path></marker>
         <marker id="pg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head gruen" d="M0 0 L10 5 L0 10z"></path></marker>
@@ -226,7 +234,6 @@
       <div class="step"><span class="n">2</span><h3 data-t="kp.m2.h">Profile</h3><p data-t="kp.m2.p">Menschen, Projekte und Stiftungen zeigen, wer sie sind und was sie brauchen. Das Profil gehört dir und wandert mit, wenn du den Anbieter wechselst.</p></div>
       <div class="step"><span class="n">3</span><h3 data-t="kp.m3.h">Karte</h3><p data-t="kp.m3.p">Hier treffen sich alle vier Rollen. Aus einem Eintrag wird ein Ort, den du besuchen kannst.</p></div>
       <div class="step"><span class="n">4</span><h3 data-t="kp.m4.h">Stack</h3><p data-t="kp.m4.p">Der Real Life Stack ist der Werkzeugkasten: Karte, Kalender, Kanban, Feed. Jede Gemeinschaft stellt sich zusammen, was sie braucht. Offener Quellcode, selbst hostbar.</p></div>
-    </div>
     </div>
   </div>
 </section>

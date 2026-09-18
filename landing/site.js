@@ -8,6 +8,9 @@ var T = {
     "meta.desc.kreislauf": "Anstifter starten, Zustifter geben, Stiftungen fördern, Projekte arbeiten draußen. Und alle sehen, was daraus wurde.",
     "aria.schema": "Hell oder dunkel",
     "aria.menue": "Menü öffnen oder schließen",
+    "aria.navigation": "Hauptnavigation",
+    "aria.karte": "Karte in der App öffnen",
+    "aria.diagramm": "Das Geflecht: vier Rollen um das Vertrauen",
     "nav.fuerwen": "Für wen",
     "nav.projekte": "Projekte",
     "nav.projekte.s": "Trag dein Projekt ein und sieh, welche Stiftungen zu dir passen.",
@@ -47,6 +50,7 @@ var T = {
     "hero.link": "So läuft es",
     "hero.note": "Getragen vom Kollektiv Lichtung e.V. Deine Identität liegt auf deinem Gerät, nicht bei uns.",
     "frame.open": "Karte in der App öffnen →",
+    "frame.url": "trustdonation.org/app · Karte",
     "frame.stiftungen": "Stiftungen",
     "frame.projekte": "Projekte",
     "proof": "<strong>280 deutsche Stiftungen</strong> haben wir durchgesehen und nach elf Förderkriterien sortiert.",
@@ -227,6 +231,9 @@ var T = {
     "meta.desc.kreislauf": "How it flows: initiators found and start, co-donors give, foundations fund, projects show themselves and show impact. Everything interlocks.",
     "aria.schema": "Light or dark",
     "aria.menue": "Open or close menu",
+    "aria.navigation": "Main navigation",
+    "aria.karte": "Open map in the app",
+    "aria.diagramm": "The network: four roles around trust",
     "nav.fuerwen": "For whom",
     "nav.projekte": "Projects",
     "nav.projekte.s": "Show your project on the map and find the foundations that fit you.",
@@ -266,6 +273,7 @@ var T = {
     "hero.link": "See the cycle",
     "hero.note": "Carried by Kollektiv Lichtung e.V. Your identity stays on your device, not with us.",
     "frame.open": "Open the map in the app →",
+    "frame.url": "trustdonation.org/app · Map",
     "frame.stiftungen": "Foundations",
     "frame.projekte": "Projects",
     "proof": "<strong>280 German foundations</strong> reviewed and sorted into eleven funding criteria.",
@@ -446,6 +454,9 @@ var T = {
     "meta.desc.kreislauf": "Así fluye: los iniciadores fundan e inician, los codonantes aportan, las fundaciones financian, los proyectos se muestran y muestran su efecto. Todo se entrelaza.",
     "aria.schema": "Claro u oscuro",
     "aria.menue": "Abrir o cerrar el menú",
+    "aria.navigation": "Navegación principal",
+    "aria.karte": "Abrir mapa en la aplicación",
+    "aria.diagramm": "La red: cuatro roles en torno a la confianza",
     "nav.fuerwen": "Para quién",
     "nav.projekte": "Proyectos",
     "nav.projekte.s": "Muestra tu proyecto en el mapa y encuentra las fundaciones que encajan contigo.",
@@ -485,6 +496,7 @@ var T = {
     "hero.link": "Ver el ciclo",
     "hero.note": "Sostenido por Kollektiv Lichtung e.V. Tu identidad queda en tu dispositivo, no con nosotros.",
     "frame.open": "Abrir el mapa en la app →",
+    "frame.url": "trustdonation.org/app · Mapa",
     "frame.stiftungen": "Fundaciones",
     "frame.projekte": "Proyectos",
     "proof": "<strong>280 fundaciones alemanas</strong> revisadas y ordenadas en once criterios de apoyo.",
@@ -691,6 +703,12 @@ function texteAnwenden(d, l) {
   var tk = seite ? "meta.title." + seite : "meta.title", dk = seite ? "meta.desc." + seite : "meta.desc"
   if (d[tk]) document.title = d[tk]
   var m = document.querySelector('meta[name="description"]'); if (m && d[dk]) m.setAttribute("content", d[dk])
+  var ot = document.querySelector('meta[property="og:title"]'); if (ot && d[tk]) ot.setAttribute("content", d[tk])
+  var od = document.querySelector('meta[property="og:description"]'); if (od && d[dk]) od.setAttribute("content", d[dk])
+  var ol = document.querySelector('meta[property="og:locale"]'); if (ol) {
+    var locales = { "de": "de_DE", "en": "en_US", "es": "es_ES" }
+    ol.setAttribute("content", locales[l] || "de_DE")
+  }
 }
 
 function auswahlZeigen() {

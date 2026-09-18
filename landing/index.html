@@ -141,23 +141,23 @@
     <a href="#rubriken" onclick="menueSchliessen()"><span class="ic"><svg><use href="#i-rubrik"></use></svg></span><span data-t="nav.rubriken">Förderkriterien</span></a>
     <a href="#antragswege" onclick="menueSchliessen()"><span class="ic"><svg><use href="#i-weg"></use></svg></span><span data-t="nav.antragswege">Antragswege</span></a>
     <a href="#mitmachen" onclick="menueSchliessen()"><span class="ic"><svg><use href="#i-hand"></use></svg></span><span data-t="nav.mitmachen">Mitmachen</span></a>
-    <div class="group" data-t="nav.sprache">Sprache</div>
-    <div class="langs">
-      <button type="button" role="menuitemradio" aria-checked="true" data-lang="de">Deutsch</button>
-      <button type="button" role="menuitemradio" aria-checked="false" data-lang="en">English</button>
-      <button type="button" role="menuitemradio" aria-checked="false" data-lang="es">Español</button>
+    <div class="group" id="mob-lang-title" data-t="nav.sprache">Sprache</div>
+    <div class="langs" role="radiogroup" aria-labelledby="mob-lang-title">
+      <button type="button" role="radio" aria-checked="true" data-lang="de">Deutsch</button>
+      <button type="button" role="radio" aria-checked="false" data-lang="en">English</button>
+      <button type="button" role="radio" aria-checked="false" data-lang="es">Español</button>
     </div>
-    <div class="group stile-gruppe" data-t="nav.stil">Sprachstil</div>
-    <div class="stile">
-      <button type="button" role="menuitemradio" aria-checked="true" data-stil="klar">Klartext</button>
-      <button type="button" role="menuitemradio" aria-checked="false" data-stil="kindgerecht">Kindgerecht</button>
-      <button type="button" role="menuitemradio" aria-checked="false" data-stil="tiefstapelei">Tiefstapelei</button>
-      <button type="button" role="menuitemradio" aria-checked="false" data-stil="herzens-sprache">Herzens-Sprache</button>
-      <button type="button" role="menuitemradio" aria-checked="false" data-stil="schamanisch">Schamanisch</button>
-      <button type="button" role="menuitemradio" aria-checked="false" data-stil="soziologen-sprech">Soziologen-Sprech</button>
-      <button type="button" role="menuitemradio" aria-checked="false" data-stil="groessenwahn">Größenwahn</button>
-      <button type="button" role="menuitemradio" aria-checked="false" data-stil="kraftvolle-sprache">Kraftvolle Sprache</button>
-      <button type="button" role="menuitemradio" aria-checked="false" data-stil="marktschreier">Marktschreier</button>
+    <div class="group stile-gruppe" id="mob-style-title" data-t="nav.stil">Sprachstil</div>
+    <div class="stile" role="radiogroup" aria-labelledby="mob-style-title">
+      <button type="button" role="radio" aria-checked="true" data-stil="klar">Klartext</button>
+      <button type="button" role="radio" aria-checked="false" data-stil="kindgerecht">Kindgerecht</button>
+      <button type="button" role="radio" aria-checked="false" data-stil="tiefstapelei">Tiefstapelei</button>
+      <button type="button" role="radio" aria-checked="false" data-stil="herzens-sprache">Herzens-Sprache</button>
+      <button type="button" role="radio" aria-checked="false" data-stil="schamanisch">Schamanisch</button>
+      <button type="button" role="radio" aria-checked="false" data-stil="soziologen-sprech">Soziologen-Sprech</button>
+      <button type="button" role="radio" aria-checked="false" data-stil="groessenwahn">Größenwahn</button>
+      <button type="button" role="radio" aria-checked="false" data-stil="kraftvolle-sprache">Kraftvolle Sprache</button>
+      <button type="button" role="radio" aria-checked="false" data-stil="marktschreier">Marktschreier</button>
     </div>
     <a class="pill" href="/app/" data-t="nav.app">App öffnen</a>
   </div>
@@ -432,7 +432,7 @@
       </div>
     </div>
     <div class="foot-bottom">
-      <span>trustdonation · Kollektiv Lichtung e.V. · <a href="/recht/#impressum" data-t="ft.impressum">Impressum</a> · <a href="/recht/#datenschutz" data-t="ft.datenschutz">Datenschutz</a></span>
+      <span>trustdonation · Kollektiv Lichtung e.V. · <span data-t="ft.impressum">Impressum</span> · <span data-t="ft.datenschutz">Datenschutz</span></span>
       <span data-t="ft.bottom">Freie Software, offene Daten, deine Identität bei dir.</span>
     </div>
   </div>

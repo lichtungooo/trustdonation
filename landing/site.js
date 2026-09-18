@@ -668,11 +668,22 @@ var STILE = {
   "kraftvolle-sprache": "Kraftvolle Sprache", "marktschreier": "Marktschreier"
 }
 var STIL_CACHE = {}
+var STIL_LAEUFT = {}
 var aktiveSprache = "de", aktiverStil = "klar"
 
 function texteAnwenden(d, l) {
   var els = document.querySelectorAll("[data-t]")
-  for (var i = 0; i < els.length; i++) { var k = els[i].dataset.t; if (d[k] != null) els[i].innerHTML = d[k] }
+  for (var i = 0; i < els.length; i++) {
+    var k = els[i].dataset.t;
+    if (d[k] != null) {
+      var val = d[k];
+      if (val.indexOf("<") !== -1) {
+        els[i].innerHTML = val;
+      } else {
+        els[i].textContent = val;
+      }
+    }
+  }
   var ar = document.querySelectorAll("[data-t-aria]")
   for (var j = 0; j < ar.length; j++) { var ka = ar[j].dataset.tAria; if (d[ka] != null) ar[j].setAttribute("aria-label", d[ka]) }
   document.documentElement.lang = l
@@ -695,8 +706,8 @@ function auswahlZeigen() {
 function anwenden() {
   var d = T[aktiveSprache]
   if (aktiveSprache === "de" && aktiverStil !== "klar") {
-    var o = STIL_CACHE[aktiverStil]
-    if (!o) { stilLaden(aktiverStil); return }
+    var o = Object.prototype.hasOwnProperty.call(STIL_CACHE, aktiverStil) ? STIL_CACHE[aktiverStil] : null
+    if (!o) { auswahlZeigen(); stilLaden(aktiverStil); return }
     var z = {}
     for (var k in T.de) z[k] = T.de[k]
     for (var k2 in o) z[k2] = o[k2]
@@ -707,16 +718,22 @@ function anwenden() {
 }
 
 function stilLaden(id) {
-  if (!STILE[id] || id === "klar") return
-  if (STIL_CACHE[id]) { anwenden(); return }
+  if (!Object.prototype.hasOwnProperty.call(STILE, id) || id === "klar") return
+  if (Object.prototype.hasOwnProperty.call(STIL_CACHE, id)) { anwenden(); return }
+  if (Object.prototype.hasOwnProperty.call(STIL_LAEUFT, id) && STIL_LAEUFT[id]) return
+  STIL_LAEUFT[id] = true
   fetch("/stile/" + id + ".json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null }).then(function (o) {
+    STIL_LAEUFT[id] = false
     if (o) { STIL_CACHE[id] = o; if (aktiverStil === id) anwenden() }
     else if (aktiverStil === id) { aktiverStil = "klar"; anwenden() }
-  }).catch(function () { if (aktiverStil === id) { aktiverStil = "klar"; anwenden() } })
+  }).catch(function () {
+    STIL_LAEUFT[id] = false
+    if (aktiverStil === id) { aktiverStil = "klar"; anwenden() }
+  })
 }
 
 function spracheSetzen(l) {
-  if (!T[l]) l = "de"
+  if (!Object.prototype.hasOwnProperty.call(T, l)) l = "de"
   aktiveSprache = l
   try { localStorage.setItem("wir-lang", l) } catch (e) {}
   anwenden()
@@ -724,7 +741,7 @@ function spracheSetzen(l) {
 
 // Ein Stil ist immer deutsch: die Wahl schaltet auf Deutsch, wenn noetig.
 function stilSetzen(id) {
-  if (!STILE[id]) id = "klar"
+  if (!Object.prototype.hasOwnProperty.call(STILE, id)) id = "klar"
   aktiverStil = id
   try { localStorage.setItem("wir-stil", id) } catch (e) {}
   if (aktiveSprache !== "de") { spracheSetzen("de"); return }
@@ -734,11 +751,19 @@ function stilSetzen(id) {
 ;(function () {
   var l = null, st = null
   try { l = localStorage.getItem("wir-lang"); st = localStorage.getItem("wir-stil") } catch (e) {}
-  if (!l) { var n = (navigator.language || "de").slice(0, 2).toLowerCase(); l = T[n] ? n : "de" }
-  aktiveSprache = T[l] ? l : "de"
-  aktiverStil = STILE[st] ? st : "klar"
+  if (!l) { var n = (navigator.language || "de").slice(0, 2).toLowerCase(); l = Object.prototype.hasOwnProperty.call(T, n) ? n : "de" }
+  aktiveSprache = Object.prototype.hasOwnProperty.call(T, l) ? l : "de"
+  aktiverStil = Object.prototype.hasOwnProperty.call(STILE, st) ? st : "klar"
   if (aktiveSprache !== "de" || aktiverStil !== "klar") anwenden(); else auswahlZeigen()
-  function schliessen(el) { var m = el.closest(".has-menu"); if (m) { m.dataset.open = "false"; m.querySelector("button").setAttribute("aria-expanded", "false") } }
+  function schliessen(el) {
+    var m = el.closest(".has-menu")
+    if (m) {
+      m.dataset.open = "false"
+      var btn = m.querySelector("button")
+      btn.setAttribute("aria-expanded", "false")
+      btn.focus()
+    }
+  }
   var opts = document.querySelectorAll("[data-lang]")
   for (var o = 0; o < opts.length; o++) opts[o].addEventListener("click", function (e) { e.stopPropagation(); spracheSetzen(this.dataset.lang); schliessen(this) })
   var stile = document.querySelectorAll("[data-stil]")
@@ -764,7 +789,18 @@ function stilSetzen(id) {
     m.addEventListener("click", function (e) { e.stopPropagation() })
   })(menues[i])
   document.addEventListener("click", function () { alleZu(null) })
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") { alleZu(null); menueSchliessen() } })
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      var activeEl = document.activeElement
+      var activeMenu = activeEl ? activeEl.closest(".has-menu") : null
+      alleZu(null)
+      menueSchliessen()
+      if (activeMenu) {
+        var btn = activeMenu.querySelector("button")
+        if (btn) btn.focus()
+      }
+    }
+  })
 })();
 
 function menueUmschalten() {

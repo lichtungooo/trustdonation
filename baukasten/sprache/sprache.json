@@ -1,12 +1,12 @@
 {
   "$beschreibung": "Achte Schicht: die Worte. Jeder Eintrag folgt baukasten/EINTRAG.md.",
   "$stand": "2026-09-17",
-  "$warum": "Die Schicht, die andere uebersehen. Die meisten scheitern nicht an der Technik, sondern an der Frage, was sie schreiben sollen. Ein Baukasten, der die Worte mitliefert, spart einer Stiftung mehr Zeit als jeder Knopf.",
+  "$warum": "Die Schicht, die andere übersehen. Die meisten scheitern nicht an der Technik, sondern an der Frage, was sie schreiben sollen. Ein Baukasten, der die Worte mitliefert, spart einer Stiftung mehr Zeit als jeder Knopf.",
   "regeln": [
     {
       "id": "klare-sprache",
       "name": "Klare Sprache",
-      "zweck": "Der Standard fuer Konzepte, Dokumente, Mails und Pitches. Klar wie Schiller, positiv wie Goethe.",
+      "zweck": "Der Standard für Konzepte, Dokumente, Mails und Pitches. Klar wie Schiller, positiv wie Goethe.",
       "datei": "plugins/sprach-tools/skills/klare-sprache",
       "herkunft": {
         "name": "Timo und Eli",
@@ -33,7 +33,7 @@
     {
       "id": "gendern",
       "name": "Gendern",
-      "zweck": "Wie wir ueber Menschen schreiben.",
+      "zweck": "Wie wir über Menschen schreiben.",
       "datei": "plugins/sprach-tools/skills/gendern",
       "herkunft": {
         "name": "Timo und Eli",
@@ -44,7 +44,7 @@
     {
       "id": "sprach-stile",
       "name": "Sprach-Stile",
-      "zweck": "Neun Stimmen fuer neun Lagen: macher, kraftvoll, herzens, kindgerecht, marktschreier, groessenwahn, tiefstapelei, schamanisch, soziologen-sprech.",
+      "zweck": "Neun Stimmen für neun Lagen: macher, kraftvoll, herzens, kindgerecht, marktschreier, groessenwahn, tiefstapelei, schamanisch, soziologen-sprech.",
       "datei": "plugins/sprach-tools/skills/sprach-stile",
       "herkunft": {
         "name": "Timo und Eli",
@@ -60,7 +60,7 @@
     },
     {
       "id": "td-anton",
-      "zweck": "Wo steht Anton, was hat er veroeffentlicht, was heisst das fuer uns."
+      "zweck": "Wo steht Anton, was hat er veröffentlicht, was heißt das für uns."
     },
     {
       "id": "td-definieren",
@@ -68,11 +68,11 @@
     },
     {
       "id": "td-naht",
-      "zweck": "Bevor Code von Anton geaendert wird. Haken pruefen, Eingriff klein ziehen."
+      "zweck": "Bevor Code von Anton geändert wird. Haken prüfen, Eingriff klein ziehen."
     },
     {
       "id": "td-modul",
-      "zweck": "Ein Space-Modul bauen, ueber das Register statt in seinen Code."
+      "zweck": "Ein Space-Modul bauen, über das Register statt in seinen Code."
     },
     {
       "id": "td-komponente",
@@ -102,15 +102,15 @@
   "$fehlt": [
     {
       "id": "zwischenbericht",
-      "warum": "Zwischen Zusage und Abschlussbericht liegt oft ein Jahr. Was in der Zeit geschrieben wird, entscheidet ueber die naechste Foerderung."
+      "warum": "Zwischen Zusage und Abschlussbericht liegt oft ein Jahr. Was in der Zeit geschrieben wird, entscheidet über die nächste Förderung."
     },
     {
       "id": "abschlussbericht",
-      "warum": "Der Bericht, der zaehlt. Er gehoert zum Modul Wirkungsbericht, sobald es das gibt."
+      "warum": "Der Bericht, der zählt. Er gehört zum Modul Wirkungsbericht, sobald es das gibt."
     },
     {
       "id": "profiluebernahme",
-      "warum": "Die Mail, mit der eine Stiftung ihren recherchierten Eintrag uebernimmt. Sie beruehrt docs/04-recht.md."
+      "warum": "Die Mail, mit der eine Stiftung ihren recherchierten Eintrag übernimmt. Sie berührt docs/04-recht.md."
     }
   ],
   "$installieren": [
@@ -138,7 +138,7 @@
       "name": "Nachfassen",
       "zweck": "Erinnern, ohne zu draengen. Wer nicht geantwortet hat, hatte meist keine Zeit, nicht kein Interesse.",
       "wann": "Zwei bis drei Wochen nach der Erstansprache, ohne Antwort.",
-      "laenge": "fuenf Zeilen, kuerzer als die erste Mail",
+      "laenge": "fünf Zeilen, kuerzer als die erste Mail",
       "datei": "baukasten/sprache/texte/nachfassen.md",
       "herkunft": {
         "name": "Timo und Eli",
@@ -149,7 +149,7 @@
     {
       "id": "einladung",
       "name": "Einladung in einen Space",
-      "zweck": "Klar machen, wohin, wofuer und was der erste Schritt ist.",
+      "zweck": "Klar machen, wohin, wofür und was der erste Schritt ist.",
       "wann": "Jemand soll in einer Gruppe mitarbeiten. Zwei Fassungen: mit und ohne vorherige Verifizierung.",
       "laenge": "sechs Zeilen",
       "datei": "baukasten/sprache/texte/einladung.md",
@@ -162,8 +162,8 @@
     {
       "id": "absage",
       "name": "Absage",
-      "zweck": "Die Beziehung erhalten. Der Grund zeigt auf ein Kriterium, nicht auf Qualitaet.",
-      "wann": "Eine Foerderung wird abgelehnt.",
+      "zweck": "Die Beziehung erhalten. Der Grund zeigt auf ein Kriterium, nicht auf Qualität.",
+      "wann": "Eine Förderung wird abgelehnt.",
       "laenge": "vier Zeilen",
       "datei": "baukasten/sprache/texte/absage.md",
       "herkunft": {
@@ -175,7 +175,7 @@
     {
       "id": "dankeschoen",
       "name": "Dankeschoen",
-      "zweck": "Den Anfang markieren. Eine Foerderung ist kein Abschluss, sondern der Beginn einer Verabredung.",
+      "zweck": "Den Anfang markieren. Eine Förderung ist kein Abschluss, sondern der Beginn einer Verabredung.",
       "wann": "Nach einer Zusage.",
       "laenge": "sieben Zeilen",
       "datei": "baukasten/sprache/texte/dankeschoen.md",

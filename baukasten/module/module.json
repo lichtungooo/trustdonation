@@ -1,38 +1,172 @@
 {
-  "$beschreibung": "Sechste Schicht: die Flaechen in der App. Jeder Eintrag folgt baukasten/EINTRAG.md.",
-  "$quellen": ["packages/toolkit/src/lib/module-register.ts im Stack-Repo", "DEFINITION.md Teil 8"],
+  "$beschreibung": "Sechste Schicht: die Flächen in der App. Jeder Eintrag folgt baukasten/EINTRAG.md.",
+  "$quellen": [
+    "packages/toolkit/src/lib/module-register.ts im Stack-Repo",
+    "DEFINITION.md Teil 8"
+  ],
   "$stand": "2026-09-17",
-  "$regel": "Im Real Life Stack entsteht ein Modul durch Programmieren, Bauen und Ausliefern. Antons Spec 01 Regel 4: Ein Space ist KEINE Schicht, das Register steht vor dem ersten Render fest. Ein Space waehlt aus dem Katalog, er traegt nichts bei.",
+  "$regel": "Im Real Life Stack entsteht ein Modul durch Programmieren, Bauen und Ausliefern. Antons Spec 01 Regel 4: Ein Space ist KEINE Schicht, das Register steht vor dem ersten Render fest. Ein Space wählt aus dem Katalog, er trägt nichts bei.",
   "$zwei_arten": {
     "daten": "Besteht aus Feldern des Feld-Registers und einer vorhandenen Ansicht. Braucht keine Zeile fremden Code.",
     "code": "Eigene Logik. Kommt als Paket mit Version, signiert, eingebunden beim Bau der Instanz."
   },
   "module": [
-    { "id": "feed", "name": "Feed", "art": "code", "herkunft": { "name": "Anton", "did": null }, "belege": ["trustdonation.org/app"], "standard": true },
-    { "id": "kanban", "name": "Kanban", "art": "code", "herkunft": { "name": "Anton", "did": null }, "belege": ["trustdonation.org/app"], "standard": true },
-    { "id": "calendar", "name": "Kalender", "art": "code", "presents": ["start"], "herkunft": { "name": "Anton", "did": null }, "belege": ["trustdonation.org/app"], "standard": true },
-    { "id": "map", "name": "Karte", "art": "code", "presents": ["position"], "herkunft": { "name": "Anton", "did": null }, "belege": ["trustdonation.org/app: 234 Stiftungen"], "standard": true },
-    { "id": "resonance", "name": "Resonanz", "art": "code", "herkunft": { "name": "Anton", "did": null }, "belege": ["trustdonation.org/app"], "standard": false },
-    { "id": "collection", "name": "Liste", "art": "code", "herkunft": { "name": "Anton", "did": null }, "belege": ["trustdonation.org/app"], "standard": true },
-    { "id": "graph", "name": "Graph", "art": "code", "herkunft": { "name": "Anton", "did": null }, "belege": ["trustdonation.org/app"], "standard": true },
+    {
+      "id": "feed",
+      "name": "Feed",
+      "art": "code",
+      "herkunft": {
+        "name": "Anton",
+        "did": null
+      },
+      "belege": [
+        "trustdonation.org/app"
+      ],
+      "standard": true
+    },
+    {
+      "id": "kanban",
+      "name": "Kanban",
+      "art": "code",
+      "herkunft": {
+        "name": "Anton",
+        "did": null
+      },
+      "belege": [
+        "trustdonation.org/app"
+      ],
+      "standard": true
+    },
+    {
+      "id": "calendar",
+      "name": "Kalender",
+      "art": "code",
+      "presents": [
+        "start"
+      ],
+      "herkunft": {
+        "name": "Anton",
+        "did": null
+      },
+      "belege": [
+        "trustdonation.org/app"
+      ],
+      "standard": true
+    },
+    {
+      "id": "map",
+      "name": "Karte",
+      "art": "code",
+      "presents": [
+        "position"
+      ],
+      "herkunft": {
+        "name": "Anton",
+        "did": null
+      },
+      "belege": [
+        "trustdonation.org/app: 234 Stiftungen"
+      ],
+      "standard": true
+    },
+    {
+      "id": "resonance",
+      "name": "Resonanz",
+      "art": "code",
+      "herkunft": {
+        "name": "Anton",
+        "did": null
+      },
+      "belege": [
+        "trustdonation.org/app"
+      ],
+      "standard": false
+    },
+    {
+      "id": "collection",
+      "name": "Liste",
+      "art": "code",
+      "herkunft": {
+        "name": "Anton",
+        "did": null
+      },
+      "belege": [
+        "trustdonation.org/app"
+      ],
+      "standard": true
+    },
+    {
+      "id": "graph",
+      "name": "Graph",
+      "art": "code",
+      "herkunft": {
+        "name": "Anton",
+        "did": null
+      },
+      "belege": [
+        "trustdonation.org/app"
+      ],
+      "standard": true
+    },
     {
       "id": "companion",
       "name": "Companion",
       "art": "code",
-      "zweck": "Ein Mensch bringt seine eigene AI mit und gibt ihr Werkzeuge in die Hand. Jede Tat traegt das Siegel des Menschen.",
-      "herkunft": { "name": "Timo und Eli", "did": null },
+      "zweck": "Ein Mensch bringt seine eigene AI mit und gibt ihr Werkzeuge in die Hand. Jede Tat trägt das Siegel des Menschen.",
+      "herkunft": {
+        "name": "Timo und Eli",
+        "did": null
+      },
       "belege": [],
       "standard": false,
       "stand": "Skelett gebaut am 17.09.2026, im Real Life Network (20-repos/rln/src/modules/companion), noch nicht im Stack",
-      "werkzeuge": ["sucheImWissensfeld"]
+      "werkzeuge": [
+        "sucheImWissensfeld"
+      ]
     }
   ],
   "$geplant": [
-    { "id": "foerderfinder", "name": "Foerderfinder", "zweck": "Zeigt einem Projekt, welche Stiftungen zu ihm passen, mit Gruenden statt mit einer Zahl.", "braucht": ["felder: foerderbereiche, reichweite, zielgruppen, summeVon, summeBis"] },
-    { "id": "antragshelfer", "name": "Antragshelfer", "zweck": "Fuehrt durch einen Antrag, Frage fuer Frage, und merkt sich Antworten fuer den naechsten.", "braucht": ["vorlagen: die Fragebogen"] },
-    { "id": "wirkungsbericht", "name": "Wirkungsbericht", "zweck": "Was aus einer Foerderung wurde, in Fakten statt Prosa.", "braucht": ["felder: wirkung"] },
-    { "id": "spendenverlauf", "name": "Spendenverlauf", "zweck": "Wer wann wohin gab, sichtbar fuer die Beteiligten.", "braucht": ["Entscheidung, wer das sehen darf"] },
-    { "id": "foerderkalender", "name": "Foerderkalender", "zweck": "Antragsfristen als Termine, damit keine verpasst wird.", "braucht": ["felder: fristen", "modul: calendar"] }
+    {
+      "id": "foerderfinder",
+      "name": "Foerderfinder",
+      "zweck": "Zeigt einem Projekt, welche Stiftungen zu ihm passen, mit Gründen statt mit einer Zahl.",
+      "braucht": [
+        "felder: foerderbereiche, reichweite, zielgruppen, summeVon, summeBis"
+      ]
+    },
+    {
+      "id": "antragshelfer",
+      "name": "Antragshelfer",
+      "zweck": "Führt durch einen Antrag, Frage für Frage, und merkt sich Antworten für den nächsten.",
+      "braucht": [
+        "vorlagen: die Fragebogen"
+      ]
+    },
+    {
+      "id": "wirkungsbericht",
+      "name": "Wirkungsbericht",
+      "zweck": "Was aus einer Förderung wurde, in Fakten statt Prosa.",
+      "braucht": [
+        "felder: wirkung"
+      ]
+    },
+    {
+      "id": "spendenverlauf",
+      "name": "Spendenverlauf",
+      "zweck": "Wer wann wohin gab, sichtbar für die Beteiligten.",
+      "braucht": [
+        "Entscheidung, wer das sehen darf"
+      ]
+    },
+    {
+      "id": "foerderkalender",
+      "name": "Foerderkalender",
+      "zweck": "Antragsfristen als Termine, damit keine verpasst wird.",
+      "braucht": [
+        "felder: fristen",
+        "modul: calendar"
+      ]
+    }
   ],
   "$hinweis": "Die Modulschmiede, in der ein Mensch ohne Code ein Modul zusammenstellt, gibt es im Real Life Network, nicht im Stack. Wer eine Idee schnell zeigen will, zeigt sie dort."
 }

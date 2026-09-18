@@ -1,5 +1,5 @@
 {
-  "$beschreibung": "Die Farben von trustdonation, jede genau einmal. Erste Schicht des Baukastens (docs/12-baukasten.md). Wer eine Farbe aendert, aendert sie hier und faehrt scripts/farben-pruefen.py.",
+  "$beschreibung": "Die Farben von trustdonation, jede genau einmal. Erste Schicht des Baukastens (docs/12-baukasten.md). Wer eine Farbe ändert, ändert sie hier und fährt scripts/farben-pruefen.py.",
   "$quellen": {
     "seite": "landing/site.css",
     "app": "branding/theme.json"
@@ -9,92 +9,171 @@
     {
       "id": "gruen",
       "wert": "#1B5E40",
-      "zweck": "Die Hauptfarbe. Schrift, Knoepfe, Logo.",
-      "seite": ["gruen", "ink", "pill", "band-text", "logo-ink"],
-      "app": ["foreground", "card-foreground", "popover-foreground", "primary", "secondary-foreground", "accent-foreground", "chart-1", "sidebar-foreground", "sidebar-primary", "sidebar-accent-foreground"]
+      "zweck": "Die Hauptfarbe. Schrift, Knöpfe, Logo.",
+      "seite": [
+        "gruen",
+        "ink",
+        "pill",
+        "band-text",
+        "logo-ink"
+      ],
+      "app": [
+        "foreground",
+        "card-foreground",
+        "popover-foreground",
+        "primary",
+        "secondary-foreground",
+        "accent-foreground",
+        "chart-1",
+        "sidebar-foreground",
+        "sidebar-primary",
+        "sidebar-accent-foreground"
+      ]
     },
     {
       "id": "weiss",
       "wert": "#FFFFFF",
-      "zweck": "Flaeche und Schrift auf Gruen.",
-      "seite": ["bg", "surface", "on-pill", "band-surface"],
-      "app": ["background", "card", "popover", "primary-foreground", "warning-foreground", "sidebar-primary-foreground"]
+      "zweck": "Fläche und Schrift auf Grün.",
+      "seite": [
+        "bg",
+        "surface",
+        "on-pill",
+        "band-surface"
+      ],
+      "app": [
+        "background",
+        "card",
+        "popover",
+        "primary-foreground",
+        "warning-foreground",
+        "sidebar-primary-foreground"
+      ]
     },
     {
       "id": "gold",
       "wert": "#EA580C",
       "zweck": "Der Akzent. Hinweise, Fokus, Warnung.",
-      "seite": ["gold", "band-accent"],
-      "app": ["ring", "warning", "chart-2", "sidebar-ring"]
+      "seite": [
+        "gold",
+        "band-accent"
+      ],
+      "app": [
+        "ring",
+        "warning",
+        "chart-2",
+        "sidebar-ring"
+      ]
     },
     {
       "id": "papier",
       "wert": "#FFF8F1",
-      "zweck": "Die weiche Flaeche hinter Abschnitten.",
-      "seite": ["bg-soft", "or1"],
-      "app": ["muted", "sidebar"]
+      "zweck": "Die weiche Fläche hinter Abschnitten.",
+      "seite": [
+        "bg-soft",
+        "or1"
+      ],
+      "app": [
+        "muted",
+        "sidebar"
+      ]
     },
     {
       "id": "linie",
       "wert": "#EFE0D2",
-      "zweck": "Raender, Trenner, Eingabefelder.",
-      "seite": ["line"],
-      "app": ["border", "input", "sidebar-border"]
+      "zweck": "Ränder, Trenner, Eingabefelder.",
+      "seite": [
+        "line"
+      ],
+      "app": [
+        "border",
+        "input",
+        "sidebar-border"
+      ]
     },
     {
       "id": "fliesstext",
       "wert": "#3C5F4E",
       "zweck": "Laufender Text, ruhiger als die Hauptfarbe.",
-      "seite": ["body", "band-body"],
+      "seite": [
+        "body",
+        "band-body"
+      ],
       "app": []
     },
     {
       "id": "gedaempft",
       "wert": "#6B8578",
-      "zweck": "Nebensaechliches: Bildunterschriften, Hinweise.",
-      "seite": ["muted"],
-      "app": ["muted-foreground", "chart-4"]
+      "zweck": "Nebensächliches: Bildunterschriften, Hinweise.",
+      "seite": [
+        "muted"
+      ],
+      "app": [
+        "muted-foreground",
+        "chart-4"
+      ]
     },
     {
       "id": "blass",
       "wert": "#9AB0A5",
       "zweck": "Das Leiseste, was noch lesbar ist.",
-      "seite": ["faint"],
+      "seite": [
+        "faint"
+      ],
       "app": []
     },
     {
       "id": "rotbraun",
       "wert": "#B5390A",
-      "zweck": "Der dunkle Akzent fuer Links und Hervorhebungen im Text.",
-      "seite": ["accent"],
-      "app": ["chart-3"]
+      "zweck": "Der dunkle Akzent für Links und Hervorhebungen im Text.",
+      "seite": [
+        "accent"
+      ],
+      "app": [
+        "chart-3"
+      ]
     },
     {
       "id": "sanft-1",
       "wert": "#FFEEDF",
       "zweck": "Die hellste Stufe der Orangeleiter.",
-      "seite": ["accent-soft", "or2"],
-      "app": ["secondary"]
+      "seite": [
+        "accent-soft",
+        "or2"
+      ],
+      "app": [
+        "secondary"
+      ]
     },
     {
       "id": "sanft-2",
       "wert": "#FFE4CC",
       "zweck": "Die zweite Stufe der Orangeleiter.",
-      "seite": ["or3"],
-      "app": ["accent", "sidebar-accent"]
+      "seite": [
+        "or3"
+      ],
+      "app": [
+        "accent",
+        "sidebar-accent"
+      ]
     },
     {
       "id": "sanft-3",
       "wert": "#FFD9B8",
       "zweck": "Die dritte Stufe der Orangeleiter.",
-      "seite": ["or4"],
-      "app": ["chart-5"]
+      "seite": [
+        "or4"
+      ],
+      "app": [
+        "chart-5"
+      ]
     },
     {
       "id": "band-linie",
       "wert": "#F3D9C0",
       "zweck": "Trenner im dunklen Band.",
-      "seite": ["band-line"],
+      "seite": [
+        "band-line"
+      ],
       "app": []
     }
   ],
@@ -103,13 +182,13 @@
       "name": "muted",
       "seite": "#6B8578",
       "app": "#FFF8F1",
-      "warum": "Dasselbe Wort, zwei Gegensaetze: auf der Seite eine Schriftfarbe, in der App eine helle Flaeche. Wer zwischen beiden Welten wechselt, greift daneben."
+      "warum": "Dasselbe Wort, zwei Gegensätze: auf der Seite eine Schriftfarbe, in der App eine helle Fläche. Wer zwischen beiden Welten wechselt, greift daneben."
     },
     {
       "name": "accent",
       "seite": "#B5390A",
       "app": "#FFE4CC",
-      "warum": "Auf der Seite ein dunkles Rotbraun fuer Links, in der App ein helles Pfirsich fuer Flaechen. Dieselbe Falle wie bei muted."
+      "warum": "Auf der Seite ein dunkles Rotbraun für Links, in der App ein helles Pfirsich für Flächen. Dieselbe Falle wie bei muted."
     }
   ]
 }

@@ -1,12 +1,12 @@
 {
-  "$beschreibung": "Zweite Schicht des Baukastens: die einzelnen Stuecke. Jeder Eintrag folgt baukasten/EINTRAG.md.",
+  "$beschreibung": "Zweite Schicht des Baukastens: die einzelnen Stücke. Jeder Eintrag folgt baukasten/EINTRAG.md.",
   "$stand": "2026-09-17",
-  "$regel": "Ein Bauteil hat je Welt eine Auspraegung und EIN Aussehen. Wer den Knopf der Landingpage aendert, aendert die Rohstoffe, nicht den Knopf der App.",
+  "$regel": "Ein Bauteil hat je Welt eine Ausprägung und EIN Aussehen. Wer den Knopf der Landingpage ändert, ändert die Rohstoffe, nicht den Knopf der App.",
   "bauteile": [
     {
       "id": "band",
       "name": "Dunkles Band",
-      "zweck": "Ein Abschnitt, der sich vom Rest abhebt. Traegt in jedem Schema dunkle Farben, auch im hellen.",
+      "zweck": "Ein Abschnitt, der sich vom Rest abhebt. Trägt in jedem Schema dunkle Farben, auch im hellen.",
       "welt": "seite",
       "datei": "ds-bundle/components/band.html",
       "rohstoffe": [
@@ -24,7 +24,7 @@
     },
     {
       "id": "knoepfe",
-      "name": "Knoepfe und Auszeichnungen",
+      "name": "Knöpfe und Auszeichnungen",
       "zweck": "Aktionen und Etiketten. Pillen mit 999px Rundung.",
       "welt": "seite",
       "datei": "ds-bundle/components/buttons.html",
@@ -46,7 +46,7 @@
     {
       "id": "karten",
       "name": "Karten, Zeilen, Kacheln",
-      "zweck": "Die Flaechen, auf denen Inhalt steht. Drei Dichten fuer drei Zwecke.",
+      "zweck": "Die Flächen, auf denen Inhalt steht. Drei Dichten für drei Zwecke.",
       "welt": "seite",
       "datei": "ds-bundle/components/cards.html",
       "rohstoffe": [
@@ -78,7 +78,7 @@
         "rotbraun",
         "gedaempft"
       ],
-      "regel": "Die Beschriftung steht ueber dem Feld, nicht darin: Ein Platzhalter verschwindet beim Tippen. Der Fehler sagt, was dadurch nicht geht, statt 'Pflichtfeld'.",
+      "regel": "Die Beschriftung steht über dem Feld, nicht darin: Ein Platzhalter verschwindet beim Tippen. Der Fehler sagt, was dadurch nicht geht, statt 'Pflichtfeld'.",
       "herkunft": {
         "name": "Timo und Eli",
         "did": null
@@ -98,7 +98,7 @@
         "gold",
         "papier"
       ],
-      "regel": "Rund fuer Menschen, gerundet fuer Einrichtungen. Ein Punkt statt eines Hakens: Ein Haken sieht aus wie eine Note, und wir vergeben keine.",
+      "regel": "Rund für Menschen, gerundet für Einrichtungen. Ein Punkt statt eines Hakens: Ein Haken sieht aus wie eine Note, und wir vergeben keine.",
       "herkunft": {
         "name": "Timo und Eli",
         "did": null
@@ -161,5 +161,5 @@
       "warum": "Foerderbereiche, Reichweite und Zielgruppen sind Tags. Sie haben kein gemeinsames Aussehen."
     }
   ],
-  "$hinweis": "Die drei ersten liegen in ds-bundle und gehoeren zu reallife.network. Die vier neuen stehen in bauteile/stuecke/ und benutzen baukasten/rohstoffe/tokens.css, das aus unserer Quelle erzeugt wird."
+  "$hinweis": "Die drei ersten liegen in ds-bundle und gehören zu reallife.network. Die vier neuen stehen in bauteile/stücke/ und benutzen baukasten/rohstoffe/tokens.css, das aus unserer Quelle erzeugt wird."
 }

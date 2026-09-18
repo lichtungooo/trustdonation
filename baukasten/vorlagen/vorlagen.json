@@ -1,12 +1,12 @@
 {
   "$beschreibung": "Siebte Schicht: ganze Auftritte, aus den Schichten darunter zusammengesetzt. Jeder Eintrag folgt baukasten/EINTRAG.md.",
   "$stand": "2026-09-17",
-  "$warum": "Eine Vorlage spart einer Stiftung am meisten. Sie will keine Knoepfe aussuchen, sie will einen Auftritt haben.",
+  "$warum": "Eine Vorlage spart einer Stiftung am meisten. Sie will keine Knöpfe aussuchen, sie will einen Auftritt haben.",
   "vorlagen": [
     {
       "id": "fragebogen-stiftung",
       "name": "Einen Stiftungseintrag anlegen",
-      "zweck": "13 W-Fragen, Recherche und Uebernahme. Jede Frage gehoert zu genau einem Feld.",
+      "zweck": "13 W-Fragen, Recherche und Übernahme. Jede Frage gehört zu genau einem Feld.",
       "datei": "docs/fragen/stiftung.md",
       "schichten": [
         "felder",
@@ -17,7 +17,7 @@
         "did": null
       },
       "belege": [
-        "docs/fragen/beispiel-stiftung.md: einmal geloest"
+        "docs/fragen/beispiel-stiftung.md: einmal gelöst"
       ]
     },
     {
@@ -34,13 +34,13 @@
         "did": null
       },
       "belege": [
-        "docs/fragen/beispiel-projekt.md: trustdonation selbst geloest"
+        "docs/fragen/beispiel-projekt.md: trustdonation selbst gelöst"
       ]
     },
     {
       "id": "fragebogen-stiftungsgespraech",
       "name": "Der erste Termin mit einer Stiftung",
-      "zweck": "Sieben Fragen und ein Protokollbogen. Fuer den Tisch, nicht fuer die App.",
+      "zweck": "Sieben Fragen und ein Protokollbogen. Für den Tisch, nicht für die App.",
       "datei": "docs/fragen/stiftungsgespraech.md",
       "schichten": [
         "sprache"
@@ -53,7 +53,7 @@
     },
     {
       "id": "space-stiftung",
-      "name": "Space fuer eine Stiftung",
+      "name": "Space für eine Stiftung",
       "zweck": "Ein fertig eingerichteter Space: vier Module, die Art `stiftung`, die Farbe ihrer Art.",
       "datei": "baukasten/vorlagen/spaces/stiftung.json",
       "schichten": [
@@ -61,19 +61,19 @@
         "module",
         "felder"
       ],
-      "vorbild": "Loewenherz Stiftung, aus Timos echten Daten",
+      "vorbild": "Löwenherz Stiftung, aus Timos echten Daten",
       "herkunft": {
         "name": "Timo und Eli",
         "did": null
       },
       "belege": [
-        "Space Loewenherz Stiftung"
+        "Space Löwenherz Stiftung"
       ]
     },
     {
       "id": "space-projekt",
-      "name": "Space fuer ein Projekt",
-      "zweck": "Dasselbe fuer ein Vorhaben, das Foerderung sucht. Kann zugleich ein eigenes Netzwerk sein.",
+      "name": "Space für ein Projekt",
+      "zweck": "Dasselbe für ein Vorhaben, das Förderung sucht. Kann zugleich ein eigenes Netzwerk sein.",
       "datei": "baukasten/vorlagen/spaces/projekt.json",
       "schichten": [
         "arten",
@@ -92,7 +92,7 @@
     },
     {
       "id": "space-netzwerk",
-      "name": "Space fuer ein Netzwerk",
+      "name": "Space für ein Netzwerk",
       "zweck": "Der Schalter `isNetwork` macht alles auf: Arten-Editor, Landingpage-Bereich, erster Platz im Umschalter.",
       "datei": "baukasten/vorlagen/spaces/netzwerk.json",
       "schichten": [
@@ -120,7 +120,7 @@
         "muster",
         "felder"
       ],
-      "absicht": "Ein Projekt sucht zuerst eine Antwort: Passe ich ueberhaupt? Darum stehen die fuenf Zahlen vor jedem Text.",
+      "absicht": "Ein Projekt sucht zuerst eine Antwort: Passe ich ueberhaupt? Darum stehen die fünf Zahlen vor jedem Text.",
       "herkunft": {
         "name": "Timo und Eli",
         "did": null
@@ -131,11 +131,11 @@
   "$fehlt": [
     {
       "id": "landingpage-projekt",
-      "warum": "Ein Projekt braucht dieselbe Seite mit anderen Zahlen: Beduerfnis, Bedarf, Luecke, Wirkung."
+      "warum": "Ein Projekt braucht dieselbe Seite mit anderen Zahlen: Beduerfnis, Bedarf, Lücke, Wirkung."
     },
     {
       "id": "space-verein",
-      "warum": "Die meisten Projekte haengen an einem Verein. Er traegt eigene Angaben."
+      "warum": "Die meisten Projekte hängen an einem Verein. Er trägt eigene Angaben."
     }
   ]
 }

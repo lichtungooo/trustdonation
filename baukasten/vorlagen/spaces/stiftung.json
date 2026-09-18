@@ -1,13 +1,21 @@
 {
-  "$beschreibung": "Ein fertiger Space fuer eine Stiftung. Siebte Schicht des Baukastens.",
-  "$vorbild": "Loewenherz Stiftung, aus Timos echten Daten (17.09.2026)",
+  "$beschreibung": "Ein fertiger Space für eine Stiftung. Siebte Schicht des Baukastens.",
+  "$vorbild": "Löwenherz Stiftung, aus Timos echten Daten (17.09.2026)",
   "$so_wird_daraus_ein_space": "Die Felder unter `data` gehen in `Group.data`. `<platzhalter>` ersetzen, den Rest lassen.",
   "name": "<Name der Stiftung>",
   "data": {
     "scope": "group",
     "access": "open",
-    "roles": ["admin", "member"],
-    "modules": ["feed", "kanban", "calendar", "map"],
+    "roles": [
+      "admin",
+      "member"
+    ],
+    "modules": [
+      "feed",
+      "kanban",
+      "calendar",
+      "map"
+    ],
     "network": "30455be1-a5f9-465d-8d19-a72dd8da2d83",
     "kind": "stiftung",
     "primaryColor": "<Hausfarbe, sonst #194294>",
@@ -15,16 +23,16 @@
   },
   "$erklaerung": {
     "network": "Die Space-Id von trustdonation. Dadurch erscheint die Stiftung im Umschalter unter ihrem Netzwerk.",
-    "kind": "Die Art im Netzwerk. Sie muss in den `spaceKinds` des Netzwerks stehen, sonst faellt sie still weg.",
+    "kind": "Die Art im Netzwerk. Sie muss in den `spaceKinds` des Netzwerks stehen, sonst fällt sie still weg.",
     "kein_isNetwork": "Eine Stiftung ist Mitglied eines Netzwerks, kein eigenes. Wer `isNetwork` setzt, bekommt den Arten-Editor und den Landingpage-Bereich, und beides braucht sie nicht.",
-    "keine_spaceKinds": "Die fuehrt das Netzwerk. Eine Stiftung waehlt daraus.",
+    "keine_spaceKinds": "Die führt das Netzwerk. Eine Stiftung wählt daraus.",
     "keine_domain": "Erst wenn die Stiftung eine eigene Seite bekommt. Siehe vorlagen/landingpage-stiftung.html.",
-    "primaryColor": "Faerbt Reiter, Knoepfe und die Kartennadel. Ohne eigene Hausfarbe die Farbe der Art (#194294), damit eine Stiftung aussieht wie eine Stiftung.",
-    "module": "Vier reichen: Feed fuer Neues, Kanban fuer die Arbeit, Kalender fuer Fristen, Karte fuer den Sitz. Resonanz, Liste und Graph lassen sich jederzeit dazunehmen."
+    "primaryColor": "Faerbt Reiter, Knöpfe und die Kartennadel. Ohne eigene Hausfarbe die Farbe der Art (#194294), damit eine Stiftung aussieht wie eine Stiftung.",
+    "module": "Vier reichen: Feed für Neues, Kanban für die Arbeit, Kalender für Fristen, Karte für den Sitz. Resonanz, Liste und Graph lassen sich jederzeit dazunehmen."
   },
   "$danach": [
     "Den Eintrag als Item vom Typ `place` anlegen, mit den Feldern aus baukasten/felder/felder.json (arten: foerderer).",
-    "Die Fragen aus docs/fragen/stiftung.md durchgehen, dreizehn Stueck.",
-    "Wenn die Stiftung den Eintrag uebernimmt: sie zum Admin ihres Space machen."
+    "Die Fragen aus docs/fragen/stiftung.md durchgehen, dreizehn Stück.",
+    "Wenn die Stiftung den Eintrag übernimmt: sie zum Admin ihres Space machen."
   ]
 }

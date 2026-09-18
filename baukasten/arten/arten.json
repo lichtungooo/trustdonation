@@ -1,30 +1,45 @@
 {
   "$beschreibung": "Fuenfte Schicht: eine Art bindet Felder. Jeder Eintrag folgt baukasten/EINTRAG.md.",
-  "$quellen": ["docs/01-rollen.md", "docs/03-datenmodell.md", "DEFINITION.md Teil 6 im Stack-Repo"],
+  "$quellen": [
+    "docs/01-rollen.md",
+    "docs/03-datenmodell.md",
+    "DEFINITION.md Teil 6 im Stack-Repo"
+  ],
   "$stand": "2026-09-17",
-  "$regel": "Eine Art bestimmt, welche Felder gefragt werden, welche Farbe ihre Kartennadel traegt und welcher Fragebogen gilt. Sie ist kein Item-Typ: Im Stack sind alle Eintraege `place`, die Art steht in den Daten.",
+  "$regel": "Eine Art bestimmt, welche Felder gefragt werden, welche Farbe ihre Kartennadel trägt und welcher Fragebogen gilt. Sie ist kein Item-Typ: Im Stack sind alle Einträge `place`, die Art steht in den Daten.",
   "arten": [
     {
       "id": "stiftung",
       "name": "Stiftung",
       "plural": "Stiftungen",
-      "zweck": "Eine Einrichtung, die foerdert. Der haeufigste Foerderer, darum eine eigene Art.",
+      "zweck": "Eine Einrichtung, die fördert. Der häufigste Förderer, darum eine eigene Art.",
       "felder": "alle aus felder.json mit arten enthaelt foerderer",
       "farbe": "#194294",
       "fragebogen": "docs/fragen/stiftung.md",
-      "herkunft": { "name": "Timo", "did": null },
-      "belege": ["trustdonation.org", "Space trustdonation: 234 Eintraege"]
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "trustdonation.org",
+        "Space trustdonation: 234 Einträge"
+      ]
     },
     {
       "id": "projekt",
       "name": "Projekt",
       "plural": "Projekte",
-      "zweck": "Ein Vorhaben, das Foerderung sucht. Traegt Beduerfnis, Bedarfe und Wirkung.",
+      "zweck": "Ein Vorhaben, das Förderung sucht. Trägt Beduerfnis, Bedarfe und Wirkung.",
       "felder": "alle aus felder.json mit arten enthaelt projekt",
       "farbe": null,
       "fragebogen": "docs/fragen/projekt.md",
-      "herkunft": { "name": "Timo", "did": null },
-      "belege": ["Space trustdonation: Marker & Maps, Lichtung"]
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "Space trustdonation: Marker & Maps, Lichtung"
+      ]
     },
     {
       "id": "gruppe",
@@ -34,8 +49,15 @@
       "felder": null,
       "farbe": null,
       "fragebogen": null,
-      "herkunft": { "name": "Timo", "did": null },
-      "belege": ["Space Real Life", "Space Marker & Maps", "Space Lichtung"]
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "Space Real Life",
+        "Space Marker & Maps",
+        "Space Lichtung"
+      ]
     },
     {
       "id": "ort",
@@ -45,8 +67,13 @@
       "felder": null,
       "farbe": null,
       "fragebogen": null,
-      "herkunft": { "name": "Timo", "did": null },
-      "belege": ["Space Lichtung"]
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "Space Lichtung"
+      ]
     },
     {
       "id": "marker",
@@ -56,14 +83,28 @@
       "felder": null,
       "farbe": null,
       "fragebogen": null,
-      "herkunft": { "name": "Timo", "did": null },
-      "belege": ["Space Marker & Maps"]
+      "herkunft": {
+        "name": "Timo",
+        "did": null
+      },
+      "belege": [
+        "Space Marker & Maps"
+      ]
     }
   ],
   "$fehlt": [
-    { "id": "verein", "warum": "Die meisten Projekte haengen an einem Verein. Er traegt eigene Angaben: Gemeinnuetzigkeit, Register, Satzungszweck." },
-    { "id": "unternehmen", "warum": "Mittelstand und Familienunternehmen sind als Foerderer gewollt, tragen aber andere Felder als eine Stiftung." },
-    { "id": "mensch", "warum": "Spec 12 im Stack definiert das Profil eines Menschen. Wie es sich zu unseren Arten verhaelt, ist offen." }
+    {
+      "id": "verein",
+      "warum": "Die meisten Projekte hängen an einem Verein. Er trägt eigene Angaben: Gemeinnuetzigkeit, Register, Satzungszweck."
+    },
+    {
+      "id": "unternehmen",
+      "warum": "Mittelstand und Familienunternehmen sind als Förderer gewollt, tragen aber andere Felder als eine Stiftung."
+    },
+    {
+      "id": "mensch",
+      "warum": "Spec 12 im Stack definiert das Profil eines Menschen. Wie es sich zu unseren Arten verhält, ist offen."
+    }
   ],
-  "$hinweis": "Die fuenf vorhandenen Arten stammen aus Timos echten Spaces (Dev-Server-Daten vom 17.09.2026), nicht aus einem Entwurf."
+  "$hinweis": "Die fünf vorhandenen Arten stammen aus Timos echten Spaces (Dev-Server-Daten vom 17.09.2026), nicht aus einem Entwurf."
 }

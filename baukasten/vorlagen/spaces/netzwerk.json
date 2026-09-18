@@ -1,31 +1,48 @@
 {
-  "$beschreibung": "Ein fertiger Space fuer ein Netzwerk. Siebte Schicht des Baukastens.",
+  "$beschreibung": "Ein fertiger Space für ein Netzwerk. Siebte Schicht des Baukastens.",
   "$vorbild": "trustdonation selbst, aus Timos echten Daten (17.09.2026)",
   "$so_wird_daraus_ein_space": "Die Felder unter `data` gehen in `Group.data`. `<platzhalter>` ersetzen, den Rest lassen.",
   "name": "<Name des Netzwerks>",
   "data": {
     "scope": "group",
     "access": "open",
-    "roles": ["admin", "member"],
-    "modules": ["feed", "kanban", "calendar", "map"],
+    "roles": [
+      "admin",
+      "member"
+    ],
+    "modules": [
+      "feed",
+      "kanban",
+      "calendar",
+      "map"
+    ],
     "isNetwork": true,
     "primaryColor": "<Hausfarbe des Netzwerks>",
     "domain": "<eigene Adresse, sonst weglassen>",
     "spaceKinds": [
-      { "id": "projekt", "label": "Projekt", "labelPlural": "Projekte" },
-      { "id": "stiftung", "label": "Stiftung", "labelPlural": "Stiftungen", "color": "#194294" }
+      {
+        "id": "projekt",
+        "label": "Projekt",
+        "labelPlural": "Projekte"
+      },
+      {
+        "id": "stiftung",
+        "label": "Stiftung",
+        "labelPlural": "Stiftungen",
+        "color": "#194294"
+      }
     ],
     "image": "<Signet als data-URI>"
   },
   "$erklaerung": {
     "isNetwork": "Der Schalter, der alles aufmacht: Ein Netzwerk bekommt den Arten-Editor, den Landingpage-Bereich und erscheint im Umschalter vor allem anderen.",
-    "spaceKinds": "Die Arten, die Mitglieder waehlen koennen. Jede braucht `id`, `label` und `labelPlural`; `color` ist die Farbe ihrer Kartennadel. Eine Art ohne `labelPlural` gilt als unvollstaendig und wird nicht gespeichert (zeileVollstaendig in td-core).",
+    "spaceKinds": "Die Arten, die Mitglieder wählen können. Jede braucht `id`, `label` und `labelPlural`; `color` ist die Farbe ihrer Kartennadel. Eine Art ohne `labelPlural` gilt als unvollstaendig und wird nicht gespeichert (zeileVollstaendig in td-core).",
     "domain": "Erscheint im Bereich Landingpage im Space-Dialog, mit kopierbarem Link. Der Bereich erscheint erst, wenn `isNetwork` gesetzt ist.",
     "primaryColor": "Bei trustdonation #b16105 statt #d97706: Die hellere Farbe war auf dem aktiven Reiter nicht lesbar (gerechnet 3,19 statt 4,58 Kontrast).",
     "ein_netzwerk_kann_mitglied_sein": "Marker & Maps ist ein eigenes Netzwerk UND ein Projekt in trustdonation. Dann kommen `network` und `kind` dazu."
   },
   "$danach": [
-    "Die Arten im Space-Dialog unter `Netzwerk` pruefen und ergaenzen.",
+    "Die Arten im Space-Dialog unter `Netzwerk` prüfen und ergänzen.",
     "Die Domain unter `Landingpage` eintragen.",
     "Mitglieder einladen. Vorher verifizieren: siehe baukasten/sprache/texte/einladung.md."
   ]

@@ -9,14 +9,14 @@
  * schreiben, die beides verstehen.
  */
 :root {
-  /* Die Hauptfarbe. Schrift, Knoepfe, Logo. */
+  /* Die Hauptfarbe. Schrift, Knöpfe, Logo. */
   --gruen: #1B5E40;
   --ink: var(--gruen);
   --pill: var(--gruen);
   --band-text: var(--gruen);
   --logo-ink: var(--gruen);
 
-  /* Flaeche und Schrift auf Gruen. */
+  /* Fläche und Schrift auf Grün. */
   --weiss: #FFFFFF;
   --bg: var(--weiss);
   --surface: var(--weiss);
@@ -27,12 +27,12 @@
   --gold: #EA580C;
   --band-accent: var(--gold);
 
-  /* Die weiche Flaeche hinter Abschnitten. */
+  /* Die weiche Fläche hinter Abschnitten. */
   --papier: #FFF8F1;
   --bg-soft: var(--papier);
   --or1: var(--papier);
 
-  /* Raender, Trenner, Eingabefelder. */
+  /* Ränder, Trenner, Eingabefelder. */
   --linie: #EFE0D2;
   --line: var(--linie);
 
@@ -41,7 +41,7 @@
   --body: var(--fliesstext);
   --band-body: var(--fliesstext);
 
-  /* Nebensaechliches: Bildunterschriften, Hinweise. */
+  /* Nebensächliches: Bildunterschriften, Hinweise. */
   --gedaempft: #6B8578;
   --muted: var(--gedaempft);
 
@@ -49,7 +49,7 @@
   --blass: #9AB0A5;
   --faint: var(--blass);
 
-  /* Der dunkle Akzent fuer Links und Hervorhebungen im Text. */
+  /* Der dunkle Akzent für Links und Hervorhebungen im Text. */
   --rotbraun: #B5390A;
   --accent: var(--rotbraun);
 
@@ -71,20 +71,20 @@
   --band-line: var(--band-linie);
 
   /* Maße */
-  /* Die groesste Breite des Inhalts. Darueber bleibt Rand. */
+  /* Die größte Breite des Inhalts. Darüber bleibt Rand. */
   --seitenbreite: 1160px;
   --page: var(--seitenbreite);
-  /* Die Standard-Rundung fuer Karten und Flaechen. */
+  /* Die Standard-Rundung für Karten und Flächen. */
   --rundung: 14px;
   --radius: var(--rundung);
-  /* Der einzige Schatten. Zwei Lagen, beide im Gruen der Marke statt in Schwarz. */
+  /* Der einzige Schatten. Zwei Lagen, beide im Grün der Marke statt in Schwarz. */
   --schatten: 0 1px 2px rgba(27,94,64,.06), 0 12px 40px rgba(27,94,64,.12);
   --shadow: var(--schatten);
 
   /* Schriften */
-  /* Die eine Schrift der Seite. Ueberschriften und Fliesstext. */
+  /* Die eine Schrift der Seite. Überschriften und Fließtext. */
   --schrift-hanken: "Hanken Grotesk", system-ui, sans-serif;
-  /* Code und Kennungen. Kommt vom Geraet, kostet nichts. */
+  /* Code und Kennungen. Kommt vom Gerät, kostet nichts. */
   --schrift-system-monospace: ui-monospace, Consolas, monospace;
 }
 

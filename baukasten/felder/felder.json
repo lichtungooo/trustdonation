@@ -2,7 +2,7 @@
   "$beschreibung": "Vierte Schicht des Baukastens: die Felder, die ein Mensch ausfuellt. Jeder Eintrag folgt baukasten/EINTRAG.md.",
   "$quelle": "docs/03-datenmodell.md",
   "$stand": "2026-09-17",
-  "$regel": "Ein Feld steht genau einmal hier, auch wenn mehrere Arten es tragen. Wer `position` zweimal fuehrt, hat zwei Wahrheiten ueber Orte.",
+  "$regel": "Ein Feld steht genau einmal hier, auch wenn mehrere Arten es tragen. Wer `position` zweimal führt, hat zwei Wahrheiten über Orte.",
   "$formen": [
     "text",
     "longtext",
@@ -20,7 +20,7 @@
     "ref",
     "select"
   ],
-  "$hinweis_manifest": "Im Stack tragen Felder eine Id der Form `<vokabular>#<feld>`, zum Beispiel `foundation/v1#foerderrahmen` (DEFINITION Teil 7). Diese Datei nennt die kurzen Namen aus dem Konzept; die Zuordnung entsteht beim Bau.",
+  "$hinweis_manifest": "Im Stack tragen Felder eine Id der Form `<vokabular>#<feld>`, zum Beispiel `foundation/v1#förderrahmen` (DEFINITION Teil 7). Diese Datei nennt die kurzen Namen aus dem Konzept; die Zuordnung entsteht beim Bau.",
   "gemeinsam": [
     "eigenmittel",
     "name",
@@ -212,7 +212,7 @@
     {
       "id": "foerderer",
       "form": "ref",
-      "zweck": "Wer schon foerdert, als Relation.",
+      "zweck": "Wer schon fördert, als Relation.",
       "arten": [
         "projekt"
       ],
@@ -302,7 +302,7 @@
     {
       "id": "kurz",
       "form": "text",
-      "zweck": "Ein Satz, der das Vorhaben fasst. Fuer Karten und Listen.",
+      "zweck": "Ein Satz, der das Vorhaben fasst. Für Karten und Listen.",
       "arten": [
         "projekt"
       ],
@@ -347,7 +347,7 @@
     {
       "id": "name",
       "form": "text",
-      "zweck": "Wie die Einrichtung oder das Vorhaben heisst.",
+      "zweck": "Wie die Einrichtung oder das Vorhaben heißt.",
       "arten": [
         "foerderer",
         "projekt"
@@ -454,7 +454,7 @@
     {
       "id": "summeBis",
       "form": "number",
-      "zweck": "Die groesste Foerderung, die vergeben wird.",
+      "zweck": "Die größte Förderung, die vergeben wird.",
       "arten": [
         "foerderer"
       ],
@@ -469,7 +469,7 @@
     {
       "id": "summeVon",
       "form": "number",
-      "zweck": "Die kleinste Foerderung, die vergeben wird.",
+      "zweck": "Die kleinste Förderung, die vergeben wird.",
       "arten": [
         "foerderer"
       ],
@@ -514,7 +514,7 @@
     {
       "id": "treuhand",
       "form": "bool",
-      "zweck": "Ob treuhaenderische Stiftungen moeglich sind.",
+      "zweck": "Ob treuhaenderische Stiftungen möglich sind.",
       "arten": [
         "foerderer"
       ],
@@ -589,7 +589,7 @@
     {
       "id": "wirkung",
       "form": "list",
-      "zweck": "Zwei bis drei nachpruefbare Dinge, die sich aendern.",
+      "zweck": "Zwei bis drei nachpruefbare Dinge, die sich ändern.",
       "arten": [
         "projekt"
       ],
@@ -619,7 +619,7 @@
     {
       "id": "zielgruppen",
       "form": "tags",
-      "zweck": "Fuer wen es da ist.",
+      "zweck": "Für wen es da ist.",
       "arten": [
         "foerderer",
         "projekt"
@@ -678,5 +678,5 @@
       ]
     }
   ],
-  "$hinweis_zwecke": "Das Datenmodell nennt viele Felder nur mit ihrer Form. Die Zwecke hier beschreiben, was das Feld offensichtlich ist, in der Sprache des Konzepts. Wo der Name allein nicht reicht, bleibt der Zweck leer und die Pruefung meldet es."
+  "$hinweis_zwecke": "Das Datenmodell nennt viele Felder nur mit ihrer Form. Die Zwecke hier beschreiben, was das Feld offensichtlich ist, in der Sprache des Konzepts. Wo der Name allein nicht reicht, bleibt der Zweck leer und die Prüfung meldet es."
 }

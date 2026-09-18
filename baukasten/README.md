@@ -4,6 +4,16 @@ Woraus wir bauen. Was hier einmal entsteht, steht der Landingpage, der App und d
 
 Die Festlegung steht in [docs/12-baukasten.md](../docs/12-baukasten.md). **Kein Marktplatz:** Ein Baustein ist Werkzeug, ein Angebot ist ein Anliegen.
 
+## Zum Ansehen
+
+**[index.html](index.html) zeigt alles auf einer Seite.** Doppelklick genügt, kein Server nötig: Die Daten sind eingebettet.
+
+Neu gebaut wird sie nach jeder Änderung an den Quellen:
+
+```bash
+python scripts/baukasten-seite-bauen.py
+```
+
 ---
 
 ## Die acht Schichten
@@ -14,14 +24,14 @@ Die Festlegung steht in [docs/12-baukasten.md](../docs/12-baukasten.md). **Kein 
 | **1. Rohstoffe: Schriften** | 2 | 0 | `rohstoffe/schriften.json` |
 | **1. Rohstoffe: Maße** | 3 | 0 | `rohstoffe/masse.json` |
 | **2. Bauteile** | 7 | 2 | `bauteile/bauteile.json` |
-| **3. Muster** | 2 | 4 | `muster/muster.json` |
+| **3. Muster** | 6 | 2 | `muster/muster.json` |
 | **4. Felder** | 43 | 0 | `felder/felder.json` |
 | **5. Arten** | 5 | 3 | `arten/arten.json` |
 | **6. Module** | 8 | 0 | `module/module.json` |
 | **7. Vorlagen** | 7 | 2 | `vorlagen/vorlagen.json` |
 | **8. Sprache: Regeln** | 4 + 11 Werkzeuge | 3 | `sprache/sprache.json` |
 | **8. Sprache: Texte** | 5 | 0 | `sprache/texte/` |
-| **zusammen** | **99** | **14** | |
+| **zusammen** | **103** | **12** | |
 
 Jeder Eintrag folgt [EINTRAG.md](EINTRAG.md): id, name, zweck, herkunft, belege, abstand.
 
@@ -97,6 +107,21 @@ python scripts/rohstoffe-bauen.py
 
 ---
 
+## Schicht 3: Die Muster
+
+`muster/stuecke/` führt die vier, die zwischen Bauteil und Vorlage sitzen:
+
+| Muster | Die Absicht darin |
+|---|---|
+| [Profilkopf](muster/stuecke/profilkopf.html) | Drei Fragen in dieser Reihenfolge: Wer ist das? Was tut es? Passt es zu mir? |
+| [Projektvorstellung](muster/stuecke/projektvorstellung.html) | In der Reihenfolge, in der eine Stiftung liest: erst was fehlt, dann was es kostet, dann was schon steht, zuletzt was sich ändert |
+| [Kontaktblock](muster/stuecke/kontaktblock.html) | Wer antwortet, und wie lange es dauert. Beides fehlt fast überall |
+| [Förderaufruf](muster/stuecke/foerderaufruf.html) | Eine Zahl, eine Frist, eine Handlung. Mehr verträgt ein Aufruf nicht |
+
+**Ein Muster trägt eine Absicht, und die entscheidet, ob eine Änderung erlaubt ist.** Beim Förderaufruf zum Beispiel: Die Zahl ist die offene Lücke, nicht die Gesamtsumme. Wer 20.000 € fordert, klingt weit weg. Wer 12.400 € braucht und 38 Prozent schon hat, klingt erreichbar.
+
+---
+
 ## Schicht 7: Die Vorlagen
 
 Ein fertiger Auftritt, statt Knöpfe auszusuchen. Vier stehen:
@@ -139,9 +164,9 @@ Zwei Beispiele daraus:
 
 Die zwanzig Lücken stehen in den Dateien. Nach Nutzen geordnet:
 
-1. **Die vier Muster** (Profilkopf, Projektvorstellung, Kontaktblock, Förderaufruf). Sie sitzen zwischen dem, was steht: Bauteile gibt es, Vorlagen auch, aber nichts dazwischen.
-2. **Die drei fehlenden Arten** (Verein, Unternehmen, Mensch).
-3. **Die Landingpage eines Projekts**, mit den anderen Zahlen: Bedürfnis, Bedarf, Lücke, Wirkung.
+1. **Die drei fehlenden Arten** (Verein, Unternehmen, Mensch). Sie halten die Felder zusammen, die es schon gibt.
+2. **Die Landingpage eines Projekts**, mit den anderen Zahlen: Bedürfnis, Bedarf, Lücke, Wirkung. Die Muster dafür stehen alle.
+3. **Der Wirkungsbericht**, als Muster und später als Modul. Er entscheidet über die nächste Förderung.
 
 ## Zwei Entscheidungen, die anstehen
 

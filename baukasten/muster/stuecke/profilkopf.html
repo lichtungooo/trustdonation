@@ -1,0 +1,115 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Profilkopf — trustdonation</title>
+<link rel="stylesheet" href="../../rohstoffe/tokens.css">
+<style>
+  body { margin:0; padding:40px; background:var(--papier); color:var(--gruen);
+         font:400 16px/1.6 var(--schrift-hanken); }
+  h1 { font-size:28px; font-weight:800; letter-spacing:-.02em; margin:0 0 8px; }
+  .vorspann { max-width:44em; color:var(--fliesstext); margin:0 0 30px; }
+  h2 { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.14em;
+       color:var(--gedaempft); margin:34px 0 14px; }
+  .notiz { font-size:13px; color:var(--gedaempft); margin-top:12px; max-width:44em; }
+
+  /* Der Profilkopf. Er beantwortet drei Fragen, in dieser Reihenfolge:
+     Wer ist das? Was tut es? Passt es zu mir?
+     Alles Weitere gehoert darunter, nicht hierher. */
+  .kopf { background:var(--weiss); border:1px solid var(--linie);
+          border-radius:var(--rundung); padding:26px 28px; max-width:46em; }
+  .obere { display:flex; gap:18px; align-items:flex-start; }
+  .bild { width:64px; height:64px; border-radius:16px; flex:none;
+          background:var(--eigenfarbe, #194294); color:var(--weiss);
+          display:flex; align-items:center; justify-content:center;
+          font-size:23px; font-weight:700; }
+  .bild[data-mensch] { border-radius:50%; }
+  .titel { flex:1; min-width:0; }
+  .titel h3 { font-size:23px; font-weight:800; letter-spacing:-.02em; margin:0 0 3px; }
+  .unterzeile { font-size:14.5px; color:var(--gedaempft);
+                display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+  .unterzeile .art { font-weight:600; color:var(--eigenfarbe, #194294); }
+  .unterzeile .trenner { color:var(--linie); }
+
+  .satz { margin:16px 0 0; font-size:17px; color:var(--fliesstext); max-width:34em; }
+
+  .leiste { display:flex; flex-wrap:wrap; gap:9px; margin-top:18px;
+            padding-top:18px; border-top:1px solid var(--linie); align-items:center; }
+  .etikett { border:1px solid var(--linie); background:var(--papier);
+             border-radius:999px; padding:5px 13px; font-size:13.5px; font-weight:600; }
+  .vertrauen { display:inline-flex; align-items:center; gap:8px; margin-left:auto;
+               font-size:13.5px; font-weight:600; }
+  .gesichter { display:inline-flex; }
+  .gesichter span { width:21px; height:21px; border-radius:50%; background:var(--gruen);
+                    color:var(--weiss); font-size:9px; font-weight:700; display:inline-flex;
+                    align-items:center; justify-content:center;
+                    border:2px solid var(--weiss); margin-right:-7px; }
+  .gesichter span:last-child { margin-right:0; }
+</style>
+
+<h1>Profilkopf</h1>
+<p class="vorspann">Er steht über jedem Eintrag: auf der Landingpage, im Space, in der Suche. Drei Fragen, in dieser Reihenfolge.</p>
+
+<h2>Eine Stiftung</h2>
+<div class="kopf" style="--eigenfarbe:#194294">
+  <div class="obere">
+    <div class="bild">UO</div>
+    <div class="titel">
+      <h3>Umweltstiftung Michael Otto</h3>
+      <div class="unterzeile">
+        <span class="art">Stiftung</span>
+        <span class="trenner">·</span><span>Hamburg</span>
+        <span class="trenner">·</span><span>bundesweit</span>
+      </div>
+    </div>
+  </div>
+  <p class="satz">Wir fördern Vorhaben, die Gewässer schützen und Menschen dafür gewinnen.</p>
+  <div class="leiste">
+    <span class="etikett">Gewässerschutz</span>
+    <span class="etikett">Umweltbildung</span>
+    <span class="vertrauen"><span class="gesichter"><span>TM</span><span>EM</span></span>2 bürgen</span>
+  </div>
+</div>
+
+<h2>Ein Projekt</h2>
+<div class="kopf" style="--eigenfarbe:#1B5E40">
+  <div class="obere">
+    <div class="bild">BP</div>
+    <div class="titel">
+      <h3>Bachpatenschaften Nordhessen</h3>
+      <div class="unterzeile">
+        <span class="art">Projekt</span>
+        <span class="trenner">·</span><span>Kassel</span>
+        <span class="trenner">·</span><span>noch 12.400 € offen</span>
+      </div>
+    </div>
+  </div>
+  <p class="satz">Ohne uns bleiben vierzig Bäche unbetreut, und niemand merkt, wenn sie kippen.</p>
+  <div class="leiste">
+    <span class="etikett">Gewässerschutz</span>
+    <span class="etikett">Jugend</span>
+    <span class="vertrauen"><span class="gesichter"><span>TM</span></span>1 bürgt</span>
+  </div>
+</div>
+
+<h2>Ein Mensch</h2>
+<div class="kopf" style="--eigenfarbe:#1B5E40">
+  <div class="obere">
+    <div class="bild" data-mensch>TM</div>
+    <div class="titel">
+      <h3>Timo Martin</h3>
+      <div class="unterzeile">
+        <span class="art">Mensch</span>
+        <span class="trenner">·</span><span>Kassel</span>
+      </div>
+    </div>
+  </div>
+  <p class="satz">Baut Netzwerke, in denen Menschen einander finden.</p>
+</div>
+
+<h2>Was daran wichtig ist</h2>
+<p class="notiz">
+  <strong>Drei Fragen, in dieser Reihenfolge:</strong> Wer ist das? Was tut es? Passt es zu mir? Alles Weitere gehört darunter, nicht hierher.<br><br>
+  <strong>Die dritte Angabe der Unterzeile ist die wichtigste.</strong> Bei einer Stiftung die Reichweite, bei einem Projekt die offene Lücke. Wer scrollt, hat sie schon gesehen.<br><br>
+  <strong>Ein Satz, keine Absätze.</strong> Bei einem Projekt ist es das Bedürfnis („Ohne uns bleiben vierzig Bäche unbetreut"), nicht die Selbstbeschreibung. Wer erklärt, was er ist, hat schon verloren.<br><br>
+  <strong>Höchstens zwei Etiketten.</strong> Fünf Themen heißt kein Thema.<br><br>
+  <strong>Das Vertrauen steht rechts außen, leise.</strong> Es ist eine Auskunft, keine Auszeichnung.
+</p>

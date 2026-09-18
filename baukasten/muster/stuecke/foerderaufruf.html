@@ -1,0 +1,68 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Förderaufruf — trustdonation</title>
+<link rel="stylesheet" href="../../rohstoffe/tokens.css">
+<style>
+  body { margin:0; padding:40px; background:var(--papier); color:var(--gruen);
+         font:400 16px/1.6 var(--schrift-hanken); }
+  h1 { font-size:28px; font-weight:800; letter-spacing:-.02em; margin:0 0 8px; }
+  .vorspann { max-width:44em; color:var(--fliesstext); margin:0 0 30px; }
+  h2 { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.14em;
+       color:var(--gedaempft); margin:34px 0 14px; }
+  .notiz { font-size:13px; color:var(--gedaempft); margin-top:12px; max-width:44em; }
+
+  /* Der Foerderaufruf. Was ein Projekt braucht, in einer Form, die eine
+     Stiftung lesen kann: eine Zahl, eine Frist, eine Handlung. */
+  .aufruf { background:var(--weiss); border:1px solid var(--linie);
+            border-radius:var(--rundung); overflow:hidden; max-width:38em; }
+  .oben { padding:24px 28px 20px; }
+  .zeile { font-size:12.5px; font-weight:700; text-transform:uppercase;
+           letter-spacing:.13em; color:var(--gold); margin-bottom:9px; }
+  .aufruf h3 { font-size:22px; font-weight:800; letter-spacing:-.02em; margin:0 0 9px; }
+  .aufruf p { margin:0; color:var(--fliesstext); max-width:30em; }
+
+  .zahl { display:flex; align-items:baseline; gap:11px; margin-top:20px; flex-wrap:wrap; }
+  .zahl b { font-size:34px; font-weight:800; letter-spacing:-.03em; line-height:1; }
+  .zahl span { font-size:14.5px; color:var(--gedaempft); }
+
+  .balken { height:9px; border-radius:999px; background:var(--linie);
+            overflow:hidden; margin-top:13px; }
+  .balken i { display:block; height:100%; background:var(--gruen); }
+
+  .unten { background:var(--papier); border-top:1px solid var(--linie);
+           padding:17px 28px; display:flex; flex-wrap:wrap; gap:14px; align-items:center; }
+  .frist { font-size:14.5px; }
+  .frist b { font-weight:700; }
+  .knopf { margin-left:auto; background:var(--gruen); color:var(--weiss);
+           border-radius:999px; padding:11px 24px; font-size:15px; font-weight:600;
+           text-decoration:none; }
+</style>
+
+<h1>Förderaufruf</h1>
+<p class="vorspann">Was ein Projekt braucht, in einer Form, die eine Stiftung lesen kann: eine Zahl, eine Frist, eine Handlung.</p>
+
+<div class="aufruf">
+  <div class="oben">
+    <div class="zeile">Offener Bedarf</div>
+    <h3>Zwanzig Messkoffer für vierzig Bäche</h3>
+    <p>Ohne sie bleiben die Patengruppen ohne Werkzeug, und die Schulungen im Frühjahr fallen aus.</p>
+    <div class="zahl">
+      <b>12.400&nbsp;€</b>
+      <span>von 20.000&nbsp;€ offen</span>
+    </div>
+    <div class="balken"><i style="width:38%"></i></div>
+  </div>
+  <div class="unten">
+    <span class="frist">Gebraucht bis <b>1. März 2027</b></span>
+    <a class="knopf" href="#">Unterstützen</a>
+  </div>
+</div>
+
+<h2>Was daran wichtig ist</h2>
+<p class="notiz">
+  <strong>Die Überschrift nennt die Sache, nicht das Projekt.</strong> „Zwanzig Messkoffer für vierzig Bäche" ist vorstellbar. „Unterstützen Sie unser Bildungsprojekt" nicht.<br><br>
+  <strong>Ein Satz sagt, was ohne die Förderung passiert.</strong> Das ist die einzige Stelle, an der ein Aufruf drängen darf, und er drängt mit einer Tatsache, nicht mit einem Gefühl.<br><br>
+  <strong>Die Zahl ist die offene Lücke, nicht die Gesamtsumme.</strong> Wer 20.000 € fordert, klingt weit weg. Wer 12.400 € braucht und 38 Prozent schon hat, klingt erreichbar.<br><br>
+  <strong>Die Frist steht unten, klein und konkret.</strong> Ein Datum bindet, „so bald wie möglich" nicht.<br><br>
+  <strong>Ein Knopf, keine Auswahl.</strong> Wer zwischen „Spenden", „Teilen" und „Mehr erfahren" wählen muss, tut nichts davon.
+</p>

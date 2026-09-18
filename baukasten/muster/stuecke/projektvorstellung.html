@@ -1,0 +1,100 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Projektvorstellung — trustdonation</title>
+<link rel="stylesheet" href="../../rohstoffe/tokens.css">
+<style>
+  body { margin:0; padding:40px; background:var(--papier); color:var(--gruen);
+         font:400 16px/1.6 var(--schrift-hanken); }
+  h1 { font-size:28px; font-weight:800; letter-spacing:-.02em; margin:0 0 8px; }
+  .vorspann { max-width:44em; color:var(--fliesstext); margin:0 0 30px; }
+  h2 { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.14em;
+       color:var(--gedaempft); margin:34px 0 14px; }
+  .notiz { font-size:13px; color:var(--gedaempft); margin-top:12px; max-width:44em; }
+
+  /* Die Projektvorstellung. Der Kern des Pitches an eine Stiftung, in der
+     Reihenfolge, in der eine Stiftung liest: erst was fehlt, dann was es
+     kostet, dann was schon steht, zuletzt was sich aendert. */
+  .blatt { background:var(--weiss); border:1px solid var(--linie);
+           border-radius:var(--rundung); padding:30px 32px; max-width:44em; }
+  .blatt > h3 { font-size:12px; font-weight:700; text-transform:uppercase;
+                letter-spacing:.13em; color:var(--gedaempft); margin:26px 0 9px; }
+  .blatt > h3:first-child { margin-top:0; }
+  .gross { font-size:20px; line-height:1.5; color:var(--fliesstext);
+           margin:0; max-width:32em; }
+
+  /* Die Luecke. Sie ist die Zahl, um die es geht, und sie steht als Balken
+     da, weil eine Stiftung sofort sehen will, wie weit das Projekt ist. */
+  .geld { margin:4px 0 0; }
+  .balken { height:12px; border-radius:999px; background:var(--linie);
+            overflow:hidden; display:flex; }
+  .balken i { display:block; height:100%; }
+  .eigen { background:var(--gruen); }
+  .zugesagt { background:var(--sanft-2); }
+  .zahlen { display:flex; flex-wrap:wrap; gap:18px; margin-top:11px; font-size:14px; }
+  .zahlen span { display:inline-flex; align-items:center; gap:7px; }
+  .zahlen i { width:10px; height:10px; border-radius:3px; display:inline-block; }
+  .zahlen b { font-weight:700; }
+  .offen { margin-left:auto; font-weight:700; color:var(--rotbraun); }
+
+  ul.liste { list-style:none; padding:0; margin:0; }
+  ul.liste li { padding:7px 0 7px 22px; position:relative; font-size:15.5px;
+                border-bottom:1px solid var(--linie); }
+  ul.liste li:last-child { border-bottom:0; }
+  ul.liste li::before { content:""; position:absolute; left:0; top:15px;
+                        width:8px; height:8px; border-radius:50%; background:var(--gruen); }
+  ul.liste li.vorhanden::before { background:var(--sanft-2); }
+  .art { font-size:12.5px; color:var(--gedaempft); margin-left:7px; }
+</style>
+
+<h1>Projektvorstellung</h1>
+<p class="vorspann">Der Kern des Pitches an eine Stiftung. In der Reihenfolge, in der eine Stiftung liest.</p>
+
+<div class="blatt">
+
+  <h3>Was fehlt hier ohne uns</h3>
+  <p class="gross">Vierzig Bäche in Nordhessen bleiben unbetreut. Niemand merkt, wenn einer kippt, bis die Fische oben schwimmen.</p>
+
+  <h3>Was es kostet</h3>
+  <div class="geld">
+    <div class="balken">
+      <i class="eigen" style="width:22%"></i>
+      <i class="zugesagt" style="width:16%"></i>
+    </div>
+    <div class="zahlen">
+      <span><i class="eigen"></i>Eigenmittel <b>4.400 €</b></span>
+      <span><i class="zugesagt"></i>zugesagt <b>3.200 €</b></span>
+      <span class="offen">offen 12.400 € von 20.000 €</span>
+    </div>
+  </div>
+
+  <h3>Was wir brauchen</h3>
+  <ul class="liste">
+    <li>Zwanzig Messkoffer <span class="art">Sachen · 8.000 €</span></li>
+    <li>Eine Fachkraft für die Schulungen <span class="art">Wissen · 3.400 €</span></li>
+    <li>Fahrten zu den Bächen <span class="art">Hände · 1.000 €</span></li>
+  </ul>
+
+  <h3>Was schon steht</h3>
+  <ul class="liste">
+    <li class="vorhanden">Zusage von vier Schulen <span class="art">schriftlich</span></li>
+    <li class="vorhanden">Genehmigung der unteren Wasserbehörde <span class="art">seit Mai</span></li>
+    <li class="vorhanden">Ein Raum in der Werkstatt Kassel <span class="art">kostenfrei</span></li>
+  </ul>
+
+  <h3>Was sich ändert</h3>
+  <ul class="liste">
+    <li>Vierzig Bäche haben je eine Patengruppe, die viermal im Jahr misst.</li>
+    <li>Die Messwerte liegen offen, jeder kann sie nachlesen.</li>
+    <li>Achtzig Jugendliche können eine Gewässerprobe nehmen und deuten.</li>
+  </ul>
+
+</div>
+
+<h2>Was daran wichtig ist</h2>
+<p class="notiz">
+  <strong>Das Bedürfnis steht zuerst, und es beschreibt eine Lücke, kein Projekt.</strong> „Vierzig Bäche bleiben unbetreut" zieht. „Wir sind ein Verein für Umweltbildung" nicht.<br><br>
+  <strong>Der Balken zeigt, wie weit das Projekt ist</strong>, bevor die Zahl kommt. Eine Stiftung fördert lieber das, was schon steht: Zweiundzwanzig Prozent Eigenmittel sagen mehr als jede Beteuerung.<br><br>
+  <strong>Bedarfe tragen ihre Art</strong>: Hände, Wissen, Sachen, Raum. Eine Stiftung, die kein Geld geben kann, gibt vielleicht einen Raum.<br><br>
+  <strong>„Was sich ändert" nennt nachprüfbare Dinge</strong>, keine Hoffnungen. „Achtzig Jugendliche können eine Probe deuten" lässt sich zählen. „Mehr Umweltbewusstsein" nicht.<br><br>
+  <strong>Zwei bis drei je Liste.</strong> Wer sieben Wirkungen verspricht, hat keine.
+</p>

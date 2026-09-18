@@ -18,9 +18,10 @@
         "did": null
       },
       "belege": [
-        "trustdonation.org"
+        "reallife.network"
       ],
-      "abstand": null
+      "abstand": null,
+      "hinweis": "Gebaut mit den Tokens von reallife.network. Beim Herholen umstellen."
     },
     {
       "id": "einladung",
@@ -38,31 +39,91 @@
         "did": null
       },
       "belege": [
-        "trustdonation.org"
+        "reallife.network"
       ],
+      "abstand": null,
+      "hinweis": "Gebaut mit den Tokens von reallife.network. Beim Herholen umstellen."
+    },
+    {
+      "id": "profilkopf",
+      "name": "Profilkopf",
+      "zweck": "Steht über jedem Eintrag: auf der Landingpage, im Space, in der Suche.",
+      "absicht": "Drei Fragen in dieser Reihenfolge beantworten: Wer ist das? Was tut es? Passt es zu mir? Alles Weitere gehört darunter.",
+      "welt": "beide",
+      "datei": "baukasten/muster/stuecke/profilkopf.html",
+      "bauteile": [
+        "avatar",
+        "vertrauens-anzeiger"
+      ],
+      "regel": "Die dritte Angabe der Unterzeile ist die wichtigste: bei einer Stiftung die Reichweite, bei einem Projekt die offene Lücke. Höchstens zwei Etiketten, denn fünf Themen heißt kein Thema.",
+      "herkunft": {
+        "name": "Timo und Eli",
+        "did": null
+      },
+      "belege": [],
+      "abstand": null
+    },
+    {
+      "id": "projektvorstellung",
+      "name": "Projektvorstellung",
+      "zweck": "Der Kern des Pitches an eine Stiftung.",
+      "absicht": "In der Reihenfolge, in der eine Stiftung liest: erst was fehlt, dann was es kostet, dann was schon steht, zuletzt was sich ändert.",
+      "welt": "beide",
+      "datei": "baukasten/muster/stuecke/projektvorstellung.html",
+      "bauteile": [],
+      "regel": "Das Bedürfnis beschreibt eine Lücke, kein Projekt. Der Balken zeigt, wie weit es ist, bevor die Zahl kommt: Eine Stiftung fördert lieber das, was schon steht. Wirkung nennt Nachprüfbares, zwei bis drei je Liste.",
+      "herkunft": {
+        "name": "Timo und Eli",
+        "did": null
+      },
+      "belege": [],
+      "abstand": null
+    },
+    {
+      "id": "kontaktblock",
+      "name": "Kontaktblock",
+      "zweck": "Sagt zwei Dinge, die fast überall fehlen: wer antwortet, und wie lange es dauert.",
+      "absicht": "Die Hürde senken. Wer weiß, dass er vier Wochen wartet, schreibt trotzdem. Wer es nicht weiß, hakt nach drei Tagen nach oder gibt auf.",
+      "welt": "beide",
+      "datei": "baukasten/muster/stuecke/kontaktblock.html",
+      "bauteile": [
+        "avatar"
+      ],
+      "regel": "Eine Funktion statt eines Namens, solange kein Profil übernommen ist: Wer aus einem Impressum abschreibt, veröffentlicht die Daten eines Menschen, der nie gefragt wurde. Kein Formular mit acht Feldern.",
+      "herkunft": {
+        "name": "Timo und Eli",
+        "did": null
+      },
+      "belege": [],
+      "abstand": null
+    },
+    {
+      "id": "foerderaufruf",
+      "name": "Förderaufruf",
+      "zweck": "Was ein Projekt braucht, in einer Form, die eine Stiftung lesen kann.",
+      "absicht": "Eine Zahl, eine Frist, eine Handlung. Mehr verträgt ein Aufruf nicht.",
+      "welt": "beide",
+      "datei": "baukasten/muster/stuecke/foerderaufruf.html",
+      "bauteile": [],
+      "regel": "Die Zahl ist die offene Lücke, nicht die Gesamtsumme: Wer 20.000 € fordert, klingt weit weg. Ein Knopf, keine Auswahl, denn wer zwischen drei Handlungen wählen muss, tut keine davon.",
+      "herkunft": {
+        "name": "Timo und Eli",
+        "did": null
+      },
+      "belege": [],
       "abstand": null
     }
   ],
   "$fehlt": [
     {
-      "id": "profilkopf",
-      "name": "Profilkopf",
-      "warum": "Jede Stiftung und jedes Projekt braucht einen Kopf: Bild, Name, Ort, was sie tut."
+      "id": "wirkungsbericht",
+      "name": "Wirkungsbericht",
+      "warum": "Was aus einer Förderung wurde. Der Bericht entscheidet über die nächste, und heute schreibt ihn jeder anders."
     },
     {
-      "id": "projektvorstellung",
-      "name": "Projektvorstellung",
-      "warum": "Der Kern des Pitches an eine Stiftung. Heute schreibt jeder ihn neu."
-    },
-    {
-      "id": "kontaktblock",
-      "name": "Kontaktblock",
-      "warum": "Wie erreicht man jemanden, ohne die Mailadresse an Sammler zu verlieren."
-    },
-    {
-      "id": "foerderaufruf",
-      "name": "Foerderaufruf",
-      "warum": "Was ein Projekt braucht, in einer Form, die eine Stiftung lesen kann."
+      "id": "spendenaufruf",
+      "name": "Spendenaufruf",
+      "warum": "Der Förderaufruf richtet sich an Stiftungen. An Menschen richtet man sich anders: kleinere Beträge, kürzere Wege, andere Sprache."
     }
   ]
 }

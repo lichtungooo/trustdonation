@@ -1,0 +1,87 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Kontaktblock — trustdonation</title>
+<link rel="stylesheet" href="../../rohstoffe/tokens.css">
+<style>
+  body { margin:0; padding:40px; background:var(--papier); color:var(--gruen);
+         font:400 16px/1.6 var(--schrift-hanken); }
+  h1 { font-size:28px; font-weight:800; letter-spacing:-.02em; margin:0 0 8px; }
+  .vorspann { max-width:44em; color:var(--fliesstext); margin:0 0 30px; }
+  h2 { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.14em;
+       color:var(--gedaempft); margin:34px 0 14px; }
+  .notiz { font-size:13px; color:var(--gedaempft); margin-top:12px; max-width:44em; }
+  .falsch { border-left:3px solid var(--rotbraun); padding-left:15px; margin-top:22px; }
+
+  /* Der Kontaktblock. Er sagt, wer antwortet und wie lange es dauert.
+     Beides fehlt fast ueberall, und beides entscheidet, ob jemand schreibt. */
+  .block { background:var(--weiss); border:1px solid var(--linie);
+           border-radius:var(--rundung); padding:24px 26px; max-width:34em;
+           margin-bottom:14px; }
+  .person { display:flex; gap:14px; align-items:center; margin-bottom:18px; }
+  .bild { width:46px; height:46px; border-radius:50%; flex:none; background:var(--gruen);
+          color:var(--weiss); display:flex; align-items:center; justify-content:center;
+          font-size:16px; font-weight:700; }
+  .person .wer { font-weight:700; font-size:16px; }
+  .person .rolle { font-size:14px; color:var(--gedaempft); }
+
+  .wege { display:grid; gap:10px; }
+  .weg { display:flex; align-items:center; gap:11px; font-size:15.5px; }
+  .weg .zeichen { width:26px; height:26px; border-radius:8px; flex:none;
+                  background:var(--papier); border:1px solid var(--linie);
+                  display:flex; align-items:center; justify-content:center;
+                  font-size:12px; font-weight:700; color:var(--gedaempft); }
+  .weg a { font-weight:600; color:var(--rotbraun); }
+  .zeit { color:var(--gedaempft); font-size:14px; }
+
+  .dauer { margin-top:18px; padding-top:16px; border-top:1px solid var(--linie);
+           font-size:14.5px; color:var(--fliesstext); }
+  .dauer b { font-weight:700; color:var(--gruen); }
+</style>
+
+<h1>Kontaktblock</h1>
+<p class="vorspann">Er sagt zwei Dinge, die fast überall fehlen: wer antwortet, und wie lange es dauert.</p>
+
+<h2>Auf einer Stiftungsseite</h2>
+<div class="block">
+  <div class="person">
+    <div class="bild">KW</div>
+    <div>
+      <div class="wer">Katrin Wieland</div>
+      <div class="rolle">Förderberatung</div>
+    </div>
+  </div>
+  <div class="wege">
+    <div class="weg"><span class="zeichen">@</span><a href="mailto:foerderung@beispiel.de">foerderung@beispiel.de</a></div>
+    <div class="weg"><span class="zeichen">T</span><a href="tel:+4940000000">040 000 000</a> <span class="zeit">Di und Do, 9 bis 12 Uhr</span></div>
+  </div>
+  <p class="dauer">Wir antworten auf Skizzen <b>innerhalb von vier Wochen</b>. Fragen vorab beantworten wir schneller.</p>
+</div>
+
+<h2>Wenn niemand genannt werden soll</h2>
+<div class="block">
+  <div class="person">
+    <div class="bild">GS</div>
+    <div>
+      <div class="wer">Die Geschäftsstelle</div>
+      <div class="rolle">Umweltstiftung Michael Otto</div>
+    </div>
+  </div>
+  <div class="wege">
+    <div class="weg"><span class="zeichen">@</span><a href="mailto:info@beispiel.de">info@beispiel.de</a></div>
+  </div>
+  <p class="dauer">Anfragen erreichen die Förderberatung. Antwort <b>in der Regel binnen zwei Wochen</b>.</p>
+</div>
+
+<h2>Was daran wichtig ist</h2>
+<p class="notiz">
+  <strong>Eine Funktion statt eines Namens, solange kein Profil übernommen ist.</strong> Recherchierte Namen gehören nicht auf eine Seite: Wer aus einem Impressum abschreibt, veröffentlicht die Daten eines Menschen, der nie gefragt wurde.<br><br>
+  <strong>Die Dauer ist das Wertvollste daran.</strong> Wer weiß, dass er vier Wochen wartet, schreibt trotzdem. Wer es nicht weiß, hakt nach dem dritten Tag nach oder gibt auf.<br><br>
+  <strong>Die Sprechzeiten stehen neben der Nummer, nicht darunter.</strong> Wer anruft, liest beides zugleich.<br><br>
+  <strong>Ein Weg reicht, wenn es nur einen gibt.</strong> Eine Telefonnummer, die niemand abhebt, kostet mehr als keine.
+</p>
+
+<div class="falsch">
+  <p class="notiz" style="margin-top:0">
+    <strong>Was wegbleibt:</strong> ein Formular mit acht Feldern. Es sortiert die Anfragen für den Empfänger und vertreibt die Hälfte der Absender. Eine Mailadresse genügt, und wer eine Skizze schickt, hat ohnehin schon geschrieben.
+  </p>
+</div>

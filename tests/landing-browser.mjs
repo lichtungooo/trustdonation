@@ -531,10 +531,29 @@ async function main() {
       kontrast.verhaeltnis >= 4.5,
       `${kontrast.verhaeltnis} zu 1 (${kontrast.schrift} auf ${kontrast.grund})`,
     );
+    /**
+     * ⚠ Geprueft wird die Eigenschaft, nicht die Anzahl.
+     *
+     * Die erste Fassung verlangte mindestens vier Luecken-Kaesten. Als Timo
+     * am 19.09.2026 drei Pflichtangaben nachreichte, fiel der Test — obwohl
+     * genau das Fortschritt war. Eine Zahl, die mit der Arbeit sinkt, taugt
+     * nicht als Probe.
+     *
+     * Was wirklich zaehlt: **Ein Kasten, der dasteht, sagt was fehlt.** Ein
+     * leerer Kasten waere eine Luecke, die sich als Inhalt ausgibt.
+     */
+    const luecken = await cdp.evaluate(`
+      var k = document.querySelectorAll(".luecke");
+      var stumm = 0;
+      for (var i = 0; i < k.length; i++) {
+        if (!/fehlt|fehlen/i.test(k[i].innerText)) stumm++;
+      }
+      return { anzahl: k.length, stumm: stumm };
+    `)
     pruefe(
-      'das Impressum sagt ehrlich, was fehlt',
-      kontrast.anzahl >= 4,
-      `${kontrast.anzahl} Kaesten`,
+      'jede verbliebene Luecke sagt, was fehlt',
+      luecken.stumm === 0,
+      `${luecken.anzahl} Kaesten, davon ${luecken.stumm} ohne Angabe`,
     );
 
     const robots = await cdp.evaluate(

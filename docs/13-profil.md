@@ -1,99 +1,93 @@
 # Das Profil
 
-**Status:** Normativer Entwurf · Überarbeitet am 20.09.2026 (zweite Fassung)
+**Status:** Normativer Entwurf · Dritte Fassung, 20.09.2026
 
-Timo am 18.09.2026: *"Ich will so eine Karte haben, wo alles draufsteht, was eine Stiftung macht. Wo ein Projekt sich komplett vorstellen kann."*
+Timo am 18.09.2026: *"Ich will so eine Karte haben, wo alles draufsteht, was eine Stiftung macht."*
 
-Und am 20.09.2026, nach der ersten Fassung: *"Das ist ja jetzt wirklich dumm Design. Es geht darum, professionelle Profile zu bauen, die diese Fragen, die zu beantworten sind, füllen. Also mit sauberen Reitern, nicht da die Fragen reinzustellen. Schau dir mal modernes Profildesign an."*
+Nach zwei Fehlversuchen am 20.09.2026: *"Guck dir mal richtig gute Profile an, wie die sein müssen. Es geht ja nicht darum, eine Stiftung darzustellen und dann ein spezielles Profil daraus zu bauen, sondern wie allgemein Profile sind, wie sie sich erklären. Du kannst Facebook, Insta, alles Mögliche anschauen."*
+
+---
+
+## Was zweimal schiefging
+
+**Erste Fassung:** sechs Abschnitte untereinander, jeder mit seiner Frage als Untertitel. Ein Fragebogen mit Farbe darauf.
+
+**Zweite Fassung:** Hero, Kennzahlen, Reiter. Besser gegliedert, und trotzdem ein Datenblatt: Beschriftung links, Wert rechts, bis nach unten.
+
+**Der gemeinsame Fehler:** Beide zeigten *Angaben über* eine Einrichtung. Ein Profil zeigt **einen Akteur mit Gesicht, Stimme, Zahlen und Werk**.
+
+---
+
+## Die Anatomie, nachgesehen bei echten Profilen
+
+Instagram, LinkedIn, GitHub und Facebook bauen ihre Profile gleich. Acht Teile in dieser Reihenfolge:
+
+| Teil | Instagram | GitHub (Organisation) | Bei uns |
+|---|---|---|---|
+| **Cover** | — | — | Band in der Hausfarbe |
+| **Bild** | rund, überlappend | Avatar links | Logo, überlappt das Band |
+| **Name** | Name + Handle | Name + verifiziert | Name |
+| **Einordnung** | Kategorie | Standort, Website | Art · fördernd · Sitz · Reichweite |
+| **Bio** | 150 Zeichen | Beschreibung | der Zweck, in eigener Stimme |
+| **Aktionen** | Folgen · Nachricht | Follow · Sponsor | Website · Antrag · Schreiben |
+| **Zahlen** | Beiträge · Follower · Gefolgt | Follower · Repos | Förderung · Bereiche · Vorhaben |
+| **Themen** | Story-Highlights (runde Kacheln) | Topics | Förderbereiche als runde Kacheln |
+| **Reiter** | Beiträge · Reels · Markiert | Overview · Repos · People | Gefördert · Antrag · Geben |
+| **Werk** | Bild-Raster | Repository-Karten | geförderte Vorhaben als Karten |
+
+### Das Werk ist das Herz
+
+**Ein GitHub-Profil ohne Repositories wäre sinnlos.** Ein Instagram-Profil ohne Raster auch. Der Hauptteil jedes Profils ist das, was jemand **getan** hat, nicht was über ihn ausgefüllt wurde.
+
+Bei einer Stiftung ist das Werk, was sie gefördert hat (`bisherGefoerdert`). Bei einem Projekt, was sich dadurch ändert (`wirkung`).
+
+Die ersten zwei Fassungen versteckten das Werk als Stichwort-Chips in einer Zeile. Jetzt steht es als Karten-Raster im ersten Reiter.
+
+### Zahlen werden gezählt, nicht nur abgelesen
+
+*"1.234 Beiträge"* bei Instagram ist gezählt, nicht eingegeben. Eine gezählte Zahl ist **immer wahr und immer aktuell**, und sie füllt die Leiste auch bei einem Eintrag, der sonst wenig trägt.
+
+| Zahl | Woher |
+|---|---|
+| Förderung | `summeVon` bis `summeBis`, angegeben |
+| Förderbereiche | gezählt aus `foerderbereiche` |
+| Vorhaben gefördert | gezählt aus `bisherGefoerdert` |
+
+Eine Zahl ohne Grundlage fehlt. Höchstens drei: Vier Zahlen nebeneinander sind keine Signale mehr, sondern eine Tabelle.
+
+### Themen als runde Kacheln
+
+Instagram nennt sie Story-Highlights und stellt sie direkt unter die Bio: runde Kreise mit einem Wort darunter. Sie sagen in einer Zeile, worum es geht, und sie sehen lebendig aus, wo eine Chip-Reihe nur Text ist.
+
+### Eine Aktion steht immer hervorgehoben
+
+Instagram hebt *Folgen* hervor, GitHub *Sponsor*. Ein Profil, dessen Aktionen alle gleich aussehen, sagt nicht, was man als Nächstes tut. Fehlt die vorgesehene starke Aktion, rückt die erste vorhandene nach.
 
 ---
 
 ## Die Fragen sind das Raster, nicht die Oberfläche
 
-Die erste Fassung stellte sechs Abschnitte untereinander, jeder mit seiner Frage als Untertitel: *"Wer ist das · Mit wem habe ich es zu tun?"*. Das ist ein Fragebogen mit Farbe darauf.
+Jeder Reiter trägt im Bauplan seine Frage. Sie sagt, welche Felder hineingehören. **Auf den Bildschirm kommt sie nie.** Wer sie anzeigt, macht aus einem Profil einen Fragebogen.
 
-**Die Fragen gehören hierher, in die Definition.** Sie sagen, welche Felder ein Profil braucht und in welcher Rangfolge. Auf dem Bildschirm steht die **Antwort**, in der Stimme der Einrichtung.
+| Reiter (Förderer) | Die Frage dahinter | Was darin steht |
+|---|---|---|
+| **Gefördert** | Was habt ihr bisher getan? | das Werk als Karten, `zielgruppen` |
+| **Antrag** | Was muss ich tun, und an wen wende ich mich? | `antragstellung`, `antragsweg`, `fristen`, `unterlagen`, `eigenmittel`, `ansprache` |
+| **Geben** | Und wenn ich etwas beitragen will? | `zustiftung`, `spende`, `treuhand`, `volumenJahr` |
 
-Das Vorbild steht bei der Software AG-Stiftung selbst. Sie gliedert ihre Seite in fünf Reiter: *Wer wir sind · Warum wir fördern · Wie wir fördern · Was wir fördern · Anträge*. Keine Frage steht auf ihrer Seite; jede ist beantwortet.
+| Reiter (Projekt) | Die Frage dahinter |
+|---|---|
+| **Vorhaben** | Was soll geschehen, und was ändert sich dadurch? |
+| **Mittel** | Wie weit ist es, und was fehlt? |
+| **Beteiligte** | Wer steht dahinter? |
 
 ---
 
-## Die Anatomie
+## Der Satz, der zieht
 
-Vier Teile in dieser Reihenfolge. Sie folgt dem, was ein Mensch in den ersten zehn Sekunden sucht.
+**Bei einer Stiftung: `hinweis`.** *"Woran erkennt ein Projekt, dass es zu uns passt"*, in ihren Worten. Er steht nirgends sonst und bekommt darum eine eigene Farbfläche mit einem Balken in der Hausfarbe.
 
-```
-+----------------------------------------------+
-| ######## Farbband in der Hausfarbe ######### |
-|  +----+                                      |
-|  | SA |   Software AG-Stiftung               |  1. Kopf
-|  +----+   Stiftung · fördernd · Darmstadt    |
-|           [ Website ]  [ Schreiben ]         |
-+----------------------------------------------+
-|  FÖRDERUNG        IM JAHR       REICHWEITE   |  2. Kennzahlen
-|  20.000-500.000   1,3 Mrd EUR   national     |
-+----------------------------------------------+
-|  Überblick | Antrag | Geben                  |  3. Reiter
-+----------------------------------------------+
-|  "Wir suchen und finden Menschen, die        |  4. Inhalt
-|   gemeinnützige Ziele verfolgen."            |
-|                                              |
-|  | Woran Sie erkennen, dass Sie passen       |
-|  | Ihr Vorhaben bewegt sich jenseits des     |
-|  | Mainstreams ...                           |
-|                                              |
-|  Förderbereiche                              |
-|  (Bildung) (Kinder und Jugend) ...           |
-+----------------------------------------------+
-```
-
-### 1. Der Kopf
-
-Wer das ist, in einem Blick. Ein Farbband in der Hausfarbe, das Logo darüber, der Name groß, und **eine einzige Meta-Zeile** mit Punkten getrennt: Art · fördernd oder operativ · Sitz.
-
-Daneben die Aktionen: Website, Schreiben. Was ein Mensch als Nächstes tut, steht dort, wo er hinsieht.
-
-**Diese vier Felder erscheinen nirgends sonst**: `foerdererart`, `art`, `sitz`, `website`.
-
-### 2. Die Kennzahlen
-
-Höchstens drei Zahlen, groß gesetzt, nebeneinander. Sie beantworten die Frage, die ein Projekt zuerst hat: *Lohnt sich das Weiterlesen?*
-
-| Bei einem Förderer | Bei einem Projekt |
-|---|---|
-| Förderung (`summeVon` bis `summeBis`) | Bedarf (`bedarfGesamt`) |
-| Im Jahr (`volumenJahr`) | Noch offen (`luecke`) |
-| Reichweite (`reichweite`) | Zeitraum (`zeitraum`) |
-
-Eine Kennzahl ohne Angabe fehlt. Wer keine einzige trägt, bekommt keine Leiste.
-
-### 3. Die Reiter
-
-Drei, höchstens vier. Ein Reiter ohne gefüllte Felder erscheint nicht, und wer nur einen Reiter füllt, bekommt gar keine Reiterleiste: Eine Leiste mit einem Reiter ist Zierrat.
-
-| Bei einem Förderer | Was darin steht |
-|---|---|
-| **Überblick** | `zweck`, `hinweis`, `foerderbereiche`, `zielgruppen`, `bisherGefoerdert` |
-| **Antrag** | `antragstellung`, `antragsweg`, `fristen`, `unterlagen`, `antragsportal`, `eigenmittel`, `ansprache`, `mail` |
-| **Geben** | `zustiftung`, `spende`, `treuhand` |
-
-| Bei einem Projekt | Was darin steht |
-|---|---|
-| **Überblick** | `beduerfnis`, `kurz`, `themen`, `zielgruppen`, `wirkung` |
-| **Vorhaben** | `bedarfe`, `eigenmittel`, `vorhandenes`, `schritte`, `termine` |
-| **Beteiligte** | `anstifter`, `gruppe`, `foerderer`, `zustifter` |
-
-### 4. Der Inhalt
-
-**Der Zweck steht als Aussage**, groß und ohne Beschriftung. Er ist die Stimme der Einrichtung, kein Formularfeld.
-
-**Der Hinweis bekommt seinen eigenen Block**, abgesetzt mit einem farbigen Balken links und der Überschrift *"Woran Sie erkennen, dass Sie passen"*. Er ist das wertvollste Feld der ganzen Karte: Er steht nirgends sonst, und er beantwortet die Frage, die jedes Projekt wirklich hat.
-
-Beim Projekt trägt `beduerfnis` diese Rolle: *"Vierzig Bäche bleiben unbetreut"* zieht, *"wir sind ein Verein für Umweltbildung"* nicht.
-
-**Alles Übrige steht als Definitionsliste**, dicht gesetzt: Beschriftung klein und leise, Wert daneben. Listen erscheinen als Chips.
-
-**Die Quelle steht leise am Fuß**, solange niemand den Eintrag übernommen hat.
+**Bei einem Projekt: `beduerfnis`.** Es beschreibt eine **Lücke, kein Projekt**: *"Vierzig Bäche bleiben unbetreut"* zieht, *"wir sind ein Verein für Umweltbildung"* nicht.
 
 ---
 
@@ -105,13 +99,15 @@ Beim Projekt trägt `beduerfnis` diese Rolle: *"Vierzig Bäche bleiben unbetreut
 | Profil eines Space | Panel rechts, über die Taste in der Kopfzeile (`?profil={spaceId}`) |
 | Profil eines recherchierten Eintrags | in seinem Item-Detail, an der Stelle der Meta-Box |
 
-**Ein Panel, zwei Arten von Profilen.** Wer es öffnet, sieht den, den er gemeint hat: einen Menschen oder eine Einrichtung.
+**Ohne Namen kein Cover.** Im Item-Detail trägt die Ansicht den Titel schon; die Fläche beginnt dann bei der Einordnungszeile.
+
+**Die Felder messen ihren Kasten.** Container-Anfragen statt Fensterbreite: Eng steht die Beschriftung über dem Wert, breit daneben. Dieselbe Fläche passt in ein Panel von 480 Pixeln und auf eine Seite von 768.
 
 ---
 
 ## Wer ein Profil trägt
 
-**Wer keinen Bauplan hat, hat kein Profil.** Die Regel steht in `bauplanFuer` und `traegtProfil` (`packages/td-core/src/profil.ts`).
+**Wer keinen Bauplan hat, hat kein Profil.** Die Regel steht in `bauplanFuer` und `traegtProfil`.
 
 | Wer | Woran erkannt | Bauplan |
 |---|---|---|
@@ -121,8 +117,6 @@ Beim Projekt trägt `beduerfnis` diese Rolle: *"Vierzig Bäche bleiben unbetreut
 | **Ein Netzwerk** | nichts davon | **keiner** |
 
 Erkannt wird über Feld-Präsenz, nicht über den Typ (Antons Muster 4).
-
-**Zwei Bedingungen für die Taste.** Ein Bauplan greift, und mindestens ein Feld trägt eine Angabe. Eine Taste, die auf eine leere Fläche führt, ist ein gebrochenes Versprechen.
 
 ---
 
@@ -136,30 +130,29 @@ Erkannt wird über Feld-Präsenz, nicht über den Typ (Antons Muster 4).
 
 Die Reiter **im** Profil sind etwas anderes als die Reiter der App. Sie gliedern eine Fläche, sie wechseln keinen Arbeitsort.
 
-**`ProfilFlaeche` ist eine Komponente.** Sie erscheint an vier Orten und liest überall dieselben Felder:
-
-1. **Im Panel rechts**, wenn jemand das Profil eines Space öffnet
-2. **Im Item-Detail**, beim Klick auf eine Nadel auf der Karte
-3. **Als eigene Seite**, die Landingpage einer Stiftung
-4. **In einer Liste**, als Zeile mit den drei Angaben, die zählen
-
-**Ohne Namen kein Kopf.** Im Item-Detail trägt die Ansicht den Titel schon.
-
-**Die Felder messen ihren Kasten.** Container-Anfragen statt Fensterbreite: Eng steht die Beschriftung über dem Wert, breit daneben. Dieselbe Fläche passt damit in ein Panel von 480 Pixeln und auf eine Seite von 768.
-
 ---
 
 ## Die Regeln
 
-1. **Ein leeres Feld erscheint nicht.** Feld-Präsenz statt Typ-Verzweigung (Antons Muster 4). Eine Karte mit zwanzig Strichen wirkt leerer als eine mit sechs Angaben.
-2. **Ein leerer Reiter erscheint nicht.** Dieselbe Regel eine Ebene höher.
+1. **Ein leeres Feld erscheint nicht.** Feld-Präsenz statt Typ-Verzweigung.
+2. **Ein leerer Reiter erscheint nicht.** Ein Werk allein füllt seinen Reiter.
 3. **Ein einzelner Reiter bekommt keine Leiste.** Eine Reiterleiste mit einem Reiter ist Zierrat.
-4. **Ein Nein ist eine Antwort.** „Treuhandstiftung: nein" gehört auf die Karte, denn es erspart jemandem eine Anfrage.
-5. **Ein Gedankenstrich ist keine Antwort.** Ein leeres Feld erscheint gar nicht, ein Strich erscheint und sagt nichts.
-6. **Keine Frage steht auf dem Bildschirm.** Die Fragen stehen in dieser Datei und im Bauplan. Wer sie anzeigt, macht aus einem Profil einen Fragebogen.
-7. **Was andere über die Einrichtung sagen, steht daneben, nie darin.** Bestätigungen und Relationen sind eine eigene Ebene.
-8. **Ein recherchierter Eintrag trägt seine Quelle.**
-9. **Kein Feld wird erfunden, um die Karte zu füllen.** Was fehlt, fehlt sichtbar.
+4. **Höchstens drei Zahlen.** Mehr ist eine Tabelle.
+5. **Eine Aktion steht immer hervorgehoben.**
+6. **Ein Nein ist eine Antwort.** „Treuhandstiftung: nein" erspart jemandem eine Anfrage.
+7. **Ein Gedankenstrich ist keine Antwort.**
+8. **Keine Frage steht auf dem Bildschirm.**
+9. **Jedes Feld steht an genau einer Stelle.** Doppelt gesagt ist halb geglaubt.
+10. **Ein recherchierter Eintrag trägt seine Quelle**, leise am Fuß.
+11. **Kein Feld wird erfunden, um die Karte zu füllen.** Was fehlt, fehlt sichtbar.
+
+---
+
+## Das Aussehen
+
+**Die Design-Doktrin gilt** (`memory/feedback_design_doktrin.md`, seit 12.05.2026): Farbflächen statt weißer Karten mit Rahmen, Atemraum statt Trennstriche, `rounded-2xl`, keine schwarzen Umrandungen.
+
+**Die Hausfarbe reist als CSS-Variable.** Eine Hausfarbe ist für weißen Grund gewählt; auf einer dunklen Fläche verschwindet sie. Die dunkle Ansicht greift darum auf den Vordergrund zurück.
 
 ---
 
@@ -167,5 +160,4 @@ Die Reiter **im** Profil sind etwas anderes als die Reiter der App. Sie gliedern
 
 - `docs/03-datenmodell.md` — die Felder im Einzelnen
 - Skill `/td-profil` — der Weg von der Frage zum Feld
-- `memory/feedback_design_doktrin.md` — Farbflächen statt Rahmen, seit 12.05.2026
 - `DEFINITION.md` Teil 9 im Stack-Repo — warum ein Space das Profil ist

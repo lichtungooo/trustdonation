@@ -1,93 +1,89 @@
 # Das Profil
 
-**Status:** Normativer Entwurf · Dritte Fassung, 20.09.2026
+**Status:** Normativer Entwurf · Vierte Fassung, 21.09.2026 · Vorgabe von Janosch
 
 Timo am 18.09.2026: *"Ich will so eine Karte haben, wo alles draufsteht, was eine Stiftung macht."*
 
-Nach zwei Fehlversuchen am 20.09.2026: *"Guck dir mal richtig gute Profile an, wie die sein müssen. Es geht ja nicht darum, eine Stiftung darzustellen und dann ein spezielles Profil daraus zu bauen, sondern wie allgemein Profile sind, wie sie sich erklären. Du kannst Facebook, Insta, alles Mögliche anschauen."*
+Nach drei Fehlversuchen von Eli hat Janosch (UX im Kernteam) am 21.09.2026 die Vorgabe gemacht. Diese Fassung setzt sie um. Die Sackgassen davor stehen in `13-profil-uebergabe.md`.
 
 ---
 
-## Was zweimal schiefging
+## Janoschs Vorgabe im Wortlaut
 
-**Erste Fassung:** sechs Abschnitte untereinander, jeder mit seiner Frage als Untertitel. Ein Fragebogen mit Farbe darauf.
-
-**Zweite Fassung:** Hero, Kennzahlen, Reiter. Besser gegliedert, und trotzdem ein Datenblatt: Beschriftung links, Wert rechts, bis nach unten.
-
-**Der gemeinsame Fehler:** Beide zeigten *Angaben über* eine Einrichtung. Ein Profil zeigt **einen Akteur mit Gesicht, Stimme, Zahlen und Werk**.
+> Es gibt ein Bild. Wenn kein Bild vorhanden ist, dann ist dort ein Platzhalterbild, sodass man das Bild manuell ergänzen kann. Es gibt einen Namen. Es gibt Mitwirkende. Es gibt eine Liste relevanter Details, die sich aus den Texten ergibt, die zu finden sind. Es gibt eine Hashtag-Funktion für wesentliche Inhalte, beispielsweise Themen, der Name, der Gründer. Hashtags können vorgeschlagen werden von Anfang an und manuell ergänzt werden. Es gibt ein Datum, wann die Stiftung gegründet wurde, und eine Zusammenfassung wesentlicher Meilensteine. Es gibt eine Karte, wo gezeigt wird, wo diese Stiftung sich befindet. Es gibt ein Feld für Stiftungsdetails rechtlicher Art und ein Textfeld, um Details selbstständig zu ergänzen. Dann ein Kontaktinformationsfeld inklusive Verweis auf die Internetseite, Adresse, Telefonnummer, E-Mail. Das Profil ist so angeordnet, dass die wichtigen Informationen ganz oben stehen und je mehr es ins Detail geht, weiter unten. In einer Art Collage. Diese Collage kann man manuell abändern, sodass man Informationen per Drag and Drop nach oben ziehen kann und umgekehrt.
 
 ---
 
-## Die Anatomie, nachgesehen bei echten Profilen
+## Die Anatomie
 
-Instagram, LinkedIn, GitHub und Facebook bauen ihre Profile gleich. Acht Teile in dieser Reihenfolge:
+**Ein Kopf, der steht, und eine Collage, die sich bewegt.**
 
-| Teil | Instagram | GitHub (Organisation) | Bei uns |
-|---|---|---|---|
-| **Cover** | — | — | Band in der Hausfarbe |
-| **Bild** | rund, überlappend | Avatar links | Logo, überlappt das Band |
-| **Name** | Name + Handle | Name + verifiziert | Name |
-| **Einordnung** | Kategorie | Standort, Website | Art · fördernd · Sitz · Reichweite |
-| **Bio** | 150 Zeichen | Beschreibung | der Zweck, in eigener Stimme |
-| **Aktionen** | Folgen · Nachricht | Follow · Sponsor | Website · Antrag · Schreiben |
-| **Zahlen** | Beiträge · Follower · Gefolgt | Follower · Repos | Förderung · Bereiche · Vorhaben |
-| **Themen** | Story-Highlights (runde Kacheln) | Topics | Förderbereiche als runde Kacheln |
-| **Reiter** | Beiträge · Reels · Markiert | Overview · Repos · People | Gefördert · Antrag · Geben |
-| **Werk** | Bild-Raster | Repository-Karten | geförderte Vorhaben als Karten |
+```
++----------------------------------------------+
+| ######## Farbband in der Hausfarbe ######### |
+|  +----+                                      |
+|  | SA |   Software AG-Stiftung               |  Kopf, fest
+|  +----+   Stiftung · fördernd · Darmstadt    |
++----------------------------------------------+
+|  [ SCHLAGWORTE                             ] |
+|  [ #Bildung #KinderUndJugend #PeterSchnell ] |
+|  [ WAS SIE WISSEN SOLLTEN                  ] |
+|  [ Hinweis, Zweck, Förderbereiche, Antrag  ] |  Collage,
+|  [ GESCHICHTE  Zeitstrahl 1992 … 2022      ] |  verschiebbar
+|  [ WO          Karte mit Nadel             ] |
+|  [ MITWIRKENDE ]  [ KONTAKT               ] |
+|  [ RECHTLICHES ]  [ EIGENE NOTIZ          ] |
++----------------------------------------------+
+```
 
-### Das Werk ist das Herz
+### Der Kopf
 
-**Ein GitHub-Profil ohne Repositories wäre sinnlos.** Ein Instagram-Profil ohne Raster auch. Der Hauptteil jedes Profils ist das, was jemand **getan** hat, nicht was über ihn ausgefüllt wurde.
+Bild, Name, Einordnungszeile. Er ist die Identität und bleibt oben.
 
-Bei einer Stiftung ist das Werk, was sie gefördert hat (`bisherGefoerdert`). Bei einem Projekt, was sich dadurch ändert (`wirkung`).
+**Das Bild hat einen Platzhalter.** Fehlt es, steht dort das Kürzel auf der Hausfarbe, und wer das Profil pflegt, sieht beim Darüberfahren *„Bild ergänzen"*. Keine von 234 recherchierten Stiftungen trägt ein Bild; der Platzhalter ist der Normalfall.
 
-Die ersten zwei Fassungen versteckten das Werk als Stichwort-Chips in einer Zeile. Jetzt steht es als Karten-Raster im ersten Reiter.
+### Die Kacheln, in ihrer Rangfolge
 
-### Zahlen werden gezählt, nicht nur abgelesen
-
-*"1.234 Beiträge"* bei Instagram ist gezählt, nicht eingegeben. Eine gezählte Zahl ist **immer wahr und immer aktuell**, und sie füllt die Leiste auch bei einem Eintrag, der sonst wenig trägt.
-
-| Zahl | Woher |
-|---|---|
-| Förderung | `summeVon` bis `summeBis`, angegeben |
-| Förderbereiche | gezählt aus `foerderbereiche` |
-| Vorhaben gefördert | gezählt aus `bisherGefoerdert` |
-
-Eine Zahl ohne Grundlage fehlt. Höchstens drei: Vier Zahlen nebeneinander sind keine Signale mehr, sondern eine Tabelle.
-
-### Themen als runde Kacheln
-
-Instagram nennt sie Story-Highlights und stellt sie direkt unter die Bio: runde Kreise mit einem Wort darunter. Sie sagen in einer Zeile, worum es geht, und sie sehen lebendig aus, wo eine Chip-Reihe nur Text ist.
-
-### Eine Aktion steht immer hervorgehoben
-
-Instagram hebt *Folgen* hervor, GitHub *Sponsor*. Ein Profil, dessen Aktionen alle gleich aussehen, sagt nicht, was man als Nächstes tut. Fehlt die vorgesehene starke Aktion, rückt die erste vorhandene nach.
-
----
-
-## Die Fragen sind das Raster, nicht die Oberfläche
-
-Jeder Reiter trägt im Bauplan seine Frage. Sie sagt, welche Felder hineingehören. **Auf den Bildschirm kommt sie nie.** Wer sie anzeigt, macht aus einem Profil einen Fragebogen.
-
-| Reiter (Förderer) | Die Frage dahinter | Was darin steht |
+| Kachel | Was darin steht | Breite |
 |---|---|---|
-| **Gefördert** | Was habt ihr bisher getan? | das Werk als Karten, `zielgruppen` |
-| **Antrag** | Was muss ich tun, und an wen wende ich mich? | `antragstellung`, `antragsweg`, `fristen`, `unterlagen`, `eigenmittel`, `ansprache` |
-| **Geben** | Und wenn ich etwas beitragen will? | `zustiftung`, `spende`, `treuhand`, `volumenJahr` |
+| **Schlagworte** | vorgeschlagen aus Förderbereichen, Zielgruppen, Gründer, Sitz; von Hand ergänzte stehen vorn | breit |
+| **Was Sie wissen sollten** | der Hinweis zuerst, dann Zweck, Förderbereiche, Zielgruppen, Förderrahmen, Antrag, Zustiftung | breit |
+| **Geschichte** | Gründungsjahr und Meilensteine als Zeitstrahl, alt nach neu | breit |
+| **Wo** | Karte mit Nadel und Anschrift | breit |
+| **Mitwirkende** | Menschen, Gründer | schmal |
+| **Kontakt** | Website, Mail, Telefon, Ansprache | schmal |
+| **Rechtliches** | Rechtsform, Register, Aufsicht, Gemeinnützigkeit, Steuernummer | schmal |
+| **Eigene Notiz** | freier Text dessen, der pflegt | breit |
 
-| Reiter (Projekt) | Die Frage dahinter |
-|---|---|
-| **Vorhaben** | Was soll geschehen, und was ändert sich dadurch? |
-| **Mittel** | Wie weit ist es, und was fehlt? |
-| **Beteiligte** | Wer steht dahinter? |
+Die Rangfolge ist Janoschs Regel: *wichtig oben, Details unten*. Ein Projekt hat dieselben acht Kacheln mit seinen eigenen Feldern (`BAUPLAN_PROJEKT`).
+
+**Eine Kachel ohne Inhalt erscheint nicht.** Ein recherchierter Eintrag zeigt in der Regel drei: Schlagworte, Details, Wo. Ein gepflegtes Profil zeigt alle acht.
+
+### Die Collage
+
+Jede Kachel lässt sich greifen und woanders ablegen. Die gewählte Reihenfolge bleibt im Browser dessen, der sie gewählt hat (`localStorage`, je Profil). Ein recherchierter Eintrag gehört niemandem, also darf niemand die Reihenfolge für alle festlegen.
+
+**Eine gespeicherte Reihenfolge ist eine Wunschliste, kein Bestand.** Sie nennt Kacheln, die es nicht mehr gibt, und kennt neue nicht. Was genannt ist und existiert, kommt in der genannten Reihenfolge; alles Übrige folgt der Rangfolge des Bauplans. Nichts geht verloren.
+
+Das Ziehen läuft über die HTML5-Schnittstelle des Browsers, wie bei Antons Kanban-Brett. Die Kennung der gezogenen Kachel trägt der Browser selbst mit (`dataTransfer`); React-Zustand zwischen `dragstart` und `drop` ist fragil.
 
 ---
 
-## Der Satz, der zieht
+## Die Schlagworte
 
-**Bei einer Stiftung: `hinweis`.** *"Woran erkennt ein Projekt, dass es zu uns passt"*, in ihren Worten. Er steht nirgends sonst und bekommt darum eine eigene Farbfläche mit einem Balken in der Hausfarbe.
+Vorgeschlagen wird aus dem, was dasteht. Aus einem Wort wird ein Schlagwort: *„Kinder und Jugend"* wird `#KinderUndJugend`, *„umwelt"* wird `#Umwelt`, *„SAGST"* bleibt `#SAGST`. Umlaute bleiben, sie sind Teil des Wortes.
 
-**Bei einem Projekt: `beduerfnis`.** Es beschreibt eine **Lücke, kein Projekt**: *"Vierzig Bäche bleiben unbetreut"* zieht, *"wir sind ein Verein für Umweltbildung"* nicht.
+**Von Hand ergänzte stehen vorn.** Ein Vorschlag ist geraten, eine Ergänzung ist gemeint. Doppelte fallen weg, auch bei unterschiedlicher Schreibweise.
+
+---
+
+## Die Karte
+
+Ein Mosaik aus Kartenkacheln, denselben, die Antons Leaflet-Adapter lädt (`tile.openstreetmap.org`). Welche Kacheln und wo die Nadel steht, rechnet `kartenAusschnitt` in `td-core`, geprüft gegen eine unabhängige Rechnung.
+
+**Warum kein eingebetteter Rahmen:** Die App läuft mit COEP, und das blockiert jedes iframe ohne passende Kopfzeilen. Gemessen am 21.09.2026: `ERR_BLOCKED_BY_RESPONSE`.
+
+**Warum keine Kartenbibliothek:** Sie wiegt ein Megabyte. Sechs Bilder tun dasselbe.
 
 ---
 
@@ -99,9 +95,7 @@ Jeder Reiter trägt im Bauplan seine Frage. Sie sagt, welche Felder hineingehör
 | Profil eines Space | Panel rechts, über die Taste in der Kopfzeile (`?profil={spaceId}`) |
 | Profil eines recherchierten Eintrags | in seinem Item-Detail, an der Stelle der Meta-Box |
 
-**Ohne Namen kein Cover.** Im Item-Detail trägt die Ansicht den Titel schon; die Fläche beginnt dann bei der Einordnungszeile.
-
-**Die Felder messen ihren Kasten.** Container-Anfragen statt Fensterbreite: Eng steht die Beschriftung über dem Wert, breit daneben. Dieselbe Fläche passt in ein Panel von 480 Pixeln und auf eine Seite von 768.
+**Ohne Namen kein Kopf.** Im Item-Detail trägt die Ansicht den Titel schon; die Collage beginnt dann bei der Einordnungszeile.
 
 ---
 
@@ -116,48 +110,59 @@ Jeder Reiter trägt im Bauplan seine Frage. Sie sagt, welche Felder hineingehör
 | Ein Vorhaben | `beduerfnis` trägt eine Angabe | Projekt |
 | **Ein Netzwerk** | nichts davon | **keiner** |
 
-Erkannt wird über Feld-Präsenz, nicht über den Typ (Antons Muster 4).
-
 ---
 
-## Eine Komponente, kein Modul
+## Die Felder, die diese Fassung neu einführt
 
-| | Modul | Komponente |
+| Feld | Form | Kachel |
 |---|---|---|
-| **Was** | eine Arbeitsfläche | ein Stück, das woanders erscheint |
-| **Wo** | als Reiter in der Kopfzeile | im Panel, im Dialog, auf der Karte, in einer Liste |
-| **Wer wählt es** | ein Space, über `Group.data.modules` | niemand: Es erscheint, wo es gebraucht wird |
+| `image` | url | Kopf |
+| `hashtags` | tags | Schlagworte (von Hand ergänzt) |
+| `gegruendet` | text | Geschichte |
+| `meilensteine` | list, je `"1992: Was geschah"` oder `{ jahr, was }` | Geschichte |
+| `address` | text | Wo |
+| `mitwirkende` | list | Mitwirkende |
+| `gruender` | text | Mitwirkende, und als Schlagwort |
+| `telefon` | tel | Kontakt |
+| `rechtsform`, `register`, `aufsicht`, `steuernummer` | text | Rechtliches |
+| `gemeinnuetzig` | bool | Rechtliches |
+| `notiz` | longtext | Eigene Notiz |
 
-Die Reiter **im** Profil sind etwas anderes als die Reiter der App. Sie gliedern eine Fläche, sie wechseln keinen Arbeitsort.
+Die Software AG-Stiftung trägt sie alle als Maßstab (`profil-sagst.json` nennt die Quellen).
 
 ---
 
 ## Die Regeln
 
-1. **Ein leeres Feld erscheint nicht.** Feld-Präsenz statt Typ-Verzweigung.
-2. **Ein leerer Reiter erscheint nicht.** Ein Werk allein füllt seinen Reiter.
-3. **Ein einzelner Reiter bekommt keine Leiste.** Eine Reiterleiste mit einem Reiter ist Zierrat.
-4. **Höchstens drei Zahlen.** Mehr ist eine Tabelle.
-5. **Eine Aktion steht immer hervorgehoben.**
+1. **Der Kopf steht fest, die Collage bewegt sich.**
+2. **Eine Kachel ohne Inhalt erscheint nicht.** Feld-Präsenz statt Typ-Verzweigung.
+3. **Ohne Bild ein Platzhalter, der einlädt.**
+4. **Eine gespeicherte Reihenfolge ist eine Wunschliste.** Nichts geht verloren.
+5. **Eigene Schlagworte vor vorgeschlagenen.**
 6. **Ein Nein ist eine Antwort.** „Treuhandstiftung: nein" erspart jemandem eine Anfrage.
-7. **Ein Gedankenstrich ist keine Antwort.**
+7. **Jedes Feld steht an genau einer Stelle.**
 8. **Keine Frage steht auf dem Bildschirm.**
-9. **Jedes Feld steht an genau einer Stelle.** Doppelt gesagt ist halb geglaubt.
-10. **Ein recherchierter Eintrag trägt seine Quelle**, leise am Fuß.
-11. **Kein Feld wird erfunden, um die Karte zu füllen.** Was fehlt, fehlt sichtbar.
+9. **Ein recherchierter Eintrag trägt seine Quelle**, leise am Fuß.
+10. **Kein Feld wird erfunden, um die Karte zu füllen.**
 
 ---
 
 ## Das Aussehen
 
-**Die Design-Doktrin gilt** (`memory/feedback_design_doktrin.md`, seit 12.05.2026): Farbflächen statt weißer Karten mit Rahmen, Atemraum statt Trennstriche, `rounded-2xl`, keine schwarzen Umrandungen.
+**Die Design-Doktrin gilt** (`memory/feedback_design_doktrin.md`, seit 12.05.2026): Jede Kachel ist eine Farbfläche, `rounded-2xl`, ohne Rahmen. Die Hausfarbe reist als CSS-Variable, damit die dunkle Ansicht lesbar bleibt.
 
-**Die Hausfarbe reist als CSS-Variable.** Eine Hausfarbe ist für weißen Grund gewählt; auf einer dunklen Fläche verschwindet sie. Die dunkle Ansicht greift darum auf den Vordergrund zurück.
+---
+
+## Offen
+
+- **Bild ergänzen:** Der Platzhalter ruft einen Haken (`onBildAendern`) auf. Was der tut, ist noch nicht angebunden; dafür braucht es Antons Bild-Upload aus `profile-panel-content.tsx`.
+- **Schlagworte von Hand ergänzen** und **die eigene Notiz schreiben**: Das Feld ist da, die Eingabe noch nicht. Beides gehört in den Bereich *Netzwerk* des Space-Dialogs.
+- **Reihenfolge für alle:** Wer den Space verwaltet, soll die Collage für alle Besucher festlegen können. Dann wandert die Reihenfolge von `localStorage` nach `Group.data.profilOrdnung`.
 
 ---
 
 ## Verwandt
 
+- `13-profil-uebergabe.md` — die Übergabe an Janosch mit den echten Zahlen
 - `docs/03-datenmodell.md` — die Felder im Einzelnen
 - Skill `/td-profil` — der Weg von der Frage zum Feld
-- `DEFINITION.md` Teil 9 im Stack-Repo — warum ein Space das Profil ist

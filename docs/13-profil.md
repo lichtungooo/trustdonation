@@ -40,7 +40,11 @@ Nach drei Fehlversuchen von Eli hat Janosch (UX im Kernteam) am 21.09.2026 die V
 
 Bild, Name, Einordnungszeile. Er ist die Identität und bleibt oben.
 
-**Das Bild hat einen Platzhalter.** Fehlt es, steht dort das Kürzel auf der Hausfarbe, und wer das Profil pflegt, sieht beim Darüberfahren *„Bild ergänzen"*. Keine von 234 recherchierten Stiftungen trägt ein Bild; der Platzhalter ist der Normalfall.
+**Das Band ist die Bildfläche.** Trägt das Profil ein Bild, füllt es sie in voller Breite, mit *„Bild ändern"* in der Ecke. Fehlt eines, steht dort ein sichtbarer Platzhalter: ein Bildsymbol und der Knopf *„Bild ergänzen"*, ohne Darüberfahren. Ohne Schreibrecht bleibt *„Noch kein Bild"*. Das Kürzel darunter bleibt die Marke.
+
+Keine von 234 recherchierten Stiftungen trägt ein Bild; der Platzhalter ist der Normalfall.
+
+**Hochladen:** Der Knopf öffnet ein Dateifeld. Das Bild wird mit seinem Seitenverhältnis auf 1200 Pixel verkleinert (WebP, rund 100 KB statt Megabyte) und in `data.image` geschrieben, über Antons Schreibhaken. Antons `resizeImage` schneidet quadratisch zu; das passt für ein Logo, nicht für eine Fläche, darum `bildVerkleinern` in `td-ui`. Der Space-Umschalter zeigt das Bild gleich mit, weil er dasselbe Feld liest.
 
 ### Die Kacheln, in ihrer Rangfolge
 
@@ -155,7 +159,6 @@ Die Software AG-Stiftung trägt sie alle als Maßstab (`profil-sagst.json` nennt
 
 ## Offen
 
-- **Bild ergänzen:** Der Platzhalter ruft einen Haken (`onBildAendern`) auf. Was der tut, ist noch nicht angebunden; dafür braucht es Antons Bild-Upload aus `profile-panel-content.tsx`.
 - **Schlagworte von Hand ergänzen** und **die eigene Notiz schreiben**: Das Feld ist da, die Eingabe noch nicht. Beides gehört in den Bereich *Netzwerk* des Space-Dialogs.
 - **Reihenfolge für alle:** Wer den Space verwaltet, soll die Collage für alle Besucher festlegen können. Dann wandert die Reihenfolge von `localStorage` nach `Group.data.profilOrdnung`.
 

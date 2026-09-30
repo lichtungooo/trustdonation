@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Einladung zur Session · Conferencing</title>
+<meta name="description" content="Bild, Ton, Chat und der Kreis mit dem Redestab. Conferencing ist ein Modul vom Real Life Network.">
+<link rel="icon" href="/branding/favicon.svg" type="image/svg+xml">
+<!-- Die Vorschau in Telegram, Signal und Co. Messenger fuehren kein
+     JavaScript aus; darum steht hier, was fuer jede Einladung gilt. Welche
+     Session, steht im Text, der mit dem Link verschickt wird. -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Real Life Network">
+<meta property="og:title" content="Einladung zur Session · Conferencing">
+<meta property="og:description" content="Bild, Ton, Chat und der Kreis mit dem Redestab. Ein Klick führt hinein.">
+<meta property="og:image" content="https://trustdonation.org/einladung/og-conferencing.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ein Kreis aus Menschen mit dem Redestab in der Mitte. Conferencing, ein Modul vom Real Life Network.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://trustdonation.org/einladung/og-conferencing.png">
+<style>
+  @font-face { font-family: "Bricolage"; src: url("/fonts/bricolage.woff2") format("woff2"); font-display: swap; }
+  @font-face { font-family: "Hanken"; src: url("/fonts/hanken.woff2") format("woff2"); font-display: swap; }
+  :root {
+    --grund: #0b1220; --grund2: #0a2a24; --text: #f8fafc; --leise: #cbd5e1; --gold: #f0c46e; --tief: #0f172a;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; }
+  body {
+    font-family: "Hanken", system-ui, sans-serif; color: var(--text);
+    background: radial-gradient(circle at 25% 40%, rgba(234,170,70,.22), transparent 45%), linear-gradient(180deg, var(--grund), var(--grund2));
+    min-height: 100vh; display: grid; place-items: center; padding: 24px 16px;
+  }
+  main { width: 100%; max-width: 880px; display: grid; gap: 40px; align-items: center; }
+  @media (min-width: 760px) { main { grid-template-columns: 320px 1fr; } }
+  .kreis { width: min(320px, 80vw); aspect-ratio: 1; justify-self: center; }
+  .oben { font-size: 14px; font-weight: 700; letter-spacing: .12em; color: var(--gold); text-transform: uppercase; margin: 0; }
+  h1 { font-family: "Bricolage", "Hanken", sans-serif; font-size: clamp(34px, 6vw, 56px); line-height: 1.05; margin: 10px 0 0; letter-spacing: -.02em; overflow-wrap: anywhere; }
+  .werk { margin: 14px 0 0; font-size: 18px; color: var(--leise); line-height: 1.5; }
+  .los {
+    display: inline-flex; align-items: center; gap: 10px; margin-top: 28px; padding: 16px 28px; border-radius: 999px;
+    background: var(--gold); color: var(--tief); font-weight: 800; font-size: 18px; text-decoration: none;
+    box-shadow: 0 10px 30px rgba(240,196,110,.25); transition: transform .15s;
+  }
+  .los:hover { transform: translateY(-1px); }
+  .neu { margin-top: 28px; padding: 18px 20px; border-radius: 16px; background: rgba(255,255,255,.06); font-size: 15px; line-height: 1.55; color: var(--leise); }
+  .neu b { color: var(--text); }
+  .fuss { margin-top: 24px; font-size: 13px; color: #94a3b8; }
+  .fuss span { display: inline-block; padding: 4px 12px; border-radius: 999px; border: 1px solid rgba(240,196,110,.5); color: var(--gold); }
+  .fehlt { color: #fca5a5; }
+  @media (prefers-reduced-motion: reduce) { .los { transition: none; } }
+</style>
+</head>
+<body>
+<main>
+  <svg class="kreis" viewBox="0 0 200 200" aria-hidden="true">
+    <circle cx="100" cy="100" r="74" fill="#382a16" stroke="#f0c46e" stroke-width="2"/>
+    <circle cx="100" cy="100" r="33" fill="none" stroke="#f0c46e" stroke-width="1"/>
+    <g stroke="#0b1220" stroke-width="3">
+      <circle cx="100" cy="26" r="11" fill="#0e7490"/><circle cx="152.3" cy="47.7" r="11" fill="#047857"/>
+      <circle cx="174" cy="100" r="11" fill="#6d28d9"/><circle cx="152.3" cy="152.3" r="11" fill="#b45309"/>
+      <circle cx="100" cy="174" r="11" fill="#be123c"/><circle cx="47.7" cy="152.3" r="11" fill="#0f766e"/>
+      <circle cx="26" cy="100" r="11" fill="#4338ca"/><circle cx="47.7" cy="47.7" r="11" fill="#c2410c"/>
+    </g>
+    <g transform="rotate(38 100 100)">
+      <rect x="97" y="66" width="6" height="68" rx="3" fill="#ba7c3e"/>
+      <ellipse cx="100" cy="67" rx="5" ry="4.5" fill="#8a5424"/>
+      <rect x="96.5" y="75" width="7" height="2.4" fill="#1f6f78"/><rect x="96.5" y="79" width="7" height="1.4" fill="#b91c1c"/>
+      <path d="M104 82 C112 86 113 99 108 108 C104 100 103 90 104 82 Z" fill="#faf7f0"/>
+    </g>
+  </svg>
+
+  <section>
+    <p class="oben">Einladung zur Session</p>
+    <h1 id="gruppe">Conferencing</h1>
+    <p class="werk">Bild, Ton, Chat und der Kreis mit dem Redestab. Die Gruppe trifft sich im Video-Raum, und du bist eingeladen.</p>
+    <a class="los" id="los" href="/app/?connector=wot">Jetzt beitreten →</a>
+    <p class="fehlt" id="fehlt" hidden>Dieser Link ist unvollständig. Bitte frag nach einem neuen.</p>
+    <div class="neu">
+      <b>Zum ersten Mal dabei?</b> Du legst dir deinen eigenen Zugang an: zwölf Wörter, die nur dir gehören. Heb sie gut auf. Danach kommst du in den Raum, und die Runde nimmt dich in die Gruppe auf.
+    </div>
+    <p class="fuss"><span>Conferencing · ein Modul vom Real Life Network</span></p>
+  </section>
+</main>
+<script>
+  // Welche Gruppe, steht im Link. Die Id ist der Schluessel des Raums; sie
+  // wird geprueft, bevor sie weitergegeben wird, und der Name nur als Text
+  // gesetzt.
+  (function () {
+    var p = new URLSearchParams(location.search)
+    var id = p.get("konferenz") || ""
+    var name = (p.get("gruppe") || "").slice(0, 80)
+    if (!/^[a-z0-9][a-z0-9-]{2,62}[a-z0-9]$/i.test(id)) {
+      document.getElementById("los").hidden = true
+      document.getElementById("fehlt").hidden = false
+      return
+    }
+    if (name) {
+      document.getElementById("gruppe").textContent = "„" + name + "“"
+      document.title = "Einladung zur Session „" + name + "“ · Conferencing"
+    }
+    var ziel = new URLSearchParams({ connector: "wot", konferenz: id })
+    if (name) ziel.set("gruppe", name)
+    document.getElementById("los").href = "/app/?" + ziel.toString()
+  })()
+</script>
+</body>
+</html>

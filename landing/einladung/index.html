@@ -14,12 +14,12 @@
 <meta property="og:site_name" content="Real Life Network">
 <meta property="og:title" content="Einladung zur Session · Conferencing">
 <meta property="og:description" content="Bild, Ton, Chat und der Kreis mit dem Redestab. Ein Klick führt hinein.">
-<meta property="og:image" content="https://trustdonation.org/einladung/og-conferencing.png">
+<meta property="og:image" content="https://trustdonation.org/einladung/og-conferencing.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Ein Kreis aus Menschen mit dem Redestab in der Mitte. Conferencing, ein Modul vom Real Life Network.">
+<meta property="og:image:alt" content="Der Schriftzug Real Life Network aus bemalten Holzbuchstaben, darunter: Einladung zur Session, Conferencing.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://trustdonation.org/einladung/og-conferencing.png">
+<meta name="twitter:image" content="https://trustdonation.org/einladung/og-conferencing.jpg">
 <style>
   @font-face { font-family: "Bricolage"; src: url("/fonts/bricolage.woff2") format("woff2"); font-display: swap; }
   @font-face { font-family: "Hanken"; src: url("/fonts/hanken.woff2") format("woff2"); font-display: swap; }
@@ -35,7 +35,9 @@
   }
   main { width: 100%; max-width: 880px; display: grid; gap: 40px; align-items: center; }
   @media (min-width: 760px) { main { grid-template-columns: 320px 1fr; } }
-  .kreis { width: min(320px, 80vw); aspect-ratio: 1; justify-self: center; }
+  .kreis { width: min(170px, 45vw); aspect-ratio: 1; justify-self: center; }
+  @media (min-width: 760px) { .kreis { width: 320px; } }
+  .logo { display: block; width: 100%; max-width: 440px; height: auto; background: #fffffd; border-radius: 18px; padding: 14px 18px; margin: 0 0 28px; box-shadow: 0 12px 40px rgba(0,0,0,.35); }
   .oben { font-size: 14px; font-weight: 700; letter-spacing: .12em; color: var(--gold); text-transform: uppercase; margin: 0; }
   h1 { font-family: "Bricolage", "Hanken", sans-serif; font-size: clamp(34px, 6vw, 56px); line-height: 1.05; margin: 10px 0 0; letter-spacing: -.02em; overflow-wrap: anywhere; }
   .werk { margin: 14px 0 0; font-size: 18px; color: var(--leise); line-height: 1.5; }
@@ -73,6 +75,7 @@
   </svg>
 
   <section>
+    <img class="logo" src="real-life-network.webp" width="960" height="458" alt="Real Life Network">
     <p class="oben">Einladung zur Session</p>
     <h1 id="gruppe">Conferencing</h1>
     <p class="werk">Bild, Ton, Chat und der Kreis mit dem Redestab. Die Gruppe trifft sich im Video-Raum, und du bist eingeladen.</p>

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Einladung zur Session · Conferencing</title>
-<meta name="description" content="Bild, Ton, Chat und der Kreis mit dem Redestab. Conferencing ist ein Modul vom Real Life Network.">
+<title>Einladung zur Session · Circling</title>
+<meta name="description" content="Bild, Ton, Chat und der Kreis mit dem Redestab. Circling ist ein Modul vom Real Life Network.">
 <link rel="icon" href="/branding/favicon.svg" type="image/svg+xml">
 <!-- Die Vorschau in Telegram, Signal und Co. Messenger fuehren kein
      JavaScript aus; darum steht hier, was fuer jede Einladung gilt. Welche
@@ -12,14 +12,14 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="Real Life Network">
-<meta property="og:title" content="Einladung zur Session · Conferencing">
+<meta property="og:title" content="Einladung zur Session · Circling">
 <meta property="og:description" content="Bild, Ton, Chat und der Kreis mit dem Redestab. Ein Klick führt hinein.">
-<meta property="og:image" content="https://trustdonation.org/einladung/og-conferencing.jpg">
+<meta property="og:image" content="https://trustdonation.org/einladung/og-circling.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Der Schriftzug Real Life Network aus bemalten Holzbuchstaben, darunter: Einladung zur Session, Conferencing.">
+<meta property="og:image:alt" content="Der Schriftzug Real Life Network aus bemalten Holzbuchstaben, darunter: Einladung zur Session, Circling.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://trustdonation.org/einladung/og-conferencing.jpg">
+<meta name="twitter:image" content="https://trustdonation.org/einladung/og-circling.jpg">
 <style>
   @font-face { font-family: "Bricolage"; src: url("/fonts/bricolage.woff2") format("woff2"); font-display: swap; }
   @font-face { font-family: "Hanken"; src: url("/fonts/hanken.woff2") format("woff2"); font-display: swap; }
@@ -77,14 +77,14 @@
   <section>
     <img class="logo" src="real-life-network.webp" width="960" height="458" alt="Real Life Network">
     <p class="oben">Einladung zur Session</p>
-    <h1 id="gruppe">Conferencing</h1>
+    <h1 id="gruppe">Circling</h1>
     <p class="werk">Bild, Ton, Chat und der Kreis mit dem Redestab. Die Gruppe trifft sich im Video-Raum, und du bist eingeladen.</p>
     <a class="los" id="los" href="/app/?connector=wot">Jetzt beitreten →</a>
     <p class="fehlt" id="fehlt" hidden>Dieser Link ist unvollständig. Bitte frag nach einem neuen.</p>
     <div class="neu">
       <b>Zum ersten Mal dabei?</b> Du legst dir deinen eigenen Zugang an: zwölf Wörter, die nur dir gehören. Heb sie gut auf. Danach kommst du in den Raum, und die Runde nimmt dich in die Gruppe auf.
     </div>
-    <p class="fuss"><span>Conferencing · ein Modul vom Real Life Network</span></p>
+    <p class="fuss"><span>Circling · ein Modul vom Real Life Network</span></p>
   </section>
 </main>
 <script>
@@ -102,7 +102,7 @@
     }
     if (name) {
       document.getElementById("gruppe").textContent = "„" + name + "“"
-      document.title = "Einladung zur Session „" + name + "“ · Conferencing"
+      document.title = "Einladung zur Session „" + name + "“ · Circling"
     }
     var ziel = new URLSearchParams({ connector: "wot", konferenz: id })
     if (name) ziel.set("gruppe", name)

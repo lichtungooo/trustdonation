@@ -12,6 +12,7 @@ Elf Skills für die Arbeit an trustdonation. Sie tragen, was wir beim Bauen gele
 | `td-naht` | **Bevor Code von Anton geändert wird.** Haken prüfen, Eingriff klein ziehen |
 | `td-modul` | Ein Space-Modul bauen, über das Register statt in seinen Code |
 | `td-komponente` | Eine Oberflächen-Komponente bauen, nachdem gesucht wurde, ob es sie gibt |
+| `td-erweiterung` | Eine Komponente der Erweiterungen bauen (ganze Darstellung je Typ, wählbar je Space), mit der Designsprache aus einem Guss |
 | `td-test` | Was getestet wird: jede Liste, jede Regel aus der Definition |
 | `td-performance` | Messen statt raten, mit den echten Zahlen von heute |
 | `td-update` | Antons Stand einspielen, neun Schritte, drei Tore |

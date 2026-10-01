@@ -31,6 +31,21 @@ python td-tools/zugang.py        # axe-core, null Funde erwartet
 python td-tools/startlast.py     # Startlast, Budget 1200 KB
 ```
 
+## 1b. Kimi prüft (Prüfkreis, zwei Runden)
+
+Claude baut, Kimi prüft. Kimi K3 liest den Unterschied seit der letzten Auslieferung (oberster Commit in `docs/AUSLIEFERUNGEN.md`) und meldet echte Fehler, keine Stilfragen.
+
+```bash
+python td-tools/kimi-pruefen.py            # Runde 1, ~5 Min.
+# kritische und mittlere Befunde beheben oder begründet zurückweisen
+python td-tools/kimi-pruefen.py --runde2   # gleiche Sitzung, prüft die Korrekturen, ~2 Min.
+```
+
+- **Ausliefern erst, wenn Runde 2 ohne kritischen Befund endet** (Rückgabe 0). Runde 2 ist Pflicht: Korrekturen sind die häufigste Quelle neuer Fehler, das hat jede bisherige Runde gezeigt.
+- Meldet das Werkzeug veränderte Dateien, war es Kimi oder eine andere Sitzung. Erst klären, dann weiter.
+- Nach jeder Runde in `td-tools/berichte/PRUEFKREIS.md` die Spalte **Lehre** füllen: Was hätte ich ohne Kimi ausgeliefert? Wiederkehrende Lehren wandern in den passenden Skill.
+- Kontingent: Timos Abo ist Moderato. Kleine Auslieferungen (nur Text, nur Musterdaten) dürfen ohne Kimi raus; das steht dann in der Zeile von `AUSLIEFERUNGEN.md`.
+
 ## 1a. Ein neues Paket? Dann den Dockerfile ergaenzen
 
 Der Bau kopiert **jede `package.json` einzeln**, damit die Abhaengigkeits-Schicht im Cache bleibt:

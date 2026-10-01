@@ -1,10 +1,14 @@
-# Sieht von aussen nach, ob trustdonation erreichbar ist.
+# Sieht von aussen nach, ob trustdonation und Circeling laufen.
 #
 # Von aussen ist besser als vom Server: Eine Pruefung, die auf demselben
-# Rechner laeuft, schweigt genau dann, wenn der Rechner weg ist.
+# Rechner laeuft, schweigt genau dann, wenn der Rechner weg ist. Auf dem
+# Server gibt es ausserdem kein cron.
 #
-# Faellt etwas aus, oeffnet der Lauf ein Issue. Ist es wieder da, schliesst
-# er es. So gibt es eine Meldung je Stoerung, nicht alle zehn Minuten eine.
+# Faellt etwas aus, oeffnet der Lauf ein Issue mit dem Etikett "wacht". Ist
+# alles wieder da, schliesst er es. So gibt es eine Meldung je Stoerung.
+#
+# GitHub fuehrt geplante Laeufe verspaetet aus, oft erst nach Stunden. Wer es
+# sofort wissen will, startet ihn von Hand: gh workflow run wacht.yml
 name: Wacht
 
 on:
@@ -19,45 +23,98 @@ jobs:
   erreichbar:
     runs-on: ubuntu-latest
     steps:
-      - name: Seiten abfragen
+      - name: Dienste abfragen
         id: pruefen
         run: |
           fehler=""
-          for ziel in "https://trustdonation.org/" "https://trustdonation.org/app/"; do
-            code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 "$ziel" || echo "000")
-            if [ "$code" != "200" ]; then
-              fehler="${fehler}${ziel} antwortet ${code}. "
+          bericht=""
+
+          # Antwortet die Adresse mit genau diesem Code?
+          genau() {
+            code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 "$2" || true)
+            [ -n "$code" ] || code="000"
+            if [ "$code" = "$3" ]; then
+              bericht="${bericht}gut      $1 ($code)\n"
+            else
+              bericht="${bericht}GESTOERT $1 antwortet $code statt $3\n"
+              fehler="${fehler}$1 antwortet $code. "
             fi
-          done
+          }
+
+          # Lebt der Dienst? Jede Antwort unter 500 zaehlt; 401 oder 404
+          # heisst, er ist da und will nur keinen Fremden.
+          lebt() {
+            code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 "$2" || true)
+            [ -n "$code" ] || code="000"
+            if [ "$code" != "000" ] && [ "$code" -lt 500 ]; then
+              bericht="${bericht}gut      $1 ($code)\n"
+            else
+              bericht="${bericht}GESTOERT $1 antwortet $code\n"
+              fehler="${fehler}$1 antwortet $code. "
+            fi
+          }
+
+          genau "Landing"          "https://trustdonation.org/"           200
+          genau "App"              "https://trustdonation.org/app/"       200
+          genau "Einladungsseite"  "https://trustdonation.org/einladung/" 200
+
           # Die App muss ihre Konfiguration ausliefern, sonst startet sie nicht.
-          conf=$(curl -s --max-time 20 "https://trustdonation.org/app/config.json" || echo "")
+          conf=$(curl -s --max-time 20 "https://trustdonation.org/app/config.json" || true)
           case "$conf" in
-            *endpoints*) ;;
-            *) fehler="${fehler}config.json fehlt oder ist unvollstaendig. " ;;
+            *endpoints*) bericht="${bericht}gut      config.json\n" ;;
+            *) bericht="${bericht}GESTOERT config.json\n"
+               fehler="${fehler}config.json fehlt oder ist unvollstaendig. " ;;
           esac
-          if [ -n "$fehler" ]; then
-            echo "fehler=$fehler" >> "$GITHUB_OUTPUT"
-            echo "$fehler"
-            exit 1
+
+          # Circeling: LiveKit, Token-Dienst, Mitschrift auf kreis.wir.ooo
+          lebt "LiveKit" "https://kreis.wir.ooo/rtc/validate"
+
+          token=$(curl -s --max-time 20 "https://kreis.wir.ooo/token/gesund" || true)
+          if [ "$token" = "wach" ]; then
+            bericht="${bericht}gut      Token-Dienst\n"
+          else
+            bericht="${bericht}GESTOERT Token-Dienst: ${token:-keine Antwort}\n"
+            fehler="${fehler}Token-Dienst antwortet nicht mit wach. "
           fi
-          echo "fehler=" >> "$GITHUB_OUTPUT"
-          echo "Alles erreichbar."
+
+          mit=$(curl -s --max-time 20 "https://kreis.wir.ooo/mitschrift/gesund" || true)
+          case "$mit" in
+            *'"bereit":true'*) bericht="${bericht}gut      Mitschrift ${mit}\n" ;;
+            *) bericht="${bericht}GESTOERT Mitschrift: ${mit:-keine Antwort}\n"
+               fehler="${fehler}Mitschrift ist nicht bereit. " ;;
+          esac
+
+          # Das Relay gehoert Anton. Faellt es aus, geht kein Login mit 12 Woertern.
+          lebt "WoT-Relay (Anton)" "https://relay.web-of-trust.de/"
+
+          printf "%b" "$bericht"
+          {
+            echo "bericht<<ENDE"
+            printf "%b" "$bericht"
+            echo "ENDE"
+            echo "fehler=$fehler"
+          } >> "$GITHUB_OUTPUT"
+          printf "%b" "$bericht" >> "$GITHUB_STEP_SUMMARY"
+          [ -z "$fehler" ]
 
       - name: Stoerung melden
         if: failure()
         uses: actions/github-script@v7
+        env:
+          BERICHT: ${{ steps.pruefen.outputs.bericht }}
         with:
           script: |
-            const titel = "Wacht: trustdonation.org gestoert"
+            const titel = "Wacht: trustdonation oder Circeling gestoert"
             const offen = await github.rest.issues.listForRepo({
               owner: context.repo.owner, repo: context.repo.repo,
               state: "open", labels: "wacht",
             })
             const text = `Die Wacht hat um ${new Date().toISOString()} eine Stoerung gefunden.\n\n`
+              + "```\n" + (process.env.BERICHT || "") + "```\n\n"
               + `Lauf: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}\n\n`
-              + `Erste Schritte: Container ansehen (\`docker ps --filter name=rls-app-wir\`), `
-              + `dann \`docker compose up -d\` in \`~/apps/wir-ooo\`. `
-              + `Zurueckdrehen ueber \`RLS_IMAGE_TAG\`, siehe docs/09-betrieb.md.`
+              + `Erste Schritte: \`docker ps\` auf dem Server. trustdonation: \`docker compose up -d\` in \`~/apps/wir-ooo\`, `
+              + `zurueckdrehen ueber \`RLS_IMAGE_TAG\` (docs/09-betrieb.md). Circeling: \`docker compose up -d\` in \`~/apps/kreis-server\`, `
+              + `dann \`docker logs kreis-mitschrift\`.`
             if (offen.data.length === 0) {
               await github.rest.issues.create({
                 owner: context.repo.owner, repo: context.repo.repo,

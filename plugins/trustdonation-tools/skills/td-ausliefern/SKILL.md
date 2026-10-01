@@ -36,15 +36,19 @@ python td-tools/startlast.py     # Startlast, Budget 1200 KB
 Claude baut, Kimi prüft. Kimi K3 liest den Unterschied seit der letzten Auslieferung (oberster Commit in `docs/AUSLIEFERUNGEN.md`) und meldet echte Fehler, keine Stilfragen.
 
 ```bash
-python td-tools/kimi-pruefen.py            # Runde 1, ~5 Min.
-# kritische und mittlere Befunde beheben oder begründet zurückweisen
-python td-tools/kimi-pruefen.py --runde2   # gleiche Sitzung, prüft die Korrekturen, ~2 Min.
+git add … && git commit … && git push fork trustdonation   # erst einchecken: nur eingecheckter Code zählt fürs Tor
+python td-tools/kimi-pruefen.py            # Runde 1, ~5 bis 20 Min.
+# kritische und mittlere Befunde beheben, einchecken, pushen
+python td-tools/kimi-pruefen.py --runde2   # gleiche Sitzung, prüft die Korrekturen
+git add td-tools/berichte && git commit -m "Prüfkreis: …" && git push fork trustdonation
 ```
+
+Jeder Bericht trägt den geprüften Commit (`Stand`) und ob Code uneingecheckt war (`Sauber`). Das Ausliefer-Tor in Schritt 4 gibt nur einen Commit frei, dessen Code ein Bericht so geprüft hat; danach dürfen sich nur Doku und Berichte ändern.
 
 - **Ausliefern erst, wenn Runde 2 ohne kritischen Befund endet** (Rückgabe 0). Runde 2 ist Pflicht: Korrekturen sind die häufigste Quelle neuer Fehler, das hat jede bisherige Runde gezeigt.
 - Meldet das Werkzeug veränderte Dateien, war es Kimi oder eine andere Sitzung. Erst klären, dann weiter.
 - Nach jeder Runde in `td-tools/berichte/PRUEFKREIS.md` die Spalte **Lehre** füllen: Was hätte ich ohne Kimi ausgeliefert? Wiederkehrende Lehren wandern in den passenden Skill.
-- Kontingent: Timos Abo ist Moderato. Kleine Auslieferungen (nur Text, nur Musterdaten) dürfen ohne Kimi raus; das steht dann in der Zeile von `AUSLIEFERUNGEN.md`.
+- Kontingent: Timos Abo ist seit 01.10.2026 Pro. Kleine Auslieferungen (nur Text, nur Musterdaten) dürfen ohne Kimi raus, aber nur über `ausliefer-tor.py --ohne-kimi "Grund"`; der Grund steht dann in `PRUEFKREIS.md` und in der Zeile von `AUSLIEFERUNGEN.md`.
 
 ## 1a. Ein neues Paket? Dann den Dockerfile ergaenzen
 
@@ -92,6 +96,15 @@ ssh timo@h2980589.stratoserver.net "cd ~/apps/wir-ooo && sh scripts/sichern.sh"
 Die `.env` ist die einzige Datei, die nur auf dem Server existiert, und sie aendert sich genau jetzt. Der Rest liegt in Git.
 
 ## 4. Server: holen und bauen
+
+**Zuerst das Ausliefer-Tor. Ohne Rückgabe 0 wird nicht gebaut.**
+
+```bash
+cd /d/Workspace/20-repos/rls-uebersicht
+python td-tools/ausliefer-tor.py     # 0 frei · 1 gesperrt · 2 CI läuft noch
+```
+
+Es prüft genau den Commit, den der Server gleich holt (`fork/trustdonation`): GitHub-Lauf „trustdonation Tore“ grün, und ein Kimi-Bericht über denselben Code ohne kritischen Befund. Am Ende meldet der Server-Bau mit `git log --oneline -1` den Commit; er muss der sein, den das Tor freigab.
 
 ```bash
 ssh timo@h2980589.stratoserver.net \

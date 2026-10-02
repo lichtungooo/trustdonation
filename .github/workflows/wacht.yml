@@ -9,6 +9,9 @@
 #
 # GitHub fuehrt geplante Laeufe verspaetet aus, oft erst nach Stunden. Wer es
 # sofort wissen will, startet ihn von Hand: gh workflow run wacht.yml
+#
+# GitHub schaltet geplante Laeufe nach 60 Tagen ohne Aktivitaet im Repo ab.
+# Dann schweigt der Waechter; einmal im Monat unter Actions nachsehen.
 name: Wacht
 
 on:
@@ -18,6 +21,12 @@ on:
 
 permissions:
   issues: write
+
+# Zwei verspaetete Laeufe zugleich saehen beide "kein offenes Issue" und
+# legten zwei an (Kimi, 02.10.2026, Befund 11).
+concurrency:
+  group: wacht
+  cancel-in-progress: false
 
 jobs:
   erreichbar:
@@ -69,7 +78,7 @@ jobs:
           # Circeling: LiveKit, Token-Dienst, Mitschrift auf kreis.wir.ooo
           lebt "LiveKit" "https://kreis.wir.ooo/rtc/validate"
 
-          token=$(curl -s --max-time 20 "https://kreis.wir.ooo/token/gesund" || true)
+          token=$(curl -s --max-time 20 "https://kreis.wir.ooo/token/gesund" | tr -d '[:space:]' || true)
           if [ "$token" = "wach" ]; then
             bericht="${bericht}gut      Token-Dienst\n"
           else
@@ -105,6 +114,16 @@ jobs:
         with:
           script: |
             const titel = "Wacht: trustdonation oder Circeling gestoert"
+            // Ohne das Etikett lehnt GitHub das Issue ab, und der Waechter
+            // schwiege genau im Ernstfall (Kimi, 02.10.2026, Befund 2).
+            try {
+              await github.rest.issues.createLabel({
+                owner: context.repo.owner, repo: context.repo.repo,
+                name: "wacht", color: "B60205",
+              })
+            } catch (e) {
+              if (e.status !== 422) throw e  // 422: gibt es schon
+            }
             const offen = await github.rest.issues.listForRepo({
               owner: context.repo.owner, repo: context.repo.repo,
               state: "open", labels: "wacht",

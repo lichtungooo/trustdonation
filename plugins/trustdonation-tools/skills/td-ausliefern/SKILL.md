@@ -104,11 +104,12 @@ cd /d/Workspace/20-repos/rls-uebersicht
 python td-tools/ausliefer-tor.py     # 0 frei · 1 gesperrt · 2 CI läuft noch
 ```
 
-Es prüft genau den Commit, den der Server gleich holt (`fork/trustdonation`): GitHub-Lauf „trustdonation Tore“ grün, und ein Kimi-Bericht über denselben Code ohne kritischen Befund. Am Ende meldet der Server-Bau mit `git log --oneline -1` den Commit; er muss der sein, den das Tor freigab.
+Es prüft den Commit `fork/trustdonation`: GitHub-Lauf „trustdonation Tore“ grün, und ein Kimi-Bericht, der **ab der letzten Auslieferung** denselben Code geprüft hat, ohne kritischen Befund. Der Bericht muss eingecheckt und gepusht sein, damit das Tor ihn findet. Bei Freigabe schreibt das Tor den Commit nach `td-tools/berichte/.kimi-freigabe`; der Server baut **genau diesen**, auch wenn inzwischen jemand weitergepusht hat.
 
 ```bash
+SHA=$(cat td-tools/berichte/.kimi-freigabe)   # fehlt die Datei, war das Tor nicht frei
 ssh timo@h2980589.stratoserver.net \
-  "cd ~/build/td-app && git fetch origin trustdonation -q && git reset --hard origin/trustdonation -q && git log --oneline -1"
+  "cd ~/build/td-app && git fetch origin trustdonation -q && git reset --hard $SHA -q && git log --oneline -1"
 
 ssh timo@h2980589.stratoserver.net \
   "cd ~/build/td-app && docker build -f deploy/app/Dockerfile -t trustdonation-app:proto-N . 2>&1 | tail -4"

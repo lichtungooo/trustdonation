@@ -91,13 +91,34 @@ und warum die Loesung so aussieht.>
 3. <Was bei Unbekanntem passiert.>
 4. <Was die Sache ausdruecklich NICHT traegt.>
 ...
+
+**Freigegeben:** Timo, <JJJJ-MM-TT> <oder: im Auftrag vom JJJJ-MM-TT enthalten>
 ```
 
 Der letzte Punkt ist wichtig und wird gern vergessen: **Was traegt die Sache nicht?** Ein Register, das Rechte traegt, ist kaputt. Eines, das Aktivierung traegt, auch. Schreib es hin.
 
+## Timo gibt frei, auch vom Handy
+
+Timo steuert die Sessions oft vom Handy (Claude Remote). Eine Frage über `AskUserQuestion` löst dort eine Push-Nachricht aus (`inputNeededNotifEnabled`). Darum sitzt die Freigabe genau hier, zwischen Definition und Bau, und ist kurz genug für einen Blick unterwegs.
+
+**Wann:** bei jeder größeren Sache. Das ist ein neues Modul, eine neue Komponente oder Erweiterung, ein neuer Item-Typ oder ein neues Feld in `data`, jede Naht in Antons Code, alles, was Daten anderer Menschen berührt. Fehlerbehebungen und Feinschliff an Freigegebenem brauchen keine eigene Freigabe.
+
+**Wie:**
+
+1. Abschnitt in `docs/DEFINITION.md` schreiben, noch ohne Zeile „Freigegeben“.
+2. `AskUserQuestion` mit einer Frage, deren Text für sich allein trägt:
+   - Was entsteht, in zwei Sätzen.
+   - Die eine Quelle und was die Sache ausdrücklich nicht trägt.
+   - Berührt sie Antons Code? Welche Naht?
+   - Optionen: **Freigeben** · **Ändern** (Timo schreibt dazu, was) · **Zurückstellen**.
+3. Bei „Freigeben“: Zeile `**Freigegeben:** Timo, <Datum>` unter den Abschnitt, einchecken, dann bauen. Bei „Ändern“: Definition berichtigen und noch einmal fragen. Bei „Zurückstellen“: nicht bauen, im Stand-Blatt unter „Als Nächstes“ eintragen.
+4. Hat Timo im Auftrag selbst gesagt, dass ohne Rückfrage gebaut wird („mach alles bis es fertig ist“), steht statt des Datums: `im Auftrag vom <Datum> enthalten`, mit seinem Satz als Zitat.
+
+**Ohne Zeile „Freigegeben“ wird nicht gebaut.** Wer eine Definition ohne sie im Repo findet, fragt nach, statt zu bauen.
+
 ## Dann erst der Bau
 
-1. Abschnitt in `docs/DEFINITION.md`.
+1. Abschnitt in `docs/DEFINITION.md`, mit Zeile „Freigegeben“.
 2. **Ein Test fuer jede Regel, die eine Liste betrifft.** Genau dort laufen Dinge auseinander. Nicht fuer alles einen Test, aber fuer die Listen.
 3. Bau, nach `docs/ARCHITEKTUR.md` Teil 3 (was gehoert in welches Paket).
 4. Aendert der Bau Antons Code: Skill `td-naht`.

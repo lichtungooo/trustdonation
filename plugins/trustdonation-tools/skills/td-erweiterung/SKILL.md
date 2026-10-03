@@ -85,6 +85,7 @@ Vor einem neuen Baustein hier nachsehen. Jeder Einstieg wird nachgeladen; das Ge
 | `stiftungen-import` | recherchierte Stiftungen in einen Space holen |
 | `netzwerke-import` | Netzwerke als Orte holen |
 | `opencollective` | Baustein Open Collective: knapp, Widget, ganz |
+| `begleiter` | Reinsprechen im Begleiter: Mikrofon über die Mitschrift aus Circeling, Weitergabe an den eigenen Agenten (MCP) |
 
 ## Module und Bausteine: überall einbindbar
 

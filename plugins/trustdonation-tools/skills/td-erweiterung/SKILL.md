@@ -40,7 +40,7 @@ Eine fertige Darstellung für einen Typ. Sie greift, wenn der aktuelle Space sie
 | 6 | **Reiter:** läuft von selbst über `komponentenAus()`; nur ein eigenes Symbol braucht eine Zeile | `apps/reference/src/views/erweiterungen-abschnitt.tsx` | `apps/reference/src/erweiterungen.test.tsx` |
 | 7 | **Musterdaten:** Eintrag mit `muster: true`, sichtbar erfundene Angaben (`example.org`), im Demo-Space; Komponente in `groups.json` → `komponenten`; **`SEED_VERSION` und `MUSTERDATEN_VERSION` gleich hochzählen**; gezeichnete SVG-Bilder | `packages/td-core/daten/`, `apps/reference/public/muster/` | |
 | 8 | **Ansehen**, lokal und nach dem Ausliefern live; **jedes Bild anschauen** | `node td-tools/komponente-ansehen.mjs <space>/<modul>/<item>` (Pfad ohne führenden Schrägstrich) | Rechner, Handy, dunkel, 0 Seitenfehler |
-| 9 | **Tore**, alle acht, nach **jeder** Änderung; ausliefern; festhalten | `python td-tools/pruefen.py`, `/td-ausliefern`, `docs/AUSLIEFERUNGEN.md`, `docs/KOMPONENTEN.md` (neue Fallen) | |
+| 9 | **Tore**, alle acht, nach **jeder** Änderung; ausliefern; festhalten | `python td-tools/pruefen.py`, `/td-ausliefern`, `docs/AUSLIEFERUNGEN.md`, `docs/KOMPONENTEN.md` (neuer Einstieg in Abschnitt 0, neue Fallen), dieser Skill (Einstieg, Gelerntes) | Gedächtnis-Tor: rot, wenn ein Einstieg hier oder im Werkstattbuch fehlt |
 
 ---
 
@@ -71,6 +71,33 @@ Vor einer neuen Komponente: kurz im Netz nachsehen, was für diese Art Seite ger
 
 ---
 
+## Was es schon gibt: die Einstiege von td-ui
+
+Vor einem neuen Baustein hier nachsehen. Jeder Einstieg wird nachgeladen; das Gedächtnis-Tor prüft, dass er hier und im Werkstattbuch (Abschnitt 0) steht.
+
+| Einstieg `@trustdonation/ui/…` | Was |
+|---|---|
+| `erweiterungen` | Reiter „Erweiterungen“: Komponenten je Space wählen |
+| `projekt-profil` | Project Profile (erste Komponente) |
+| `stiftungs-profil` | Stiftungsprofil im Auftritt der Stiftung, mit Bearbeiten und Profil übernehmen |
+| `profil-flaeche` | Collage für Orte mit Profil-Bauplan, der Rückfall |
+| `projekt-entwurf` | Profil-Entwurf aus dem eigenen Agenten |
+| `stiftungen-import` | recherchierte Stiftungen in einen Space holen |
+| `netzwerke-import` | Netzwerke als Orte holen |
+| `opencollective` | Baustein Open Collective: knapp, Widget, ganz |
+
+## Module und Bausteine: überall einbindbar
+
+Timo am 03.10.2026: *"Wenn wir Module bauen, muss es in alle Seiten offen sein und integrierbar sein."* Ein Baustein hängt an keinem Profil. Er nimmt, was er braucht (etwa eine Adresse), und kommt in Projekt, Person, Space, Netzwerk oder Landingpage. Gedächtnis: `feedback_module_ueberall_einbindbar.md`.
+
+## Was wir an den ersten beiden Komponenten gelernt haben
+
+- **Bearbeiten** (proto-69): eigener Editor aus der Feldliste (`PROJEKT_PROFIL_FELDER`, `STIFTUNGS_PROFIL_FELDER`), Stift je Abschnitt, Vorschau sofort. Gespeichert werden immer die **ganzen Daten** (`abschnittSpeichern`), denn jeder Connector ersetzt `data`. Den Knopf zeigt nur, wer nach Antons Regel darf.
+- **Auftritt** (proto-70): Logo, Hausfarben, Texte aus der Website über `td-tools/stiftungen/auftritt.py` (robots.txt, ein Abruf je Sekunde, SVG nach Erlaubnisliste). Farben als CSS-Variablen `--td-haus`, `--td-akzent`, gemischt mit `color-mix`; Schrift auf Kontrast gerechnet (`lesbarAuf`). Ganz unten der Hinweis zur Herkunft.
+- **Eigene Motive** (proto-71): Bilder der Websites nehmen wir nicht. 17 eigene Zeichnungen in den Hausfarben, gewählt über `motivFuer`.
+- **Profil übernehmen** (03.10.): Schritte als reine Funktionen über die ganzen Daten; Verwaltende nach Antons `resolveAdminView`, nachgebildet in `verwaltetSpace`.
+- **Open Collective** (03.10.): ein Dienst vor der fremden Schnittstelle (`trustdonation.org/oc/<name>`), Eingänge ohne Namen.
+
 ## Die Fallen, kurz
 
 1. **Budget:** Alles über den Index von td-ui landet im Hauptteil. Eigener Einstieg, und auch der Kern läuft im nachgeladenen Stück.
@@ -85,9 +112,8 @@ Die ganze Liste mit Ursachen steht im Werkstattbuch, Abschnitt 4.
 
 ## Was als Nächstes kommt
 
-- **Stiftungsprofil** (zweite Komponente; die vier Verbesserungen sind entschieden)
-- **Open Collective live** über die öffentliche GraphQL-Schnittstelle
-- **Bearbeiten** über Antons `fields`
+- **Open Collective an weiteren Trägern:** Personenprofil, Space und Netzwerk, Widget auf der Landingpage
+- **Bilder hochladen** im Bearbeiten, sobald Antons Stack Dateien trägt
 - **Widgets und HUD** als vierte Art, siehe Gedächtnis `project_gamification_komponenten.md`
 
 ## Verwandt

@@ -166,9 +166,14 @@ Umlaute im Bundle sind oft escaped. Nach **Ids** suchen, nicht nach Namen mit Um
 
 ## 7. Nachtragen
 
-1. **`docs/AUSLIEFERUNGEN.md`**: neue Zeile oben mit Stand, Commit, Datum und dem, was ein Mensch merkt. Beim Zurueckdrehen zaehlt genau das.
-2. **`memory/stand_trustdonation.md`**: Image-Tag, Commit, was unterwegs schiefging.
-3. Bei einer neuen Falle zusaetzlich `40-forge/Real-Life-Forge/ERFAHRUNGEN.md`.
+Fester Punkt jeder Auslieferung, egal wie lang die Sitzung ist (Timo, 03.10.2026: *"Ich möchte, dass das automatisiert läuft"*). Das Gedächtnis-Tor in `pruefen.py` ist rot, solange etwas davon fehlt.
+
+1. **`docs/AUSLIEFERUNGEN.md`**: neue Zeile oben mit Stand, Commit, Datum und dem, was ein Mensch merkt. Beim Zurückdrehen zählt genau das.
+2. **`memory/stand_trustdonation.md`**: die neue Auslieferung (`proto-N`), Image-Tag, Commit, was unterwegs schiefging. *Tor prüft: proto-N steht im Stand.*
+3. **Lehren in die Erfahrungen:** `40-forge/Real-Life-Forge/ERFAHRUNGEN.md`, die laufende Erfahrung um proto-N ergänzen (was trägt, was Zeit kostete, was wir ab jetzt tun). *Tor prüft: proto-N steht dort.*
+4. **Lehren in die Skills:** Was beim Bauen neu gelernt wurde, kommt in den Skill, der es beim nächsten Mal braucht: `td-erweiterung` (Komponenten, Bausteine), `td-modul` (Flächen), `td-komponente` (kleine Bausteine). Ein neuer Einstieg von td-ui gehört in `td-erweiterung` und in `docs/KOMPONENTEN.md` Abschnitt 0. *Tor prüft: jeder Einstieg steht in beiden.*
+5. **Werkstattbuch und Register**, wenn berührt: `docs/KOMPONENTEN.md` (neue Fallen), `docs/NAEHTE.md`, `40-forge/Real-Life-Forge/INFRASTRUKTUR.md`.
+6. **Server-Gedächtnis und Werkstatt-Tafel** (CLAUDE.md, „STAND pflegen“).
 
 ## Landing statt App
 

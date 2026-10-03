@@ -87,6 +87,7 @@ Vor einem neuen Baustein hier nachsehen. Jeder Einstieg wird nachgeladen; das Ge
 | `opencollective` | Baustein Open Collective: knapp, Widget, ganz |
 | `begleiter` | Reinsprechen im Begleiter: Mikrofon über die Mitschrift aus Circeling, Weitergabe an den eigenen Agenten (MCP) |
 | `ki` | Das KI-Modul: Chat wie GPT, Claude Code mit dem MCP-Server des Space, Arbeitsschritte sichtbar, fertiges Profil zum Speichern |
+| `person-profil` | Das Profil eines Menschen: Sichtbarkeit je Angabe (öffentlich, Kontakte, nur ich), ehrlich wer es heute sieht, „So sehen mich andere“ |
 
 ## Module und Bausteine: überall einbindbar
 

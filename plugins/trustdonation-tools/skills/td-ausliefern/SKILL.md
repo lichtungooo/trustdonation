@@ -33,6 +33,8 @@ python td-tools/startlast.py     # Startlast, Budget 1200 KB
 
 ## 1b. Kimi prüft (Prüfkreis, zwei Runden)
 
+**Seit 03.10.2026 (Timo):** *"Wenn du die Module fertig programmiert hast, kannst du die ruhig hochladen, pushen. Kimi fährt nach und nach die Tests, dann werden sie geupdatet."* Fertig Gebautes geht also live, sobald alle acht Tore, CI und der Augenschein grün sind, auch wenn Kimi noch nicht geprüft hat: `ausliefer-tor.py --ohne-kimi "Timo: ausliefern, Kimi prüft nach"`. Die Kimi-Warteschlange läuft ab der letzten geprüften Stelle weiter; ein Bereich gilt erst mit Bericht als geprüft. Befunde kommen als nächste Auslieferung. Gedächtnis: `feedback_ausliefern_vor_kimi.md`.
+
 Claude baut, Kimi prüft. Kimi K3 liest den Unterschied seit der letzten Auslieferung (oberster Commit in `docs/AUSLIEFERUNGEN.md`) und meldet echte Fehler, keine Stilfragen.
 
 ```bash
